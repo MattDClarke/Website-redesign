@@ -1,6 +1,7 @@
 $colors: (
     black: black,
     white: white,
+    off-white: #d8d8d8,
     yellow: rgb(255, 230, 0),
     red: red
 );
@@ -10,7 +11,7 @@ $colors: (
 }
 
 
-$tablet: 675px; // smaller sized screens --> decr size by about 1/2
+$tablet: 812px; // smaller sized screens --> decr size by about 1/2
 $mobile: 460px; // small sized screens
 
 @mixin tablet {
@@ -28,6 +29,10 @@ $mobile: 460px; // small sized screens
 * {
     box-sizing: border-box;
   }
+
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+}
 
 .wrapper {
     display: grid;
@@ -54,6 +59,15 @@ body {
     padding-right: 0;
     padding-top: 0px;
     border-bottom: rgba(255, 255, 255, 0.5) 0.5px solid;
+}
+
+// styling active page
+body.home .nav-home a,
+body.about .nav-about a,
+body.school-talks .nav-school-talks a,
+body.book .nav-book a,
+body.links .nav-link a {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.95);
 }
 
 .navbar-brand-container {
@@ -152,9 +166,13 @@ body {
     outline: none;
   }
 
-
-.nav-link:hover {
+.nav-link:hover  {
     color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+}
+
+.nav-link i:hover  {
+    color: green;
     transition: all 0.5s;
 }
 
@@ -163,10 +181,6 @@ body {
     @include tablet {
         font-size: 20px;
     }   
-}
-
-.nav-active {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.95);
 }
 
 .my-form input {
@@ -178,7 +192,6 @@ body {
         padding-bottom: 0;
     }
 }
-
 
 button.my-btn {
     padding-top: 10px;
@@ -220,7 +233,6 @@ footer img {
     }
 }
 
-
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
@@ -241,11 +253,12 @@ footer img {
 .grid-card {
     display: none; // hide images for filtering (show all called when page loaded (in JS file)
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.842);
+    background-color: color(off-white);
     box-shadow: 0 0 4px  rgb(15, 15, 15);
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    max-height: 315.75px; /* prevent grid-card from expanding too much vertically */
+    max-height: 350px;
+    //max-height: 315.75px; /* prevent grid-card from expanding too much vertically */
 
     // @include tablet {
     //     max-height: 300px;
@@ -267,9 +280,52 @@ footer img {
     }
 }
 
-.img-adjust {
-    object-position: 30%;  /* adjust the Krait photo to the right */
+.img-adjust-1 {
+    object-position: 10%;  
 }
+.img-adjust-2 {
+    object-position: 13%;  
+}
+.img-adjust-3 {
+    object-position: 20%;  
+}
+.img-adjust-4 {
+    object-position: 25%;  
+}
+.img-adjust-5 {
+    object-position: 30%;  
+}
+.img-adjust-6 {
+    object-position: 35%;  
+}
+.img-adjust-7 {
+    object-position: 40%;  
+}
+.img-adjust-8 {
+    object-position: 60%;  
+}
+.img-adjust-9 {
+    object-position: 65%;  
+}
+.img-adjust-10 {
+    object-position: 70%;  
+}
+.img-adjust-11 {
+    object-position: 75%;  
+}
+.img-adjust-12 {
+    object-position: 80%;  
+}
+.img-adjust-13 {
+    object-position: 85%;  
+}
+.img-adjust-14 {
+    object-position: 90%;  
+}
+.img-adjust-15 {
+    object-position: 100%;  
+}
+
 
 .grid-card-text {
     padding-top: 10px;
@@ -288,6 +344,7 @@ footer img {
 .common-name {
     font-size: 17px;
     font-weight: 600;
+    line-height: 1.2em;
 
     @include tablet {
         font-size: 10px;
@@ -304,6 +361,13 @@ footer img {
         font-size: 5.99px;
         padding-top: 0;
         line-height: 0.5px;
+    }
+}
+
+.chinese-name p {
+
+    @include mobile {
+        margin-bottom: 10px;
     }
 }
 
@@ -385,4 +449,100 @@ footer img {
 
 .gallery-filter:focus {
     outline: none;
+}
+
+
+// ................................................  about.html  ........................................................
+
+.about-box {
+    background-color: color(off-white);
+    box-shadow: 0 0 4px  rgb(15, 15, 15);
+    border-radius: 5px;
+    padding: 30px;
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    @include tablet {
+        font-size: 15px;
+    }
+
+    @include mobile {
+        font-size: 14px;
+    }
+
+}
+
+.about-box a {
+    color: green;
+}
+
+
+.about-box-bottom {
+    margin-top: 20px;
+
+    @include tablet {
+        margin-top: 10px;
+    }
+}
+
+.about-box p {
+    margin-bottom: 0;
+}
+
+.about-header {
+    color: color(white);
+    letter-spacing: 3px;
+    text-align: center;
+
+    @include tablet {
+        font-size: 30px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+    }
+}
+
+.about-header-credits {
+    padding-top: 40px;
+
+    @include tablet {
+        padding-top: 20px;
+    }
+}
+
+.about-table {
+    text-align: center;
+}
+
+.about-table td {
+    padding: 7px;
+    
+    @include tablet {
+        padding: 5px;
+    }
+
+    @include mobile {
+        padding: 2px;
+    }
+}
+
+
+// ................................................  school-talks.html  ........................................................
+
+.slide-container {
+    text-align: center;
+    margin-top: 20px;  
+}
+
+.slide {
+    
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    
+   
 }

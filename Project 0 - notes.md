@@ -1,3 +1,5 @@
+
+
 # CS50 Web Programming - Project 0
 
 
@@ -9,26 +11,77 @@
 ## Steps
 
 - [x] Make general index homepage layout with Grid, Flexbox and Bootstrap
+
 - [x] make images responsive
+
 - [x] crop images with CSS object-fit?
+
 - [x] style
+
 - [x] drop-down: adjust width of search input and lang input
+
 - [x] make images responsive when hovered over (move a bit or incr. in size)
+
 - [x] Make sure footer sticks to bottom using Grid or Flexbox (check my I & T Downloader project)
+
 - [x] Make nav list items align when size is small and have font awesome images align
+
 - [x] Nav items alignment is not ideal.... not aligned with content...left align? then right align search bar? Try make .navbar-items-container (flex container) span the viewport width and then make nav layout more evenly spaced...
+
 - [x] Nav margins when screen size big...
+
 - [x] menu icon color...change to white...
+
 - [x] Add venomous icons - background - scull and crossbones, with some transparency??
+
 - [x] active page - underline text?
+
 - [x] Make snakes gallery filterable - https://www.w3schools.com/howto/howto_js_portfolio_filter.asp
+
 - [x] Make mobile responsive...change grid-card size for mobile using an image query later.... (smaller....)
+
 - [x] Make css neater, inherit properties... like in lecture add sass properties
+
 - [x] Add filter: Taipei, common
-- [ ] Nunjucks - templating language --> add to file, use because it is like Jinja2
-- [ ] make some link pages for the snake species - example pages
+
+- [x] Filtering ... filter without making images display none when Javascript turned off...  see ladies article --> ignore for now...
+
+- [x] Nunjucks - templating language --> add to file, use because it is like Jinja2
+
+- [x] filtering: add  mildly venomous
+
+- [x] add all species for cards
+
+- [x] add alt="  " for images
+
+- [x] correctly orient images in cards... x-axis --> add to njk file
+
+- [x] correctly orient images in cards... y-axis --> add to njk file
+
+- [x] check images in mobile form
+
+- [x] make about.html text responsive
+
+  make some link pages for the snake species - example pages, one species, one about, one links, ....
+
+- [x] about page
+
+- [ ] school talks - make images same size
+
+- [ ] book
+
+- [ ] Links
+
+- [ ] One snake - first one
+
 - [ ] check that search works
+
+- [ ] fix Chinese language icon - edit it...make it unique
+
+- [ ] make javascript files only load for the pages they are needed for? e.g. only add gallery-filter.js to index.njk?
+
 - [ ] Check that I met requirements of CS50 project (I can add links in a table... write README...)
+
 - [ ] After submitting, if it looks good... suggest a site update to Hans Breuer?  
 
 
@@ -80,3 +133,33 @@
 5. [Submit this form](https://forms.cs50.io/c5ccb746-cc89-48c6-8a69-c3c12ff3a844).
 
 You can then go to https://cs50.me/cs50w to view your current progress!
+
+
+
+
+
+### What I learned
+
+- Nunjucks --> populating HTML with data (data.json). Decided not to use as the image cards vary alot... learn at a later stage when I am more comfortable with JavaScript
+
+
+
+### Silly errors
+
+> Small errors that took long to fix
+
+- Nunjucks and Gulp
+
+  - duplicate gulp.js and .njk files caused errors
+
+  - In _layouts.njk I left out " " which caused a template render error...
+
+    ```{% include partials/_footer.njk %}```
+
+    Should have been ```{% include "partials/_footer.njk" %}```
+
+- I made the index.html page thumbnails large images.... loads slowly... need to redo using small images...
+
+### Future improvements
+
+- Make no JavaScript/ no CSS fallback

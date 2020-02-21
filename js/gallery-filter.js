@@ -67,6 +67,10 @@ document.getElementById('gallery-filter-venomous').addEventListener("click", fun
     filterSelection("venomous");
 });
 
+document.getElementById('gallery-filter-mildlyVenomous').addEventListener("click", function() {
+  filterSelection("mildlyVenomous");
+});
+
 document.getElementById('gallery-filter-nonVenomous').addEventListener("click", function() {
     filterSelection("nonVenomous");
 });
