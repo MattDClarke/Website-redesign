@@ -3,16 +3,31 @@ $colors: (
     white: white,
     off-white: #d8d8d8,
     yellow: rgb(255, 230, 0),
-    red: red
+    red: red,
+    green: green
 );
 
 @function color($color-name) {
     @return map-get($colors, $color-name)
 }
 
-
+$desktop: 1280px; // large screen
 $tablet: 812px; // smaller sized screens --> decr size by about 1/2
 $mobile: 460px; // small sized screens
+
+$carousel-xxlg: 1000px;  // for resizing img carousel (school talks, ...)
+$carousel-xlg: 880px; 
+$carousel-lg: 800px; 
+$carousel-md: 700px;
+$carousel-sml: 600px;
+$carousel-xsml: 500px;
+$carousel-xxsml: 400px;
+
+@mixin desktop {
+    @media all and (max-width: #{$desktop}) {
+        @content;
+    }
+}
 
 @mixin tablet {
     @media all and (max-width: #{$tablet}) {
@@ -25,6 +40,50 @@ $mobile: 460px; // small sized screens
         @content;
     }
 }
+
+@mixin carousel-xxlg {
+    @media all and (max-width: #{$carousel-xxlg}) {
+        @content;
+    }
+}
+
+@mixin carousel-xlg {
+    @media all and (max-width: #{$carousel-xlg}) {
+        @content;
+    }
+}
+
+@mixin carousel-lg {
+    @media all and (max-width: #{$carousel-lg}) {
+        @content;
+    }
+}
+
+@mixin carousel-md {
+    @media all and (max-width: #{$carousel-md}) {
+        @content;
+    }
+}
+
+@mixin carousel-sml {
+    @media all and (max-width: #{$carousel-sml}) {
+        @content;
+    }
+}
+
+@mixin carousel-xsml {
+    @media all and (max-width: #{$carousel-xsml}) {
+        @content;
+    }
+}
+
+@mixin carousel-xxsml {
+    @media all and (max-width: #{$carousel-xxsml}) {
+        @content;
+    }
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -66,7 +125,7 @@ body.home .nav-home a,
 body.about .nav-about a,
 body.school-talks .nav-school-talks a,
 body.book .nav-book a,
-body.links .nav-link a {
+body.links .nav-links a {
     border-bottom: 2px solid rgba(255, 255, 255, 0.95);
 }
 
@@ -97,7 +156,6 @@ body.links .nav-link a {
         width: 150px;
     }
 }
-
 
 .navbar-nav {
     flex: 1.6;
@@ -172,7 +230,7 @@ body.links .nav-link a {
 }
 
 .nav-link i:hover  {
-    color: green;
+    color: color(green);
     transition: all 0.5s;
 }
 
@@ -243,6 +301,7 @@ footer img {
     padding: 1rem;
     font-size: 75%;
 
+
     @include tablet {
         grid-template-columns: repeat(auto-fit, 100px);
         grid-gap: 10px;
@@ -258,11 +317,6 @@ footer img {
     cursor: pointer;
     transition: all 0.3s ease 0s;
     max-height: 350px;
-    //max-height: 315.75px; /* prevent grid-card from expanding too much vertically */
-
-    // @include tablet {
-    //     max-height: 300px;
-    // }
 }
 
 .grid-card:hover {
@@ -453,32 +507,44 @@ footer img {
 
 
 // ................................................  about.html  ........................................................
+.about-col-12 {
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* there is a heading... */
+}
 
-.about-box {
+%text-box-template {  /* SASS inheritance */
     background-color: color(off-white);
     box-shadow: 0 0 4px  rgb(15, 15, 15);
     border-radius: 5px;
     padding: 30px;
-    text-align: justify;
+    align-self: center; /* center about-box in viewport*/ 
+    text-align: justify; 
     font-size: 20px;
-    margin-top: 0;
-    margin-left: 5%;
-    margin-right: 5%;
 
     @include tablet {
         font-size: 15px;
     }
-
     @include mobile {
         font-size: 14px;
     }
-
 }
 
-.about-box a {
-    color: green;
+.text-box {
+    @extend %text-box-template;
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 1200px;
 }
 
+.site-link {
+    color: color(green);
+}
+
+.site-link:hover {
+    color: color(green);
+}
 
 .about-box-bottom {
     margin-top: 20px;
@@ -492,7 +558,7 @@ footer img {
     margin-bottom: 0;
 }
 
-.about-header {
+.header {
     color: color(white);
     letter-spacing: 3px;
     text-align: center;
@@ -514,11 +580,11 @@ footer img {
     }
 }
 
-.about-table {
+.table-text {
     text-align: center;
 }
 
-.about-table td {
+.table-text td {
     padding: 7px;
     
     @include tablet {
@@ -532,17 +598,251 @@ footer img {
 
 
 // ................................................  school-talks.html  ........................................................
+.carousel {
+    position: relative;
+    height: 500px;
+    width: 90%;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
 
-.slide-container {
-    text-align: center;
-    margin-top: 20px;  
+    @include carousel-xxlg {
+        height: 450px;
+    }
+
+    @include carousel-xlg {
+        height: 400px;
+    }
+
+    @include carousel-lg {
+        height: 350px;
+    }
+
+    @include carousel-md {
+        height: 300px;
+    }
+
+    @include carousel-sml {
+        height: 250px;
+    }
+
+    @include carousel-xsml {
+        height: 200px;
+    }
+
+    @include mobile {
+        margin-top: 20px;
+    }
+
+    @include carousel-xxsml {
+        height: 150px;
+    }
 }
 
-.slide {
-    
+.carousel__slide {
+    height: auto;
     width: 100%;
+}
+
+.carousel__image {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+
+    @include carousel-xxlg {
+        height: 450px;
+    }
+
+    @include carousel-xlg {
+        height: 400px;
+    }
+
+    @include carousel-lg {
+        height: 350px;
+    }
+
+    @include carousel-md {
+        height: 300px;
+    }
+
+    @include carousel-sml {
+        height: 250px;
+    }
+
+    @include carousel-xsml {
+        height: 200px;
+    }
+
+    @include carousel-xxsml {
+        height: 150px;
+    }
+}
+
+.school-talks-img-6 {
+    object-position: 50% 5%;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 500ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute; /* stack images on top of each other */
+    top: 0;
+    bottom: 0;
     height: 400px;
-    object-fit: contain;
-    
-   
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel__button img:hover, .carousel__nav button:hover {
+    transform: scale(1.2);
+    transition: all ease-in 0.2s;
+}
+
+.carousel__button--left {
+    left: -40px; /* position away from image */
+
+    @include carousel-lg {
+        left: -32px; 
+    }
+    @include carousel-sml {
+        left: -25px; 
+    }
+    @include carousel-xxsml {
+        left: -20px; 
+    }
+}
+
+.carousel__button--right {
+    right: -40px;
+
+    @include carousel-lg {
+        right: -32px; 
+    }
+    @include carousel-sml {
+        right: -25px; 
+    }
+    @include carousel-xxsml {
+        right: -20px; 
+    }
+}
+
+.carousel__button img {
+    width: 20px;
+
+    @include carousel-sml {
+        width: 15px; 
+    }
+    @include carousel-xxsml {
+        width: 10px; 
+    }
+}
+
+.carousel__button:focus, .carousel__indicator:focus {
+    outline: none;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px 0;
+    background-color: color(off-white);
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,.3);
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background: rgba(0,0,0,.75);
+}
+
+
+// ................................................  book.html  ........................................................
+.text-box--book {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-img-container {
+    text-align: center;
+    margin-right: 20px;
+
+    @include desktop {
+        width: 100%;
+        padding-bottom: 30px;
+        margin-right: 0px;
+    }
+}
+
+.book-img {
+    width: 280px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: -4px 4px 4px  rgba(0,0,0,0.7);
+
+    @include tablet {
+        width: 200px;
+    }
+}
+
+.book-img:hover {
+    transform: scale(1.1);
+    transition: 0.7s ease-in;
+}
+
+.book-text-1 {
+    flex: 1;
+}
+
+
+// ................................................  links.html  ........................................................
+.table-text--links {
+    text-align: left;
+}
+
+th.table-header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 5px; 
+    font-size: 30px;
+
+    @include tablet {
+        font-size: 22.5px;
+        padding-top: 25px;
+ 
+    }
+    @include mobile {
+        font-size: 21px;
+        padding-top: 15px;
+    }
 }

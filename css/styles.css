@@ -45,7 +45,7 @@ body.home .nav-home a,
 body.about .nav-about a,
 body.school-talks .nav-school-talks a,
 body.book .nav-book a,
-body.links .nav-link a {
+body.links .nav-links a {
   border-bottom: 2px solid rgba(255, 255, 255, 0.95);
 }
 
@@ -518,32 +518,57 @@ footer img {
   outline: none;
 }
 
-.about-box {
+.about-col-12 {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* there is a heading... */
+}
+
+.text-box {
+  /* SASS inheritance */
   background-color: #d8d8d8;
   -webkit-box-shadow: 0 0 4px #0f0f0f;
           box-shadow: 0 0 4px #0f0f0f;
   border-radius: 5px;
   padding: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /* center about-box in viewport*/
   text-align: justify;
   font-size: 20px;
-  margin-top: 0;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 @media all and (max-width: 812px) {
-  .about-box {
+  .text-box {
     font-size: 15px;
   }
 }
 
 @media all and (max-width: 460px) {
-  .about-box {
+  .text-box {
     font-size: 14px;
   }
 }
 
-.about-box a {
+.text-box {
+  margin-top: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 1200px;
+}
+
+.site-link {
+  color: green;
+}
+
+.site-link:hover {
   color: green;
 }
 
@@ -561,20 +586,20 @@ footer img {
   margin-bottom: 0;
 }
 
-.about-header {
+.header {
   color: white;
   letter-spacing: 3px;
   text-align: center;
 }
 
 @media all and (max-width: 812px) {
-  .about-header {
+  .header {
     font-size: 30px;
   }
 }
 
 @media all and (max-width: 460px) {
-  .about-header {
+  .header {
     font-size: 20px;
   }
 }
@@ -589,35 +614,349 @@ footer img {
   }
 }
 
-.about-table {
+.table-text {
   text-align: center;
 }
 
-.about-table td {
+.table-text td {
   padding: 7px;
 }
 
 @media all and (max-width: 812px) {
-  .about-table td {
+  .table-text td {
     padding: 5px;
   }
 }
 
 @media all and (max-width: 460px) {
-  .about-table td {
+  .table-text td {
     padding: 2px;
   }
 }
 
-.slide-container {
-  text-align: center;
-  margin-top: 20px;
+.carousel {
+  position: relative;
+  height: 500px;
+  width: 90%;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
-.slide {
+@media all and (max-width: 1000px) {
+  .carousel {
+    height: 450px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  .carousel {
+    height: 400px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .carousel {
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .carousel {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .carousel {
+    height: 250px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .carousel {
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .carousel {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .carousel {
+    height: 150px;
+  }
+}
+
+.carousel__slide {
+  height: auto;
   width: 100%;
+}
+
+.carousel__image {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media all and (max-width: 1000px) {
+  .carousel__image {
+    height: 450px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  .carousel__image {
+    height: 400px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .carousel__image {
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .carousel__image {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .carousel__image {
+    height: 250px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .carousel__image {
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .carousel__image {
+    height: 150px;
+  }
+}
+
+.school-talks-img-6 {
+  -o-object-position: 50% 5%;
+     object-position: 50% 5%;
+}
+
+.carousel__track-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  -webkit-transition: -webkit-transform 500ms ease-in;
+  transition: -webkit-transform 500ms ease-in;
+  transition: transform 500ms ease-in;
+  transition: transform 500ms ease-in, -webkit-transform 500ms ease-in;
+}
+
+.carousel__slide {
+  position: absolute;
+  /* stack images on top of each other */
+  top: 0;
+  bottom: 0;
   height: 400px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 100%;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel__button img:hover, .carousel__nav button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.carousel__button--left {
+  left: -40px;
+  /* position away from image */
+}
+
+@media all and (max-width: 800px) {
+  .carousel__button--left {
+    left: -32px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .carousel__button--left {
+    left: -25px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .carousel__button--left {
+    left: -20px;
+  }
+}
+
+.carousel__button--right {
+  right: -40px;
+}
+
+@media all and (max-width: 800px) {
+  .carousel__button--right {
+    right: -32px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .carousel__button--right {
+    right: -25px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .carousel__button--right {
+    right: -20px;
+  }
+}
+
+.carousel__button img {
+  width: 20px;
+}
+
+@media all and (max-width: 600px) {
+  .carousel__button img {
+    width: 15px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .carousel__button img {
+    width: 10px;
+  }
+}
+
+.carousel__button:focus, .carousel__indicator:focus {
+  outline: none;
+}
+
+.carousel__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  padding: 10px 0;
+  background-color: #d8d8d8;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.text-box--book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.book-img-container {
+  text-align: center;
+  margin-right: 20px;
+}
+
+@media all and (max-width: 1280px) {
+  .book-img-container {
+    width: 100%;
+    padding-bottom: 30px;
+    margin-right: 0px;
+  }
+}
+
+.book-img {
+  width: 280px;
+  height: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.7);
+          box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+@media all and (max-width: 812px) {
+  .book-img {
+    width: 200px;
+  }
+}
+
+.book-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.7s ease-in;
+  transition: 0.7s ease-in;
+}
+
+.book-text-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.table-text--links {
+  text-align: left;
+}
+
+th.table-header {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+@media all and (max-width: 812px) {
+  th.table-header {
+    font-size: 22.5px;
+    padding-top: 25px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  th.table-header {
+    font-size: 21px;
+    padding-top: 15px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

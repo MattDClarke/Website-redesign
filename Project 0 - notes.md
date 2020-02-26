@@ -66,11 +66,25 @@
 
 - [x] about page
 
-- [ ] school talks - make images same size
+  school talks
 
-- [ ] book
+  
 
-- [ ] Links
+  
+
+- [x] make images same size
+
+- [x] make carosel
+
+- [x] make carousel go back to start if right arrow clicked on last image (and do same for start image and left arrow).  For loop --> reset current slide = 0 and current dot = 0 if left arrow  clicked when image = current  image = image array.length
+
+- [x] make carousel responsive
+
+- [x] book - make img next to text (desktop size) and text below img (tablet/ mobile size) --> FlexBox (need to change .about-box  width...)
+
+- [x] Links - check that nav links icon works
+
+- [ ] Links - th Incr padding and make text larger
 
 - [ ] One snake - first one
 
@@ -79,6 +93,14 @@
 - [ ] fix Chinese language icon - edit it...make it unique
 
 - [ ] make javascript files only load for the pages they are needed for? e.g. only add gallery-filter.js to index.njk?
+
+- [ ] prevent nav and footer from reloading after changing page...async js?
+
+- [ ] check HTML and CSS (w3 validator)
+
+- [ ] accessibility --> no JS fallback
+
+- [ ] look at again - improve design? more white space?
 
 - [ ] Check that I met requirements of CS50 project (I can add links in a table... write README...)
 
