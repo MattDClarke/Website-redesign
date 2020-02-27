@@ -314,7 +314,6 @@ footer img {
     border-radius: 5px;
     background-color: color(off-white);
     box-shadow: 0 0 4px  rgb(15, 15, 15);
-    cursor: pointer;
     transition: all 0.3s ease 0s;
     max-height: 350px;
 }
@@ -328,6 +327,7 @@ footer img {
     height: 166.75px;
     object-fit: cover; /* crops image top and bottom in this case */
     border-radius: 5px 5px 0 0;
+    cursor: pointer;
 
     @include tablet {
         height: 83.375px;
@@ -517,10 +517,9 @@ footer img {
     background-color: color(off-white);
     box-shadow: 0 0 4px  rgb(15, 15, 15);
     border-radius: 5px;
-    padding: 30px;
-    align-self: center; /* center about-box in viewport*/ 
-    text-align: justify; 
     font-size: 20px;
+    margin-top: 0;
+    max-width: 1200px;
 
     @include tablet {
         font-size: 15px;
@@ -532,17 +531,38 @@ footer img {
 
 .text-box {
     @extend %text-box-template;
-    margin-top: 0;
+    align-self: center; /* center about-box in viewport*/ 
     margin-left: 5%;
     margin-right: 5%;
-    max-width: 1200px;
+    text-align: justify;
+    padding: 30px; 
 }
+
+.text-box--species {
+    @extend %text-box-template;
+    flex: 1;
+    padding: 30px;
+}
+
+
+.text-box--species-media {
+    @extend %text-box-template;
+    flex: 1;
+    padding: 10px 30px;
+}
+
+
 
 .site-link {
     color: color(green);
 }
 
-.site-link:hover {
+.site-link--species {
+    color: color(green);
+    font-style: italic;
+}
+
+.site-link:hover, .site-link--species:hover {
     color: color(green);
 }
 
@@ -558,17 +578,44 @@ footer img {
     margin-bottom: 0;
 }
 
-.header {
+
+%header-template {
     color: color(white);
     letter-spacing: 3px;
     text-align: center;
+}
+.header {
+    @extend %header-template;
 
     @include tablet {
         font-size: 30px;
     }
-
     @include mobile {
         font-size: 20px;
+    }
+}
+
+.header--species {
+    @extend %header-template;
+    font-size: 35px;
+
+    @include tablet {
+        font-size: 26px;
+    }
+    @include mobile {
+        font-size: 17.5px;
+    }
+}
+
+.header--status, .header--danger {
+    @extend %header-template;
+    font-size: 25px;
+
+    @include tablet {
+        font-size: 19px;
+    }
+    @include mobile {
+        font-size: 12.5px;
     }
 }
 
@@ -598,13 +645,17 @@ footer img {
 
 
 // ................................................  school-talks.html  ........................................................
-.carousel {
+%carousel-template {
     position: relative;
-    height: 500px;
     width: 90%;
     margin-top: 40px;
     max-width: 1200px;
     margin: 40px auto;
+}
+
+.carousel--short {
+    @extend %carousel-template;
+    height: 500px;
 
     @include carousel-xxlg {
         height: 450px;
@@ -639,15 +690,57 @@ footer img {
     }
 }
 
+.carousel--tall {
+    @extend %carousel-template;
+    height: 600px;
+
+
+    @include carousel-xxlg {
+        height: 540px;
+    }
+
+    @include carousel-xlg {
+        height: 480px;
+    }
+
+    @include carousel-lg {
+        height: 420px;
+    }
+
+    @include carousel-md {
+        height: 360px;
+    }
+
+    @include carousel-sml {
+        height: 300px;
+    }
+
+    @include carousel-xsml {
+        height: 240px;
+    }
+
+    @include mobile {
+        margin-top: 20px;
+    }
+
+    @include carousel-xxsml {
+        height: 180px;
+    }
+}
+
 .carousel__slide {
     height: auto;
     width: 100%;
 }
 
-.carousel__image {
-    height: 500px;
+%carousel__image-template {
     width: 100%;
     object-fit: cover;
+}
+
+.carousel__image--short {
+    @extend %carousel__image-template;
+    height: 500px;
 
     @include carousel-xxlg {
         height: 450px;
@@ -675,6 +768,39 @@ footer img {
 
     @include carousel-xxsml {
         height: 150px;
+    }
+}
+
+.carousel__image--tall {
+    @extend %carousel__image-template;
+    height: 600px;
+
+    @include carousel-xxlg {
+        height: 540px;
+    }
+
+    @include carousel-xlg {
+        height: 480px;
+    }
+
+    @include carousel-lg {
+        height: 420px;
+    }
+
+    @include carousel-md {
+        height: 360px;
+    }
+
+    @include carousel-sml {
+        height: 300px;
+    }
+
+    @include carousel-xsml {
+        height: 240px;
+    }
+
+    @include carousel-xxsml {
+        height: 180px;
     }
 }
 
@@ -815,7 +941,7 @@ footer img {
 }
 
 .book-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.7s ease-in;
 }
 
@@ -845,4 +971,61 @@ th.table-header {
         font-size: 21px;
         padding-top: 15px;
     }
+}
+
+// ................................................  species pages  ........................................................
+
+.species-media {
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.text-box-container {
+    margin-left: 5%;
+    margin-right: 5%;   
+    display: flex;
+    justify-content: center;
+}
+
+.text-box-container-info {
+    margin-top: 40px; 
+
+    @include tablet {
+        margin-top: 20px;
+    }
+}
+
+.species-info-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.info-box-header {
+    flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    font-weight: 600;
+
+    @include tablet {
+        padding-top: 10px;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+}
+
+.info-box-text {
+    text-align: justify;
+    flex: 4;
+    padding: 10px 0px;
+    @include tablet {
+        padding: 0;
+    }
+
 }

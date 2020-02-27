@@ -277,7 +277,6 @@ footer img {
   background-color: #d8d8d8;
   -webkit-box-shadow: 0 0 4px #0f0f0f;
           box-shadow: 0 0 4px #0f0f0f;
-  cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   max-height: 350px;
@@ -295,6 +294,7 @@ footer img {
      object-fit: cover;
   /* crops image top and bottom in this case */
   border-radius: 5px 5px 0 0;
+  cursor: pointer;
 }
 
 @media all and (max-width: 812px) {
@@ -530,45 +530,64 @@ footer img {
   /* there is a heading... */
 }
 
-.text-box {
+.text-box, .text-box--species, .text-box--species-media {
   /* SASS inheritance */
   background-color: #d8d8d8;
   -webkit-box-shadow: 0 0 4px #0f0f0f;
           box-shadow: 0 0 4px #0f0f0f;
   border-radius: 5px;
-  padding: 30px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  /* center about-box in viewport*/
-  text-align: justify;
   font-size: 20px;
+  margin-top: 0;
+  max-width: 1200px;
 }
 
 @media all and (max-width: 812px) {
-  .text-box {
+  .text-box, .text-box--species, .text-box--species-media {
     font-size: 15px;
   }
 }
 
 @media all and (max-width: 460px) {
-  .text-box {
+  .text-box, .text-box--species, .text-box--species-media {
     font-size: 14px;
   }
 }
 
 .text-box {
-  margin-top: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /* center about-box in viewport*/
   margin-left: 5%;
   margin-right: 5%;
-  max-width: 1200px;
+  text-align: justify;
+  padding: 30px;
+}
+
+.text-box--species {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px;
+}
+
+.text-box--species-media {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px 30px;
 }
 
 .site-link {
   color: green;
 }
 
-.site-link:hover {
+.site-link--species {
+  color: green;
+  font-style: italic;
+}
+
+.site-link:hover, .site-link--species:hover {
   color: green;
 }
 
@@ -586,7 +605,7 @@ footer img {
   margin-bottom: 0;
 }
 
-.header {
+.header, .header--species, .header--status, .header--danger {
   color: white;
   letter-spacing: 3px;
   text-align: center;
@@ -601,6 +620,38 @@ footer img {
 @media all and (max-width: 460px) {
   .header {
     font-size: 20px;
+  }
+}
+
+.header--species {
+  font-size: 35px;
+}
+
+@media all and (max-width: 812px) {
+  .header--species {
+    font-size: 26px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header--species {
+    font-size: 17.5px;
+  }
+}
+
+.header--status, .header--danger {
+  font-size: 25px;
+}
+
+@media all and (max-width: 812px) {
+  .header--status, .header--danger {
+    font-size: 19px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header--status, .header--danger {
+    font-size: 12.5px;
   }
 }
 
@@ -634,60 +685,115 @@ footer img {
   }
 }
 
-.carousel {
+.carousel--short, .carousel--tall {
   position: relative;
-  height: 500px;
   width: 90%;
   margin-top: 40px;
   max-width: 1200px;
   margin: 40px auto;
 }
 
+.carousel--short {
+  height: 500px;
+}
+
 @media all and (max-width: 1000px) {
-  .carousel {
+  .carousel--short {
     height: 450px;
   }
 }
 
 @media all and (max-width: 880px) {
-  .carousel {
+  .carousel--short {
     height: 400px;
   }
 }
 
 @media all and (max-width: 800px) {
-  .carousel {
+  .carousel--short {
     height: 350px;
   }
 }
 
 @media all and (max-width: 700px) {
-  .carousel {
+  .carousel--short {
     height: 300px;
   }
 }
 
 @media all and (max-width: 600px) {
-  .carousel {
+  .carousel--short {
     height: 250px;
   }
 }
 
 @media all and (max-width: 500px) {
-  .carousel {
+  .carousel--short {
     height: 200px;
   }
 }
 
 @media all and (max-width: 460px) {
-  .carousel {
+  .carousel--short {
     margin-top: 20px;
   }
 }
 
 @media all and (max-width: 400px) {
-  .carousel {
+  .carousel--short {
     height: 150px;
+  }
+}
+
+.carousel--tall {
+  height: 600px;
+}
+
+@media all and (max-width: 1000px) {
+  .carousel--tall {
+    height: 540px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  .carousel--tall {
+    height: 480px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .carousel--tall {
+    height: 420px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .carousel--tall {
+    height: 360px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .carousel--tall {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .carousel--tall {
+    height: 240px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .carousel--tall {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .carousel--tall {
+    height: 180px;
   }
 }
 
@@ -696,52 +802,101 @@ footer img {
   width: 100%;
 }
 
-.carousel__image {
-  height: 500px;
+.carousel__image--short, .carousel__image--tall {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.carousel__image--short {
+  height: 500px;
+}
+
 @media all and (max-width: 1000px) {
-  .carousel__image {
+  .carousel__image--short {
     height: 450px;
   }
 }
 
 @media all and (max-width: 880px) {
-  .carousel__image {
+  .carousel__image--short {
     height: 400px;
   }
 }
 
 @media all and (max-width: 800px) {
-  .carousel__image {
+  .carousel__image--short {
     height: 350px;
   }
 }
 
 @media all and (max-width: 700px) {
-  .carousel__image {
+  .carousel__image--short {
     height: 300px;
   }
 }
 
 @media all and (max-width: 600px) {
-  .carousel__image {
+  .carousel__image--short {
     height: 250px;
   }
 }
 
 @media all and (max-width: 500px) {
-  .carousel__image {
+  .carousel__image--short {
     height: 200px;
   }
 }
 
 @media all and (max-width: 400px) {
-  .carousel__image {
+  .carousel__image--short {
     height: 150px;
+  }
+}
+
+.carousel__image--tall {
+  height: 600px;
+}
+
+@media all and (max-width: 1000px) {
+  .carousel__image--tall {
+    height: 540px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  .carousel__image--tall {
+    height: 480px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .carousel__image--tall {
+    height: 420px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .carousel__image--tall {
+    height: 360px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .carousel__image--tall {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .carousel__image--tall {
+    height: 240px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .carousel__image--tall {
+    height: 180px;
   }
 }
 
@@ -922,8 +1077,8 @@ footer img {
 }
 
 .book-img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-transition: 0.7s ease-in;
   transition: 0.7s ease-in;
 }
@@ -957,6 +1112,87 @@ th.table-header {
   th.table-header {
     font-size: 21px;
     padding-top: 15px;
+  }
+}
+
+.species-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.text-box-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text-box-container-info {
+  margin-top: 40px;
+}
+
+@media all and (max-width: 812px) {
+  .text-box-container-info {
+    margin-top: 20px;
+  }
+}
+
+.species-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media all and (max-width: 812px) {
+  .species-info-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.info-box-header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  font-weight: 600;
+}
+
+@media all and (max-width: 812px) {
+  .info-box-header {
+    padding-top: 10px;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+}
+
+.info-box-text {
+  text-align: justify;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  padding: 10px 0px;
+}
+
+@media all and (max-width: 812px) {
+  .info-box-text {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

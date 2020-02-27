@@ -84,15 +84,27 @@
 
 - [x] Links - check that nav links icon works
 
-- [ ] Links - th Incr padding and make text larger
+- [x] Links - th Incr padding and make text larger
 
-- [ ] One snake - first one
+  first snake page:
+
+- [x] header
+
+- [x] gallery - object-position adjust
+
+- [x] snake info --> flexbox, change orientation when mobile
+
+- [ ] videos and more photos box --> fix size (x-axis), padding... add background (videos - video; camera - camera)
+
+- [ ] add rest of text and anchor elements
 
 - [ ] check that search works
 
 - [ ] fix Chinese language icon - edit it...make it unique
 
 - [ ] make javascript files only load for the pages they are needed for? e.g. only add gallery-filter.js to index.njk?
+
+- [ ] layout when page loaded... adjust brand image size?
 
 - [ ] prevent nav and footer from reloading after changing page...async js?
 
