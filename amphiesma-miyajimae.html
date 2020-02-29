@@ -10,9 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/28d5ded6ac.js" crossorigin="anonymous"></script>
+    <script src="js/scroll-sneak.js"></script>
     <title>Snakes of Taiwan: 
     Amphiesma miyajimae - Maki's Keelback
 </title>
+
 </head>
 
 <body class="">  
@@ -26,7 +28,7 @@
             <span class="">☰</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav mt-2 mt-lg-0">
+            <ul  id="navLinks" class="navbar-nav mt-2 mt-lg-0">
                 <li class="nav-item nav-home">
                     <a class="nav-link" href="/index.html"><i class="fas fa-home fa-2x"></i></br>Home</a>
                 </li>
@@ -49,9 +51,117 @@
                     <a class="nav-link" href="#"><i class="fas fa-language fa-2x"></i></br>Chinese</a>
                 </li>
             </ul>
-            <form class="my-form form-inline my-2 my-lg-0">
+            <form id="nav-search-form" class="my-form form-inline my-2 my-lg-0">
                 <div class="my-form-spacer"></div>
-                <input class="form-control mr-sm-2" type="search">
+                
+                <div class="search-input-container">
+                    <input id="searchInput" type="search" placeholder="Search for a species">
+                    <ul id="searchUL"> 
+                    
+                        <li><a href="/amphiesma-miyajimae.html">Maki&#39;s Keelback<br><i>Amphiesma Miyajimae</i></a></li>
+                    
+                        <li><a href="#">Taiwan Coral Snake<br><i>Sinomicrurus sauteri</i></a></li>
+                    
+                        <li><a href="#">Hatori&#39;s Coral Snake<br><i>Sinomicrurus hatori</i></a></li>
+                    
+                        <li><a href="#">Taiwan Kukri Snake<br><i>Oligodon formosanus</i></a></li>
+                    
+                        <li><a href="#">Big-eyed Ratsnake<br><i>Ptyas dhumnades</i></a></li>
+                    
+                        <li><a href="#">Chinese Water Snake<br><i>Enhydris chinensis</i></a></li>
+                    
+                        <li><a href="#">Plumbeous Water Snake<br><i>Enhydris plumbea</i></a></li>
+                    
+                        <li><a href="#">Collared Reed Snake<br><i>Calamaria pavimentata</i></a></li>
+                    
+                        <li><a href="#">Asiatic Many-Toothed Snake<br><i>Sibynophis chinensis chinensis</i></a></li>
+                    
+                        <li><a href="#">Chinese Green Tree Viper<br><i>Viridovipera stejnegeri stejnegeri</i></a></li>
+                    
+                        <li><a href="#">Greater Green Snake<br><i>Cyclophiops major</i></a></li>
+                    
+                        <li><a href="#">Rein Snake<br><i>Rhadinophis frenatum</i></a></li>
+                    
+                        <li><a href="#">Brahminy Blind Snake<br><i>Ramphotyphlops braminus</i></a></li>
+                    
+                        <li><a href="#">Formosan Odd-Scaled Snake<br><i>Achalinus formosanus formosanus</i></a></li>
+                    
+                        <li><a href="#">Black Odd-Scaled Snake<br><i>Achalinus niger</i></a></li>
+                    
+                        <li><a href="#">Dhaman (Oriental) Ratsnake<br><i>Ptyas mucosa</i></a></li>
+                    
+                        <li><a href="#">Chinese Ratsnake<br><i>Ptyas korros</i></a></li>
+                    
+                        <li><a href="#">Chinese Mountain Snake<br><i>Plagiopholis styani</i></a></li>
+                    
+                        <li><a href="#">Mock Viper<br><i>Psammodynastes pulverulentus papenfussi</i></a></li>
+                    
+                        <li><a href="#">Swinhoe&#39;s Grass Snake<br><i>Rhabdophis swinhonis</i></a></li>
+                    
+                        <li><a href="#">Sauter&#39;s Water (Grass) Snake<br><i>Amphiesma sauteri</i></a></li>
+                    
+                        <li><a href="#">Paiwan Keelback<br><i>Amphiesma sp.</i></a></li>
+                    
+                        <li><a href="#">Eastern Water Snake<br><i>Sinonatrix percarinata suriki</i></a></li>
+                    
+                        <li><a href="#">King Ratsnake<br><i>Elaphe carinata</i></a></li>
+                    
+                        <li><a href="#">Buff Striped Keelback<br><i>Amphiesma stolatum</i></a></li>
+                    
+                        <li><a href="#">Taiwan Beauty Snake<br><i>Orthriophis taeniurus friesi</i></a></li>
+                    
+                        <li><a href="#">Burmese Python<br><i>Python molurus bivittatus</i></a></li>
+                    
+                        <li><a href="#">Checkered Keelback<br><i>Xenochrophis piscator</i></a></li>
+                    
+                        <li><a href="#">Mountain Keelback<br><i>Pseudoxenodon stejnegeri stejnegeri</i></a></li>
+                    
+                        <li><a href="#">Asian Tiger Snake<br><i>Rhabdophis tigrinus formosanus</i></a></li>
+                    
+                        <li><a href="#">Russell&#39;s Viper<br><i>Daboia russelli siamensis</i></a></li>
+                    
+                        <li><a href="#">False Viper<br><i>Macropisthodon rudis rudis</i></a></li>
+                    
+                        <li><a href="#">Taiwan Habu<br><i>Protobothrops mucrosquamatus</i></a></li>
+                    
+                        <li><a href="#">Taiwan Mountain Pitviper<br><i>Trimeresurus gracilis</i></a></li>
+                    
+                        <li><a href="#">Alishan Habu<br><i>Ovophis monticola makazayazaya</i></a></li>
+                    
+                        <li><a href="#">Hundred-Pacer (Chinese Moccasin)<br><i>Deinagkistrodon acutus</i></a></li>
+                    
+                        <li><a href="#">Mandarin Ratsnake<br><i>Euprepiophis mandarina</i></a></li>
+                    
+                        <li><a href="#">(Square-headed) Cat Snake<br><i>Boiga kraepelini</i></a></li>
+                    
+                        <li><a href="#">Taiwan Slug Snake<br><i>Pareas formosensis</i></a></li>
+                    
+                        <li><a href="#">Red-banded Snake<br><i>Dinodon rufozonatum</i></a></li>
+                    
+                        <li><a href="#">Ringed Water Snake<br><i>Sinonatrix annularis</i></a></li>
+                    
+                        <li><a href="#">Red Bamboo Ratsnake<br><i>Oreocryptophis porphyracea kawakamii</i></a></li>
+                    
+                        <li><a href="#">Ornate (Red-bellied) Kukri Snake<br><i>Oligodon ornatus</i></a></li>
+                    
+                        <li><a href="#">MacClelland&#39;s Coral Snake<br><i>Sinomicrurus macclellandi swinhoei</i></a></li>
+                    
+                        <li><a href="#">Chinese Cobra<br><i>Naja atra</i></a></li>
+                    
+                        <li><a href="#">Formosa Wolf Snake<br><i>Lycodon ruhstrati ruhstrati</i></a></li>
+                    
+                        <li><a href="#">Black-banded Sea Krait<br><i>Pseudolaticauda semifasciata</i></a></li>
+                    
+                        <li><a href="#">Many-banded Krait<br><i>Bungarus multicinctus multicinctus</i></a></li>
+                    
+                        <li><a href="#">Yellow-lipped Sea Krait<br><i>Laticauda colubrina</i></a></li>
+                    
+                        <li><a href="#">Turtlehead Sea Snake<br><i>Emydocephalus ijimae</i></a></li>
+                    
+                        <li><a href="#">Black-lipped Sea Krait<br><i>Laticauda laticaudata</i></a></li>
+                    
+                    <ul>
+                </div>
                 <button class="my-btn btn btn-secondary btn-lg my-2 my-sm-0" type="submit">Search</button>
             </form>        
         </div>
@@ -231,7 +341,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/gallery-filter.js"></script>
-    <script src="js/gallery-slideshow.js"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/scroll-sneak-call.js"></script>
+
 </body>
 </html> 

@@ -94,29 +94,51 @@
 
 - [x] snake info --> flexbox, change orientation when mobile
 
-- [ ] videos and more photos box --> fix size (x-axis), padding... add background (videos - video; camera - camera)
+- [x] videos and more photos box --> fix size (x-axis), padding... add background (videos - video; camera - camera)
 
-- [ ] add rest of text and anchor elements
+- [x] add rest of text and anchor elements
 
-- [ ] check that search works
+  Search bar
+
+- [x] Make dropdown menu same width as search bar for desktop...need to figure out width change with viewport width change of input (calc. empirically with 5 viewport width sizes...)
+
+- [ ] Make sure search disappears when appropriate - when incorrect search (e.g. dfsfsdfsdf) make ul disapear. make search input type "search" and make sure body opacity = 1 when x clicked (need to target it and make a JS event)
+
+- [x] adjust brand image size for ipad and mobile (make it look good when on top of page). 
+
+- [x] decr. index.html filters padding when mobile screen size
 
 - [ ] fix Chinese language icon - edit it...make it unique
 
-- [ ] make javascript files only load for the pages they are needed for? e.g. only add gallery-filter.js to index.njk?
+- [x] make javascript files only load for the pages they are needed for? e.g. only add gallery-filter.js to index.njk?
 
-- [ ] layout when page loaded... adjust brand image size?
+- [x] layout when page loaded... adjust brand image size?
 
-- [ ] prevent nav and footer from reloading after changing page...async js?
+- [x] nav border when tablet/ mobile.... check if still white
+
+- [ ] make nav stay in same pos on screen when clicking nav links --> tried ... did not work
+
+- [ ] make gallery filter have some animation or delay with filtering... as well as filter buttons and search list. animation between moving tabs? some delay or fade in
 
 - [ ] check HTML and CSS (w3 validator)
 
-- [ ] accessibility --> no JS fallback
+- [ ] accessibility --> no JS fallback hidden elements --> visable for screen readers? What does site look like with js disabled?
 
-- [ ] look at again - improve design? more white space?
+- [ ] look at again - improve design? more white space? check the design show youtube
 
 - [ ] Check that I met requirements of CS50 project (I can add links in a table... write README...)
 
 - [ ] After submitting, if it looks good... suggest a site update to Hans Breuer?  
+
+
+
+### Problems
+
+- Species search input - UL is hidden in Chrome but not Firefox
+
+<img src="C:\Users\m_d_c\AppData\Roaming\Typora\typora-user-images\image-20200229153427006.png" alt="image-20200229153427006" style="zoom:50%;" />![image-20200229153448580](C:\Users\m_d_c\AppData\Roaming\Typora\typora-user-images\image-20200229153448580.png)
+
+- scroll-sneak  (keeping scroll pos when nav page changed) works for Chrome but not Firefox.
 
 
 
@@ -172,6 +194,8 @@ You can then go to https://cs50.me/cs50w to view your current progress!
 
 
 
+
+
 ### What I learned
 
 - Nunjucks --> populating HTML with data (data.json). Decided not to use as the image cards vary alot... learn at a later stage when I am more comfortable with JavaScript
@@ -193,6 +217,8 @@ You can then go to https://cs50.me/cs50w to view your current progress!
     Should have been ```{% include "partials/_footer.njk" %}```
 
 - I made the index.html page thumbnails large images.... loads slowly... need to redo using small images...
+
+- Problem with search list being a flex-box container without me declaring it as such... I had a non-specific navbar ul = flex box set.... fixed by using > (only direct child ul of the nav bar element will become a flex box). The problem? I was not specific enough so it caused problems later...
 
 ### Future improvements
 

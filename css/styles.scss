@@ -12,6 +12,7 @@ $colors: (
 }
 
 $desktop: 1280px; // large screen
+$menu-button: 991px; // width when Bootstrap menu aria appears
 $tablet: 812px; // smaller sized screens --> decr size by about 1/2
 $mobile: 460px; // small sized screens
 
@@ -25,6 +26,12 @@ $carousel-xxsml: 400px;
 
 @mixin desktop {
     @media all and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin menu-button {
+    @media all and (max-width: #{$menu-button}) {
         @content;
     }
 }
@@ -84,13 +91,12 @@ $carousel-xxsml: 400px;
 }
 
 
-
 * {
     box-sizing: border-box;
   }
 
 body {
-    font-family:  Arial, Helvetica, sans-serif;
+    font-family:  Arial, Helvetica, sans-serif; 
 }
 
 .wrapper {
@@ -118,6 +124,10 @@ body {
     padding-right: 0;
     padding-top: 0px;
     border-bottom: rgba(255, 255, 255, 0.5) 0.5px solid;
+
+    @include mobile {
+        padding-bottom: 0;
+    }
 }
 
 // styling active page
@@ -139,6 +149,16 @@ body.links .nav-links a {
     font-weight: 700;
     padding-top: 30px;
     padding-bottom: 30px;
+    margin-right: 0;
+
+    @include tablet {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    @include mobile {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 .navbar-items-container {
@@ -149,31 +169,33 @@ body.links .nav-links a {
 
 .navbar img {
     height: auto;
-    width: 300px;
+    width: 200px;
     border-radius: 5px;
 
     @include tablet {
-        width: 150px;
+        width: 188px;
+    }
+    @include mobile {
+        width: 130px;
     }
 }
 
 .navbar-nav {
-    flex: 1.6;
+    flex: 1.62;
 }
 
-#navbarToggler ul li {
+#navbarToggler ul > li {  
     padding: 0 3px;
 }
 
-#navbarToggler ul  {
-    display: flex;
+#navbarToggler > ul {  /* made more specific with > so that it did not make search list ul a flex-box  */
+    display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
     @include mobile {
         justify-content: center;
-        padding-bottom: 20px;
     }
   }
 
@@ -208,15 +230,15 @@ body.links .nav-links a {
 }
 
 
-
 .dropdown-menu.show {
     width: 160px;
   }
 
-
 .nav-link {
     margin-left: 5px;
     margin-right: 5px;
+    // padding-left: 0;
+    // padding-right: 0;
     color: rgba(255, 255, 255, 0.95);
 }
 
@@ -241,26 +263,111 @@ body.links .nav-links a {
     }   
 }
 
-.my-form input {
-    line-height: 38px;
-    flex: 1;
+// .my-form input {
+//     line-height: 38px;
+//     flex: 1;
 
-    @include tablet {
-        padding-top: 0;
-        padding-bottom: 0;
+//     @include tablet {
+//         padding-top: 0;
+//         padding-bottom: 0;
+//     }
+// }
+
+
+.search-input-container {
+        flex: 1;
+        display: flex;
+        // flex-direction: column;
+    
+        @include tablet {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
-}
+    
 
 button.my-btn {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     margin-left: 10px;
+    border-width: 2px;
 
     @include tablet {
         font-size: 16px;
         padding-top: 7px;
         padding-bottom: 7px;
     }
+}
+
+
+
+//   ...................... Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp ............
+  
+#searchInput {
+    line-height: 38px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 13px;
+    font-size: 18px;
+
+    @include tablet {
+        font-size: 16px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}  
+
+#searchUL {
+    /* Remove default list styling */
+    position: absolute;
+    z-index: 1;
+    list-style-type: none;
+    flex: 1;
+    width: calc(38.17% - 120.813px); /* found empirically using a linear equation */
+    justify-self: stretch;
+    width: i;
+    padding: 0;
+    margin-top: 53.2px;
+    display: none;
+    max-height: 392px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    background-color: color(off-white);
+
+    @include menu-button {
+        width: calc(100% - 139.349px); 
+    }
+    @include tablet {
+        width: calc(100% - 126.7px); 
+        max-height: 303px;
+    }
+  }
+  
+  #searchUL li a {
+    border: 1px solid #ddd; 
+    margin-top: -1px;
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 6px 13px; 
+    text-align: left;
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; 
+    color: black; 
+    display: block; /* Make it into a block element to fill the whole list */
+
+    @include tablet {
+        font-size: 16px;
+    }
+}
+  
+#searchUL li a:hover {
+    background-color: #eee; /* Add a hover effect to all links */
+}
+
+//   ...................... Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp ............
+
+main {
+    transition: all 1s;  /* for slowly decr opacity of main when text in search bar */
+    min-height: 110vh; /* when filtering gallery (index.html)  when mildly venomous clicked (only 3 results)... prevent footer from showing  */
 }
 
 footer {
@@ -491,6 +598,11 @@ footer img {
 
 .gallery-filter {
     margin: 1em;
+
+    @include mobile {
+        margin: 4px;
+        padding: 5px 10px;
+    }
 }
 
 .gallery-filter:hover {
@@ -938,11 +1050,6 @@ footer img {
     @include tablet {
         width: 200px;
     }
-}
-
-.book-img:hover {
-    transform: scale(1.05);
-    transition: 0.7s ease-in;
 }
 
 .book-text-1 {

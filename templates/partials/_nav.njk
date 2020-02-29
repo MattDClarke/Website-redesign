@@ -7,7 +7,7 @@
             <span class="">☰</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav mt-2 mt-lg-0">
+            <ul  id="navLinks" class="navbar-nav mt-2 mt-lg-0">
                 <li class="nav-item nav-home">
                     <a class="nav-link" href="/index.html"><i class="fas fa-home fa-2x"></i></br>Home</a>
                 </li>
@@ -30,9 +30,17 @@
                     <a class="nav-link" href="#"><i class="fas fa-language fa-2x"></i></br>Chinese</a>
                 </li>
             </ul>
-            <form class="my-form form-inline my-2 my-lg-0">
+            <form id="nav-search-form" class="my-form form-inline my-2 my-lg-0">
                 <div class="my-form-spacer"></div>
-                <input class="form-control mr-sm-2" type="search">
+                {# <input id="searchInput" class="form-control mr-sm-2" type="input" placeholder="Search for a species"> #}
+                <div class="search-input-container">
+                    <input id="searchInput" type="search" placeholder="Search for a species">
+                    <ul id="searchUL"> 
+                    {% for name in names %}
+                        <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
+                    {% endfor %}
+                    <ul>
+                </div>
                 <button class="my-btn btn btn-secondary btn-lg my-2 my-sm-0" type="submit">Search</button>
             </form>        
         </div>
