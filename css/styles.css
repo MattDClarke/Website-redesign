@@ -629,6 +629,8 @@ footer img {
 }
 
 .gallery-filter:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   background-color: #ffe600;
 }
 

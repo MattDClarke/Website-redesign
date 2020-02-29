@@ -237,8 +237,6 @@ body.links .nav-links a {
 .nav-link {
     margin-left: 5px;
     margin-right: 5px;
-    // padding-left: 0;
-    // padding-right: 0;
     color: rgba(255, 255, 255, 0.95);
 }
 
@@ -262,16 +260,6 @@ body.links .nav-links a {
         font-size: 20px;
     }   
 }
-
-// .my-form input {
-//     line-height: 38px;
-//     flex: 1;
-
-//     @include tablet {
-//         padding-top: 0;
-//         padding-bottom: 0;
-//     }
-// }
 
 
 .search-input-container {
@@ -606,6 +594,7 @@ footer img {
 }
 
 .gallery-filter:hover {
+    transition: all 0.5s;
     background-color: color(yellow)
 ;} 
 
@@ -662,7 +651,6 @@ footer img {
     flex: 1;
     padding: 10px 30px;
 }
-
 
 
 .site-link {

@@ -116,9 +116,11 @@
 
 - [x] nav border when tablet/ mobile.... check if still white
 
-- [ ] make nav stay in same pos on screen when clicking nav links --> tried ... did not work
+- [x] make nav stay in same pos on screen when clicking nav links --> tried ... did not work
 
-- [ ] make gallery filter have some animation or delay with filtering... as well as filter buttons and search list. animation between moving tabs? some delay or fade in
+- [ ] make gallery filter have some animation or delay with filtering... as well as fsearch list. animation between moving tabs on nav? some delay or fade in
+
+- [ ] carousels -- too big?
 
 - [ ] check HTML and CSS (w3 validator)
 
