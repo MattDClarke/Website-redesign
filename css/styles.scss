@@ -307,7 +307,6 @@ button.my-btn {
     flex: 1;
     width: calc(38.17% - 12px); /* found empirically using a linear equation */
     justify-self: stretch;
-    width: i;
     padding: 0;
     margin-top: 52.2px;
     display: none;
@@ -554,7 +553,6 @@ footer img {
 
 .gallery-intro {
     text-align: center;
-    font-size: rgba(255, 255, 255, 0.9);
     font-size: 30px;
     letter-spacing: 3px;
     margin: 0px 20px 0px 20px;
