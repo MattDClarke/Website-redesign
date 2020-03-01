@@ -1,4 +1,4 @@
-
+.text-box
 
 # CS50 Web Programming - Project 0
 
@@ -118,11 +118,13 @@
 
 - [x] make nav stay in same pos on screen when clicking nav links --> tried ... did not work
 
-- [ ] make gallery filter have some animation or delay with filtering... as well as fsearch list. animation between moving tabs on nav? some delay or fade in
+- [x] watch <https://www.youtube.com/watch?v=y_MTsIQuNEo&t=1171s> add gradient and box shadow to .text-box to make it look more modern 
 
-- [ ] carousels -- too big?
+- [x] carousels -- too big? maybe make it a modal like bing images (show series of images ? then click and show gallery slide show in modal?)
 
 - [ ] check HTML and CSS (w3 validator)
+
+- [ ] add to github pages.... then post to fcc for feedback
 
 - [ ] accessibility --> no JS fallback hidden elements --> visable for screen readers? What does site look like with js disabled?
 

@@ -65,29 +65,21 @@ body.links .nav-links a {
 
 .navbar-brand {
   font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-right: 0;
-}
-
-@media all and (max-width: 812px) {
-  .navbar-brand {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-}
-
-@media all and (max-width: 460px) {
-  .navbar-brand {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
 }
 
 .navbar-items-container {
   padding-top: 10px;
   text-align: center;
   width: 100%;
+}
+
+@media all and (max-width: 460px) {
+  .navbar-items-container {
+    padding-top: 5px;
+  }
 }
 
 .navbar img {
@@ -265,13 +257,13 @@ button.my-btn {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  width: calc(38.17% - 120.813px);
+  width: calc(38.17% - 12px);
   /* found empirically using a linear equation */
   -ms-grid-column-align: stretch;
       justify-self: stretch;
   width: i;
   padding: 0;
-  margin-top: 53.2px;
+  margin-top: 52.2px;
   display: none;
   max-height: 392px;
   overflow-y: scroll;
@@ -281,14 +273,14 @@ button.my-btn {
 
 @media all and (max-width: 991px) {
   #searchUL {
-    width: calc(100% - 139.349px);
+    width: calc(100% - 30px);
   }
 }
 
 @media all and (max-width: 812px) {
   #searchUL {
-    width: calc(100% - 126.7px);
     max-height: 303px;
+    margin-top: 42.2px;
   }
 }
 
@@ -390,8 +382,8 @@ footer img {
   display: none;
   border-radius: 5px;
   background-color: #d8d8d8;
-  -webkit-box-shadow: 0 0 4px #0f0f0f;
-          box-shadow: 0 0 4px #0f0f0f;
+  -webkit-box-shadow: 5px 7px 6px black;
+          box-shadow: 5px 7px 6px black;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   max-height: 350px;
@@ -589,13 +581,20 @@ footer img {
   font-size: rgba(255, 255, 255, 0.9);
   font-size: 30px;
   letter-spacing: 3px;
-  margin: 10px;
+  margin: 0px 20px 0px 20px;
   color: white;
 }
 
 @media all and (max-width: 812px) {
   .gallery-intro {
     font-size: 15px;
+    margin-top: 50px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .gallery-intro {
+    margin-top: 10px;
   }
 }
 
@@ -657,9 +656,9 @@ footer img {
 .text-box, .text-box--species, .text-box--species-media {
   /* SASS inheritance */
   background-color: #d8d8d8;
-  -webkit-box-shadow: 0 0 4px #0f0f0f;
-          box-shadow: 0 0 4px #0f0f0f;
-  border-radius: 5px;
+  -webkit-box-shadow: 10px 14px 12px black;
+          box-shadow: 10px 14px 12px black;
+  border-radius: 30px;
   font-size: 20px;
   margin-top: 0;
   max-width: 1200px;
@@ -674,6 +673,7 @@ footer img {
 @media all and (max-width: 460px) {
   .text-box, .text-box--species, .text-box--species-media {
     font-size: 14px;
+    border-radius: 20px;
   }
 }
 
@@ -688,6 +688,12 @@ footer img {
   padding: 30px;
 }
 
+@media all and (max-width: 812px) {
+  .text-box {
+    padding: 20px;
+  }
+}
+
 .text-box--species {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -699,7 +705,17 @@ footer img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 10px 30px;
+  padding: 0 10px 30px 30px;
+  border-radius: 0 0 30px 30px;
+  margin-top: -5px;
+  /* make it sit right above carousel nav without space */
+}
+
+@media all and (max-width: 460px) {
+  .text-box--species-media {
+    font-size: 14px;
+    border-radius: 0 0 20px 20px;
+  }
 }
 
 .site-link {
@@ -870,7 +886,7 @@ footer img {
 }
 
 .carousel--tall {
-  height: 600px;
+  height: 550px;
 }
 
 @media all and (max-width: 1000px) {
@@ -979,7 +995,7 @@ footer img {
 }
 
 .carousel__image--tall {
-  height: 600px;
+  height: 550px;
 }
 
 @media all and (max-width: 1000px) {
@@ -1033,7 +1049,15 @@ footer img {
   height: 100%;
   position: relative;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 30px 30px 0 0;
+  -webkit-box-shadow: 10px -6px 12px black;
+          box-shadow: 10px -6px 12px black;
+}
+
+@media all and (max-width: 460px) {
+  .carousel__track-container {
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .carousel__track {
@@ -1139,16 +1163,32 @@ footer img {
   outline: none;
 }
 
-.carousel__nav {
+.carousel__nav--school-talks, .carousel__nav--species {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 5px;
   padding: 10px 0;
   background-color: #d8d8d8;
+}
+
+.carousel__nav--school-talks {
+  border-radius: 0 0 30px 30px;
+  -webkit-box-shadow: 10px 14px 12px black;
+          box-shadow: 10px 14px 12px black;
+}
+
+@media all and (max-width: 460px) {
+  .carousel__nav--school-talks {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.carousel__nav--species {
+  -webkit-box-shadow: 10px -12px 12px black;
+          box-shadow: 10px -12px 12px black;
 }
 
 .carousel__indicator {
@@ -1162,7 +1202,7 @@ footer img {
 }
 
 .carousel__indicator.current-slide {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .text-box--book {
@@ -1190,8 +1230,8 @@ footer img {
   width: 280px;
   height: auto;
   border-radius: 5px;
-  -webkit-box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.7);
-          box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
 }
 
 @media all and (max-width: 812px) {

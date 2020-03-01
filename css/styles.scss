@@ -147,24 +147,19 @@ body.links .nav-links a {
 }
 .navbar-brand {
     font-weight: 700;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-right: 0;
-
-    @include tablet {
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-    @include mobile {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
 }
 
 .navbar-items-container {
     padding-top: 10px;
     text-align: center;
     width: 100%;
+
+    @include mobile {
+        padding-top: 5px;
+    }
 }
 
 .navbar img {
@@ -261,18 +256,17 @@ body.links .nav-links a {
     }   
 }
 
-
 .search-input-container {
-        flex: 1;
-        display: flex;
-        // flex-direction: column;
-    
-        @include tablet {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+    flex: 1;
+    display: flex;
+    // flex-direction: column;
+
+    @include tablet {
+        padding-top: 0;
+        padding-bottom: 0;
     }
-    
+}
+
 
 button.my-btn {
     padding-top: 9px;
@@ -311,11 +305,11 @@ button.my-btn {
     z-index: 1;
     list-style-type: none;
     flex: 1;
-    width: calc(38.17% - 120.813px); /* found empirically using a linear equation */
+    width: calc(38.17% - 12px); /* found empirically using a linear equation */
     justify-self: stretch;
     width: i;
     padding: 0;
-    margin-top: 53.2px;
+    margin-top: 52.2px;
     display: none;
     max-height: 392px;
     overflow-y: scroll;
@@ -323,11 +317,12 @@ button.my-btn {
     background-color: color(off-white);
 
     @include menu-button {
-        width: calc(100% - 139.349px); 
+        width: calc(100% - 30px); 
     }
     @include tablet {
-        width: calc(100% - 126.7px); 
+        // width: calc(100% - 126.7px); 
         max-height: 303px;
+        margin-top: 42.2px;
     }
   }
   
@@ -408,7 +403,7 @@ footer img {
     display: none; // hide images for filtering (show all called when page loaded (in JS file)
     border-radius: 5px;
     background-color: color(off-white);
-    box-shadow: 0 0 4px  rgb(15, 15, 15);
+    box-shadow: 5px 7px 6px rgba(0, 0, 0, 1);
     transition: all 0.3s ease 0s;
     max-height: 350px;
 }
@@ -474,7 +469,6 @@ footer img {
 .img-adjust-15 {
     object-position: 100%;  
 }
-
 
 .grid-card-text {
     padding-top: 10px;
@@ -563,11 +557,15 @@ footer img {
     font-size: rgba(255, 255, 255, 0.9);
     font-size: 30px;
     letter-spacing: 3px;
-    margin: 10px;
+    margin: 0px 20px 0px 20px;
     color: color(white);
 
     @include tablet {
         font-size: 15px;
+        margin-top: 50px;
+    }
+    @include mobile {
+        margin-top: 10px;
     }
 }  
 
@@ -616,8 +614,8 @@ footer img {
 
 %text-box-template {  /* SASS inheritance */
     background-color: color(off-white);
-    box-shadow: 0 0 4px  rgb(15, 15, 15);
-    border-radius: 5px;
+    box-shadow: 10px 14px 12px rgba(0, 0, 0, 1);
+    border-radius: 30px;
     font-size: 20px;
     margin-top: 0;
     max-width: 1200px;
@@ -627,6 +625,7 @@ footer img {
     }
     @include mobile {
         font-size: 14px;
+        border-radius: 20px;
     }
 }
 
@@ -637,6 +636,10 @@ footer img {
     margin-right: 5%;
     text-align: justify;
     padding: 30px; 
+
+    @include tablet {
+        padding: 20px;
+    }
 }
 
 .text-box--species {
@@ -649,7 +652,14 @@ footer img {
 .text-box--species-media {
     @extend %text-box-template;
     flex: 1;
-    padding: 10px 30px;
+    padding: 0 10px 30px 30px;
+    border-radius: 0 0 30px 30px;
+    margin-top: -5px;  /* make it sit right above carousel nav without space */
+
+    @include mobile {
+        font-size: 14px;
+        border-radius: 0 0 20px 20px;
+    }
 }
 
 
@@ -677,7 +687,6 @@ footer img {
 .about-box p {
     margin-bottom: 0;
 }
-
 
 %header-template {
     color: color(white);
@@ -792,7 +801,7 @@ footer img {
 
 .carousel--tall {
     @extend %carousel-template;
-    height: 600px;
+    height: 550px;
 
 
     @include carousel-xxlg {
@@ -873,7 +882,7 @@ footer img {
 
 .carousel__image--tall {
     @extend %carousel__image-template;
-    height: 600px;
+    height: 550px;
 
     @include carousel-xxlg {
         height: 540px;
@@ -912,7 +921,12 @@ footer img {
     height: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 10px -6px 12px rgba(0, 0, 0, 1);
+
+    @include mobile {
+        border-radius: 20px 20px 0 0;
+    }
 }
 
 .carousel__track {
@@ -989,13 +1003,28 @@ footer img {
     outline: none;
 }
 
-.carousel__nav {
+%carousel__nav--template {
     display: flex;
     justify-content: center;
-    border-radius: 5px;
     padding: 10px 0;
     background-color: color(off-white);
 }
+
+.carousel__nav--school-talks {
+    @extend %carousel__nav--template;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 10px 14px 12px rgba(0, 0, 0, 1);
+
+    @include mobile {
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+.carousel__nav--species {
+    @extend %carousel__nav--template;
+    box-shadow: 10px -12px 12px rgba(0, 0, 0, 1);
+}
+
 
 .carousel__indicator {
     border: 0;
@@ -1008,7 +1037,7 @@ footer img {
 }
 
 .carousel__indicator.current-slide {
-    background: rgba(0,0,0,.75);
+    background: rgba(0,0,0,.8);
 }
 
 
@@ -1033,7 +1062,8 @@ footer img {
     width: 280px;
     height: auto;
     border-radius: 5px;
-    box-shadow: -4px 4px 4px  rgba(0,0,0,0.7);
+    box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
+
 
     @include tablet {
         width: 200px;
