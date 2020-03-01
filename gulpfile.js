@@ -10,7 +10,7 @@ gulp.task('nunjucks', function() {
 		path: ['./templates']
 	  }))
 	// output files in folder
-	.pipe(gulp.dest('./'))
+	.pipe(gulp.dest('./dist'))
   });
 
 var data = require('gulp-data');
@@ -23,7 +23,7 @@ return gulp.src('./pages/**/*.+(html|njk)')
 	.pipe(nunjucksRender({
 	path: ['./templates']
 	}))
-	.pipe(gulp.dest('./'))
+	.pipe(gulp.dest('./dist'))
 });
 
 const newLocal = 'nunjucks';
