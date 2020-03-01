@@ -1,9 +1,10 @@
 {
   "name": "css-grid",
   "version": "1.0.0",
-  "description": "",
+  "description": "- CS50 Web Programming with Python and JavaScript",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "start": "run-script-os",
     "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
     "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
@@ -19,7 +20,17 @@
     "run-script-os": "^1.0.3"
   },
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "nunjucks": "^3.2.0",
     "pug": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattDClarke/snakes-of-taiwan.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/MattDClarke/snakes-of-taiwan/issues"
+  },
+  "homepage": "https://MattDClarke.github.io/snakes-of-taiwan"
 }
