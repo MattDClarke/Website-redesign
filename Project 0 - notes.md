@@ -102,7 +102,7 @@
 
 - [x] Make dropdown menu same width as search bar for desktop...need to figure out width change with viewport width change of input (calc. empirically with 5 viewport width sizes...)
 
-- [ ] Make sure search disappears when appropriate - when incorrect search (e.g. dfsfsdfsdf) make ul disapear. make search input type "search" and make sure body opacity = 1 when x clicked (need to target it and make a JS event)
+- [x] Make sure search disappears when appropriate - when incorrect search (e.g. dfsfsdfsdf) make ul disapear. make search input type "search" and make sure body opacity = 1 when x clicked (need to target it and make a JS event)
 
 - [x] adjust brand image size for ipad and mobile (make it look good when on top of page). 
 
@@ -122,9 +122,15 @@
 
 - [x] carousels -- too big? maybe make it a modal like bing images (show series of images ? then click and show gallery slide show in modal?)
 
-- [ ] check HTML and CSS (w3 validator)
+- [x] check HTML and CSS (w3 validator)
 
-- [ ] add to github pages.... then post to fcc for feedback
+- [x] add to github pages.... then post to fcc for feedback
+
+- [ ] add mobile swipe function for images
+
+- [ ] email Hans Breuer
+
+- [ ] add project to fcc forum... ask for critique
 
 - [ ] accessibility --> no JS fallback hidden elements --> visable for screen readers? What does site look like with js disabled?
 
