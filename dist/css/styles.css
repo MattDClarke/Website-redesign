@@ -71,14 +71,14 @@ body.links .nav-links a {
 }
 
 .navbar-items-container {
-  padding-top: 10px;
   text-align: center;
   width: 100%;
+  padding-top: 8px;
 }
 
 @media all and (max-width: 460px) {
   .navbar-items-container {
-    padding-top: 5px;
+    padding-top: 1px;
   }
 }
 
@@ -150,10 +150,8 @@ body.links .nav-links a {
   }
 }
 
-.navbar-toggler:hover {
-  background-color: #6c757d93;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+.navbar-toggler span {
+  color: white;
 }
 
 .navbar-toggler:focus {
@@ -247,6 +245,10 @@ button.my-btn {
     padding-top: 0;
     padding-bottom: 0;
   }
+}
+
+#searchInput:focus {
+  outline: none;
 }
 
 #searchUL {

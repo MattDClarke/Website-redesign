@@ -68,10 +68,6 @@
 
   school talks
 
-  
-
-  
-
 - [x] make images same size
 
 - [x] make carosel
@@ -126,7 +122,11 @@
 
 - [x] add to github pages.... then post to fcc for feedback
 
-- [ ] add mobile swipe function for images
+- [x] check GitHub page --> 2nd image in image grid updated 2nd and 3rd image still the same?
+
+- [ ] fix mobile errors (padding, orange highlighting)
+
+- [ ] add mobile swipe function for image --> slider.js
 
 - [ ] email Hans Breuer
 

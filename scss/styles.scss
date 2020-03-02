@@ -153,12 +153,12 @@ body.links .nav-links a {
 }
 
 .navbar-items-container {
-    padding-top: 10px;
     text-align: center;
     width: 100%;
+    padding-top: 8px;
 
     @include mobile {
-        padding-top: 5px;
+        padding-top: 1px;
     }
 }
 
@@ -208,9 +208,8 @@ body.links .nav-links a {
     }
 }
 
-.navbar-toggler:hover {
-    background-color: #6c757d93;
-    transition: all 1s;
+.navbar-toggler span{
+    color: white;
 }
 
 .navbar-toggler:focus {
@@ -298,6 +297,10 @@ button.my-btn {
         padding-bottom: 0;
     }
 }  
+
+#searchInput:focus {
+    outline: none;
+}
 
 #searchUL {
     /* Remove default list styling */
@@ -591,11 +594,11 @@ footer img {
 
 .gallery-filter:hover {
     transition: all 0.5s;
-    background-color: color(yellow)
-;} 
+    background-color: color(yellow);
+} 
 
 .gallery-filter-active {
-    background-color: color(yellow);
+    background-color: color(yellow);  
 }
 
 .gallery-filter:focus {
