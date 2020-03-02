@@ -195,16 +195,20 @@ body.links .nav-links a {
   }
 
   .navbar-toggler {
-    background-color: color(black);
-    font-size: 50px;
+    //background-color: color(black);
+    font-size: 70px;
     padding: 20px 20px 25px;
     color: color(white);
-    line-height: 20px;
+    line-height: 10px;
 
     @include tablet {
-        font-size: 33px;
+        font-size: 60px;
         padding: 13px 13px 17px 13px;
         line-height: 13px;
+    }
+
+    @include mobile {
+        font-size: 40px;
     }
 }
 

@@ -135,18 +135,23 @@ body.links .nav-links a {
 }
 
 .navbar-toggler {
-  background-color: black;
-  font-size: 50px;
+  font-size: 70px;
   padding: 20px 20px 25px;
   color: white;
-  line-height: 20px;
+  line-height: 10px;
 }
 
 @media all and (max-width: 812px) {
   .navbar-toggler {
-    font-size: 33px;
+    font-size: 60px;
     padding: 13px 13px 17px 13px;
     line-height: 13px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .navbar-toggler {
+    font-size: 40px;
   }
 }
 
