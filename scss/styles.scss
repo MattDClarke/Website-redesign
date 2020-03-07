@@ -12,6 +12,7 @@ $colors: (
 }
 
 $desktop: 1280px; // large screen
+$filter-wrap: 1200px; // change margin when filters wrap
 $ipad: 1023px; // ipad wide view
 $menu-button: 991px; // width when Bootstrap menu aria appears
 $tablet: 812px; // smaller sized screens --> decr size by about 1/2
@@ -27,6 +28,12 @@ $carousel-xxsml: 400px;
 
 @mixin desktop {
     @media all and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin filter-wrap {
+    @media all and (max-width: #{$filter-wrap}) {
         @content;
     }
 }
@@ -377,6 +384,7 @@ footer {
     color: color(white);
     box-shadow: 0 0 1px  rgba(255,255,255,0.1);
     border-top: rgba(255, 255, 255, 0.5) 0.5px solid;
+    margin-top: 60px;
 }
 
 .footer-img-container {
@@ -597,6 +605,10 @@ footer img {
 .gallery-filter {
     margin: 1em;
 
+    @include filter-wrap {
+        margin: 5px;
+    }
+
     @include mobile {
         margin: 4px;
         padding: 5px 10px;
@@ -812,295 +824,6 @@ footer img {
     }
 }
 
-
-// ................................................  school-talks.html  ........................................................
-%carousel-template {
-    position: relative;
-    width: 90%;
-    margin-top: 40px;
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-.carousel--short {
-    @extend %carousel-template;
-    height: 500px;
-
-    @include carousel-xxlg {
-        height: 450px;
-    }
-
-    @include carousel-xlg {
-        height: 400px;
-    }
-
-    @include carousel-lg {
-        height: 350px;
-    }
-
-    @include carousel-md {
-        height: 300px;
-    }
-
-    @include carousel-sml {
-        height: 250px;
-    }
-
-    @include carousel-xsml {
-        height: 200px;
-    }
-
-    @include mobile {
-        margin-top: 20px;
-    }
-
-    @include carousel-xxsml {
-        height: 150px;
-    }
-}
-
-.carousel--tall {
-    @extend %carousel-template;
-    height: 550px;
-
-
-    @include carousel-xxlg {
-        height: 540px;
-    }
-
-    @include carousel-xlg {
-        height: 480px;
-    }
-
-    @include carousel-lg {
-        height: 420px;
-    }
-
-    @include carousel-md {
-        height: 360px;
-    }
-
-    @include carousel-sml {
-        height: 300px;
-    }
-
-    @include carousel-xsml {
-        height: 240px;
-    }
-
-    @include mobile {
-        margin-top: 20px;
-    }
-
-    @include carousel-xxsml {
-        height: 180px;
-    }
-}
-
-.carousel__slide {
-    height: auto;
-    width: 100%;
-}
-
-%carousel__image-template {
-    width: 100%;
-    object-fit: cover;
-}
-
-.carousel__image--short {
-    @extend %carousel__image-template;
-    height: 500px;
-
-    @include carousel-xxlg {
-        height: 450px;
-    }
-
-    @include carousel-xlg {
-        height: 400px;
-    }
-
-    @include carousel-lg {
-        height: 350px;
-    }
-
-    @include carousel-md {
-        height: 300px;
-    }
-
-    @include carousel-sml {
-        height: 250px;
-    }
-
-    @include carousel-xsml {
-        height: 200px;
-    }
-
-    @include carousel-xxsml {
-        height: 150px;
-    }
-}
-
-.carousel__image--tall {
-    @extend %carousel__image-template;
-    height: 550px;
-
-    @include carousel-xxlg {
-        height: 540px;
-    }
-
-    @include carousel-xlg {
-        height: 480px;
-    }
-
-    @include carousel-lg {
-        height: 420px;
-    }
-
-    @include carousel-md {
-        height: 360px;
-    }
-
-    @include carousel-sml {
-        height: 300px;
-    }
-
-    @include carousel-xsml {
-        height: 240px;
-    }
-
-    @include carousel-xxsml {
-        height: 180px;
-    }
-}
-
-.school-talks-img-6 {
-    object-position: 50% 5%;
-}
-
-.carousel__track-container {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 30px 30px 0 0;
-    box-shadow: 10px -6px 12px rgba(0, 0, 0, 1);
-
-    @include mobile {
-        border-radius: 20px 20px 0 0;
-    }
-}
-
-.carousel__track {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 500ms ease-in;
-}
-
-.carousel__slide {
-    position: absolute; /* stack images on top of each other */
-    top: 0;
-    bottom: 0;
-    height: 400px;
-    width: 100%;
-}
-
-.carousel__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-}
-
-.carousel__button img:hover, .carousel__nav button:hover {
-    transform: scale(1.2);
-    transition: all ease-in 0.2s;
-}
-
-.carousel__button--left {
-    left: -40px; /* position away from image */
-
-    @include carousel-lg {
-        left: -32px; 
-    }
-    @include carousel-sml {
-        left: -25px; 
-    }
-    @include carousel-xxsml {
-        left: -20px; 
-    }
-}
-
-.carousel__button--right {
-    right: -40px;
-
-    @include carousel-lg {
-        right: -32px; 
-    }
-    @include carousel-sml {
-        right: -25px; 
-    }
-    @include carousel-xxsml {
-        right: -20px; 
-    }
-}
-
-.carousel__button img {
-    width: 20px;
-
-    @include carousel-sml {
-        width: 15px; 
-    }
-    @include carousel-xxsml {
-        width: 10px; 
-    }
-}
-
-.carousel__button:focus, .carousel__indicator:focus {
-    outline: none;
-}
-
-%carousel__nav--template {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    background-color: color(off-white);
-}
-
-.carousel__nav--school-talks {
-    @extend %carousel__nav--template;
-    border-radius: 0 0 30px 30px;
-    box-shadow: 10px 14px 12px rgba(0, 0, 0, 1);
-
-    @include mobile {
-        border-radius: 0 0 20px 20px;
-    }
-}
-
-.carousel__nav--species {
-    @extend %carousel__nav--template;
-    box-shadow: 10px -12px 12px rgba(0, 0, 0, 1);
-}
-
-
-.carousel__indicator {
-    border: 0;
-    border-radius: 50px;
-    width: 15px;
-    height: 15px;
-    background: rgba(0,0,0,.3);
-    margin: 0 12px;
-    cursor: pointer;
-}
-
-.carousel__indicator.current-slide {
-    background: rgba(0,0,0,.8);
-}
-
-
 // ................................................  book.html  ........................................................
 .text-box--book {
     display: flex;
@@ -1218,7 +941,7 @@ th.table-header {
 
 // ..............................................  swiper gallery grid  ........................................................
 
-.species-box {
+.header-box {
     grid-area: head;
 }
 
@@ -1278,4 +1001,19 @@ th.table-header {
     @include tablet {
         font-size: 12.5px;
     }
+}
+
+// ......................................  swiper gallery -- school talks  .................................................
+
+#header--school-talks {
+    margin-top: 0;
+    text-align: left;
+    
+    @include ipad {
+        text-align: center;
+    }
+}
+
+.school-talks-text-container {
+    margin-top: 40px;
 }

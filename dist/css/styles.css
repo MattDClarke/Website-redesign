@@ -341,6 +341,7 @@ footer {
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
   border-top: rgba(255, 255, 255, 0.5) 0.5px solid;
+  margin-top: 60px;
 }
 
 .footer-img-container {
@@ -625,6 +626,12 @@ footer img {
   margin: 1em;
 }
 
+@media all and (max-width: 1200px) {
+  .gallery-filter {
+    margin: 5px;
+  }
+}
+
 @media all and (max-width: 460px) {
   .gallery-filter {
     margin: 4px;
@@ -890,386 +897,6 @@ footer img {
   }
 }
 
-.carousel--short, .carousel--tall {
-  position: relative;
-  width: 90%;
-  margin-top: 40px;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-.carousel--short {
-  height: 500px;
-}
-
-@media all and (max-width: 1000px) {
-  .carousel--short {
-    height: 450px;
-  }
-}
-
-@media all and (max-width: 880px) {
-  .carousel--short {
-    height: 400px;
-  }
-}
-
-@media all and (max-width: 800px) {
-  .carousel--short {
-    height: 350px;
-  }
-}
-
-@media all and (max-width: 700px) {
-  .carousel--short {
-    height: 300px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .carousel--short {
-    height: 250px;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .carousel--short {
-    height: 200px;
-  }
-}
-
-@media all and (max-width: 460px) {
-  .carousel--short {
-    margin-top: 20px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .carousel--short {
-    height: 150px;
-  }
-}
-
-.carousel--tall {
-  height: 550px;
-}
-
-@media all and (max-width: 1000px) {
-  .carousel--tall {
-    height: 540px;
-  }
-}
-
-@media all and (max-width: 880px) {
-  .carousel--tall {
-    height: 480px;
-  }
-}
-
-@media all and (max-width: 800px) {
-  .carousel--tall {
-    height: 420px;
-  }
-}
-
-@media all and (max-width: 700px) {
-  .carousel--tall {
-    height: 360px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .carousel--tall {
-    height: 300px;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .carousel--tall {
-    height: 240px;
-  }
-}
-
-@media all and (max-width: 460px) {
-  .carousel--tall {
-    margin-top: 20px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .carousel--tall {
-    height: 180px;
-  }
-}
-
-.carousel__slide {
-  height: auto;
-  width: 100%;
-}
-
-.carousel__image--short, .carousel__image--tall {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.carousel__image--short {
-  height: 500px;
-}
-
-@media all and (max-width: 1000px) {
-  .carousel__image--short {
-    height: 450px;
-  }
-}
-
-@media all and (max-width: 880px) {
-  .carousel__image--short {
-    height: 400px;
-  }
-}
-
-@media all and (max-width: 800px) {
-  .carousel__image--short {
-    height: 350px;
-  }
-}
-
-@media all and (max-width: 700px) {
-  .carousel__image--short {
-    height: 300px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .carousel__image--short {
-    height: 250px;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .carousel__image--short {
-    height: 200px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .carousel__image--short {
-    height: 150px;
-  }
-}
-
-.carousel__image--tall {
-  height: 550px;
-}
-
-@media all and (max-width: 1000px) {
-  .carousel__image--tall {
-    height: 540px;
-  }
-}
-
-@media all and (max-width: 880px) {
-  .carousel__image--tall {
-    height: 480px;
-  }
-}
-
-@media all and (max-width: 800px) {
-  .carousel__image--tall {
-    height: 420px;
-  }
-}
-
-@media all and (max-width: 700px) {
-  .carousel__image--tall {
-    height: 360px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .carousel__image--tall {
-    height: 300px;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .carousel__image--tall {
-    height: 240px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .carousel__image--tall {
-    height: 180px;
-  }
-}
-
-.school-talks-img-6 {
-  -o-object-position: 50% 5%;
-     object-position: 50% 5%;
-}
-
-.carousel__track-container {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 30px 30px 0 0;
-  -webkit-box-shadow: 10px -6px 12px black;
-          box-shadow: 10px -6px 12px black;
-}
-
-@media all and (max-width: 460px) {
-  .carousel__track-container {
-    border-radius: 20px 20px 0 0;
-  }
-}
-
-.carousel__track {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  -webkit-transition: -webkit-transform 500ms ease-in;
-  transition: -webkit-transform 500ms ease-in;
-  transition: transform 500ms ease-in;
-  transition: transform 500ms ease-in, -webkit-transform 500ms ease-in;
-}
-
-.carousel__slide {
-  position: absolute;
-  /* stack images on top of each other */
-  top: 0;
-  bottom: 0;
-  height: 400px;
-  width: 100%;
-}
-
-.carousel__button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.carousel__button img:hover, .carousel__nav button:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all ease-in 0.2s;
-  transition: all ease-in 0.2s;
-}
-
-.carousel__button--left {
-  left: -40px;
-  /* position away from image */
-}
-
-@media all and (max-width: 800px) {
-  .carousel__button--left {
-    left: -32px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .carousel__button--left {
-    left: -25px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .carousel__button--left {
-    left: -20px;
-  }
-}
-
-.carousel__button--right {
-  right: -40px;
-}
-
-@media all and (max-width: 800px) {
-  .carousel__button--right {
-    right: -32px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .carousel__button--right {
-    right: -25px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .carousel__button--right {
-    right: -20px;
-  }
-}
-
-.carousel__button img {
-  width: 20px;
-}
-
-@media all and (max-width: 600px) {
-  .carousel__button img {
-    width: 15px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .carousel__button img {
-    width: 10px;
-  }
-}
-
-.carousel__button:focus, .carousel__indicator:focus {
-  outline: none;
-}
-
-.carousel__nav--school-talks, .carousel__nav--species {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px 0;
-  background-color: #d8d8d8;
-}
-
-.carousel__nav--school-talks {
-  border-radius: 0 0 30px 30px;
-  -webkit-box-shadow: 10px 14px 12px black;
-          box-shadow: 10px 14px 12px black;
-}
-
-@media all and (max-width: 460px) {
-  .carousel__nav--school-talks {
-    border-radius: 0 0 20px 20px;
-  }
-}
-
-.carousel__nav--species {
-  -webkit-box-shadow: 10px -12px 12px black;
-          box-shadow: 10px -12px 12px black;
-}
-
-.carousel__indicator {
-  border: 0;
-  border-radius: 50px;
-  width: 15px;
-  height: 15px;
-  background: rgba(0, 0, 0, 0.3);
-  margin: 0 12px;
-  cursor: pointer;
-}
-
-.carousel__indicator.current-slide {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 .text-box--book {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1418,7 +1045,7 @@ th.table-header {
   }
 }
 
-.species-box {
+.header-box {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
@@ -1502,5 +1129,20 @@ th.table-header {
   .swiper-gallery-info {
     font-size: 12.5px;
   }
+}
+
+#header--school-talks {
+  margin-top: 0;
+  text-align: left;
+}
+
+@media all and (max-width: 1023px) {
+  #header--school-talks {
+    text-align: center;
+  }
+}
+
+.school-talks-text-container {
+  margin-top: 40px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -10,7 +10,7 @@
   padding-bottom: 15px;
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   .swiper-container {
     width: 90vw;
   }
@@ -25,7 +25,7 @@
   /* move next and prev buttons off img */
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   .swiper-slide img {
     border: 16px solid #d8d8d8;
   }
@@ -44,7 +44,7 @@
   padding: 10px;
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   .swiper-pagination {
     padding: 4px;
   }
@@ -84,7 +84,7 @@
   background-color: black;
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   .swiper-pagination .swiper-pagination-bullet-active {
     height: 12px;
     width: 12px;
@@ -187,7 +187,7 @@
   color: white;
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   #swiper-button-next--modal {
     -webkit-transform: translateX(20%);
             transform: translateX(20%);
@@ -200,14 +200,14 @@
   color: white;
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   #swiper-button-prev--modal {
     -webkit-transform: translateX(-20%);
             transform: translateX(-20%);
   }
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   .swiper-button-next:after {
     font-size: 20px;
     -webkit-transform: translateX(60%);
@@ -215,7 +215,7 @@
   }
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 558px) {
   .swiper-button-prev:after {
     font-size: 20px;
     -webkit-transform: translateX(-60%);

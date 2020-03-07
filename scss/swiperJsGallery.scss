@@ -10,7 +10,7 @@ $colors: (
 }
 
 
-$small-screen: 520px;  // for resizing img carousel ( ...)
+$small-screen: 558px;  // for resizing img carousel ( ...)
 
 @mixin small-screen {
     @media all and (max-width: #{$small-screen}) {
