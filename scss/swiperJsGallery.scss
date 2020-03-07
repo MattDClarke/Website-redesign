@@ -1,0 +1,209 @@
+$colors: (
+    black: black,
+    white: white,
+    off-white: #d8d8d8,
+    yellow: rgb(255, 230, 0),
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+
+$small-screen: 520px;  // for resizing img carousel ( ...)
+
+@mixin small-screen {
+    @media all and (max-width: #{$small-screen}) {
+        @content;
+    }
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+  
+  /* ................................................ swiper gallery .......................................................... */
+  
+.swiper-container {
+    width: 500px;
+    height: auto;
+    padding-bottom: 15px;
+
+@include small-screen {
+    width: 90vw;
+    }
+}
+  
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 30px solid color(off-white);  /* move next and prev buttons off img */ 
+
+@include small-screen {
+    border: 16px solid color(off-white);
+    }
+}
+  
+.swiper-slide img:hover {
+    cursor: pointer;
+}
+  
+.swiper-slide {
+    height: 360px;
+}
+  
+.swiper-pagination {
+    background-color: color(off-white);
+    padding: 10px;
+
+    @include small-screen {
+        padding: 4px;
+    }
+}
+  
+.swiper-button-prev {
+    position: absolute;
+    transform: translateX(-30%);
+    color: color(black);
+}
+  
+.swiper-button-prev:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+  
+.swiper-button-next {
+    position: absolute;
+    transform: translateX(30%);
+    color: color(black);
+    font-weight: 900;
+}
+  
+.swiper-button-next:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+  
+.swiper-pagination {
+    background-color: color(off-white);
+    // border-radius: 10px;
+}
+  
+/*active pagination*/
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: color(black); 
+
+    @include small-screen {
+        height: 12px;
+        width: 12px;
+    }
+}
+  
+/*other pagination*/
+.swiper-pagination .swiper-pagination-bullet {
+    height: 15px;
+    width: 15px;
+}
+
+.swiper-pagination .swiper-pagination-bullet:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.swiper-pagination .swiper-pagination-bullet:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+  
+/* ................................................ modal .......................................................... */
+.modal {
+    display:none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal-content {
+    background-color: rgb(0, 0, 0);
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    animation-name: modalOpen;
+    animation-duration: 1s;
+}
+
+.closeBtn {
+    position: absolute;  /* removed from normal flow of doc, positioned relative to its nearest ancestor (modal content)*/
+    z-index: 4;
+    color:color(white);
+    right: 10px;
+    font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus {
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalOpen {
+    from{opacity: 0}
+    to {opacity: 1}
+}
+
+/* ............................................. modal swiper gallery ....................................................... */
+/* used ids higher specificity to override gallery styles */
+
+#swiper-container--modal {
+    z-index:3;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    padding:0;
+    border:0;
+}
+
+#swiper-pagination--modal {
+    display:none; /* if pagination not included in modal... index.html pagination buttons dnt change (black for active slide)*/
+}
+  
+#swiper-button-next--modal {
+    transform:translateX(-40%);
+    color: color(white);
+
+    @include small-screen {
+        transform:translateX(20%);
+    }
+}
+
+#swiper-button-prev--modal {
+    transform:translateX(40%);
+    color: color(white);
+
+    @include small-screen {
+        transform:translateX(-20%);
+    }
+}
+
+
+.swiper-button-next:after {
+    @include small-screen {
+        font-size: 20px;
+        transform:translateX(60%);
+    }   
+}
+
+.swiper-button-prev:after {
+    @include small-screen {
+        font-size: 20px;
+        transform:translateX(-60%);
+    }
+
+}
+  

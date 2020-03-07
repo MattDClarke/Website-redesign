@@ -12,6 +12,7 @@ $colors: (
 }
 
 $desktop: 1280px; // large screen
+$ipad: 1023px; // ipad wide view
 $menu-button: 991px; // width when Bootstrap menu aria appears
 $tablet: 812px; // smaller sized screens --> decr size by about 1/2
 $mobile: 460px; // small sized screens
@@ -26,6 +27,12 @@ $carousel-xxsml: 400px;
 
 @mixin desktop {
     @media all and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media all and (max-width: #{$ipad}) {
         @content;
     }
 }
@@ -623,6 +630,7 @@ footer img {
     border-radius: 30px;
     font-size: 20px;
     margin-top: 0;
+    width: 90%;
     max-width: 1200px;
 
     @include tablet {
@@ -653,17 +661,31 @@ footer img {
     padding: 30px;
 }
 
-
 .text-box--species-media {
     @extend %text-box-template;
     flex: 1;
-    padding: 0 10px 30px 30px;
-    border-radius: 0 0 30px 30px;
-    margin-top: -5px;  /* make it sit right above carousel nav without space */
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-top: 40px;
 
     @include mobile {
         font-size: 14px;
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px;
+    }
+}
+
+.text-box--links {
+    @extend %text-box-template;
+    margin-bottom: 40px;
+    align-self: center; /* center about-box in viewport*/ 
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    padding: 30px; 
+
+    @include tablet {
+        padding: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -696,20 +718,29 @@ footer img {
 %header-template {
     color: color(white);
     letter-spacing: 3px;
-    text-align: center;
+
+    @include ipad {
+        text-align: center;
+    }
 }
+
 .header {
     @extend %header-template;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 35px;
 
     @include tablet {
-        font-size: 30px;
+        font-size: 26px;
+        margin-top: 40px;
     }
     @include mobile {
-        font-size: 20px;
+        font-size: 17.5px;
+        margin-top: 20px;
     }
 }
 
-.header--species {
+.header--name {
     @extend %header-template;
     font-size: 35px;
 
@@ -718,6 +749,22 @@ footer img {
     }
     @include mobile {
         font-size: 17.5px;
+    }
+}
+
+.header--species {
+    @extend %header-template;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    line-height: 1.5em;
+
+    @include tablet {
+        font-size: 30px;
+
+    }
+    @include mobile {
+        font-size: 20px;
+        
     }
 }
 
@@ -731,6 +778,10 @@ footer img {
     @include mobile {
         font-size: 12.5px;
     }
+}
+
+.header--status {
+    margin-top: 30px;
 }
 
 .about-header-credits {
@@ -1120,10 +1171,10 @@ th.table-header {
 }
 
 .text-box-container-info {
-    margin-top: 40px; 
+    margin-top: 10px; 
 
     @include tablet {
-        margin-top: 20px;
+        margin-top: 5px;
     }
 }
 
@@ -1158,4 +1209,70 @@ th.table-header {
         padding: 0;
     }
 
+}
+
+
+// ..............................................  swiper gallery grid  ........................................................
+
+.species-box {
+    grid-area: head;
+}
+
+.swiper-gallery {
+    grid-area: gallery;
+}
+
+.swiper-gallery-grid-container {
+    display: flex;
+    justify-content: center;   /* center grid on page */
+}
+
+.swiper-gallery-grid {
+    display: grid;
+    grid-template-columns: auto 520px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "head gallery"
+    "info gallery";
+    margin-top: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding: 0 30px;
+    max-width: 1200px;
+
+    @include ipad {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "head"
+        "gallery"
+        "info";
+        padding: 0;
+    }
+
+    @include tablet {
+        margin-top: 40px;
+    }
+
+    @include mobile {
+        margin-top: 20px;
+    }
+
+}
+
+.swiper-gallery-info {
+    grid-area: info;
+    align-self: end;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: color(white);
+
+    @include ipad {
+        text-align: center;
+    }
+
+    @include tablet {
+        font-size: 16px;
+    }
 }

@@ -4,46 +4,77 @@
     Amphiesma miyajimae - Maki's Keelback
 {% endblock %}
 {% block content %}
+    
+    <div class="swiper-gallery-grid-container">
+    <div class="swiper-gallery-grid">
+        <div class="species-box">
+            <h1 class="header--name">Maki's Keelback</h1>
+            <h2 class="header--species">AMPHIESMA MIYAJIMAE</h2>
+            <h3 class="header--status">Status: Protected (Cat.I)</h3>
+            <h4 class="header--danger">Non-venomous</h4>
+        </div>                      
+        <div class="swiper-gallery">
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <span class="closeBtn">&times;</span>
+                    <!-- Swiper modal -->
+                    <div id="swiper-container--modal" class="swiper-container--modal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="height:100vh;">
+                                <div class="swiper-zoom-container">
+                                <img class="swiper-lazy" style="object-fit: contain;border:0;" data-src="images-amphiesma-miyajimae/Amphiesma_miyajimae-1.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="height:100vh;">
+                                <div class="swiper-zoom-container">
+                                <img class="swiper-lazy" style="object-fit: contain;border:0;" data-src="images-amphiesma-miyajimae/Amphiesma_miyajimae-2.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="height:100vh;">
+                                <div class="swiper-zoom-container">
+                                <img class="swiper-lazy" style="object-fit: contain;border:0;" data-src="images-amphiesma-miyajimae/Amphiesma_miyajimae-3.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="height:100vh;">
+                                <div class="swiper-zoom-container">
+                                <img class="swiper-lazy" style="object-fit: contain;border:0;" data-src="images-amphiesma-miyajimae/Amphiesma_miyajimae-4.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="height:100vh;">
+                                <div class="swiper-zoom-container">
+                                <img class="swiper-lazy" style="object-fit: contain;border:0;" data-src="images-amphiesma-miyajimae/Amphiesma_miyajimae-5.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div id="swiper-pagination--modal" class="swiper-pagination"></div>
+                        <!-- Add Pagination -->
+                        <div id="swiper-button-next--modal" class="swiper-button-next"></div>
+                        <div id="swiper-button-prev--modal" class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="species-box">
-        <h1 class="header">AMPHIESMA MIYAJIMAE</h1>
-        <h1 class="header--species">Maki's Keelback</h1>
-        <h1 class="header--status">Status: Protected (Cat.I)</h1>
-        <h1 class="header--danger">Non-venomous</h1>
-    </div>                      
-    <div class="carousel--tall">
-        <button class="carousel__button carousel__button--left"> <!-- __ means child-->
-            <img src="images-school-talks/chevron-left-solid.svg" alt="left icon">
-        </button>
-        <div class="carousel__track-container">
-            <ul class="carousel__track">
-                <li class="carousel__slide current-slide">
-                    <img class="carousel__image--tall" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-1.jpg" alt="Amphiesma-miyajimae image 1">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image--tall" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-2.jpg" alt="Amphiesma-miyajimae image 2">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image--tall" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-3.jpg" alt="Amphiesma-miyajimae image 3">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image--tall" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-4.jpg" alt="Amphiesma-miyajimae image 4">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image--tall" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-5.jpg" alt="Amphiesma-miyajimae image 5">
-                </li>
-            </ul>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="swiper-slide-img" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-1.jpg"></div>
+                    <div class="swiper-slide"><img class="swiper-slide-img" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-2.jpg"></div>
+                    <div class="swiper-slide"><img class="swiper-slide-img" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-3.jpg"></div>
+                    <div class="swiper-slide"><img class="swiper-slide-img" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-4.jpg"></div>
+                    <div class="swiper-slide"><img class="swiper-slide-img" src="images-amphiesma-miyajimae/Amphiesma_miyajimae-5.jpg"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
-        <button class="carousel__button carousel__button--right"> <!-- means modifier -->
-            <img src="images-school-talks/chevron-right-solid.svg" alt="right icon">
-        </button>
-        <div class="carousel__nav carousel__nav--species">  
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+        <div class="swiper-gallery-info">
+            Click image to view full screen.
         </div>
+    </div>
     </div>
 
     <div class="text-box-container">
@@ -66,7 +97,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="text-box-container text-box-container-info">
         <div class="text-box--species">
             <div class="species-info-box">
@@ -158,6 +189,57 @@
         </div>
     </div>
 
-    <script src="js/carousel.js"></script>
+    <script src="js/swiperJsGallery.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        autoHeight: true, //enable auto height
+        observer: true,
+        observeParents: true,
+        observeChildren: true,
+        spaceBetween: 0,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+
+        // swiper - modal
+        var swiperModal = new Swiper('.swiper-container--modal', {
+        observer: true,
+        observeParents: true,
+        observeChildren: true,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        zoom: {
+            maxRatio: 2,
+            toggle: true,  // enable zoom-in by double tapping slide
+        },
+
+        preloadImages: false,
+        // Enable lazy loading
+        lazy: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+
+        keyboard: {
+            enabled: true,
+        },
+
+        });
+
+        swiper.controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
+        swiperModal.controller.control = swiper;
+    </script>
 
 {% endblock %}

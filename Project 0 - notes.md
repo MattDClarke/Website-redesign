@@ -124,9 +124,23 @@
 
 - [x] check GitHub page --> 2nd image in image grid updated 2nd and 3rd image still the same?
 
-- [ ] fix mobile errors (padding, orange highlighting)
+- [x] fix mobile errors (padding, orange highlighting) ☰
 
-- [ ] add mobile swipe function for image --> slider.js
+- [ ] add mobile swipe function for image --> swiper.js 1) Maki's Keelback 2) School Talks
+
+  (see paint design on desktop)
+
+- [ ] fix next and prev buttons
+
+- [x] make full page modal for viewing images? check the you tube
+
+- [ ] delete old gallery scss
+
+- [ ] page heading / text-box incr vertical space check for consistency
+
+- [ ]  animate image gallery - css key frames animate btn active and non-active state
+
+- [ ] keyframe animation for nav tabs and page transition
 
 - [ ] email Hans Breuer
 
@@ -229,6 +243,8 @@ You can then go to https://cs50.me/cs50w to view your current progress!
 - I made the index.html page thumbnails large images.... loads slowly... need to redo using small images...
 
 - Problem with search list being a flex-box container without me declaring it as such... I had a non-specific navbar ul = flex box set.... fixed by using > (only direct child ul of the nav bar element will become a flex box). The problem? I was not specific enough so it caused problems later...
+
+- burger nav button looked strange on mobile... (grey when it should have been white) it did not render properly. I used the UTF-8 glyph code instead and it worked <https://css-tricks.com/snippets/html/glyphs/>
 
 ### Future improvements
 
