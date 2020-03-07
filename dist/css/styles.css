@@ -854,6 +854,12 @@ footer img {
   margin-top: 30px;
 }
 
+@media all and (max-width: 460px) {
+  .header--status {
+    margin-top: 15px;
+  }
+}
+
 .about-header-credits {
   padding-top: 40px;
 }
@@ -1494,7 +1500,7 @@ th.table-header {
 
 @media all and (max-width: 812px) {
   .swiper-gallery-info {
-    font-size: 16px;
+    font-size: 12.5px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

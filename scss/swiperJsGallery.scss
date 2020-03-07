@@ -134,6 +134,7 @@ $small-screen: 520px;  // for resizing img carousel ( ...)
     padding: 0;
     height: 100%;
     width: 100%;
+    border: 0px; // remove border from full screen modal
     animation-name: modalOpen;
     animation-duration: 1s;
 }

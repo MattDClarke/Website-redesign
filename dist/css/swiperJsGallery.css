@@ -125,6 +125,7 @@
   padding: 0;
   height: 100%;
   width: 100%;
+  border: 0px;
   -webkit-animation-name: modalOpen;
           animation-name: modalOpen;
   -webkit-animation-duration: 1s;
