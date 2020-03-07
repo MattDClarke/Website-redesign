@@ -8,6 +8,8 @@
   width: 500px;
   height: auto;
   padding-bottom: 15px;
+  -webkit-box-shadow: 10px 0 12px black;
+          box-shadow: 10px 0 12px black;
 }
 
 @media all and (max-width: 558px) {
@@ -23,6 +25,7 @@
      object-fit: cover;
   border: 30px solid #d8d8d8;
   /* move next and prev buttons off img */
+  border-radius: 10px;
 }
 
 @media all and (max-width: 558px) {
@@ -42,6 +45,9 @@
 .swiper-pagination {
   background-color: #d8d8d8;
   padding: 10px;
+  border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: 10px 14px 12px black;
+          box-shadow: 10px 14px 12px black;
 }
 
 @media all and (max-width: 558px) {
@@ -73,10 +79,6 @@
 .swiper-button-next:focus {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.swiper-pagination {
-  background-color: #d8d8d8;
 }
 
 /*active pagination*/

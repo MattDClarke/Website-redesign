@@ -427,6 +427,13 @@ footer img {
     box-shadow: 5px 7px 6px rgba(0, 0, 0, 1);
     transition: all 0.3s ease 0s;
     max-height: 350px;
+    animation-name: galleryFilter; // animate filtering of gallery
+    animation-duration: 1s;
+}
+
+@keyframes galleryFilter {
+    from{opacity: 0}
+    to {opacity: 1}
 }
 
 .grid-card:hover {
@@ -987,9 +994,8 @@ th.table-header {
     }
 }
 
-.swiper-gallery-info {
+%swiper-gallery-info-template {
     grid-area: info;
-    align-self: end;
     font-size: 18px;
     letter-spacing: 2px;
     color: color(white);
@@ -1001,6 +1007,15 @@ th.table-header {
     @include tablet {
         font-size: 12.5px;
     }
+}
+
+.swiper-gallery-info {
+    @extend %swiper-gallery-info-template;
+    align-self: end;
+}
+
+.swiper-gallery-info--align {
+    align-self: start;
 }
 
 // ......................................  swiper gallery -- school talks  .................................................

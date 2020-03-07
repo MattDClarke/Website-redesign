@@ -394,6 +394,28 @@ footer img {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   max-height: 350px;
+  -webkit-animation-name: galleryFilter;
+          animation-name: galleryFilter;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes galleryFilter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes galleryFilter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .grid-card:hover {
@@ -1111,9 +1133,6 @@ th.table-header {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: info;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
   font-size: 18px;
   letter-spacing: 2px;
   color: white;
@@ -1129,6 +1148,18 @@ th.table-header {
   .swiper-gallery-info {
     font-size: 12.5px;
   }
+}
+
+.swiper-gallery-info {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.swiper-gallery-info--align {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 #header--school-talks {
