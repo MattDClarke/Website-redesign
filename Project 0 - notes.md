@@ -126,7 +126,7 @@
 
 - [x] fix mobile errors (padding, orange highlighting) ☰
 
-- [ ] add mobile swipe function for image --> swiper.js 1) Maki's Keelback 2) School Talks
+- [x] add mobile swipe function for image --> swiper.js 1) Maki's Keelback 2) School Talks
 
   (see paint design on desktop)
 
@@ -134,15 +134,15 @@
 
 - [x] make full page modal for viewing images? check the you tube
 
-- [ ] delete old gallery scss
+- [x] delete old gallery scss
 
-- [ ] page heading / text-box incr vertical space check for consistency
+- [x] page heading / text-box incr vertical space check for consistency
 
-- [ ]  animate image gallery - css key frames animate btn active and non-active state
+- [x]  animate image gallery - css key frames animate btn active and non-active state
 
-- [ ] keyframe animation for nav tabs and page transition
+- [x] keyframe animation for nav tabs and page transition
 
-- [ ] email Hans Breuer
+- [x] email Hans Breuer
 
 - [ ] add project to fcc forum... ask for critique
 
