@@ -13,7 +13,7 @@ function filterSelection(c) {
     // .indexOf returns the pos of first occurences of a specified val in a string. Returns -1 if no occurence
     // e.g. if venomous filter button is clicked, c=venomous --> if thumbnail has venomous class then show class will be added
     // index of c will be > -1 if present... add show class to venomous thumbnails
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show"); // if c = "all" --> c="" --> .indexOf > -1 ... add show to all thumbnails
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show"); // if c = "all" --> c="" --> .indexOf > -1 ... add show to thumbnail
   }
 }
 
@@ -27,7 +27,9 @@ function w3AddClass(element, name) { // HTML element and CSS class targeted e.g.
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) { 
     // .indexOf() returns pos of first occurance of string ("class="show") (-1 returned if no occurence)
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];} // add class ="show"
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    } // add class ="show" if show is not there already
   }
 }
 
