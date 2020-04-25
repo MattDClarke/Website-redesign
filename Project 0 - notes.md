@@ -1,11 +1,11 @@
-.text-box
-
 # CS50 Web Programming - Project 0
+
 
 
 ## To do
 
-- Make a modern, mobile version of snakesofTaiwan.com (simplified version, only a few snakes)
+- Make a modern, mobile friendly version of snakesofTaiwan.com (simplified version, only a few snakes as an example)
+
 
 
 ## Steps
@@ -44,7 +44,7 @@
 
 - [x] Add filter: Taipei, common
 
-- [x] Filtering ... filter without making images display none when Javascript turned off...  see ladies article --> ignore for now...
+- [ ] Filtering ... filter without making images display none when Javascript turned off...  see ladies article --> ignore for now...
 
 - [x] Nunjucks - templating language --> add to file, use because it is like Jinja2
 
@@ -70,7 +70,7 @@
 
 - [x] make images same size
 
-- [x] make carosel
+- [x] make carousel
 
 - [x] make carousel go back to start if right arrow clicked on last image (and do same for start image and left arrow).  For loop --> reset current slide = 0 and current dot = 0 if left arrow  clicked when image = current  image = image array.length
 
@@ -144,15 +144,15 @@
 
 - [x] email Hans Breuer
 
-- [ ] add project to fcc forum... ask for critique
+- [x] add project to fcc forum... ask for critique
 
 - [ ] accessibility --> no JS fallback hidden elements --> visable for screen readers? What does site look like with js disabled?
 
 - [ ] look at again - improve design? more white space? check the design show youtube
 
-- [ ] Check that I met requirements of CS50 project (I can add links in a table... write README...)
+- [x] Check that I met requirements of CS50 project (I can add links in a table... write README...)
 
-- [ ] After submitting, if it looks good... suggest a site update to Hans Breuer?  
+- [x] After submitting, if it looks good... suggest a site update to Hans Breuer?  
 
 
 
@@ -245,6 +245,8 @@ You can then go to https://cs50.me/cs50w to view your current progress!
 - Problem with search list being a flex-box container without me declaring it as such... I had a non-specific navbar ul = flex box set.... fixed by using > (only direct child ul of the nav bar element will become a flex box). The problem? I was not specific enough so it caused problems later...
 
 - burger nav button looked strange on mobile... (grey when it should have been white) it did not render properly. I used the UTF-8 glyph code instead and it worked <https://css-tricks.com/snippets/html/glyphs/>
+
+  
 
 ### Future improvements
 

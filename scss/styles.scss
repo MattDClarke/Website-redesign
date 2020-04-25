@@ -144,6 +144,31 @@ body {
     }
 }
 
+
+/* add hover underline effect to nav links */
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform ease 0.25s;
+}
+
+.nav-link:hover::after {
+    transform: scale(1,1);
+}
+  
 // styling active page
 body.home .nav-home a,
 body.about .nav-about a,
@@ -151,6 +176,7 @@ body.school-talks .nav-school-talks a,
 body.book .nav-book a,
 body.links .nav-links a {
     border-bottom: 2px solid rgba(255, 255, 255, 0.95);
+
 }
 
 .navbar-brand-container {
@@ -276,7 +302,6 @@ body.links .nav-links a {
 .search-input-container {
     flex: 1;
     display: flex;
-    // flex-direction: column;
 
     @include tablet {
         padding-top: 0;
