@@ -4,56 +4,56 @@ filterSelection("all") // default value - run when page loads (display: none for
  // Execute the function (called when one of the filter buttons is clicked)
 function filterSelection(c) { 
   var x, i;
-  x = document.getElementsByClassName("grid-card"); // get all image thumbnails - store group as a variable (returns an array)
+  x = document.getElementsByClassName("grid-card"); // get all image (with species info) cards - store group as a variable (returns an array)
   if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) { // loop through gallery (go through each thumbnail) with particular filter
+  for (i = 0; i < x.length; i++) { // loop through gallery (go through each card) with particular filter
     // remove the "show" class from all img thumbnails
     w3RemoveClass(x[i], "show");
     // Add the "show" class (display:block) to the filtered elements
-    // .indexOf returns the pos of first occurences of a specified val in a string. Returns -1 if no occurence
+    // .indexOf returns the pos of first occurence of a specified val in a string. Returns -1 if no occurence
     // e.g. if venomous filter button is clicked, c=venomous --> if thumbnail has venomous class then show class will be added
     // index of c will be > -1 if present... add show class to venomous thumbnails
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show"); // if c = "all" --> c="" --> .indexOf > -1 ... add show to thumbnail
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show"); // if c = "all" --> c="" --> .indexOf > -1 ... add show to all cards...
   }
 }
 
 
-// Show filtered elements
-function w3AddClass(element, name) { // HTML element and CSS class targeted e.g. if venomous filter btn clicked --> thumbnail with venomous class --> add show class
-  var i, arr1, arr2;
+// Show filtered elements (pass in grid card that needs show class added to it)
+function w3AddClass(element, name) { // HTML element and CSS class targeted e.g. if venomous filter btn clicked --> card with venomous class --> add show class
+  var i;
   // .split() changes strings into an array (in this case space separated strings --> array)
-  arr1 = element.className.split(" "); // saves an array listing all CSS classes that a thumbnail element has (classes are listed with white spaces inbetween them) class="grid-card venomous" --> ["grid-card", "venomous"]
+  var arr1 = element.className.split(" "); // saves an array listing all CSS classes that a grid card element has (classes are listed with white spaces inbetween them) class="grid-card venomous" --> ["grid-card", "venomous"]
   // name = "show"
-  arr2 = name.split(" ");
+  var arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) { 
     // .indexOf() returns pos of first occurance of string ("class="show") (-1 returned if no occurence)
-    if (arr1.indexOf(arr2[i]) == -1) {
+    if (arr1.indexOf(arr2[i]) == -1) { // "show" class is not present for the grid-card
       element.className += " " + arr2[i];
     } // add class ="show" if show is not there already
   }
 }
 
 
-// Hide elements that are not selected (do for each thumbnail with class = grid-card)
-function w3RemoveClass(element, name) { // img thumbnail (class= grid-card), name ="show"
-  var i, arr1, arr2;
-  arr1 = element.className.split(" "); // eg. ["grid-card", "venomous"]
-  arr2 = name.split(" "); // eg. class= "show" --> ["show"]
+// Hide elements that are not selected (do for each card with class = grid-card)
+function w3RemoveClass(element, name) { // img thumbnail (class= grid-card), name ="show" <-- I want to remove name="show" class
+  var i;
+  var arr1 = element.className.split(" "); // eg. ["grid-card", "venomous"] splits into array of substrings (does not change OG string)
+  var arr2 = name.split(" "); // eg. class= "show" --> ["show"]
   for (i = 0; i < arr2.length; i++) { // if show class is not present on a particular grid-card then it wnt loop...
     while (arr1.indexOf(arr2[i]) > -1) { // while there is an occurence of show class
       arr1.splice(arr1.indexOf(arr2[i]), 1);   // at position arr1.indexOf(arr2[i])  remove 1 item --> remove show class...
     }
   }
-  element.className = arr1.join(" ");
+  element.className = arr1.join(" "); // convert array to string, join elements using " " eg. ["grid-card", "venomous"] -> "grid-card venomous"... add class name (without "show" if it was present)
 }
 
 
 // Add active class to the current button (highlight it)
 var galleryFilters = document.getElementById("gallery-filters");
 var filters = galleryFilters.getElementsByClassName("gallery-filter");
-for (var i = 0; i < filters.length; i++) {
+for (var i = 0; i < filters.length; i++) { // loop through all buttons
   filters[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("gallery-filter-active");
+    var current = document.getElementsByClassName("gallery-filter-active"); // by default = Show All filter button (in .njk file... I set it)
     current[0].className = current[0].className.replace(" gallery-filter-active", ""); // remove active class from previously clicked btn
     this.className += " gallery-filter-active"; // add active class to recently clicked btn
   });

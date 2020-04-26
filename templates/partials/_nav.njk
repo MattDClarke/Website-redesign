@@ -34,7 +34,7 @@
                 <div class="my-form-spacer"></div>
                 {# <input id="searchInput" class="form-control mr-sm-2" type="input" placeholder="Search for a species"> #}
                 <div class="search-input-container">
-                    <input id="searchInput" type="search" placeholder="Search for a species" autocomplete="off">
+                    <input id="searchInput" type="search" placeholder="Search for a species" autocomplete="off" maxlength="50">
                     <ul id="searchUL"> 
                     {% for name in names %}
                         <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
