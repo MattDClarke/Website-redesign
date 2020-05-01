@@ -4,801 +4,843 @@
     Home
 {% endblock %}
 {% block content %}
-    <section class="gallery-intro">
-        <p>Click images for data, photos, videos, stories, and links</p>
-    </section>
-    
-    <section id="gallery-filters">
-        <button id="gallery-filter-show-all" class="btn btn-light btn-lg gallery-filter gallery-filter-active">
-            Show All
-        </button>
-        <button id="gallery-filter-venomous" class="btn btn-light btn-lg gallery-filter">
-            Venomous
-        </button>
-        <button id="gallery-filter-mildlyVenomous" class="btn btn-light btn-lg gallery-filter">
-            Mildly Venomous
-        </button>
-        <button id="gallery-filter-nonVenomous" class="btn btn-light btn-lg gallery-filter">
-            Non-venomous
-        </button>
-        <button id="gallery-filter-taipei" class="btn btn-light btn-lg gallery-filter">
-            Taipei
-        </button>
-        <button id="gallery-filter-common" class="btn btn-light btn-lg gallery-filter">
-            Common
-        </button>
-        <button id="gallery-filter-endemic" class="btn btn-light btn-lg gallery-filter">
-            Endemic
-        </button>
-    </section>
-    
-    <section class="grid-cards">     
-        <div class="grid-card nonVenomous taipei endemic">                            
-            <div class="img-container">
-                <a href="amphiesma-miyajimae.html">   
-                    <img class="img-adjust-8" src="images-index/Amphiesma_miyajimae_ZhimingS_small.jpg" alt="Maki's Keelback">
-                </a>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Amphiesma miyajimae
-                </h1>
-                <p class="common-name">Maki's Keelback</p>
-                <div class="chinese-name">
-                    <p>金 絲蛇</p>
-                    <p>(jin1si1she2)</p>
+    <div id="gridCardsWithFilter">
+        <section class="gallery-intro">
+            <p>Click images for data, photos, videos, stories, and links</p>
+        </section>
+        
+        <section class="filter-categories">
+            <span><input type="checkbox" id="filter-all" class="filter-input filter-all" name="filter" checked><label for="filter-all" class="filter-label" autocomplete="off">All</label></span> 
+            <span><input type="checkbox" id="venomous" class="filter-input" name="filter"><label for="venomous" class="filter-label" autocomplete="off">Venomous</label></span> 
+            <span><input type="checkbox" id="mildlyVen" class="filter-input" name="filter"><label for="mildlyVen" class="filter-label" autocomplete="off">Mildy Venomous</label></span> 
+            <span><input type="checkbox" id="nonVen" class="filter-input" name="filter"><label for="nonVen" class="filter-label" autocomplete="off">Non-venomous</label></span> 
+            <span><input type="checkbox" id="taipei" class="filter-input" name="filter"><label for="taipei" class="filter-label" autocomplete="off">Taipei</label></span>
+            <span><input type="checkbox" id="common" class="filter-input" name="filter"><label for="common" class="filter-label" autocomplete="off">Common</label></span> 
+            <span><input type="checkbox" id="endemic" class="filter-input" name="filter"><label for="endemic" class="filter-label" autocomplete="off">Endemic</label></span> 
+        </section>      
+        
+        <section class="filter-wrap">     
+            <div class="filter-item nonVen taipei endemic">                            
+                <div class="img-container">
+                    <a href="amphiesma-miyajimae.html">   
+                        <img class="img-adjust-8" src="images-index/Amphiesma_miyajimae_ZhimingS_small.jpg" alt="Maki's Keelback">
+                    </a>
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous endemic">
-            <div class="img-container">
-                <img class="img-adjust-2" src="images-index/Sinomicrurus_sauteri_Simon_Pu_1_small.jpg" alt="Taiwan Coral Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div  class="grid-card-text">
-                <h1 class="scientific-name">
-                    Sinomicrurus sauteri
-                </h1>
-                <p class="common-name">Taiwan Coral Snake</p>
-                <div class="chinese-name">
-                    <p>梭 德氏帶紋赤蛇</p>
-                    <p>(suo1de2shi4dai4wen2chi4she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Amphiesma miyajimae
+                    </h1>
+                    <p class="common-name">Maki's Keelback</p>
+                    <div class="chinese-name">
+                        <p>金 絲蛇</p>
+                        <p>(jin1si1she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card venomous endemic">
-            <div class="img-container">
-                <img class="img-adjust-7" src="images-index/SinomicrurushatoriHank(1)_small.jpg" alt="Hatori's Coral Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Sinomicrurus hatori
-                </h1>
-                <p class="common-name">Hatori's Coral Snake</p>
-                <div class="chinese-name">
-                    <p>羽鳥氏帶紋赤蛇</p>
-                    <p>(yu3niao3shi4dai4wen2chi4she2)</p>
+            <div class="filter-item venomous endemic">
+                <div class="img-container">
+                    <img class="img-adjust-2" src="images-index/Sinomicrurus_sauteri_Simon_Pu_1_small.jpg" alt="Taiwan Coral Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img src="images-index/TaiwanKukriSnakeOligodonformosanus_17_small.jpg" alt="Taiwan Kukri Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Oligodon formosanus
-                </h1>
-                <p class="common-name">Taiwan Kukri Snake</p>
-                <div class="chinese-name">
-                    <p>赤背松柏根</p>
-                    <p>(chi4bei4song1bo2gen1)</p>
+                <div  class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Sinomicrurus sauteri
+                    </h1>
+                    <p class="common-name">Taiwan Coral Snake</p>
+                    <div class="chinese-name">
+                        <p>梭 德氏帶紋赤蛇</p>
+                        <p>(suo1de2shi4dai4wen2chi4she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img src="images-index/Zaocys_dhumnades_small.jpg" alt="Big-eyed Ratsnake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Ptyas dhumnades
-                </h1>
-                <p class="common-name">Big-eyed Ratsnake</p>
-                <div class="chinese-name">
-                    <p>過 山刀</p>
-                    <p>(guo4shan1dao1)</p>
+            <div class="filter-item venomous endemic">
+                <div class="img-container">
+                    <img class="img-adjust-7" src="images-index/SinomicrurushatoriHank(1)_small.jpg" alt="Hatori's Coral Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
                 </div>
-            </div>
-        </div>
-        <div class="grid-card mildlyVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-15" src="images-index/Enhydrischinensis-TST_small.jpg" alt="Chinese Water Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Enhydris chinensis
-                </h1>
-                <p class="common-name">Chinese Water Snake</p>
-                <div class="chinese-name">
-                    <p>唐 水蛇</p>
-                    <p>(tang2shui3she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Sinomicrurus hatori
+                    </h1>
+                    <p class="common-name">Hatori's Coral Snake</p>
+                    <div class="chinese-name">
+                        <p>羽鳥氏帶紋赤蛇</p>
+                        <p>(yu3niao3shi4dai4wen2chi4she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card mildlyVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-6" src="images-index/Enhydris_plumbea_2_small.jpg" alt="Plumbeous Water Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Enhydris plumbea
-                </h1>
-                <p class="common-name">Plumbeous Water Snake</p>
-                <div class="chinese-name">
-                    <p>鉛 色水蛇</p>
-                    <p>(shui3she2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img src="images-index/TaiwanKukriSnakeOligodonformosanus_17_small.jpg" alt="Taiwan Kukri Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-11" src="images-index/Calamaria_pavimentataSKINK_small.jpg" alt="Collared Reed Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Calamaria pavimentata
-                </h1>
-                <p class="common-name">Collared Reed Snake</p>
-                <div class="chinese-name">
-                    <p>鐵 線蛇</p>
-                    <p>(tie3xian4she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Oligodon formosanus
+                    </h1>
+                    <p class="common-name">Taiwan Kukri Snake</p>
+                    <div class="chinese-name">
+                        <p>赤背松柏根</p>
+                        <p>(chi4bei4song1bo2gen1)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img src="images-index/AsiaticMany-ToothedSnakeSybinophischinensischinensisZhuzihu_06_small.jpg" alt="Asiatic Many-Toothed Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Sibynophis chinensis chinensis
-                </h1>
-                <p class="common-name">Asiatic Many-Toothed Snake</p>
-                <div class="chinese-name">
-                    <p>黑 頭蛇</p>
-                    <p>(hei1tou2she2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img src="images-index/Zaocys_dhumnades_small.jpg" alt="Big-eyed Ratsnake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous common taipei">
-            <div class="img-container">
-                <img class="img-adjust-12" src="images-index/Viridoviperastejnegeri-TST_small.jpg" alt="Chinese Green Tree Viper"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Viridovipera stejnegeri stejnegeri
-                </h1>
-                <p class="common-name">Chinese Green Tree Viper</p>
-                <div class="chinese-name">
-                    <p>赤尾青竹絲</p>
-                    <p>(chi4wei2qing1zhu2si1)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Ptyas dhumnades
+                    </h1>
+                    <p class="common-name">Big-eyed Ratsnake</p>
+                    <div class="chinese-name">
+                        <p>過 山刀</p>
+                        <p>(guo4shan1dao1)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous common taipei">
-            <div class="img-container">
-                <img src="images-index/GreaterGreenSnakeCyclophiopsmajorDOR090509_small.jpg" alt="Greater Green Snake.">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Cyclophiops major
-                </h1>
-                <p class="common-name">Greater Green Snake</p>
-                <div class="chinese-name">
-                    <p>青蛇</p>
-                    <p>(qing1she2)</p>
+            <div class="filter-item mildlyVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-15" src="images-index/Enhydrischinensis-TST_small.jpg" alt="Chinese Water Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous">
-            <div class="img-container">
-                <img class="img-adjust-7" src="images-index/Rhadinophisfrenatum-Chungweiyou_small.jpg" alt="Rein Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Rhadinophis frenatum
-                </h1>
-                <p class="common-name">Rein Snake</p>
-                <div class="chinese-name">
-                    <p>灰 腹綠錦蛇</p>
-                    <p>(hui1fu2lü4jin3she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Enhydris chinensis
+                    </h1>
+                    <p class="common-name">Chinese Water Snake</p>
+                    <div class="chinese-name">
+                        <p>唐 水蛇</p>
+                        <p>(tang2shui3she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-3" src="images-index/Ramphotyphlops_braminus3_small.jpg" alt="Brahminy Blind Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Ramphotyphlops braminus
-                </h1>
-                <p class="common-name">Brahminy Blind Snake</p>
-                <div class="chinese-name">
-                    <p>盲 蛇</p>
-                    <p>(mang2she2)</p>
+            <div class="filter-item mildlyVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-6" src="images-index/Enhydris_plumbea_2_small.jpg" alt="Plumbeous Water Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous endemic">
-            <div class="img-container">
-                <img class="img-adjust-10" src="images-index/AchalinusformosanusSKINK_small.jpg" alt="Formosan Odd-Scaled Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Achalinus formosanus formosanus
-                </h1>
-                <p class="common-name">Formosan Odd-Scaled Snake</p>
-                <div class="chinese-name">
-                    <p>台 灣標蛇</p>
-                    <p>(tai2wan1biao1she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Enhydris plumbea
+                    </h1>
+                    <p class="common-name">Plumbeous Water Snake</p>
+                    <div class="chinese-name">
+                        <p>鉛 色水蛇</p>
+                        <p>(shui3she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous endemic">
-            <div class="img-container">
-                <img class="img-adjust-6" src="images-index/Achalinusniger-TST_small.jpg" alt="Black Odd-Scaled Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Achalinus niger
-                </h1>
-                <p class="common-name">Black Odd-Scaled Snake</p>
-                <div class="chinese-name">
-                    <p>標 蛇</p>
-                    <p>(biao1she2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-11" src="images-index/Calamaria_pavimentataSKINK_small.jpg" alt="Collared Reed Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-7" src="images-index/Ptyasmucosa081209-1_p1_small.jpg" alt="Dhaman (Oriental) Ratsnake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Ptyas mucosa
-                </h1>
-                <p class="common-name">Dhaman (Oriental) Ratsnake</p>
-                <div class="chinese-name">
-                    <p>南 蛇</p>
-                    <p>(nan2she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Calamaria pavimentata
+                    </h1>
+                    <p class="common-name">Collared Reed Snake</p>
+                    <div class="chinese-name">
+                        <p>鐵 線蛇</p>
+                        <p>(tie3xian4she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-4" src="images-index/Ptyaskorros_chungweiyou(1)_small.jpg" alt="Chinese Ratsnake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Ptyas mucosa
-                </h1>
-                <p class="common-name">Chinese Ratsnake</p>
-                <div class="chinese-name">
-                    <p>細 紋南蛇</p>
-                    <p>(xi4wen2nan2she2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img src="images-index/AsiaticMany-ToothedSnakeSybinophischinensischinensisZhuzihu_06_small.jpg" alt="Asiatic Many-Toothed Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-4" src="images-index/Plagiopholis_styani__Zhiming_small.jpg" alt="Chinese Mountain Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Plagiopholis styani
-                </h1>
-                <p class="common-name">Chinese Mountain Snake</p>
-                <div class="chinese-name">
-                    <p>福建頸 斑蛇</p>
-                    <p>(fu2jian4jing1ban1she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Sibynophis chinensis chinensis
+                    </h1>
+                    <p class="common-name">Asiatic Many-Toothed Snake</p>
+                    <div class="chinese-name">
+                        <p>黑 頭蛇</p>
+                        <p>(hei1tou2she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei common endemic">
-            <img class="img-adjust-7" src="images-index/MockViperPsammodynastespulverulentus_15_small.jpg" alt="Mock Viper">
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Psammodynastes pulverulentus papenfussi
-                </h1>
-                <p class="common-name">Mock Viper</p>
-                <div class="chinese-name">
-                    <p>茶 斑蛇</p>
-                    <p>(cha2ban1she2)</p>
+            <div class="filter-item venomous common taipei">
+                <div class="img-container">
+                    <img class="img-adjust-12" src="images-index/Viridoviperastejnegeri-TST_small.jpg" alt="Chinese Green Tree Viper"><i class="fas fa-exclamation-triangle fa-2x"></i>
                 </div>
-            </div>
-        </div> 
-        <div class="grid-card nonVenomous taipei endemic">
-            <div class="img-container">
-                <img src="images-index/SwinhoesGrassSnakeRhabdophisswinhonis_02_small.jpg" alt="Swinhoe's Grass Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Rhabdophis swinhonis
-                </h1>
-                <p class="common-name">Swinhoe's Grass Snake</p>
-                <div class="chinese-name">
-                    <p>斯文豪氏游蛇</p>
-                    <p>(si1wen2hao2shi4you2she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Viridovipera stejnegeri stejnegeri
+                    </h1>
+                    <p class="common-name">Chinese Green Tree Viper</p>
+                    <div class="chinese-name">
+                        <p>赤尾青竹絲</p>
+                        <p>(chi4wei2qing1zhu2si1)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img src="images-index/SautersWatersnakeAmphiesmasauterisauteri0002_small.jpg" alt="Sauter's Water (Grass) Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Amphiesma sauteri
-                </h1>
-                <p class="common-name">Sauter's Water (Grass) Snake</p>
-                <div class="chinese-name">
-                    <p>梭德氏游蛇</p>
-                    <p>(suo1de2shi4you2she2)</p>
+            <div class="filter-item nonVen common taipei">
+                <div class="img-container">
+                    <img src="images-index/GreaterGreenSnakeCyclophiopsmajorDOR090509_small.jpg" alt="Greater Green Snake.">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous endemic">
-            <div class="img-container">
-                <img src="images-index/PaiwanKeelback_Chungweiyou1(1)_small.jpg" alt="Paiwan Keelback">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Amphiesma sp.
-                </h1>
-                <p class="common-name">Paiwan Keelback</p>
-                <div class="chinese-name">
-                    <p>排 灣腹鏈</p>
-                    <p>(pai2wan1fu4lian4she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Cyclophiops major
+                    </h1>
+                    <p class="common-name">Greater Green Snake</p>
+                    <div class="chinese-name">
+                        <p>青蛇</p>
+                        <p>(qing1she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous endemic taipei">
-            <div class="img-container">
-                <img src="images-index/H&K&SunKids_PingdengliWatersnake_02_small.jpg" alt="Eastern Water Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Sinonatrix percarinata suriki
-                </h1>
-                <p class="common-name">Eastern Water Snake</p>
-                <div class="chinese-name">
-                    <p>白腹游蛇</p>
-                    <p>(bai2fu2you2she2)</p>
+            <div class="filter-item nonVen">
+                <div class="img-container">
+                    <img class="img-adjust-7" src="images-index/Rhadinophisfrenatum-Chungweiyou_small.jpg" alt="Rein Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous common taipei">
-            <div class="img-container">
-                <img src="images-index/KingRatsnakeElaphecarinata_Rucksack_01_small.jpg" alt="Eastern Water Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Elaphe carinata
-                </h1>
-                <p class="common-name">King Ratsnake</p>
-                <div class="chinese-name">
-                    <p>臭 青公</p>
-                    <p>(chou4qing1gong1)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Rhadinophis frenatum
+                    </h1>
+                    <p class="common-name">Rein Snake</p>
+                    <div class="chinese-name">
+                        <p>灰 腹綠錦蛇</p>
+                        <p>(hui1fu2lü4jin3she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-5" src="images-index/Amphiesmastolatum_Gerrut1_small.jpg" alt="Buff Striped Keelback">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Amphiesma stolatum
-                </h1>
-                <p class="common-name">Buff Striped Keelback</p>
-                <div class="chinese-name">
-                    <p>花 浪蛇</p>
-                    <p>(hua1lang4she2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-3" src="images-index/Ramphotyphlops_braminus3_small.jpg" alt="Brahminy Blind Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous endemic taipei">
-            <div class="img-container">
-                <img src="images-index/TaiwanBeautySnakeOrthriopis(Elaphe)taeniurafriesi_44_small.jpg" alt="Taiwan Beauty Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Amphiesma stolatum
-                </h1>
-                <p class="common-name">Taiwan Beauty Snake</p>
-                <div class="chinese-name">
-                    <p>黑 眉錦蛇</p>
-                    <p>(hei1mei2jin3she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Ramphotyphlops braminus
+                    </h1>
+                    <p class="common-name">Brahminy Blind Snake</p>
+                    <div class="chinese-name">
+                        <p>盲 蛇</p>
+                        <p>(mang2she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous">
-            <div class="img-container">
-                <img class="img-adjust-6" src="images-index/BurmKevin_small.jpg" alt="Burmese Python">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Python molurus bivittatus
-                </h1>
-                <p class="common-name">Burmese Python</p>
-                <div class="chinese-name">
-                    <p>緬甸蟒</p>
-                    <p>(mian3dian4mang3)</p>
+            <div class="filter-item nonVen endemic">
+                <div class="img-container">
+                    <img class="img-adjust-10" src="images-index/AchalinusformosanusSKINK_small.jpg" alt="Formosan Odd-Scaled Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-9" src="images-index/Xenochrophis_piscator_small.jpg" alt="Checkered Keelback">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Xenochrophis piscator
-                </h1>
-                <p class="common-name">Checkered Keelback</p>
-                <div class="chinese-name">
-                    <p>草 花蛇</p>
-                    <p>(cao3hua1she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Achalinus formosanus formosanus
+                    </h1>
+                    <p class="common-name">Formosan Odd-Scaled Snake</p>
+                    <div class="chinese-name">
+                        <p>台 灣標蛇</p>
+                        <p>(tai2wan1biao1she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei endemic">
-            <div class="img-container">
-                <img class="img-adjust-13" src="images-index/Pseudoxenodonstejnegeri-TST_small.jpg" alt="Mountain Keelback">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Pseudoxenodon stejnegeri stejnegeri
-                </h1>
-                <p class="common-name">Mountain Keelback</p>
-                <div class="chinese-name">
-                    <p>史丹吉氏斜鱗蛇</p>
-                    <p>(shi3dan1ji2shi4xie2lin2she2)</p>
+            <div class="filter-item nonVen endemic">
+                <div class="img-container">
+                    <img class="img-adjust-6" src="images-index/Achalinusniger-TST_small.jpg" alt="Black Odd-Scaled Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous taipei endemic">
-            <div class="img-container">
-                <img src="images-index/Rhabdophis_tigrinus_formosanus_Zhiming_small.jpg" alt="Asian Tiger Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Rhabdophis tigrinus formosanus
-                </h1>
-                <p class="common-name">Asian Tiger Snake</p>
-                <div class="chinese-name">
-                    <p>台 灣赤煉蛇</p>
-                    <p>(tai2wan1chi4lian4she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Achalinus niger
+                    </h1>
+                    <p class="common-name">Black Odd-Scaled Snake</p>
+                    <div class="chinese-name">
+                        <p>標 蛇</p>
+                        <p>(biao1she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card venomous">
-            <div class="img-container">
-                <img src="images-index/Daboia_russelli_ZhimingS_small.jpg" alt="Russell's Viper"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Daboia russelli siamensis
-                </h1>
-                <p class="common-name">Russell's Viper</p>
-                <div class="chinese-name">
-                    <p>鎖 蛇</p>
-                    <p>(suo3she2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-7" src="images-index/Ptyasmucosa081209-1_p1_small.jpg" alt="Dhaman (Oriental) Ratsnake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-13" src="images-index/FalseHabuMacropisthodonrudisrudisBalaka090615_10_small.jpg" alt="False Viper"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Macropisthodon rudis rudis
-                </h1>
-                <p class="common-name">False Viper</p>
-                <div class="chinese-name">
-                    <p>擬 龜殼花</p>
-                    <p>(ni3gui1ke3hua1)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Ptyas mucosa
+                    </h1>
+                    <p class="common-name">Dhaman (Oriental) Ratsnake</p>
+                    <div class="chinese-name">
+                        <p>南 蛇</p>
+                        <p>(nan2she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card venomous taipei common">
-            <div class="img-container">
-                <img class="img-adjust-6" src="images-index/TaiwanHabuProtobothropsmucrosquamatusZhuzihuBIG_3_small.jpg" alt="Taiwan Habu"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Protobothrops mucrosquamatus
-                </h1>
-                <p class="common-name">Taiwan Habu</p>
-                <div class="chinese-name">
-                    <p>龜 殼花</p>
-                    <p>(gui1ke3hua1)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-4" src="images-index/Ptyaskorros_chungweiyou(1)_small.jpg" alt="Chinese Ratsnake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous endemic">
-            <div class="img-container">
-                <img class="img-adjust-5" src="images-index/Trimeresurusgracilis_chungweiyou(5)_small1.jpg" alt="Taiwan Mountain Pitviper"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Trimeresurus gracilis
-                </h1>
-                <p class="common-name">Taiwan Mountain Pitviper</p>
-                <div class="chinese-name">
-                    <p>菊池氏龜殼花</p>
-                    <p>(ju2chi3shi4gui1ke3hua1)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Ptyas mucosa
+                    </h1>
+                    <p class="common-name">Chinese Ratsnake</p>
+                    <div class="chinese-name">
+                        <p>細 紋南蛇</p>
+                        <p>(xi4wen2nan2she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card venomous taipei">
-            <div class="img-container">
-                <img src="images-index/AlishanHabuOvophismonticola_Balaka090911_29_small.jpg" alt="Alishan Habu"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Ovophis monticola makazayazaya
-                </h1>
-                <p class="common-name">Alishan Habu</p>
-                <div class="chinese-name">
-                    <p>阿 里山龜殼花</p>
-                    <p>(a1li3shan1gui1ke3hua1)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-4" src="images-index/Plagiopholis_styani__Zhiming_small.jpg" alt="Chinese Mountain Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous">
-            <div class="img-container">
-                <img src="images-index/DeinagkistrdodonacutusA-Jie(7)_small.jpg" alt="Hundred-Pacer (Chinese Moccasin)"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Deinagkistrodon acutus
-                </h1>
-                <p class="common-name">Hundred-Pacer (Chinese Moccasin)</p>
-                <div class="chinese-name">
-                    <p>百 步蛇</p>
-                    <p>(bai3bu4she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Plagiopholis styani
+                    </h1>
+                    <p class="common-name">Chinese Mountain Snake</p>
+                    <div class="chinese-name">
+                        <p>福建頸 斑蛇</p>
+                        <p>(fu2jian4jing1ban1she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous">
-            <div class="img-container">
-                <img src="images-index/Euprepiophis_mandarina_Simon_Pu3s_small.jpg" alt="Mandarin Ratsnake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Euprepiophis mandarina
-                </h1>
-                <p class="common-name">Mandarin Ratsnake</p>
-                <div class="chinese-name">
-                    <p>高 砂蛇</p>
-                    <p>(gao1sha1she2)</p>
+            <div class="filter-item nonVen taipei common endemic">
+                <img class="img-adjust-7" src="images-index/MockViperPsammodynastespulverulentus_15_small.jpg" alt="Mock Viper">
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Psammodynastes pulverulentus papenfussi
+                    </h1>
+                    <p class="common-name">Mock Viper</p>
+                    <div class="chinese-name">
+                        <p>茶 斑蛇</p>
+                        <p>(cha2ban1she2)</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="grid-card mildlyVenomous common taipei">
-            <div class="img-container">
-                <img src="images-index/Boigakraepelini-TST_small.jpg" alt="(Square-headed) Cat Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Boiga kraepelini
-                </h1>
-                <p class="common-name">(Square-headed) Cat Snake</p>
-                <div class="chinese-name">
-                    <p>大 頭蛇</p>
-                    <p>(da4tou2she2)</p>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div> 
+            <div class="filter-item nonVen taipei endemic">
+                <div class="img-container">
+                    <img src="images-index/SwinhoesGrassSnakeRhabdophisswinhonis_02_small.jpg" alt="Swinhoe's Grass Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei endemic">
-            <div class="img-container">
-                <img src="images-index/TaiwanSlugSnakePareasformosensisZhuzihu.jpg" alt="Taiwan Slug Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Pareas formosensis
-                </h1>
-                <p class="common-name">Taiwan Slug Snake</p>
-                <div class="chinese-name">
-                    <p>台 灣鈍頭蛇</p>
-                    <p>(tai2wan1dun4tou2she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Rhabdophis swinhonis
+                    </h1>
+                    <p class="common-name">Swinhoe's Grass Snake</p>
+                    <div class="chinese-name">
+                        <p>斯文豪氏游蛇</p>
+                        <p>(si1wen2hao2shi4you2she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei common">
-            <div class="img-container">
-                <img src="images-index/Dinodonrufozonatum_Balaka_090619_7_small.jpg" alt="Red-banded Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Dinodon rufozonatum
-                </h1>
-                <p class="common-name">Red-banded Snake</p>
-                <div class="chinese-name">
-                    <p>紅 斑蛇</p>
-                    <p>(hong2ban1she2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img src="images-index/SautersWatersnakeAmphiesmasauterisauteri0002_small.jpg" alt="Sauter's Water (Grass) Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-8" src="images-index/Sinonatrix_annularis_chungweyou(3)_small.jpg" alt="Ringed Water Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Sinonatrix annularis
-                </h1>
-                <p class="common-name">Ringed Water Snake</p>
-                <div class="chinese-name">
-                    <p>赤 腹游蛇</p>
-                    <p>(chi4fu2you2she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Amphiesma sauteri
+                    </h1>
+                    <p class="common-name">Sauter's Water (Grass) Snake</p>
+                    <div class="chinese-name">
+                        <p>梭德氏游蛇</p>
+                        <p>(suo1de2shi4you2she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-4" src="images-index/Oreocryptophisporphyraceakawakami-TST_small.jpg" alt="Red Bamboo Ratsnake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Oreocryptophis porphyracea kawakamii
-                </h1>
-                <p class="common-name">Red Bamboo Ratsnake</p>
-                <div class="chinese-name">
-                    <p>紅 竹蛇</p>
-                    <p>(hong2zhu2she2)</p>
+            <div class="filter-item nonVen endemic">
+                <div class="img-container">
+                    <img src="images-index/PaiwanKeelback_Chungweiyou1(1)_small.jpg" alt="Paiwan Keelback">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-5" src="images-index/Oligodon_ornatusSKINK_small.jpg" alt="Ornate (Red-bellied) Kukri Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Oligodon ornatus
-                </h1>
-                <p class="common-name">Ornate (Red-bellied) Kukri Snake</p>
-                <div class="chinese-name">
-                    <p>赤腹松柏根</p>
-                    <p>(chi4fu2song1bo2gen1)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Amphiesma sp.
+                    </h1>
+                    <p class="common-name">Paiwan Keelback</p>
+                    <div class="chinese-name">
+                        <p>排 灣腹鏈</p>
+                        <p>(pai2wan1fu4lian4she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card venomous taipei endemic">
-            <div class="img-container">
-                <img class="img-adjust-14" src="images-index/Sinomicrurusmacclellandiswinhoei-TST_small.jpg" alt="MacClelland's Coral Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Sinomicrurus macclellandi swinhoei
-                </h1>
-                <p class="common-name">MacClelland's Coral Snake</p>
-                <div class="chinese-name">
-                    <p>環紋赤蛇</p>
-                    <p>(huan2wen2chi4she2)</p>
+            <div class="filter-item nonVen endemic taipei">
+                <div class="img-container">
+                    <img src="images-index/H&K&SunKids_PingdengliWatersnake_02_small.jpg" alt="Eastern Water Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous taipei">
-            <div class="img-container">
-                <img src="images-index/Najaatra-TST_small1.jpg" alt="Chinese Cobra"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Naja atra
-                </h1>
-                <p class="common-name">Chinese Cobra</p>
-                <div class="chinese-name">
-                    <p>眼 鏡蛇</p>
-                    <p>(yan3jing4she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Sinonatrix percarinata suriki
+                    </h1>
+                    <p class="common-name">Eastern Water Snake</p>
+                    <div class="chinese-name">
+                        <p>白腹游蛇</p>
+                        <p>(bai2fu2you2she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card nonVenomous taipei">
-            <div class="img-container">
-                <img src="images-index/PlumBlossomSnakeLycodonruhstrati_06_small.jpg" alt="Formosa Wolf Snake">
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Lycodon ruhstrati ruhstrati
-                </h1>
-                <p class="common-name">Formosa Wolf Snake</p>
-                <div class="chinese-name">
-                    <p>白梅花蛇</p>
-                    <p>(bai2mei2hua1she2)</p>
+            <div class="filter-item nonVen common taipei">
+                <div class="img-container">
+                    <img src="images-index/KingRatsnakeElaphecarinata_Rucksack_01_small.jpg" alt="Eastern Water Snake">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous">
-            <div class="img-container">
-                <img class="img-adjust-12" src="images-index/Pseudolaticaudasemifasciata_A-Jie_1_small.jpg" alt="Black-banded Sea Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Pseudolaticauda semifasciata
-                </h1>
-                <p class="common-name">Black-banded Sea Krait</p>
-                <div class="chinese-name">
-                    <p>闊帶清斑海蛇</p>
-                    <p>(kuo4dai4qing1ban1hai3she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Elaphe carinata
+                    </h1>
+                    <p class="common-name">King Ratsnake</p>
+                    <div class="chinese-name">
+                        <p>臭 青公</p>
+                        <p>(chou4qing1gong1)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div>
-        <div class="grid-card venomous taipei">
-            <div class="img-container">
-                <img class="img-adjust-6" src="images-index/MultibandedKraitBungarusmulticinctusmulticinctus_ZhuzihuParty_05_small2.jpg" alt="Many-banded Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Bungarus multicinctus multicinctus
-                </h1>
-                <p class="common-name">Many-banded Krait</p>
-                <div class="chinese-name">
-                    <p>雨 傘節</p>
-                    <p>(yu3san3jie2)</p>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-5" src="images-index/Amphiesmastolatum_Gerrut1_small.jpg" alt="Buff Striped Keelback">
                 </div>
-            </div>
-        </div>
-        <div class="grid-card venomous">
-            <div class="img-container">
-                <img class="img-adjust-5" src="images-index/Laticaudacolubrinae-TST_small.jpg" alt="Yellow-lipped Sea Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Laticauda colubrina
-                </h1>
-                <p class="common-name">Yellow-lipped Sea Krait</p>
-                <div class="chinese-name">
-                    <p>黃 唇青斑海蛇</p>
-                    <p>(huang2chun2qing1ban1hai3she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Amphiesma stolatum
+                    </h1>
+                    <p class="common-name">Buff Striped Keelback</p>
+                    <div class="chinese-name">
+                        <p>花 浪蛇</p>
+                        <p>(hua1lang4she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div> 
-        <div class="grid-card venomous">
-            <div class="img-container">
-                <img class="img-adjust" src="images-index/emydocephalus_ijimae_Ajie(2)_small.jpg" alt="Turtlehead Sea Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Emydocephalus ijimae
-                </h1>
-                <p class="common-name">Turtlehead Sea Snake</p>
-                <div class="chinese-name">
-                    <p>飯 島氏海蛇</p>
-                    <p>(fan4dao3shi4hai3she2)</p>
+            <div class="filter-item nonVen endemic taipei">
+                <div class="img-container">
+                    <img src="images-index/TaiwanBeautySnakeOrthriopis(Elaphe)taeniurafriesi_44_small.jpg" alt="Taiwan Beauty Snake">
                 </div>
-            </div>
-        </div> 
-        <div class="grid-card venomous">
-            <div class="img-container">
-                <img class="img-adjust-14" src="images-index/Laticauda_laticauda_small.jpg" alt="Black-lipped Sea Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
-            </div>
-            <div class="grid-card-text">
-                <h1 class="scientific-name">
-                    Laticauda laticaudata
-                </h1>
-                <p class="common-name">Black-lipped Sea Krait</p>
-                <div class="chinese-name">
-                    <p>黑唇清斑海蛇</p>
-                    <p>(hei1chun2qing1ban1hai3she2)</p>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Amphiesma stolatum
+                    </h1>
+                    <p class="common-name">Taiwan Beauty Snake</p>
+                    <div class="chinese-name">
+                        <p>黑 眉錦蛇</p>
+                        <p>(hei1mei2jin3she2)</p>
+                    </div>
                 </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
             </div>
-        </div> 
-    </section>
+            <div class="filter-item nonVen">
+                <div class="img-container">
+                    <img class="img-adjust-6" src="images-index/BurmKevin_small.jpg" alt="Burmese Python">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Python molurus bivittatus
+                    </h1>
+                    <p class="common-name">Burmese Python</p>
+                    <div class="chinese-name">
+                        <p>緬甸蟒</p>
+                        <p>(mian3dian4mang3)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-9" src="images-index/Xenochrophis_piscator_small.jpg" alt="Checkered Keelback">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Xenochrophis piscator
+                    </h1>
+                    <p class="common-name">Checkered Keelback</p>
+                    <div class="chinese-name">
+                        <p>草 花蛇</p>
+                        <p>(cao3hua1she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei endemic">
+                <div class="img-container">
+                    <img class="img-adjust-13" src="images-index/Pseudoxenodonstejnegeri-TST_small.jpg" alt="Mountain Keelback">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Pseudoxenodon stejnegeri stejnegeri
+                    </h1>
+                    <p class="common-name">Mountain Keelback</p>
+                    <div class="chinese-name">
+                        <p>史丹吉氏斜鱗蛇</p>
+                        <p>(shi3dan1ji2shi4xie2lin2she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous taipei endemic">
+                <div class="img-container">
+                    <img src="images-index/Rhabdophis_tigrinus_formosanus_Zhiming_small.jpg" alt="Asian Tiger Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Rhabdophis tigrinus formosanus
+                    </h1>
+                    <p class="common-name">Asian Tiger Snake</p>
+                    <div class="chinese-name">
+                        <p>台 灣赤煉蛇</p>
+                        <p>(tai2wan1chi4lian4she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous">
+                <div class="img-container">
+                    <img src="images-index/Daboia_russelli_ZhimingS_small.jpg" alt="Russell's Viper"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Daboia russelli siamensis
+                    </h1>
+                    <p class="common-name">Russell's Viper</p>
+                    <div class="chinese-name">
+                        <p>鎖 蛇</p>
+                        <p>(suo3she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous taipei">
+                <div class="img-container">
+                    <img class="img-adjust-13" src="images-index/FalseHabuMacropisthodonrudisrudisBalaka090615_10_small.jpg" alt="False Viper"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Macropisthodon rudis rudis
+                    </h1>
+                    <p class="common-name">False Viper</p>
+                    <div class="chinese-name">
+                        <p>擬 龜殼花</p>
+                        <p>(ni3gui1ke3hua1)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous taipei common">
+                <div class="img-container">
+                    <img class="img-adjust-6" src="images-index/TaiwanHabuProtobothropsmucrosquamatusZhuzihuBIG_3_small.jpg" alt="Taiwan Habu"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Protobothrops mucrosquamatus
+                    </h1>
+                    <p class="common-name">Taiwan Habu</p>
+                    <div class="chinese-name">
+                        <p>龜 殼花</p>
+                        <p>(gui1ke3hua1)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous endemic">
+                <div class="img-container">
+                    <img class="img-adjust-5" src="images-index/Trimeresurusgracilis_chungweiyou(5)_small1.jpg" alt="Taiwan Mountain Pitviper"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Trimeresurus gracilis
+                    </h1>
+                    <p class="common-name">Taiwan Mountain Pitviper</p>
+                    <div class="chinese-name">
+                        <p>菊池氏龜殼花</p>
+                        <p>(ju2chi3shi4gui1ke3hua1)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous taipei">
+                <div class="img-container">
+                    <img src="images-index/AlishanHabuOvophismonticola_Balaka090911_29_small.jpg" alt="Alishan Habu"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Ovophis monticola makazayazaya
+                    </h1>
+                    <p class="common-name">Alishan Habu</p>
+                    <div class="chinese-name">
+                        <p>阿 里山龜殼花</p>
+                        <p>(a1li3shan1gui1ke3hua1)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous">
+                <div class="img-container">
+                    <img src="images-index/DeinagkistrdodonacutusA-Jie(7)_small.jpg" alt="Hundred-Pacer (Chinese Moccasin)"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Deinagkistrodon acutus
+                    </h1>
+                    <p class="common-name">Hundred-Pacer (Chinese Moccasin)</p>
+                    <div class="chinese-name">
+                        <p>百 步蛇</p>
+                        <p>(bai3bu4she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen">
+                <div class="img-container">
+                    <img src="images-index/Euprepiophis_mandarina_Simon_Pu3s_small.jpg" alt="Mandarin Ratsnake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Euprepiophis mandarina
+                    </h1>
+                    <p class="common-name">Mandarin Ratsnake</p>
+                    <div class="chinese-name">
+                        <p>高 砂蛇</p>
+                        <p>(gao1sha1she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item mildlyVen common taipei">
+                <div class="img-container">
+                    <img src="images-index/Boigakraepelini-TST_small.jpg" alt="(Square-headed) Cat Snake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Boiga kraepelini
+                    </h1>
+                    <p class="common-name">(Square-headed) Cat Snake</p>
+                    <div class="chinese-name">
+                        <p>大 頭蛇</p>
+                        <p>(da4tou2she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei endemic">
+                <div class="img-container">
+                    <img src="images-index/TaiwanSlugSnakePareasformosensisZhuzihu.jpg" alt="Taiwan Slug Snake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Pareas formosensis
+                    </h1>
+                    <p class="common-name">Taiwan Slug Snake</p>
+                    <div class="chinese-name">
+                        <p>台 灣鈍頭蛇</p>
+                        <p>(tai2wan1dun4tou2she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei common">
+                <div class="img-container">
+                    <img src="images-index/Dinodonrufozonatum_Balaka_090619_7_small.jpg" alt="Red-banded Snake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Dinodon rufozonatum
+                    </h1>
+                    <p class="common-name">Red-banded Snake</p>
+                    <div class="chinese-name">
+                        <p>紅 斑蛇</p>
+                        <p>(hong2ban1she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-8" src="images-index/Sinonatrix_annularis_chungweyou(3)_small.jpg" alt="Ringed Water Snake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Sinonatrix annularis
+                    </h1>
+                    <p class="common-name">Ringed Water Snake</p>
+                    <div class="chinese-name">
+                        <p>赤 腹游蛇</p>
+                        <p>(chi4fu2you2she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-4" src="images-index/Oreocryptophisporphyraceakawakami-TST_small.jpg" alt="Red Bamboo Ratsnake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Oreocryptophis porphyracea kawakamii
+                    </h1>
+                    <p class="common-name">Red Bamboo Ratsnake</p>
+                    <div class="chinese-name">
+                        <p>紅 竹蛇</p>
+                        <p>(hong2zhu2she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img class="img-adjust-5" src="images-index/Oligodon_ornatusSKINK_small.jpg" alt="Ornate (Red-bellied) Kukri Snake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Oligodon ornatus
+                    </h1>
+                    <p class="common-name">Ornate (Red-bellied) Kukri Snake</p>
+                    <div class="chinese-name">
+                        <p>赤腹松柏根</p>
+                        <p>(chi4fu2song1bo2gen1)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous taipei endemic">
+                <div class="img-container">
+                    <img class="img-adjust-14" src="images-index/Sinomicrurusmacclellandiswinhoei-TST_small.jpg" alt="MacClelland's Coral Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Sinomicrurus macclellandi swinhoei
+                    </h1>
+                    <p class="common-name">MacClelland's Coral Snake</p>
+                    <div class="chinese-name">
+                        <p>環紋赤蛇</p>
+                        <p>(huan2wen2chi4she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous taipei">
+                <div class="img-container">
+                    <img src="images-index/Najaatra-TST_small1.jpg" alt="Chinese Cobra"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Naja atra
+                    </h1>
+                    <p class="common-name">Chinese Cobra</p>
+                    <div class="chinese-name">
+                        <p>眼 鏡蛇</p>
+                        <p>(yan3jing4she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item nonVen taipei">
+                <div class="img-container">
+                    <img src="images-index/PlumBlossomSnakeLycodonruhstrati_06_small.jpg" alt="Formosa Wolf Snake">
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Lycodon ruhstrati ruhstrati
+                    </h1>
+                    <p class="common-name">Formosa Wolf Snake</p>
+                    <div class="chinese-name">
+                        <p>白梅花蛇</p>
+                        <p>(bai2mei2hua1she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous">
+                <div class="img-container">
+                    <img class="img-adjust-12" src="images-index/Pseudolaticaudasemifasciata_A-Jie_1_small.jpg" alt="Black-banded Sea Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Pseudolaticauda semifasciata
+                    </h1>
+                    <p class="common-name">Black-banded Sea Krait</p>
+                    <div class="chinese-name">
+                        <p>闊帶清斑海蛇</p>
+                        <p>(kuo4dai4qing1ban1hai3she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous taipei">
+                <div class="img-container">
+                    <img class="img-adjust-6" src="images-index/MultibandedKraitBungarusmulticinctusmulticinctus_ZhuzihuParty_05_small2.jpg" alt="Many-banded Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Bungarus multicinctus multicinctus
+                    </h1>
+                    <p class="common-name">Many-banded Krait</p>
+                    <div class="chinese-name">
+                        <p>雨 傘節</p>
+                        <p>(yu3san3jie2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div>
+            <div class="filter-item venomous">
+                <div class="img-container">
+                    <img class="img-adjust-5" src="images-index/Laticaudacolubrinae-TST_small.jpg" alt="Yellow-lipped Sea Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Laticauda colubrina
+                    </h1>
+                    <p class="common-name">Yellow-lipped Sea Krait</p>
+                    <div class="chinese-name">
+                        <p>黃 唇青斑海蛇</p>
+                        <p>(huang2chun2qing1ban1hai3she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div> 
+            <div class="filter-item venomous">
+                <div class="img-container">
+                    <img class="img-adjust" src="images-index/emydocephalus_ijimae_Ajie(2)_small.jpg" alt="Turtlehead Sea Snake"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Emydocephalus ijimae
+                    </h1>
+                    <p class="common-name">Turtlehead Sea Snake</p>
+                    <div class="chinese-name">
+                        <p>飯 島氏海蛇</p>
+                        <p>(fan4dao3shi4hai3she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div> 
+            <div class="filter-item venomous">
+                <div class="img-container">
+                    <img class="img-adjust-14" src="images-index/Laticauda_laticauda_small.jpg" alt="Black-lipped Sea Krait"><i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="filter-item-text">
+                    <h1 class="scientific-name">
+                        Laticauda laticaudata
+                    </h1>
+                    <p class="common-name">Black-lipped Sea Krait</p>
+                    <div class="chinese-name">
+                        <p>黑唇清斑海蛇</p>
+                        <p>(hei1chun2qing1ban1hai3she2)</p>
+                    </div>
+                </div>
+                <div class="filter-mask"></div> <!-- mask is last -->
+            </div> 
+
+            <div class="filter-no-item">Sorry, no snakes match your filter selections.</div>
+
+        </section>
+    </div>
     
     <script src="js/gallery-filter.js"></script>
 

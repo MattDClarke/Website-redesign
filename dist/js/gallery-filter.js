@@ -1,90 +1,59 @@
-// modified from https://www.w3schools.com/howto/howto_js_portfolio_filter.asp
+function addClassAll(el, cls){
+	for (var i = 0; i < el.length; ++i){
+		if (!el[i].className.match('(?:^|\\s)'+cls+'(?!\\S)')){ el[i].className += ' '+cls; } // if input element (.mask) does not have a class of cls (filter-mask-active) (REGEX to find a match btn other classes (or no other classes btn)).. if not there.... add the class
+		}
+	}
+function delClassAll(el, cls){
+	for (var i = 0; i < el.length; ++i){
+		el[i].className = el[i].className.replace(new RegExp('(?:^|\\s)'+cls+'(?!\\S)'),'');
+		}
+	}
 
-filterSelection("all") // default value - run when page loads (display: none for grid-cards...)
- // Execute the function (called when one of the filter buttons is clicked)
-function filterSelection(c) { 
-  var x, i;
-  x = document.getElementsByClassName("grid-card"); // get all image (with species info) cards - store group as a variable (returns an array)
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) { // loop through gallery (go through each card) with particular filter
-    // remove the "show" class from all img thumbnails
-    w3RemoveClass(x[i], "show");
-    // Add the "show" class (display:block) to the filtered elements
-    // .indexOf returns the pos of first occurence of a specified val in a string. Returns -1 if no occurence
-    // e.g. if venomous filter button is clicked, c=venomous --> if thumbnail has venomous class then show class will be added
-    // index of c will be > -1 if present... add show class to venomous thumbnails
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show"); // if c = "all" --> c="" --> .indexOf > -1 ... add show to all cards...
-  }
-}
+function contentFilter(filterID, filterType){  
+	var id = filterID;
+	document.querySelector(id + ' .filter-categories').onclick = function(evt) { 
+		var elem = evt.target || evt.srcElement, // .target --> get the element that triggered the event
+		    wrap = document.querySelectorAll(id+' .filter-wrap'), // card container
+		    items = document.querySelectorAll(id+' .filter-item'), // card
+		    inputs = document.querySelectorAll(id+' .filter-input'),
+		    filters = [],
+		    noitem = document.querySelectorAll(id+' .filter-no-item'), 
+		    mask = document.querySelectorAll(id+' .filter-mask'), // hide cards (covers filter wrap... when filter-mask-active (defined in CSS))
+		    type = filterType;
+		addClassAll(mask, 'filter-mask-active'); // mask all cards (animated in CSS?)
+		setTimeout(function() { delClassAll(mask, 'filter-mask-active'); }, 1000); // create some delay (animation) when unveiling cards
+		if (elem.className.match('(?:^|\\s)filter-all(?!\\S)')) { //  if filter-all checkbox clicked...
+			for (var i = 1; i < inputs.length; ++i) { // loop through inputs but ignore [0] (skip 1st input in loop) - filter-all
+				inputs[i].checked = false; // uncheck all  inputs (excl. filter all)
+				}
+				delClassAll(items, 'selected'); // remove selected class from all items 
+				delClassAll(wrap, 'filtered-'+type); // CAN  PROBABLY DELETE THIS
+				delClassAll(noitem, 'filter-no-item-active'); // make sure no-filter item message does not show (display: none)
+			} else { // ----> another filter is checked.... -------------> WHEN A FILTER OTHER THAN ALL IS CHECKED <----------------------
+			inputs[0].checked = false; // uncheck #filter-all
+			for (var i = 1; i < inputs.length; ++i) { // loop through inputs but ignore [0] - #filter-all
+				if (inputs[i].checked) { filters.push(inputs[i].id); } // add checked inputs to filters array 
+				}
+				delClassAll(items, 'selected'); // remove selected from all items (will display:none;)
+				addClassAll(wrap, 'filtered-'+type);  
 
+				for (var i = 0; i < filters.length; ++i) { // LOOOPING THROUGH FILTER array!!!
+					// if there was at least one checked input (other than all...)  run the addClassAll function adds selected class to filter-items that match checked (checkbox) class
+					if (filters.length > 0) {addClassAll(document.querySelectorAll(id+' .filter-item.'+filters.join('.')), 'selected');} // build css selector from filters array (add selected class to filter items (all except show all))
+					document.querySelectorAll(id+' .selected').length == 0 ? addClassAll(noitem, 'filter-no-item-active') : delClassAll(noitem, 'filter-no-item-active'); // if no checkboxes (other than all) are checked, display no matches message
+				} 
+				var checkCount = 0;  
+				for (var i = 0; i < inputs.length; ++i) {
+					checkCount += inputs[i].checked ? 1 : 0; // if inputs[i].checked is true --> add 1, else add 0 
+					}
+				if (checkCount == 0) {inputs[0].checked = true;}
+				if (inputs[0].checked) {
+					delClassAll(wrap, 'filtered-'+type);
+					delClassAll(noitem, 'filter-no-item-active');
+					}
+			}
+		}
+	}
 
-// Show filtered elements (pass in grid card that needs show class added to it)
-function w3AddClass(element, name) { // HTML element and CSS class targeted e.g. if venomous filter btn clicked --> card with venomous class --> add show class
-  var i;
-  // .split() changes strings into an array (in this case space separated strings --> array)
-  var arr1 = element.className.split(" "); // saves an array listing all CSS classes that a grid card element has (classes are listed with white spaces inbetween them) class="grid-card venomous" --> ["grid-card", "venomous"]
-  // name = "show"
-  var arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) { 
-    // .indexOf() returns pos of first occurance of string ("class="show") (-1 returned if no occurence)
-    if (arr1.indexOf(arr2[i]) == -1) { // "show" class is not present for the grid-card
-      element.className += " " + arr2[i];
-    } // add class ="show" if show is not there already
-  }
-}
+contentFilter('#gridCardsWithFilter', 'inclusive'); // demo 1 init - params: unique wrapper id, filter type (inclusive/exclusive)
 
-
-// Hide elements that are not selected (do for each card with class = grid-card)
-function w3RemoveClass(element, name) { // img thumbnail (class= grid-card), name ="show" <-- I want to remove name="show" class
-  var i;
-  var arr1 = element.className.split(" "); // eg. ["grid-card", "venomous"] splits into array of substrings (does not change OG string)
-  var arr2 = name.split(" "); // eg. class= "show" --> ["show"]
-  for (i = 0; i < arr2.length; i++) { // if show class is not present on a particular grid-card then it wnt loop...
-    while (arr1.indexOf(arr2[i]) > -1) { // while there is an occurence of show class
-      arr1.splice(arr1.indexOf(arr2[i]), 1);   // at position arr1.indexOf(arr2[i])  remove 1 item --> remove show class...
-    }
-  }
-  element.className = arr1.join(" "); // convert array to string, join elements using " " eg. ["grid-card", "venomous"] -> "grid-card venomous"... add class name (without "show" if it was present)
-}
-
-
-// Add active class to the current button (highlight it)
-var galleryFilters = document.getElementById("gallery-filters");
-var filters = galleryFilters.getElementsByClassName("gallery-filter");
-for (var i = 0; i < filters.length; i++) { // loop through all buttons
-  filters[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("gallery-filter-active"); // by default = Show All filter button (in .njk file... I set it)
-    current[0].className = current[0].className.replace(" gallery-filter-active", ""); // remove active class from previously clicked btn
-    this.className += " gallery-filter-active"; // add active class to recently clicked btn
-  });
-}
-
-
-// call function when filter btn clicked
-document.getElementById('gallery-filter-show-all').addEventListener("click", function() {
-    filterSelection("all");
-});
-
-document.getElementById('gallery-filter-venomous').addEventListener("click", function() {
-    filterSelection("venomous");
-});
-
-document.getElementById('gallery-filter-mildlyVenomous').addEventListener("click", function() {
-  filterSelection("mildlyVenomous");
-});
-
-document.getElementById('gallery-filter-nonVenomous').addEventListener("click", function() {
-    filterSelection("nonVenomous");
-});
-
-document.getElementById('gallery-filter-taipei').addEventListener("click", function() {
-  filterSelection("taipei");
-});
-
-document.getElementById('gallery-filter-common').addEventListener("click", function() {
-  filterSelection("common");
-});
-
-document.getElementById('gallery-filter-endemic').addEventListener("click", function() {
-  filterSelection("endemic");
-});
