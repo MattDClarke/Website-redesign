@@ -399,7 +399,12 @@ footer img {
 
 .filter-categories span {
   padding: 0.25rem;
-  white-space: nowrap;
+}
+
+@media all and (max-width: 812px) {
+  .filter-categories span {
+    padding: 0;
+  }
 }
 
 .filter-label {
@@ -424,6 +429,7 @@ footer img {
 @media all and (max-width: 812px) {
   .filter-label {
     font-size: 0.9rem;
+    padding: 0.25rem 0.37rem;
   }
 }
 
@@ -582,6 +588,95 @@ footer img {
      object-position: 100%;
 }
 
+.hover-top-left:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: -70% -40%;
+     object-position: -70% -40%;
+}
+
+.hover-center:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.hover-top:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 50% -40%;
+     object-position: 50% -40%;
+}
+
+.hover-top-lg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 50% 7px;
+     object-position: 50% 7px;
+}
+
+.hover-top-right:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 110% -40%;
+     object-position: 110% -40%;
+}
+
+.hover-top-right-lg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 130% 5px;
+     object-position: 130% 5px;
+}
+
+.hover-right:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 110% 50%;
+     object-position: 110% 50%;
+}
+
+.hover-right-lg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 130% 50%;
+     object-position: 130% 50%;
+}
+
+.hover-bottom-right:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 110% 120%;
+     object-position: 110% 120%;
+}
+
+.hover-bottom:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: 50% 120%;
+     object-position: 50% 120%;
+}
+
+.hover-bottom-left:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: -50% -40%;
+     object-position: -50% -40%;
+}
+
+.hover-left:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: -10% 50%;
+     object-position: -10% 50%;
+}
+
+.hover-left-sml:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -o-object-position: -10% 50%;
+     object-position: -10% 50%;
+}
+
 .filter-item-text {
   padding-top: 10px;
   padding-left: 10px;
@@ -683,10 +778,17 @@ footer img {
   display: block;
   width: 100%;
   background: #d8d8d8;
-  color: red;
-  padding: 1em 1.5em;
+  color: black;
+  font-size: 1rem;
+  padding: 1rem;
   margin: 0.75%;
   border-radius: 0.25rem;
+}
+
+@media all and (max-width: 812px) {
+  .filter-no-item.filter-no-item-active {
+    font-size: 10px;
+  }
 }
 
 .filter-mask-active {
