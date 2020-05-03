@@ -2,7 +2,7 @@ $colors: (
     black: black,
     white: white,
     off-white: #d8d8d8,
-    yellow: rgb(255, 230, 0),
+    yellow: #fefb10,
     orange: orange,
     orange-yellow: rgb(255, 196, 0),
     red: red,
@@ -125,7 +125,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-gap: 40px;
-    min-height: 100vh; 
+    min-height: 100vh;
 
     @include tablet {
         grid-gap: 20px;
@@ -398,8 +398,8 @@ button.my-btn {
 //   ...................... Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp ............
 
 main {
-    transition: all 1s;  /* for slowly decr opacity of main when text in search bar */
-    min-height: 110vh; /* when filtering gallery (index.html)  when mildly venomous clicked (only 3 results)... prevent footer from showing  */
+    transition: all 1s;  /* for slowly decr opacity of main when text in search bar */ 
+    min-height: 100vh; /* when filtering gallery (index.html)  when mildly venomous clicked (only 3 results)... prevent footer from showing  */
 }
 
 footer {
@@ -449,7 +449,6 @@ footer img {
 }
   
 
-  
 .filter-label { 
     display: block; /* allow bottom and top margin to be set (push away filter labels above or below) */ 
     margin-right:0.5rem; 
@@ -484,8 +483,14 @@ footer img {
     }
 }
   
-  
-  // ******************************************************************** Gallery container ************************************************************************ //
+
+// ****************************************************** Gallery container ******************************************************* //
+
+#gridCardsWithFilter {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
   
 .filter-wrap {
     position:relative; 
@@ -581,6 +586,7 @@ footer img {
     object-position: 100%;  
 }
 
+// ******************************************** zoom hover effect - index.html gallery *********************************************** //
 
 .hover-top-left:hover {
     transform: $hover-zoom;
@@ -1107,80 +1113,11 @@ th.table-header {
 
 }
 
-
-// ******************************************************************** swiper gallery grid ************************************************************************ //
-
 .header-box {
-    grid-area: head;
+    text-align: center;
 }
 
-.swiper-gallery {
-    grid-area: gallery;
-}
-
-.swiper-gallery-grid-container {
-    display: flex;
-    justify-content: center;   /* center grid on page */
-}
-
-.swiper-gallery-grid {
-    display: grid;
-    grid-template-columns: auto 520px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "head gallery"
-    "info gallery";
-    margin-top: 60px;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-    padding: 0 30px;
-    max-width: 1200px;
-
-    @include ipad {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "head"
-        "gallery"
-        "info";
-        padding: 0;
-    }
-
-    @include tablet {
-        margin-top: 40px;
-    }
-
-    @include mobile {
-        margin-top: 20px;
-    }
-}
-
-%swiper-gallery-info-template {
-    grid-area: info;
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: color(white);
-
-    @include ipad {
-        text-align: center;
-    }
-
-    @include tablet {
-        font-size: 12.5px;
-    }
-}
-
-.swiper-gallery-info {
-    @extend %swiper-gallery-info-template;
-    align-self: end;
-}
-
-.swiper-gallery-info--align {
-    align-self: start;
-}
-
-// ************************************************************ swiper gallery - school talks ******************************************************************* //
+// ************************************************* swiper gallery - school talks ************************************************ //
 
 #header--school-talks {
     margin-top: 0;
@@ -1194,3 +1131,5 @@ th.table-header {
 .school-talks-text-container {
     margin-top: 40px;
 }
+
+  

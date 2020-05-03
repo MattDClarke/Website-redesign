@@ -345,7 +345,7 @@ main {
   -webkit-transition: all 1s;
   transition: all 1s;
   /* for slowly decr opacity of main when text in search bar */
-  min-height: 110vh;
+  min-height: 100vh;
   /* when filtering gallery (index.html)  when mildly venomous clicked (only 3 results)... prevent footer from showing  */
 }
 
@@ -416,7 +416,7 @@ footer img {
   font-size: 1rem;
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  background: #ffe600;
+  background: #fefb10;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -450,6 +450,11 @@ footer img {
           transform: translateX(3px);
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+#gridCardsWithFilter {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .filter-wrap {
@@ -749,7 +754,7 @@ footer img {
 
 .img-container .fa-exclamation-triangle {
   position: absolute;
-  color: #ffe600;
+  color: #fefb10;
   background-color: red;
   border-radius: 3px;
   border: 4px solid red;
@@ -1260,98 +1265,7 @@ th.table-header {
 }
 
 .header-box {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: head;
-}
-
-.swiper-gallery {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: gallery;
-}
-
-.swiper-gallery-grid-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* center grid on page */
-}
-
-.swiper-gallery-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 520px;
-      grid-template-columns: auto 520px;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "head gallery" "info gallery";
-  margin-top: 60px;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
-  padding: 0 30px;
-  max-width: 1200px;
-}
-
-@media all and (max-width: 1023px) {
-  .swiper-gallery-grid {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-        grid-template-areas: "head" "gallery" "info";
-    padding: 0;
-  }
-}
-
-@media all and (max-width: 812px) {
-  .swiper-gallery-grid {
-    margin-top: 40px;
-  }
-}
-
-@media all and (max-width: 460px) {
-  .swiper-gallery-grid {
-    margin-top: 20px;
-  }
-}
-
-.swiper-gallery-info {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: info;
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: white;
-}
-
-@media all and (max-width: 1023px) {
-  .swiper-gallery-info {
-    text-align: center;
-  }
-}
-
-@media all and (max-width: 812px) {
-  .swiper-gallery-info {
-    font-size: 12.5px;
-  }
-}
-
-.swiper-gallery-info {
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-}
-
-.swiper-gallery-info--align {
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  text-align: center;
 }
 
 #header--school-talks {
