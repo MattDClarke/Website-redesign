@@ -804,7 +804,7 @@ footer img {
 
 // ******************************************************************** About.html ************************************************************************ //
 
-.about-col-12 {
+.about-col {
     padding: 0;
     display: flex;
     flex-direction: column; /* there is a heading... */
@@ -982,9 +982,6 @@ footer img {
     }
 }
 
-.table-text {
-    text-align: center;
-}
 
 .table-text td {
     padding: 7px;
@@ -1033,10 +1030,6 @@ footer img {
 }
 
 // ******************************************************************** links.html ************************************************************************ //
-
-.table-text--links {
-    text-align: left;
-}
 
 th.table-header {
     padding-left: 0;

@@ -872,7 +872,7 @@ footer img {
   }
 }
 
-.about-col-12 {
+.about-col {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1096,10 +1096,6 @@ footer img {
   }
 }
 
-.table-text {
-  text-align: center;
-}
-
 .table-text td {
   padding: 7px;
 }
@@ -1155,10 +1151,6 @@ footer img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.table-text--links {
-  text-align: left;
 }
 
 th.table-header {
