@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #161616;
+  background-color: #131313;
 }
 
 .wrapper {
@@ -96,6 +96,10 @@ nav {
   list-style: none;
 }
 
+.nav-links li:focus {
+  outline: none;
+}
+
 .nav-links a:hover {
   cursor: pointer;
 }
@@ -141,6 +145,7 @@ body.links .nav-links-page a {
 
 /* ........................................................ nav search ........................................................ */
 .search-input-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,7 +171,7 @@ body.links .nav-links-page a {
   font-family: 'Montserrat', sans-serif;
   height: 0;
   border: 0;
-  border-radius: 30px;
+  border-radius: 5px;
   margin-right: 40px;
   -webkit-transition: height 1s ease;
   transition: height 1s ease;
@@ -360,15 +365,12 @@ body.links .nav-links-page a {
   position: absolute;
   z-index: 1;
   list-style-type: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: calc(38.17% - 12px);
-  /* found empirically using a linear equation */
+  width: 47.8%;
   -ms-grid-column-align: stretch;
       justify-self: stretch;
   padding: 0;
-  margin-top: 52.2px;
+  margin-top: 40px;
+  right: 40px;
   display: none;
   max-height: 392px;
   overflow-y: scroll;
@@ -376,16 +378,11 @@ body.links .nav-links-page a {
   background-color: #d8d8d8;
 }
 
-@media all and (max-width: 991px) {
+@media all and (max-width: 600px) {
   #searchUL {
-    width: calc(100% - 30px);
-  }
-}
-
-@media all and (max-width: 812px) {
-  #searchUL {
-    max-height: 303px;
-    margin-top: 42.2px;
+    left: 0;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 

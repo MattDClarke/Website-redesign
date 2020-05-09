@@ -134,7 +134,7 @@
           animation-duration: 1s;
 }
 
-.closeBtn {
+.close-btn-modal {
   position: absolute;
   /* removed from normal flow of doc, positioned relative to its nearest ancestor (modal content)*/
   z-index: 4;
@@ -143,7 +143,7 @@
   font-size: 30px;
 }
 
-.closeBtn:hover, .closeBtn:focus {
+.close-btn-modal:hover, .close-btn-modal:focus {
   color: #727272;
   text-decoration: none;
   cursor: pointer;

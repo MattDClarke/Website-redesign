@@ -3,7 +3,7 @@ $colors: (
     white: white,
     off-white: #d8d8d8,
     grey: rgb(192, 192, 192),
-    dark-grey: rgb(22, 22, 22),
+    dark-grey: #131313,
     yellow: #fefb10,
     orange: orange,
     orange-yellow: rgb(255, 196, 0),
@@ -152,6 +152,10 @@ nav {
     
   .nav-links li {
     list-style: none;
+
+    &:focus {
+        outline: none;
+    }
   }
   
   .nav-links a:hover {
@@ -198,6 +202,7 @@ body.links .nav-links-page a {
 
 /* ........................................................ nav search ........................................................ */
 .search-input-container {
+    position: relative;
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
@@ -217,9 +222,8 @@ body.links .nav-links-page a {
     font-family: 'Montserrat', sans-serif;
     height: 0;
     border: 0;
-    border-radius: 30px;
+    border-radius: 5px;
     margin-right: 40px;
-    -webkit-transition: height 1s ease;
     transition: height 1s ease;
     font-size: 1rem;
     cursor: pointer;
@@ -577,11 +581,11 @@ body.links .nav-links-page a {
     position: absolute;
     z-index: 1;
     list-style-type: none;
-    flex: 1;
-    width: calc(38.17% - 12px); /* found empirically using a linear equation */
+    width: 47.8%;
     justify-self: stretch;
     padding: 0;
-    margin-top: 52.2px;
+    margin-top: 40px;
+    right: 40px;
     display: none;
     max-height: 392px;
     overflow-y: scroll;
@@ -589,13 +593,22 @@ body.links .nav-links-page a {
     background-color: color(off-white);
 
     @include menu-button {
-        width: calc(100% - 30px); 
+        //width: calc(100% - 30px); 
     }
+
     @include tablet {
         // width: calc(100% - 126.7px); 
-        max-height: 303px;
-        margin-top: 42.2px;
+        //max-height: 303px;
+        //margin-top: 42.2px;
     }
+
+    @include logo-resize {
+        left: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
 }
   
   #searchUL li a {

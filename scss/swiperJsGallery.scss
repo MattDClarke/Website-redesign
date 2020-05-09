@@ -139,7 +139,7 @@ $small-screen: 558px;  // for resizing img carousel ( ...)
     animation-duration: 1s;
 }
 
-.closeBtn {
+.close-btn-modal {
     position: absolute;  /* removed from normal flow of doc, positioned relative to its nearest ancestor (modal content)*/
     z-index: 4;
     color:color(white);
@@ -147,7 +147,7 @@ $small-screen: 558px;  // for resizing img carousel ( ...)
     font-size: 30px;
 }
 
-.closeBtn:hover,.closeBtn:focus {
+.close-btn-modal:hover, .close-btn-modal:focus {
     color: rgb(114, 114, 114);
     text-decoration: none;
     cursor: pointer;

@@ -7,7 +7,7 @@ var modal = document.getElementById('simpleModal');
 var modalBtn = document.querySelectorAll('.swiper-slide-img'); // select all swiper-slides (outside modal)
 //var modalBtn = document.getElementById('modalBtn');
 // close button
-var closeBtn = document.getElementsByClassName('closeBtn')[0]; // returns an array... just get first one (only one element with this class)
+var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0]; // returns an array... just get first one (only one element with this class)
 
 
 modalBtn.forEach(element => { 
@@ -15,7 +15,7 @@ modalBtn.forEach(element => {
 })
 
 // Listen for close click
-closeBtn.addEventListener('click', closeModal);
+closeBtnModal.addEventListener('click', closeModal);
 
 // function open modal
 function openModal() {
