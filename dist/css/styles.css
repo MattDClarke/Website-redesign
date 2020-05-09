@@ -25,6 +25,7 @@ body {
   }
 }
 
+/* ........................................................... nav  .......................................................... */
 nav {
   background-color: black;
   padding-top: 10px;
@@ -74,10 +75,6 @@ nav {
   color: white;
 }
 
-.logo a span {
-  border-bottom: 2px solid green;
-}
-
 .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,10 +97,6 @@ nav {
   outline: none;
 }
 
-.nav-links a:hover {
-  cursor: pointer;
-}
-
 .nav-links a {
   text-decoration: none;
   color: white;
@@ -112,13 +105,17 @@ nav {
   position: relative;
 }
 
+.nav-links a:hover {
+  cursor: pointer;
+}
+
 .nav-links a::after {
   content: '';
   display: block;
   height: 3px;
   background: white;
   position: absolute;
-  top: 1.5em;
+  top: 1.2em;
   left: 0;
   right: 0;
   border-radius: 10px;
@@ -140,7 +137,7 @@ body.about .nav-about a,
 body.school-talks .nav-school-talks a,
 body.book .nav-book a,
 body.links .nav-links-page a {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid white;
 }
 
 /* ........................................................ nav search ........................................................ */
@@ -350,17 +347,7 @@ body.links .nav-links-page a {
           transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.my-form {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-#searchUL {
+.search-ul {
   /* Remove default list styling */
   position: absolute;
   z-index: 1;
@@ -379,14 +366,14 @@ body.links .nav-links-page a {
 }
 
 @media all and (max-width: 600px) {
-  #searchUL {
+  .search-ul {
     left: 0;
     width: 90%;
     margin-left: 5%;
   }
 }
 
-#searchUL li a {
+.search-ul li a {
   border: 1px solid #ddd;
   margin-top: -1px;
   background-color: #f6f6f6;
@@ -402,16 +389,17 @@ body.links .nav-links-page a {
 }
 
 @media all and (max-width: 812px) {
-  #searchUL li a {
+  .search-ul li a {
     font-size: 16px;
   }
 }
 
-#searchUL li a:hover {
+.search-ul li a:hover {
   background-color: #eee;
   /* Add a hover effect to all links */
 }
 
+/* ....................................................  nav filter list ..................................................... */
 main {
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -472,6 +460,7 @@ footer img {
   }
 }
 
+/* ...................................................... gallery filter ...................................................... */
 .filter-categories {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,6 +528,7 @@ footer img {
           box-shadow: none;
 }
 
+/* ..................................................... gallery container ..................................................... */
 #gridCardsWithFilter {
   max-width: 1200px;
   margin: 0 auto;
@@ -573,8 +563,8 @@ footer img {
   position: relative;
   border-radius: 5px;
   background-color: #d8d8d8;
-  -webkit-box-shadow: 5px 7px 6px black;
-          box-shadow: 5px 7px 6px black;
+  -webkit-box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
   max-height: 350px;
 }
 
@@ -680,6 +670,7 @@ footer img {
      object-position: 100%;
 }
 
+/* ......................................... zoom hover effect - index gallery ............................................. */
 .hover-top-left:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -770,7 +761,7 @@ footer img {
 }
 
 .filter-item-text {
-  padding-top: 10px;
+  text-align: center;
   padding-left: 10px;
   padding-right: 10px;
   line-height: 5px;
@@ -785,11 +776,38 @@ footer img {
   }
 }
 
+.scientific-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 7px;
+  height: 50px;
+  font-size: 13.5px;
+  font-style: italic;
+  line-height: 1.2em;
+}
+
+@media all and (max-width: 812px) {
+  .scientific-name {
+    height: 35px;
+    font-size: 10px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+}
+
 .common-name {
   position: relative;
   font-size: 17px;
   font-weight: 600;
   line-height: 1.2em;
+  padding-top: 10px;
 }
 
 .common-name::before {
@@ -809,45 +827,42 @@ footer img {
   .common-name {
     font-size: 10px;
     line-height: 10px;
+    padding-top: 5px;
     margin-bottom: 8px;
   }
 }
 
-.chinese-name {
-  padding-top: 5px 0;
+.chinese-name-container {
+  font-size: 11px;
+  margin-top: 23px;
   line-height: 1px;
 }
 
 @media all and (max-width: 812px) {
-  .chinese-name {
-    font-size: 5.99px;
-    padding-top: 0;
+  .chinese-name-container {
+    font-size: 5.6px;
+    margin-top: 11.5px;
     line-height: 0.5px;
   }
 }
 
-.chinese-name p {
+.chinese-name-chars {
   margin-bottom: 15px;
 }
 
 @media all and (max-width: 812px) {
-  .chinese-name p {
+  .chinese-name-chars {
     margin-bottom: 10px;
   }
 }
 
-.scientific-name {
-  margin: 0;
-  height: 50px;
-  font-size: 15px;
-  font-style: italic;
-  line-height: 1.2em;
+.chinese-name-romanized {
+  margin-bottom: 25px;
 }
 
 @media all and (max-width: 812px) {
-  .scientific-name {
-    height: 35px;
-    font-size: 10px;
+  .chinese-name-romanized {
+    margin-bottom: 15px;
   }
 }
 
@@ -875,6 +890,7 @@ footer img {
   }
 }
 
+/* ................................................... filtering the gallery ................................................... */
 .filtered-inclusive .filter-item, .filtered-exclusive .filter-item, .filter-no-item {
   display: none;
 }
@@ -910,7 +926,7 @@ footer img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background-color: black;
+  background-color: #131313;
   -webkit-animation: filterMask 1s ease-in;
           animation: filterMask 1s ease-in;
 }
@@ -958,6 +974,7 @@ footer img {
   /* covers briefly... a pulse */
 }
 
+/* ........................................................ gallery intro........................................................ */
 .gallery-intro {
   text-align: center;
   font-size: 30px;
@@ -979,6 +996,7 @@ footer img {
   }
 }
 
+/* ........................................................ about.html ........................................................ */
 .about-col {
   padding: 0;
   display: -webkit-box;
@@ -1219,6 +1237,7 @@ footer img {
   }
 }
 
+/* ........................................................ book.html ........................................................ */
 .text-box--book {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1260,6 +1279,7 @@ footer img {
           flex: 1;
 }
 
+/* ........................................................ links.html ........................................................ */
 th.table-header {
   padding-left: 0;
   padding-right: 0;
@@ -1282,6 +1302,7 @@ th.table-header {
   }
 }
 
+/* ........................................................ species pages ........................................................ */
 .species-media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1367,6 +1388,7 @@ th.table-header {
   text-align: center;
 }
 
+/* .............................................. swiper gallery - school talks ................................................. */
 #header--school-talks {
   margin-top: 0;
   text-align: left;

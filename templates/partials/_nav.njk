@@ -24,92 +24,10 @@
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
         <input id="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50">
-        <ul id="searchUL"> 
+        <ul id="searchUL" class="search-ul"> 
             {% for name in names %}
                 <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
             {% endfor %}
         </ul>
     </div>
-
-
-            {# 
-                <form id="nav-search-form" class="search-input-container">
-                    <div class="my-form-spacer"></div> 
-                    <div class="search-input-container">
-                        <input id="searchInput" type="search" placeholder="" autocomplete="off" maxlength="50">
-                        <ul id="searchUL"> 
-                        {% for name in names %}
-                            <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </form>   #}
-
-
-
-            {# <div class="search-input-container">
-                <input type="text" id="search" class="search-input" placeholder="" maxlength="50">
-            </div> #}
-
-            {# <form id="nav-search-form" class="my-form form-inline my-2 my-lg-0">
-                <div class="my-form-spacer"></div>
-                <div class="search-input-container">
-                    <input id="searchInput" type="search" placeholder="Search for a species" autocomplete="off" maxlength="50">
-                    <ul id="searchUL"> 
-                    {% for name in names %}
-                        <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
-                    {% endfor %}
-                    </ul>
-                </div>
-            </form>   #}
-
 </nav>
-
-
-
-{# <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand-container">
-        <a class="navbar-brand" href="index.html"><img src="images-index/Snakes_of_Taiwan_homepage_final.png" alt="image of Chinese Green Tree Viper"></a>
-    </div>
-    <div class="navbar-items-container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span>&equiv;</span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul id="navLinks" class="navbar-nav mt-2 mt-lg-0">
-                <li class="nav-item nav-home">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item nav-about">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item nav-school-talks">
-                    <a class="nav-link" href="school-talks.html">School Talks</a>
-                </li>
-                <li class="nav-item nav-book">
-                    <a class="nav-link" href="book.html">Book</a>
-                </li>
-                <li class="nav-item nav-links">
-                    <a class="nav-link" href="links.html">Links</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">English</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Chinese</a>
-                </li>
-            </ul>
-            <form id="nav-search-form" class="my-form form-inline my-2 my-lg-0">
-                <div class="my-form-spacer"></div>
-                <div class="search-input-container">
-                    <input id="searchInput" type="search" placeholder="Search for a species" autocomplete="off" maxlength="50">
-                    <ul id="searchUL"> 
-                    {% for name in names %}
-                        <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
-                    {% endfor %}
-                    </ul>
-                </div>
-            </form>        
-        </div>
-    </div>
-</nav> #}

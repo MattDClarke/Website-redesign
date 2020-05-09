@@ -93,18 +93,17 @@ body {
     }
 }  
 
-
-// ************************************************************* Nav ************************************************************* //
+/* ........................................................... nav  .......................................................... */
 
 nav {
     background-color: color(black);
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid white;
-  }
+}
       
   /* container to make minimum nav width */
-  .nav--items {
+.nav--items {
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -112,103 +111,100 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 0;
-    }
+}
   
-  .website-logo {
+.website-logo {
     height: 32px;
     margin-bottom: -9px;
-  
+
     @include logo-resize {
-      height: 24px;
+    height: 24px;
     }
-  }
+}
       
-  .logo {
+.logo {
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 23px;
     color: color(white);
     width: 50%;
     padding-left: 5%;
-  }
-  
-  .logo a {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: color(white); 
-  }
-  
-  .logo a span {
-    border-bottom: 2px solid green;
-  }
-  
-  .nav-links {
+
+    a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: color(white); 
+    }
+}
+
+
+.nav-links {
     display: flex;
     justify-content: space-around;
     align-items: baseline;  /* align text of nav items and language select */
     width: 50%; 
     margin-right: 5%;
-  }
-    
-  .nav-links li {
-    list-style: none;
 
-    &:focus {
-        outline: none;
+    li {
+        list-style: none; 
+         
+        &:focus {
+            outline: none;
+        } 
     }
-  }
-  
-  .nav-links a:hover {
-    cursor: pointer;
-  }
-    
-  .nav-links a {
-    text-decoration: none;
-    color: color(white);
-    letter-spacing: 1.5px;
-    font-weight: bold;
-    position: relative;
-  }
-    
-  .nav-links a::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background: color(white);
-    position: absolute;
-    top: 1.5em;
-    left: 0;
-    right: 0;
-    border-radius: 10px;
-    transform: scale(0);
-    transition: transform ease 0.25s;
-  }
-    
-  .nav-links a:hover::after {
-    transform: scale(1,1);
-  }
 
-  // styling active page
+    a {
+        text-decoration: none;
+        color: color(white);
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        position: relative;   
+        
+        &:hover {
+            cursor: pointer;    
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: color(white);
+            position: absolute;
+            top: 1.2em;
+            left: 0;
+            right: 0;
+            border-radius: 10px;
+            transform: scale(0);
+            transition: transform ease 0.25s;    
+        }
+
+        &:hover::after {
+            transform: scale(1,1);
+        }
+    }
+}
+
+// styling active page
 body.home .nav-home a,
 body.about .nav-about a,
 body.school-talks .nav-school-talks a,
 body.book .nav-book a,
 body.links .nav-links-page a {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.95);
+    border-bottom: 2px solid color(white);
 }
 
 
 
-
 /* ........................................................ nav search ........................................................ */
+
 .search-input-container {
     position: relative;
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-  }
+}
 
-  .search-input-spacer {
+.search-input-spacer {
     width: 50%;
     flex: 1;
     margin-left: 5%;
@@ -216,9 +212,9 @@ body.links .nav-links-page a {
     @include logo-resize {
         display: none;
     }
-  }
+}
 
-  .search-input {
+.search-input {
     font-family: 'Montserrat', sans-serif;
     height: 0;
     border: 0;
@@ -228,7 +224,7 @@ body.links .nav-links-page a {
     font-size: 1rem;
     cursor: pointer;
     flex: 1;
-    
+
     &:focus {
         outline: none;
     }
@@ -236,107 +232,107 @@ body.links .nav-links-page a {
     @include logo-resize {
         margin: 0 5%;
     }
-  }
+}
   
 
   
-  .search-icon {
+.search-icon {
     position: absolute;
     right: 10px;
     width: 32px;
     margin: 5.5px 0.5px 0.5px 5.5px;
     cursor: pointer;
-  }
+}
   
-  .search-close {
+.search-close {
     position: absolute;
     right: 10px;
     display: none;
     font-size: 3rem;
     cursor: pointer;
-  }
+}
   
   
-    /* ........................................................ nav burger ........................................................ */
+/* ........................................................ nav burger ........................................................ */
   
-  .burger {
+.burger {
     display: none;
     cursor: pointer;
     width: 50%;
-  }
+}
     
   /* to make burger icon right aligned */
-  .burger--container {
+.burger--container {
     width: 25px;
     margin: 0 auto;
     text-align: left;
-  }
+}
     
-  .burger--container div{
+.burger--container div{
     background-color: color(white);
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: right;
     transition: all 0.5s ease;
-  }
+}
     
-  .line1 {
+.line1 {
     width: 21px; 
     height: 2px;
     margin-left: 4px; /* to make burger icon right aligned */
-  }
-  .line2 {
+}
+.line2 {
     width: 23px;
     height: 3px;
     margin-left: 2px; /* to make burger icon right aligned */
-  }
-  .line3 {
+}
+.line3 {
     width: 25px;
     height: 4px;
-  }
+}
     
     
-  /* ........................................................ nav mobile ........................................................ */
+/* ........................................................ nav mobile ........................................................ */
     
-  @media (max-width: 1000px) {
+@media (max-width: 1000px) {
     body {
-      overflow-x: hidden;
+        overflow-x: hidden;
     }
     .nav-links {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      padding-top: 20vh;
-      top: 0;
-      background-color: color(maroon);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      width: 50%;
-      margin-right: 0;
-      z-index: 1;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-    }
-    
-    .nav-links li {
-      opacity: 0;
-      padding: 5px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding-top: 20vh;
+        top: 0;
+        background-color: color(maroon);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 50%;
+        margin-right: 0;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+
+        li {
+            opacity: 0;
+            padding: 5px;
+        }
     }
     
     .burger {
       display: block;
     }
-  }
+}
     
     
-  .nav-active {
+.nav-active {
     transform: translateX(0%);
     z-index: 2;
-  }
+}
     
-  @keyframes navLinkFade {
+@keyframes navLinkFade {
     from {
       opacity: 0;
       transform: translateX(50px);
@@ -345,238 +341,31 @@ body.links .nav-links-page a {
       opacity: 1;
       transform: translateX(0px);
     }
-  }
+}
     
-  .burger.close {
+.burger.close {
     width: 50%;
     color: color(black);
     z-index: 3;
-  }
-    
-  .close .line1 {
-    width: 25px; 
-    margin-left: 0;
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  .close .line2 {
-    margin-left: 0px;
-    opacity: 0;
-  }
-  .close .line3 {
-    height: 2px;
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-  
-/////////////////////// OLD NAV......///////////////  
-
-
-
-// .navbar {
-//     flex-direction: column;
-//     box-shadow: 0 0 1px  rgba(255,255,255,0.1);
-//     background-color: color(black);
-//     padding-left: 0;
-//     padding-right: 0;
-//     padding-top: 0px;
-//     border-bottom: rgba(255, 255, 255, 0.5) 0.5px solid;
-
-//     @include mobile {
-//         padding-bottom: 0;
-//     }
-// }
-
-
-// /* add hover underline effect to nav links */
-
-// .nav-link {
-//     position: relative;
-// }
-
-// .nav-link::after {
-//     content: '';
-//     display: block;
-//     height: 2px;
-//     background: white;
-//     position: absolute;
-//     bottom: -2px;
-//     left: 0;
-//     right: 0;
-//     border-radius: 10px;
-//     transform: scale(0);
-//     transition: transform ease 0.25s;
-// }
-
-// .nav-link:hover::after {
-//     transform: scale(1,1);
-// }
-  
-
-
-// .navbar-brand-container {
-//     width:100%;
-//     text-align: center;
-//     border-bottom: rgba(255, 255, 255, 0.5) 0.5px solid;
-//     box-shadow: 0 0 1px  rgba(255,255,255,1);
-// }
-// .navbar-brand {
-//     font-weight: 700;
-//     padding-top: 5px;
-//     padding-bottom: 5px;
-//     margin-right: 0;
-// }
-
-// .navbar-items-container {
-//     text-align: center;
-//     width: 100%;
-//     padding-top: 8px;
-
-//     @include mobile {
-//         padding-top: 1px;
-//     }
-// }
-
-// .navbar img {
-//     height: auto;
-//     width: 200px;
-//     border-radius: 5px;
-
-//     @include tablet {
-//         width: 188px;
-//     }
-//     @include mobile {
-//         width: 130px;
-//     }
-// }
-
-// .navbar-nav {
-//     flex: 1.62;
-// }
-
-// #navbarToggler ul > li {  
-//     padding: 0 3px;
-// }
-
-// #navbarToggler > ul {  /* made more specific with > so that it did not make search list ul a flex-box  */
-//     display: flex; 
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: space-evenly;
-
-//     @include mobile {
-//         justify-content: center;
-//     }
-//   }
-
-//   .navbar-toggler {
-//     //background-color: color(black);
-//     font-size: 70px;
-//     padding: 20px 20px 25px;
-//     color: color(white);
-//     line-height: 10px;
-
-//     @include tablet {
-//         font-size: 60px;
-//         padding: 13px 13px 17px 13px;
-//         line-height: 13px;
-//     }
-
-//     @include mobile {
-//         font-size: 40px;
-//     }
-// }
-
-// .navbar-toggler span{
-//     color: white;
-// }
-
-// .navbar-toggler:focus {
-//     outline: none;
-// }
-
-.my-form {
-    flex-wrap: nowrap;
-    flex: 1;
-    margin-left: 15px;
-    margin-right: 15px;
 }
-
-// .dropdown-menu.show {
-//     width: 160px;
-//   }
-
-// .nav-link {
-//     margin-left: 5px;
-//     margin-right: 5px;
-//     color: rgba(255, 255, 255, 0.95);
-// }
-
-// .nav-link:focus {
-//     outline: none;
-//   }
-
-// .nav-link:hover  {
-//     color: rgba(255, 255, 255, 0.6);
-//     transition: all 0.5s;
-// }
-
-// .nav-link i:hover  {
-//     color: color(green);
-//     transition: all 0.5s;
-// }
-
-// .nav-link i {
-
-//     @include tablet {
-//         font-size: 20px;
-//     }   
-// }
-
-// .search-input-container {
-//     flex: 1;
-//     display: flex;
-
-//     @include tablet {
-//         padding-top: 0;
-//         padding-bottom: 0;
-//     }
-// }
-
-
-// button.my-btn {
-//     padding-top: 9px;
-//     padding-bottom: 9px;
-//     margin-left: 10px;
-//     border-width: 2px;
-
-//     @include tablet {
-//         font-size: 16px;
-//         padding-top: 7px;
-//         padding-bottom: 7px;
-//     }
-// }
-
-
-//   ...................... Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp ............
   
-// #searchInput {
-//     line-height: 38px;
-//     width: 100%;
-//     border-radius: 5px;
-//     padding: 5px 13px;
-//     font-size: 18px;
+.close {
+    .line1 {
+        width: 25px; 
+        margin-left: 0;
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .line2 {
+        margin-left: 0px;
+        opacity: 0;
+    }
+    .line3 {
+        height: 2px;
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}  
 
-//     @include tablet {
-//         font-size: 16px;
-//         padding-top: 0;
-//         padding-bottom: 0;
-//     }
-// }  
-
-// #searchInput:focus {
-//     outline: none;
-// }
-
-#searchUL {
+.search-ul {
     /* Remove default list styling */
     position: absolute;
     z-index: 1;
@@ -592,26 +381,14 @@ body.links .nav-links-page a {
     border-radius: 5px;
     background-color: color(off-white);
 
-    @include menu-button {
-        //width: calc(100% - 30px); 
-    }
-
-    @include tablet {
-        // width: calc(100% - 126.7px); 
-        //max-height: 303px;
-        //margin-top: 42.2px;
-    }
-
     @include logo-resize {
         left: 0;
         width: 90%;
         margin-left: 5%;
     }
-
-
 }
   
-  #searchUL li a {
+.search-ul li a {
     border: 1px solid #ddd; 
     margin-top: -1px;
     background-color: #f6f6f6; /* Grey background color */
@@ -627,40 +404,21 @@ body.links .nav-links-page a {
     }
 }
   
-#searchUL li a:hover {
+.search-ul li a:hover {
     background-color: #eee; /* Add a hover effect to all links */
 }
 
 
-//   ...................... Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp ............
+/* ....................................................  nav filter list ..................................................... */
+//  Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp .
 
 main {
-    // position: relative;
     transition: all 1s;  /* for slowly decr opacity of main when text in search bar */ 
     min-height: 100vh; /* when filtering gallery (index.html)  when mildly venomous clicked (only 3 results)... prevent footer from showing  */
 }
-
-// main::after {
-//     content: "";
-//     background-color: color(dark-grey);
-//     top: 0;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     position: absolute;
-//     z-index: -1; 
-//   }
-    
-//   .main-content {
-//     max-width: 1200px;
-//     min-height: 100vh;
-//     margin: 0 auto;
-//     bottom: 0;
-//     position: relative;
-//   }
     
   /* make background fade when nav menu opened - toggled using JavaScript */
-  .main-content.background-fade {
+.main-content.background-fade {
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
@@ -671,7 +429,7 @@ main {
     left:0;
     right: 0;
     transition: all 0.5s ease;
-  }
+}
 
 
 footer {
@@ -703,23 +461,21 @@ footer img {
     }
 }
 
-// ******************************************************************** Gallery filter ************************************************************************ //
+/* ...................................................... gallery filter ...................................................... */
 
 .filter-categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-.filter-categories span { 
-    padding:0.25rem;
-    
-    @include tablet {
-        padding: 0.25rem;
-    }
 
+    span {
+        padding:0.25rem;
+
+        @include tablet {
+            padding: 0.25rem;
+        }
+    }
 }
-  
 
 .filter-label { 
     display: block; /* allow bottom and top margin to be set (push away filter labels above or below) */ 
@@ -743,7 +499,7 @@ footer img {
     }
 }
   
-  .filter-input {
+.filter-input {
     position: absolute; /* align over label.. good for better for accessibilty on some touch devices for discoverability. https://css-tricks.com/the-checkbox-hack/ */
     display: flex;
     z-index: 1;
@@ -757,7 +513,7 @@ footer img {
 }
   
 
-// ****************************************************** Gallery container ******************************************************* //
+/* ..................................................... gallery container ..................................................... */
 
 #gridCardsWithFilter {
     max-width: 1200px;
@@ -788,7 +544,7 @@ footer img {
     position: relative;
     border-radius: 5px;
     background-color: color(off-white);
-    box-shadow: 5px 7px 6px rgba(0, 0, 0, 1);
+    box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
     max-height: 350px;
   
     &:hover {
@@ -859,7 +615,8 @@ footer img {
     object-position: 100%;  
 }
 
-// ******************************************** zoom hover effect - index.html gallery *********************************************** //
+
+/* ......................................... zoom hover effect - index gallery ............................................. */
 
 .hover-top-left:hover {
     transform: $hover-zoom;
@@ -928,7 +685,7 @@ footer img {
   
 
 .filter-item-text {
-    padding-top: 10px;
+    text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     line-height: 5px;
@@ -941,11 +698,31 @@ footer img {
     }
 }
 
+.scientific-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+    height: 50px;
+    font-size: 13.5px;
+    font-style: italic;
+    line-height: 1.2em;
+
+    @include tablet {
+        height: 35px;
+        font-size: 10px;
+        padding-bottom: 15px;
+        padding-top: 10px;
+    }
+}
+
+
 .common-name {
     position: relative;
     font-size: 17px;
     font-weight: 600;
     line-height: 1.2em;
+    padding-top: 10px;
 
     &::before {
         content: '';
@@ -963,40 +740,38 @@ footer img {
     @include tablet {
         font-size: 10px;
         line-height: 10px;
+        padding-top: 5px;
         margin-bottom: 8px;
     }
 }
 
-.chinese-name {
-    padding-top: 5px 0;
+.chinese-name-container {
+    font-size: 11px;
+    margin-top: 23px;
     line-height: 1px;
 
     @include tablet {
-        font-size: 5.99px;
-        padding-top: 0;
+        font-size: 5.6px;
+        margin-top: 11.5px;
         line-height: 0.5px;
     }
 }
 
-.chinese-name p {
+.chinese-name-chars {
     margin-bottom: 15px;
+
     @include tablet {
         margin-bottom: 10px;
     }
 }
 
-.scientific-name {
-    margin: 0;
-    height: 50px;
-    font-size: 15px;
-    font-style: italic;
-    line-height: 1.2em;
-
+.chinese-name-romanized {
+    margin-bottom: 25px;
     @include tablet {
-        height: 35px;
-        font-size: 10px;
+        margin-bottom: 15px;
     }
 }
+
 
 .img-container {
     position: relative;
@@ -1020,7 +795,8 @@ footer img {
     }
 }
 
-// ******************************************************************** filtering the gallery  ******************************************************************** //
+
+/* ................................................... filtering the gallery ................................................... */
 
 
 .filtered-inclusive .filter-item, .filtered-exclusive .filter-item, .filter-no-item { 
@@ -1054,7 +830,7 @@ footer img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    background-color: color(black);
+    background-color: color(dark-grey);
     animation:filterMask 1s ease-in; 
 }
  
@@ -1072,7 +848,8 @@ footer img {
 	100% { opacity: 1 }   /* covers briefly... a pulse */
 }
 
-// ******************************************************************** Gallery intro ************************************************************************ //
+
+/* ........................................................ gallery intro........................................................ */
 
 .gallery-intro {
     text-align: center;
@@ -1091,7 +868,7 @@ footer img {
 }  
 
 
-// ******************************************************************** About.html ************************************************************************ //
+/* ........................................................ about.html ........................................................ */
 
 .about-col {
     padding: 0;
@@ -1271,7 +1048,6 @@ footer img {
     }
 }
 
-
 .table-text td {
     padding: 7px;
     
@@ -1284,7 +1060,8 @@ footer img {
     }
 }
 
-// ******************************************************************** book.html ************************************************************************ //
+
+/* ........................................................ book.html ........................................................ */
 
 .text-box--book {
     display: flex;
@@ -1318,7 +1095,7 @@ footer img {
     flex: 1;
 }
 
-// ******************************************************************** links.html ************************************************************************ //
+/* ........................................................ links.html ........................................................ */
 
 th.table-header {
     padding-left: 0;
@@ -1338,7 +1115,7 @@ th.table-header {
     }
 }
 
-// ******************************************************************** species pages************************************************************************ //
+/* ........................................................ species pages ........................................................ */
 
 .species-media {
     display: flex;
@@ -1399,7 +1176,8 @@ th.table-header {
     text-align: center;
 }
 
-// ************************************************* swiper gallery - school talks ************************************************ //
+
+/* .............................................. swiper gallery - school talks ................................................. */
 
 #header--school-talks {
     margin-top: 0;
