@@ -3,10 +3,10 @@ $colors: (
     white: white,
     off-white: #d8d8d8,
     grey: rgb(192, 192, 192),
-    dark-grey: #131313,
+    dark-grey: #0e0e0e,
     yellow: #fefb10,
     orange: orange,
-    orange-yellow: rgb(255, 196, 0),
+    light-yellow: #fdfa54,
     red: red,
     maroon: #800000,
     green: #00B200,
@@ -484,12 +484,12 @@ footer img {
     border-radius:0.5rem; 
     font-size:1rem;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-    background: color(yellow);
+    background: color(white);
     transition: all 0.3s ease 0s;
   
     &:hover {
       cursor: pointer;
-      background: color(orange-yellow);
+      background: color(light-yellow);
     }    
 
     @include tablet {
@@ -506,7 +506,7 @@ footer img {
     opacity: 0; /* hide */
      
     &:checked + label { // adjacent sibling selector
-      background-color: color(orange);
+      background-color: color(yellow);
       transform: translateX(3px);
       box-shadow: none;
     }
@@ -533,9 +533,9 @@ footer img {
     font-size: 75%;
 
     @include tablet {
-        grid-template-columns: repeat(auto-fit, 100px);
+        grid-template-columns: repeat(auto-fit, 139px);
         grid-gap: 10px;
-        font-size: 50%;
+        font-size: 70%;
     }
 }
 
@@ -565,7 +565,7 @@ footer img {
     transition: all 0.9s ease;
   
     @include tablet {
-      height: 83.375px;
+      height: 116.7px;
     }
 }
 
@@ -691,10 +691,10 @@ footer img {
     line-height: 5px;
 
     @include tablet {
-        padding-top: 5px;
+        padding-top: 0px;
         padding-left: 5px;
         padding-right: 5px;
-        line-height: 3.3px;
+        line-height: 3.5px;
     }
 }
 
@@ -710,9 +710,9 @@ footer img {
 
     @include tablet {
         height: 35px;
-        font-size: 10px;
-        padding-bottom: 15px;
-        padding-top: 10px;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
 }
 
@@ -738,10 +738,10 @@ footer img {
     }
 
     @include tablet {
-        font-size: 10px;
-        line-height: 10px;
-        padding-top: 5px;
-        margin-bottom: 8px;
+        font-size: 15px;
+        //line-height: 10px;
+        padding-top: 7px;
+        margin-bottom: 15px;
     }
 }
 
@@ -751,9 +751,9 @@ footer img {
     line-height: 1px;
 
     @include tablet {
-        font-size: 5.6px;
+        font-size: 7.7px;
         margin-top: 11.5px;
-        line-height: 0.5px;
+        //line-height: 0.5px;
     }
 }
 
@@ -768,7 +768,7 @@ footer img {
 .chinese-name-romanized {
     margin-bottom: 25px;
     @include tablet {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 }
 
@@ -853,9 +853,9 @@ footer img {
 
 .gallery-intro {
     text-align: center;
-    font-size: 30px;
-    letter-spacing: 3px;
-    margin: 0px 20px 0px 20px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin: 60px 20px 20px 20px;
     color: color(white);
 
     @include tablet {
