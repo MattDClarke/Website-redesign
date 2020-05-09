@@ -6,7 +6,7 @@
         tabs[i].onclick = sneaky.sneak;
     }
 
-    var sneaky = new ScrollSneak(location.hostname), tabs = document.getElementById('navLinks').getElementsByTagName('li'), i = 0, len = tabs.length;
+    var sneaky = new ScrollSneak(location.hostname), tabs = document.getElementById('navUl').getElementsByTagName('li'), i = 0, len = tabs.length;
     for (; i < len; i++) {
         tabs[i].onclick = sneaky.sneak;
     }

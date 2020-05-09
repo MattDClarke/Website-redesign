@@ -1,4 +1,73 @@
-<nav class="navbar navbar-expand-lg">
+<nav>
+    <div class="nav--items">
+        <div class="logo">
+            <a href="#"><img src="images-nav/snakes-of-taiwan_logo.svg" alt="Snakes of Taiwan logo" class="website-logo"></a>
+        </div>
+        <ul id="navUl" class="nav-links">
+            <li class="nav-home"><a href="index.html">Home</a></li>
+            <li class="nav-about"><a href="about.html">About</a></li>
+            <li class="nav-school-talks"><a href="school-talks.html">School Talks</a></li>
+            <li class="nav-book"><a href="book.html">Book</a></li>
+            <li class="nav-links-page"><a href="links.html">Links</a></li>
+            <li><a href="#" lang="zh-CN">中文</a></li>
+        </ul> 
+        <div class="burger">
+            <div class="burger--container">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <img src="images-nav/search.svg" alt="search button" id="search-icon" class="search-icon">
+        <img src="images-nav/close.svg" alt="close button" id="search-close" class="search-icon search-close">
+    </div>
+    <div id="nav-search-form" class="search-input-container">
+        <div class="search-input-spacer"></div>
+        <input id="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50">
+            <ul id="searchUL"> 
+            {% for name in names %}
+                <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
+            {% endfor %}
+            </ul>
+    </div>
+
+
+            {# 
+                <form id="nav-search-form" class="search-input-container">
+                    <div class="my-form-spacer"></div> 
+                    <div class="search-input-container">
+                        <input id="searchInput" type="search" placeholder="" autocomplete="off" maxlength="50">
+                        <ul id="searchUL"> 
+                        {% for name in names %}
+                            <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </form>   #}
+
+
+
+            {# <div class="search-input-container">
+                <input type="text" id="search" class="search-input" placeholder="" maxlength="50">
+            </div> #}
+
+            {# <form id="nav-search-form" class="my-form form-inline my-2 my-lg-0">
+                <div class="my-form-spacer"></div>
+                <div class="search-input-container">
+                    <input id="searchInput" type="search" placeholder="Search for a species" autocomplete="off" maxlength="50">
+                    <ul id="searchUL"> 
+                    {% for name in names %}
+                        <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </form>   #}
+
+</nav>
+
+
+
+{# <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand-container">
         <a class="navbar-brand" href="index.html"><img src="images-index/Snakes_of_Taiwan_homepage_final.png" alt="image of Chinese Green Tree Viper"></a>
     </div>
@@ -9,30 +78,29 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul id="navLinks" class="navbar-nav mt-2 mt-lg-0">
                 <li class="nav-item nav-home">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home fa-2x"></i><br>Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item nav-about">
-                    <a class="nav-link" href="about.html"><i class="far fa-address-card fa-2x"></i><br>About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item nav-school-talks">
-                    <a class="nav-link" href="school-talks.html"><i class="fas fa-chalkboard-teacher fa-2x"></i><br>School Talks</a>
+                    <a class="nav-link" href="school-talks.html">School Talks</a>
                 </li>
                 <li class="nav-item nav-book">
-                    <a class="nav-link" href="book.html"><i class="fas fa-book-reader fa-2x"></i><br>Book</a>
+                    <a class="nav-link" href="book.html">Book</a>
                 </li>
                 <li class="nav-item nav-links">
-                    <a class="nav-link" href="links.html"><i class="fas fa-link fa-2x"></i><br>Links</a>
+                    <a class="nav-link" href="links.html">Links</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-language fa-2x"></i><br>English</a>
+                    <a class="nav-link" href="#">English</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-language fa-2x"></i><br>Chinese</a>
+                    <a class="nav-link" href="#">Chinese</a>
                 </li>
             </ul>
             <form id="nav-search-form" class="my-form form-inline my-2 my-lg-0">
                 <div class="my-form-spacer"></div>
-                {# <input id="searchInput" class="form-control mr-sm-2" type="input" placeholder="Search for a species"> #}
                 <div class="search-input-container">
                     <input id="searchInput" type="search" placeholder="Search for a species" autocomplete="off" maxlength="50">
                     <ul id="searchUL"> 
@@ -41,8 +109,7 @@
                     {% endfor %}
                     </ul>
                 </div>
-                {# <button class="my-btn btn btn-secondary btn-lg my-2 my-sm-0" type="submit">Search</button> #}
             </form>        
         </div>
     </div>
-</nav>
+</nav> #}
