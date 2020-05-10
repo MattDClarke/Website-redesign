@@ -118,8 +118,13 @@ nav {
     height: 32px;
     margin-bottom: -9px;
 
+    @include tablet {
+        height: 28px;
+    }
+
     @include logo-resize {
     height: 24px;
+    width: 210.917px;
     }
 }
       

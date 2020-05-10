@@ -54,9 +54,16 @@ nav {
   margin-bottom: -9px;
 }
 
+@media all and (max-width: 812px) {
+  .website-logo {
+    height: 28px;
+  }
+}
+
 @media all and (max-width: 600px) {
   .website-logo {
     height: 24px;
+    width: 210.917px;
   }
 }
 
