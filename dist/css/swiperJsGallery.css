@@ -5,14 +5,12 @@
 
 /* ................................................ swiper gallery .......................................................... */
 .swiper-container {
-  width: 500px;
+  width: 650px;
   height: auto;
   padding-bottom: 15px;
-  -webkit-box-shadow: 10px 0 12px black;
-          box-shadow: 10px 0 12px black;
 }
 
-@media all and (max-width: 558px) {
+@media all and (max-width: 700px) {
   .swiper-container {
     width: 90vw;
   }
@@ -23,14 +21,13 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 30px solid #d8d8d8;
+  border: 30px solid #0e0e0e;
   /* move next and prev buttons off img */
-  border-radius: 10px;
 }
 
-@media all and (max-width: 558px) {
+@media all and (max-width: 700px) {
   .swiper-slide img {
-    border: 16px solid #d8d8d8;
+    border: 16px solid #0e0e0e;
   }
 }
 
@@ -43,14 +40,11 @@
 }
 
 .swiper-pagination {
-  background-color: #d8d8d8;
   padding: 10px;
   border-radius: 0 0 10px 10px;
-  -webkit-box-shadow: 10px 14px 12px black;
-          box-shadow: 10px 14px 12px black;
 }
 
-@media all and (max-width: 558px) {
+@media all and (max-width: 700px) {
   .swiper-pagination {
     padding: 4px;
   }
@@ -60,7 +54,7 @@
   position: absolute;
   -webkit-transform: translateX(-30%);
           transform: translateX(-30%);
-  color: black;
+  color: white;
 }
 
 .swiper-button-prev:focus {
@@ -68,35 +62,38 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.swiper-button-next, .swiper-button-prev {
+  top: calc(50% - 10px);
+}
+
 .swiper-button-next {
   position: absolute;
   -webkit-transform: translateX(30%);
           transform: translateX(30%);
-  color: black;
-  font-weight: 900;
+  color: white;
 }
 
 .swiper-button-next:focus {
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: white;
 }
 
-/*active pagination*/
-.swiper-pagination .swiper-pagination-bullet-active {
-  background-color: black;
-}
-
-@media all and (max-width: 558px) {
-  .swiper-pagination .swiper-pagination-bullet-active {
-    height: 12px;
-    width: 12px;
-  }
+.swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  opacity: 0.6;
 }
 
 /*other pagination*/
 .swiper-pagination .swiper-pagination-bullet {
   height: 15px;
   width: 15px;
+  background-color: #ff1110;
+}
+
+@media all and (max-width: 700px) {
+  .swiper-pagination .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+  }
 }
 
 .swiper-pagination .swiper-pagination-bullet:hover {
@@ -104,11 +101,19 @@
           transform: scale(1.2);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  background-color: white;
+  opacity: 0.5;
 }
 
 .swiper-pagination .swiper-pagination-bullet:focus {
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: white;
+  -webkit-tap-highlight-color: #f8f8f8;
+}
+
+/*active pagination*/
+.swiper-pagination-bullet-active {
+  background-color: white !important;
 }
 
 /* ................................................ modal .......................................................... */
@@ -189,7 +194,7 @@
   color: white;
 }
 
-@media all and (max-width: 558px) {
+@media all and (max-width: 700px) {
   #swiper-button-next--modal {
     -webkit-transform: translateX(20%);
             transform: translateX(20%);
@@ -202,14 +207,14 @@
   color: white;
 }
 
-@media all and (max-width: 558px) {
+@media all and (max-width: 700px) {
   #swiper-button-prev--modal {
     -webkit-transform: translateX(-20%);
             transform: translateX(-20%);
   }
 }
 
-@media all and (max-width: 558px) {
+@media all and (max-width: 700px) {
   .swiper-button-next:after {
     font-size: 20px;
     -webkit-transform: translateX(60%);
@@ -217,7 +222,7 @@
   }
 }
 
-@media all and (max-width: 558px) {
+@media all and (max-width: 700px) {
   .swiper-button-prev:after {
     font-size: 20px;
     -webkit-transform: translateX(-60%);

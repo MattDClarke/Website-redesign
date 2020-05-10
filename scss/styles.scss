@@ -1,11 +1,11 @@
 $colors: (
     black: black,
     white: white,
+    white-lighter: rgb(236, 236, 236),
     off-white: #d8d8d8,
     grey: rgb(192, 192, 192),
     dark-grey: #0e0e0e,
     yellow: #fefb10,
-    orange: orange,
     light-yellow: #fdfa54,
     red: red,
     maroon: #800000,
@@ -220,6 +220,8 @@ body.links .nav-links-page a {
     border: 0;
     border-radius: 5px;
     margin-right: 40px;
+    //padding-left: 45px;
+    padding-left: 14px;
     transition: height 1s ease;
     font-size: 1rem;
     cursor: pointer;
@@ -242,6 +244,11 @@ body.links .nav-links-page a {
     width: 32px;
     margin: 5.5px 0.5px 0.5px 5.5px;
     cursor: pointer;
+
+    @include logo-resize {
+        width: 24px;
+        margin-bottom: -6px;
+    }
 }
   
 .search-close {
@@ -250,6 +257,11 @@ body.links .nav-links-page a {
     display: none;
     font-size: 3rem;
     cursor: pointer;
+    
+    @include logo-resize {
+        width: 24px;
+        margin-bottom: -6px;
+    }
 }
   
   
@@ -265,6 +277,7 @@ body.links .nav-links-page a {
 .burger--container {
     width: 25px;
     margin: 0 auto;
+    margin-bottom: -8.4px;  // vertically align logo and burger menu icon
     text-align: left;
 }
     
@@ -277,21 +290,36 @@ body.links .nav-links-page a {
 }
     
 .line1 {
-    width: 21px; 
+    width: 5px; 
     height: 2px;
-    margin-left: 4px; /* to make burger icon right aligned */
+    margin-left: 20px; /* to make burger icon right aligned */
 }
 .line2 {
-    width: 23px;
+    width: 14px;
     height: 3px;
-    margin-left: 2px; /* to make burger icon right aligned */
+    margin-left: 11px; /* to make burger icon right aligned */
 }
 .line3 {
     width: 25px;
     height: 4px;
 }
     
+// .line1 {
+//     width: 21px; 
+//     height: 2px;
+//     margin-left: 4px; /* to make burger icon right aligned */
+// }
+// .line2 {
+//     width: 23px;
+//     height: 3px;
+//     margin-left: 2px; /* to make burger icon right aligned */
+// }
+// .line3 {
+//     width: 25px;
+//     height: 4px;
+// }
     
+
 /* ........................................................ nav mobile ........................................................ */
     
 @media (max-width: 1000px) {
@@ -302,7 +330,7 @@ body.links .nav-links-page a {
         position: fixed;
         right: 0;
         bottom: 0;
-        padding-top: 20vh;
+        padding-top: 50px;
         top: 0;
         background-color: color(maroon);
         display: flex;
@@ -317,7 +345,7 @@ body.links .nav-links-page a {
 
         li {
             opacity: 0;
-            padding: 5px;
+            padding: 10px;
         }
     }
     
@@ -370,7 +398,7 @@ body.links .nav-links-page a {
     position: absolute;
     z-index: 1;
     list-style-type: none;
-    width: 47.8%;
+    width: calc(47.5% - 12px);
     justify-self: stretch;
     padding: 0;
     margin-top: 40px;
@@ -436,30 +464,39 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    line-height: 15px;
-    font-size: 10px;
-    padding: 5px;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 20px 5px;
     background-color: color(black);
     color: color(white);
     box-shadow: 0 0 1px  rgba(255,255,255,0.1);
     border-top: rgba(255, 255, 255, 0.5) 0.5px solid;
     margin-top: 60px;
+
+    @include tablet {
+        font-size: 10px;
+    }
 }
 
 .footer-img-container {
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 footer img {
     width: 100px;
     height: 100%;
-    margin: 10px;
     border-radius: 5px;
 
     @include tablet {
-        width: 50px;
+        width: 75px;
     }
 }
+
+.developer-link {
+    text-decoration: none;
+    color: color(white);
+}
+
 
 /* ...................................................... gallery filter ...................................................... */
 
@@ -739,7 +776,6 @@ footer img {
 
     @include tablet {
         font-size: 15px;
-        //line-height: 10px;
         padding-top: 7px;
         margin-bottom: 15px;
     }
@@ -753,7 +789,6 @@ footer img {
     @include tablet {
         font-size: 7.7px;
         margin-top: 11.5px;
-        //line-height: 0.5px;
     }
 }
 
@@ -791,7 +826,7 @@ footer img {
     right: 0px;
 
     @include tablet {
-        font-size: 8px;
+        font-size: 14px;
     }
 }
 
@@ -855,12 +890,12 @@ footer img {
     text-align: center;
     font-size: 20px;
     letter-spacing: 1.5px;
-    margin: 60px 20px 20px 20px;
+    margin: 7px 20px 20px 20px;
     color: color(white);
 
     @include tablet {
         font-size: 15px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
     @include mobile {
         margin-top: 10px;
@@ -877,10 +912,12 @@ footer img {
 }
 
 %text-box-template {  /* SASS inheritance */
-    background-color: color(off-white);
-    box-shadow: 10px 14px 12px rgba(0, 0, 0, 1);
-    border-radius: 30px;
+    //background-color: color(off-white);
+    //box-shadow: 10px 14px 12px rgba(0, 0, 0, 1);
+    //border-radius: 30px;
+    color: color(white-lighter);
     font-size: 20px;
+    line-height: 2rem;
     margin-top: 0;
     width: 90%;
     max-width: 1200px;
@@ -968,7 +1005,7 @@ footer img {
 }
 
 %header-template {
-    color: color(white);
+    color: color(white-lighter);
     letter-spacing: 3px;
 
     @include ipad {
@@ -979,7 +1016,7 @@ footer img {
 .header {
     @extend %header-template;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 25px;
     font-size: 35px;
 
     @include tablet {
@@ -995,7 +1032,7 @@ footer img {
 .header--name {
     @extend %header-template;
     font-size: 35px;
-
+    margin-top: 25px;
     @include tablet {
         font-size: 26px;
     }
@@ -1191,5 +1228,3 @@ th.table-header {
 .school-talks-text-container {
     margin-top: 40px;
 }
-
-  

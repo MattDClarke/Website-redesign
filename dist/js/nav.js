@@ -94,7 +94,6 @@ searchIcon.addEventListener('click', () => {
 searchIcon.style.display = 'none';
 closeBtnSearch.style.display = 'block';
 searchInput.style.height = '40px';
-searchInput.style.paddingLeft = '45px';
 searchInput.style.cursor = 'text';
 searchInput.focus();
 

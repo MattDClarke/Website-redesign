@@ -10,7 +10,7 @@ $colors: (
 }
 
 
-$small-screen: 558px;  // for resizing img carousel ( ...)
+$small-screen: 700px;  // for resizing img carousel ( ...)
 
 @mixin small-screen {
     @media all and (max-width: #{$small-screen}) {
@@ -24,13 +24,14 @@ $small-screen: 558px;  // for resizing img carousel ( ...)
     box-sizing: border-box;
 }
   
-  /* ................................................ swiper gallery .......................................................... */
+/* ................................................ swiper gallery .......................................................... */
   
 .swiper-container {
-    width: 500px;
+    // width: 500px;
+    width: 650px;
     height: auto;
     padding-bottom: 15px;
-    box-shadow: 10px 0 12px rgba(0, 0, 0, 1);
+    //box-shadow: 10px 0 12px rgba(0, 0, 0, 1);
 
 @include small-screen {
     width: 90vw;
@@ -41,11 +42,10 @@ $small-screen: 558px;  // for resizing img carousel ( ...)
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border: 30px solid color(off-white);  /* move next and prev buttons off img */
-    border-radius: 10px; 
+    border: 30px solid #0e0e0e; /* move next and prev buttons off img */
 
 @include small-screen {
-    border: 16px solid color(off-white);
+    border: 16px solid #0e0e0e;
     }
 }
   
@@ -58,10 +58,8 @@ $small-screen: 558px;  // for resizing img carousel ( ...)
 }
   
 .swiper-pagination {
-    background-color: color(off-white);
     padding: 10px;
     border-radius: 0 0 10px 10px;
-    box-shadow: 10px 14px 12px rgba(0, 0, 0, 1);
 
     @include small-screen {
         padding: 4px;
@@ -71,51 +69,63 @@ $small-screen: 558px;  // for resizing img carousel ( ...)
 .swiper-button-prev {
     position: absolute;
     transform: translateX(-30%);
-    color: color(black);
+    color: color(white);
 }
   
 .swiper-button-prev:focus {
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.swiper-button-next, .swiper-button-prev {
+    top: calc(50% - 10px); // vertically center
+}
   
 .swiper-button-next {
     position: absolute;
     transform: translateX(30%);
-    color: color(black);
-    font-weight: 900;
+    color: color(white);
 }
   
 .swiper-button-next:focus {
     outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: color(white);
 }
   
+
+.swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    opacity: 0.6;
+}
+
   
-/*active pagination*/
-.swiper-pagination .swiper-pagination-bullet-active {
-    background-color: color(black); 
+/*other pagination*/
+.swiper-pagination .swiper-pagination-bullet {
+    height: 15px;
+    width: 15px;
+    background-color: #ff1110;
 
     @include small-screen {
         height: 12px;
         width: 12px;
     }
 }
-  
-/*other pagination*/
-.swiper-pagination .swiper-pagination-bullet {
-    height: 15px;
-    width: 15px;
-}
 
 .swiper-pagination .swiper-pagination-bullet:hover {
     transform: scale(1.2);
     transition: all 0.5s;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;  
 }
 
 .swiper-pagination .swiper-pagination-bullet:focus {
     outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    -webkit-tap-highlight-color: rgb(248, 248, 248);
+}
+
+/*active pagination*/
+.swiper-pagination-bullet-active {
+    background-color: color(white) !important; // had to use !important.. override .swiper-pagination-bullet color
 }
   
 /* ................................................ modal .......................................................... */
@@ -207,4 +217,3 @@ $small-screen: 558px;  // for resizing img carousel ( ...)
     }
 
 }
-  
