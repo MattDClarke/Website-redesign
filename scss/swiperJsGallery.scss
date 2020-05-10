@@ -68,7 +68,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
   
 .swiper-button-prev {
     position: absolute;
-    transform: translateX(-30%);
+    transform: translateX(-40%);
     color: color(white);
 }
   
@@ -81,9 +81,13 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     top: calc(50% - 10px); // vertically center
 }
   
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 2rem;
+}
+
 .swiper-button-next {
     position: absolute;
-    transform: translateX(30%);
+    transform: translateX(40%);
     color: color(white);
 }
   

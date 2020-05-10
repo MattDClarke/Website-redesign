@@ -52,8 +52,8 @@
 
 .swiper-button-prev {
   position: absolute;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
   color: white;
 }
 
@@ -66,10 +66,14 @@
   top: calc(50% - 10px);
 }
 
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 2rem;
+}
+
 .swiper-button-next {
   position: absolute;
-  -webkit-transform: translateX(30%);
-          transform: translateX(30%);
+  -webkit-transform: translateX(40%);
+          transform: translateX(40%);
   color: white;
 }
 

@@ -8,6 +8,7 @@ $colors: (
     yellow: #fefb10,
     light-yellow: #fdfa54,
     red: red,
+    red-lighter: #ff1110,
     maroon: #800000,
     green: #00B200,
     light-green: #14FF4c
@@ -112,7 +113,7 @@ nav {
     margin: 0 auto;
     padding: 10px 0;
 }
-  
+
 .website-logo {
     height: 32px;
     margin-bottom: -9px;
@@ -192,7 +193,6 @@ body.book .nav-book a,
 body.links .nav-links-page a {
     border-bottom: 2px solid color(white);
 }
-
 
 
 /* ........................................................ nav search ........................................................ */
@@ -282,7 +282,7 @@ body.links .nav-links-page a {
 }
     
 .burger--container div{
-    background-color: color(white);
+    //background-color: color(white);
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: right;
@@ -293,15 +293,19 @@ body.links .nav-links-page a {
     width: 5px; 
     height: 2px;
     margin-left: 20px; /* to make burger icon right aligned */
+    background-color: color(white);  
 }
 .line2 {
     width: 14px;
     height: 3px;
     margin-left: 11px; /* to make burger icon right aligned */
+    background-color: color(red-lighter);
 }
 .line3 {
     width: 25px;
     height: 4px;
+    background-color: color(white);
+    
 }
     
 // .line1 {
@@ -346,6 +350,10 @@ body.links .nav-links-page a {
         li {
             opacity: 0;
             padding: 10px;
+        }
+
+        li.nav-home {
+            padding-top: 20px;
         }
     }
     
@@ -844,17 +852,18 @@ footer img {
 
 .filter-no-item.filter-no-item-active { /* message stating no filter results */
 	display:block; 
-	width:100%; 
-	background:color(off-white); 
-    color: color(black); 
+    width: 400px;
+	background: color(red-lighter); 
+    color: color(white); 
     font-size: 1rem;
 	padding: 1rem; 
-    margin:0.75%;
+    justify-self: center;
+    text-align: center;
     border-radius:0.25rem; 
 
     @include tablet {
         font-size: 10px;
-        //line-height: 10px;
+        width: 260px;
     }
 }
 

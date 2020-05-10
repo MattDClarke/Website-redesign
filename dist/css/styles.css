@@ -236,7 +236,6 @@ body.links .nav-links-page a {
 }
 
 .burger--container div {
-  background-color: white;
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: right;
@@ -249,6 +248,7 @@ body.links .nav-links-page a {
   height: 2px;
   margin-left: 20px;
   /* to make burger icon right aligned */
+  background-color: white;
 }
 
 .line2 {
@@ -256,11 +256,13 @@ body.links .nav-links-page a {
   height: 3px;
   margin-left: 11px;
   /* to make burger icon right aligned */
+  background-color: #ff1110;
 }
 
 .line3 {
   width: 25px;
   height: 4px;
+  background-color: white;
 }
 
 /* ........................................................ nav mobile ........................................................ */
@@ -301,6 +303,9 @@ body.links .nav-links-page a {
   .nav-links li {
     opacity: 0;
     padding: 10px;
+  }
+  .nav-links li.nav-home {
+    padding-top: 20px;
   }
   .burger {
     display: block;
@@ -928,18 +933,21 @@ footer img {
 .filter-no-item.filter-no-item-active {
   /* message stating no filter results */
   display: block;
-  width: 100%;
-  background: #d8d8d8;
-  color: black;
+  width: 400px;
+  background: #ff1110;
+  color: white;
   font-size: 1rem;
   padding: 1rem;
-  margin: 0.75%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
   border-radius: 0.25rem;
 }
 
 @media all and (max-width: 812px) {
   .filter-no-item.filter-no-item-active {
     font-size: 10px;
+    width: 260px;
   }
 }
 

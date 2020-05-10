@@ -4,9 +4,20 @@ const navSlide = () => {
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
   const mainContent = document.querySelector('.main-content');
+  // close search input (if open)
+  var searchInputBox = document.getElementById('searchInput');
+  const searchIcon = document.getElementById('search-icon');
+  const closeBtnSearch = document.getElementById('search-close');
   
   burger.addEventListener('click',()=> {
     
+    // close search input (if open)... same effect as clicking close for search box
+    closeBtnSearch.style.display = 'none';
+    searchIcon.style.display = 'block';
+    searchInputBox.style.height = '0';
+    searchInputBox.value = ''; // clear input
+    searchFilter(); // to make UL display = none. (if user closes search when there are search results displayed)
+
     // toggle nav
     nav.classList.toggle('nav-active');
 
