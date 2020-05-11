@@ -25,7 +25,7 @@ $filter-wrap: 1200px; // change margin when filters wrap
 $ipad: 1023px; // ipad wide view
 $menu-button: 991px; // width when Bootstrap menu aria appears
 $tablet: 812px; // smaller sized screens --> decr size by about 1/2
-$logo-resize: 600px;
+$tablet-mobile: 600px;
 $mobile: 460px; // small sized screens
 
 
@@ -59,8 +59,8 @@ $mobile: 460px; // small sized screens
     }
 }
 
-@mixin logo-resize {
-    @media all and (max-width: #{$logo-resize}) {
+@mixin tablet-mobile {
+    @media all and (max-width: #{$tablet-mobile}) {
         @content;
     }
 } 
@@ -78,9 +78,25 @@ $mobile: 460px; // small sized screens
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    width: 14px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: color(dark-grey);
+    scrollbar-width: thin;
+    scrollbar-color: color(maroon) color(black);
+}
+
+body::-webkit-scrollbar-track {
+    background: color(black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: color(maroon);
+    border-radius: 6px;
+    border: 3px solid color(black);
 }
 
 .wrapper {
@@ -122,7 +138,7 @@ nav {
         height: 28px;
     }
 
-    @include logo-resize {
+    @include tablet-mobile {
     height: 24px;
     width: 210.917px;
     }
@@ -214,7 +230,7 @@ body.links .nav-links-page a {
     flex: 1;
     margin-left: 5%;
 
-    @include logo-resize {
+    @include tablet-mobile {
         display: none;
     }
 }
@@ -225,7 +241,6 @@ body.links .nav-links-page a {
     border: 0;
     border-radius: 5px;
     margin-right: 40px;
-    //padding-left: 45px;
     padding-left: 14px;
     transition: height 1s ease;
     font-size: 1rem;
@@ -236,7 +251,11 @@ body.links .nav-links-page a {
         outline: none;
     }
 
-    @include logo-resize {
+    @include tablet {
+        font-size: 0.875rem;
+    }
+
+    @include tablet-mobile {
         margin: 0 5%;
     }
 }
@@ -246,25 +265,35 @@ body.links .nav-links-page a {
 .search-icon {
     position: absolute;
     right: 10px;
-    width: 32px;
+    height: 32px;
     margin: 5.5px 0.5px 0.5px 5.5px;
     cursor: pointer;
+    
+    @include tablet {
+        height: 28px;
+    }
 
-    @include logo-resize {
+    @include tablet-mobile {
         width: 24px;
         margin-bottom: -6px;
     }
 }
   
+
 .search-close {
     position: absolute;
     right: 10px;
     display: none;
+    height: 23px;
     font-size: 3rem;
     cursor: pointer;
+
+    @include tablet {
+        height: 21.13px;
+    }
     
-    @include logo-resize {
-        width: 24px;
+    @include tablet-mobile {
+        height: 18.1px;
         margin-bottom: -6px;
     }
 }
@@ -287,7 +316,6 @@ body.links .nav-links-page a {
 }
     
 .burger--container div{
-    //background-color: color(white);
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: right;
@@ -417,12 +445,16 @@ body.links .nav-links-page a {
     margin-top: 40px;
     right: 40px;
     display: none;
-    max-height: 392px;
+    max-height: 306px;
     overflow-y: scroll;
     border-radius: 5px;
     background-color: color(off-white);
 
-    @include logo-resize {
+    @include tablet {
+        max-height: 277px;
+    }
+
+    @include tablet-mobile {
         left: 0;
         width: 90%;
         margin-left: 5%;
@@ -436,12 +468,12 @@ body.links .nav-links-page a {
     padding: 6px 13px; 
     text-align: left;
     text-decoration: none; /* Remove default text underline */
-    font-size: 18px; 
+    font-size: 1rem; 
     color: black; 
     display: block; /* Make it into a block element to fill the whole list */
 
     @include tablet {
-        font-size: 16px;
+        font-size: 0.875rem;
     }
 }
   

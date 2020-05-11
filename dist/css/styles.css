@@ -5,9 +5,25 @@
           box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #0e0e0e;
+  scrollbar-width: thin;
+  scrollbar-color: #800000 black;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #800000;
+  border-radius: 6px;
+  border: 3px solid black;
 }
 
 .wrapper {
@@ -191,6 +207,12 @@ body.links .nav-links-page a {
   outline: none;
 }
 
+@media all and (max-width: 812px) {
+  .search-input {
+    font-size: 0.875rem;
+  }
+}
+
 @media all and (max-width: 600px) {
   .search-input {
     margin: 0 5%;
@@ -200,9 +222,15 @@ body.links .nav-links-page a {
 .search-icon {
   position: absolute;
   right: 10px;
-  width: 32px;
+  height: 32px;
   margin: 5.5px 0.5px 0.5px 5.5px;
   cursor: pointer;
+}
+
+@media all and (max-width: 812px) {
+  .search-icon {
+    height: 28px;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -216,13 +244,20 @@ body.links .nav-links-page a {
   position: absolute;
   right: 10px;
   display: none;
+  height: 23px;
   font-size: 3rem;
   cursor: pointer;
 }
 
+@media all and (max-width: 812px) {
+  .search-close {
+    height: 21.13px;
+  }
+}
+
 @media all and (max-width: 600px) {
   .search-close {
-    width: 24px;
+    height: 18.1px;
     margin-bottom: -6px;
   }
 }
@@ -387,10 +422,16 @@ body.links .nav-links-page a {
   margin-top: 40px;
   right: 40px;
   display: none;
-  max-height: 392px;
+  max-height: 306px;
   overflow-y: scroll;
   border-radius: 5px;
   background-color: #d8d8d8;
+}
+
+@media all and (max-width: 812px) {
+  .search-ul {
+    max-height: 277px;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -410,7 +451,7 @@ body.links .nav-links-page a {
   text-align: left;
   text-decoration: none;
   /* Remove default text underline */
-  font-size: 18px;
+  font-size: 1rem;
   color: black;
   display: block;
   /* Make it into a block element to fill the whole list */
@@ -418,7 +459,7 @@ body.links .nav-links-page a {
 
 @media all and (max-width: 812px) {
   .search-ul li a {
-    font-size: 16px;
+    font-size: 0.875rem;
   }
 }
 
