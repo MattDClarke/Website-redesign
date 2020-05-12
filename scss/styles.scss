@@ -556,7 +556,6 @@ footer img {
   
     &:hover {
       cursor: pointer;
-      background: color(light-yellow);
     }    
 
     @include tablet {
@@ -943,9 +942,6 @@ footer img {
 }
 
 %text-box-template {  /* SASS inheritance */
-    //background-color: color(off-white);
-    //box-shadow: 10px 14px 12px rgba(0, 0, 0, 1);
-    //border-radius: 30px;
     color: color(white-lighter);
     font-size: 20px;
     line-height: 2rem;

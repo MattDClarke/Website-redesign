@@ -577,7 +577,6 @@ footer img {
 
 .filter-label:hover {
   cursor: pointer;
-  background: #fdfa54;
 }
 
 @media all and (max-width: 812px) {
