@@ -1126,6 +1126,7 @@ footer img {
 @media all and (max-width: 812px) {
   .text-box {
     padding: 20px;
+    letter-spacing: -0.052rem;
   }
 }
 
@@ -1153,7 +1154,7 @@ footer img {
 }
 
 .text-box--links {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1167,7 +1168,12 @@ footer img {
 @media all and (max-width: 812px) {
   .text-box--links {
     padding: 20px;
-    margin-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .text-box--links {
+    padding: 10px;
   }
 }
 
@@ -1184,13 +1190,9 @@ footer img {
   color: #00B200;
 }
 
-.about-box-bottom {
-  margin-top: 20px;
-}
-
 @media all and (max-width: 812px) {
   .about-box-bottom {
-    margin-top: 10px;
+    padding-top: 5px;
   }
 }
 
@@ -1198,13 +1200,13 @@ footer img {
   margin-bottom: 0;
 }
 
-.header, .header--name, .header--species, .header--status, .header--danger {
+.header, .header-links, .header--name, .header--species, .header--status, .header--danger {
   color: #ececec;
   letter-spacing: 3px;
 }
 
 @media all and (max-width: 1023px) {
-  .header, .header--name, .header--species, .header--status, .header--danger {
+  .header, .header-links, .header--name, .header--species, .header--status, .header--danger {
     text-align: center;
   }
 }
@@ -1226,6 +1228,26 @@ footer img {
   .header {
     font-size: 17.5px;
     margin-top: 20px;
+  }
+}
+
+.header-links {
+  text-align: left;
+  font-size: 28px;
+  margin-top: 25px;
+}
+
+@media all and (max-width: 812px) {
+  .header-links {
+    font-size: 20.8px;
+    margin-top: 15px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header-links {
+    font-size: 18px;
+    margin-top: 10px;
   }
 }
 
@@ -1290,30 +1312,42 @@ footer img {
   }
 }
 
-.about-header-credits {
-  padding-top: 40px;
+.my-list1 {
+  margin-top: 30px;
+  margin-left: 20px;
+  list-style: none;
+  text-align: left;
 }
 
 @media all and (max-width: 812px) {
-  .about-header-credits {
-    padding-top: 20px;
+  .my-list1 {
+    letter-spacing: -0.052rem;
+    margin-top: 15px;
   }
 }
 
-.table-text td {
-  padding: 7px;
+.my-list2 {
+  margin-top: 15px;
+  margin-left: 20px;
+  list-style: none;
+  text-align: left;
 }
 
 @media all and (max-width: 812px) {
-  .table-text td {
-    padding: 5px;
+  .my-list2 {
+    letter-spacing: -0.052rem;
+    margin-top: 5px;
   }
 }
 
-@media all and (max-width: 460px) {
-  .table-text td {
-    padding: 2px;
-  }
+.my-list1 li::before, .my-list2 li::before {
+  content: "\2022";
+  color: red;
+  display: inline-block;
+  font-size: 25px;
+  width: 1em;
+  margin-left: -1em;
+  top: 0;
 }
 
 /* ........................................................ book.html ........................................................ */
@@ -1328,6 +1362,7 @@ footer img {
 .book-img-container {
   text-align: center;
   margin-right: 20px;
+  margin-top: 10px;
 }
 
 @media all and (max-width: 1280px) {
@@ -1356,6 +1391,10 @@ footer img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.book-text-2 {
+  margin-top: 20px;
 }
 
 /* ........................................................ links.html ........................................................ */
@@ -1428,6 +1467,7 @@ th.table-header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    letter-spacing: -0.052rem;
   }
 }
 
@@ -1460,6 +1500,7 @@ th.table-header {
 @media all and (max-width: 812px) {
   .info-box-text {
     padding: 0;
+    letter-spacing: -0.052rem;
   }
 }
 

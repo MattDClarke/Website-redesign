@@ -340,22 +340,7 @@ body.links .nav-links-page a {
     background-color: color(white);
     
 }
-    
-// .line1 {
-//     width: 21px; 
-//     height: 2px;
-//     margin-left: 4px; /* to make burger icon right aligned */
-// }
-// .line2 {
-//     width: 23px;
-//     height: 3px;
-//     margin-left: 2px; /* to make burger icon right aligned */
-// }
-// .line3 {
-//     width: 25px;
-//     height: 4px;
-// }
-    
+
 
 /* ........................................................ nav mobile ........................................................ */
     
@@ -512,7 +497,7 @@ footer {
     line-height: 20px;
     font-size: 14px;
     padding: 20px 5px;
-    background-color: color(black);
+    background-color: black;
     color: color(white);
     box-shadow: 0 0 1px  rgba(255,255,255,0.1);
     border-top: rgba(255, 255, 255, 0.5) 0.5px solid;
@@ -987,8 +972,10 @@ footer img {
 
     @include tablet {
         padding: 20px;
+        letter-spacing: -0.052rem;
     }
 }
+
 
 .text-box--species {
     @extend %text-box-template;
@@ -1011,7 +998,7 @@ footer img {
 
 .text-box--links {
     @extend %text-box-template;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     align-self: center; /* center about-box in viewport*/ 
     margin-left: 5%;
     margin-right: 5%;
@@ -1020,7 +1007,10 @@ footer img {
 
     @include tablet {
         padding: 20px;
-        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        padding: 10px;
     }
 }
 
@@ -1039,10 +1029,9 @@ footer img {
 }
 
 .about-box-bottom {
-    margin-top: 20px;
 
     @include tablet {
-        margin-top: 10px;
+        padding-top: 5px;
     }
 }
 
@@ -1074,6 +1063,23 @@ footer img {
         margin-top: 20px;
     }
 }
+
+.header-links {
+    @extend %header-template;
+    text-align: left;
+    font-size: 28px;
+    margin-top: 25px;
+
+    @include tablet {
+        font-size: 20.8px;
+        margin-top: 15px;
+    }
+    @include mobile {
+        font-size: 18px;
+        margin-top: 10px;
+    }    
+}
+
 
 .header--name {
     @extend %header-template;
@@ -1123,26 +1129,40 @@ footer img {
     }
 }
 
-.about-header-credits {
-    padding-top: 40px;
+
+.my-list1 {
+    margin-top: 30px;
+    margin-left: 20px;
+    list-style: none;
+    text-align: left;
 
     @include tablet {
-        padding-top: 20px;
+        letter-spacing: -0.052rem;
+        margin-top: 15px;
     }
 }
 
-.table-text td {
-    padding: 7px;
-    
-    @include tablet {
-        padding: 5px;
-    }
+.my-list2 {
+    margin-top: 15px;
+    margin-left: 20px;
+    list-style: none;
+    text-align: left;
 
-    @include mobile {
-        padding: 2px;
+    @include tablet {
+        letter-spacing: -0.052rem;
+        margin-top: 5px;
     }
 }
 
+.my-list1 li::before, .my-list2 li::before {
+    content: "\2022";
+    color: color(red);
+    display: inline-block; 
+    font-size: 25px;
+    width: 1em;
+    margin-left: -1em;
+    top: 0;
+}
 
 /* ........................................................ book.html ........................................................ */
 
@@ -1154,6 +1174,7 @@ footer img {
 .book-img-container {
     text-align: center;
     margin-right: 20px;
+    margin-top: 10px;
 
     @include desktop {
         width: 100%;
@@ -1178,6 +1199,9 @@ footer img {
     flex: 1;
 }
 
+.book-text-2 {
+    margin-top: 20px;
+}
 /* ........................................................ links.html ........................................................ */
 
 th.table-header {
@@ -1228,7 +1252,9 @@ th.table-header {
 
     @include tablet {
         flex-direction: column;
+        letter-spacing: -0.052rem;
     }
+
 }
 
 .info-box-header {
@@ -1251,6 +1277,7 @@ th.table-header {
     padding: 10px 0px;
     @include tablet {
         padding: 0;
+        letter-spacing: -0.052rem;
     }
 
 }
