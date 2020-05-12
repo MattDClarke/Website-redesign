@@ -1102,6 +1102,7 @@ footer img {
 @media all and (max-width: 812px) {
   .text-box, .text-box--species, .text-box--species-media, .text-box--links {
     font-size: 15px;
+    line-height: 25px;
   }
 }
 
