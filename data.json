@@ -2,7 +2,7 @@
   "names": [{
     "href": "amphiesma-miyajimae.html",
     "common": "Maki's Keelback",
-    "scientific": "Amphiesma Miyajimae"
+    "scientific": "Hebius miyajimae"
   }, {
     "href": "#",
     "common": "Taiwan Coral Snake",
@@ -22,11 +22,11 @@
   }, {
     "href": "#",
     "common": "Chinese Water Snake",
-    "scientific": "Enhydris chinensis"
+    "scientific": "Myrrophis chinensis"
   }, {
     "href": "#",
     "common": "Plumbeous Water Snake",
-    "scientific": "Enhydris plumbea"
+    "scientific": "Hypsiscopus plumbea"
   }, {
     "href": "#",
     "common": "Collared Reed Snake",
@@ -38,19 +38,19 @@
   }, {
     "href": "#",
     "common": "Chinese Green Tree Viper",
-    "scientific": "Viridovipera stejnegeri stejnegeri"
+    "scientific": "Trimeresurus stejnegeri stejnegeri"
   }, {
     "href": "#",
     "common": "Greater Green Snake",
-    "scientific": "Cyclophiops major"
+    "scientific": "Ptyas major"
   }, {
     "href": "#",
     "common": "Rein Snake",
-    "scientific": "Rhadinophis frenatum"
+    "scientific": "Gonyosoma frenatum"
   }, {
     "href": "#",
     "common": "Brahminy Blind Snake",
-    "scientific": "Ramphotyphlops braminus"
+    "scientific": "Indotyphlops braminus"
   }, {
     "href": "#",
     "common": "Formosan Odd-Scaled Snake",
@@ -82,11 +82,11 @@
   }, {
     "href": "#",
     "common": "Sauter's Water (Grass) Snake",
-    "scientific": "Amphiesma sauteri"
+    "scientific": "Hebius sauteri"
   }, {
     "href": "#",
     "common": "Paiwan Keelback",
-    "scientific": "Amphiesma sp."
+    "scientific": "Hebius sp."
   }, {
     "href": "#",
     "common": "Eastern Water Snake",
@@ -102,7 +102,7 @@
   }, {
     "href": "#",
     "common": "Taiwan Beauty Snake",
-    "scientific": "Orthriophis taeniurus friesi"
+    "scientific": "Elaphe taeniura friesi"
   }, {
     "href": "#",
     "common": "Burmese Python",
@@ -110,7 +110,7 @@
   }, {
     "href": "#",
     "common": "Checkered Keelback",
-    "scientific": "Xenochrophis piscator"
+    "scientific": "Fowlea flavipuncatus"
   }, {
     "href": "#",
     "common": "Mountain Keelback",
@@ -126,7 +126,7 @@
   }, {
     "href": "#",
     "common": "False Viper",
-    "scientific": "Macropisthodon rudis rudis"
+    "scientific": "Pseuagkistrodon rudis"
   }, {
     "href": "#",
     "common": "Taiwan Habu",
@@ -158,7 +158,7 @@
   }, {
     "href": "#",
     "common": "Red-banded Snake",
-    "scientific": "Dinodon rufozonatum"
+    "scientific": "Lycodon rufozonatus"
   }, {
     "href": "#",
     "common": "Ringed Water Snake",
@@ -186,7 +186,7 @@
   }, {
     "href": "#",
     "common": "Black-banded Sea Krait",
-    "scientific": "Pseudolaticauda semifasciata"
+    "scientific": "Laticauda semifasciata"
   }, {
     "href": "#",
     "common": "Many-banded Krait",
@@ -201,7 +201,7 @@
     "scientific": "Emydocephalus ijimae"
   }, {
       "href": "#",
-      "common": "Black-lipped Sea Krait",
+      "common": "Common Sea Krait",
       "scientific": "Laticauda laticaudata"
     }]
 }
