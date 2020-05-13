@@ -116,7 +116,7 @@ nav {
     background-color: color(black);
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid color(white);
 }
       
   /* container to make minimum nav width */
@@ -454,7 +454,7 @@ body.links .nav-links-page a {
     text-align: left;
     text-decoration: none; /* Remove default text underline */
     font-size: 1rem; 
-    color: black; 
+    color: color(black); 
     display: block; /* Make it into a block element to fill the whole list */
 
     @include tablet {
@@ -497,11 +497,17 @@ footer {
     line-height: 20px;
     font-size: 14px;
     padding: 20px 5px;
-    background-color: black;
+    background-color: color(black);
     color: color(white);
     box-shadow: 0 0 1px  rgba(255,255,255,0.1);
-    border-top: rgba(255, 255, 255, 0.5) 0.5px solid;
     margin-top: 60px;
+
+
+    // make footer slanted
+    padding-top: 90px;
+    padding-bottom: 40px;
+    clip-path: polygon(0px 100px, 100% 0px, 100% 100%, 0% 100%);
+
 
     @include tablet {
         font-size: 10px;
@@ -1295,6 +1301,3 @@ th.table-header {
     }
 }
 
-.school-talks-text-container {
-    margin-top: 40px;
-}
