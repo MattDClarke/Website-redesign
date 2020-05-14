@@ -1099,18 +1099,19 @@ footer img {
   margin-top: 0;
   width: 90%;
   max-width: 1200px;
+  padding: 30px 0;
 }
 
 @media all and (max-width: 812px) {
   .text-box, .text-box--species, .text-box--species-media, .text-box--links {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 25px;
   }
 }
 
 @media all and (max-width: 460px) {
   .text-box, .text-box--species, .text-box--species-media, .text-box--links {
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 20px;
   }
 }
@@ -1123,13 +1124,17 @@ footer img {
   margin-left: 5%;
   margin-right: 5%;
   text-align: justify;
-  padding: 30px;
 }
 
 @media all and (max-width: 812px) {
   .text-box {
-    padding: 20px;
-    letter-spacing: -0.052rem;
+    padding: 20px 0;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .text-box {
+    letter-spacing: -0.038rem;
   }
 }
 
@@ -1137,14 +1142,14 @@ footer img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .text-box--species-media {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 10px 30px;
+  padding: 10px 0;
   border-radius: 30px;
   margin-top: 40px;
 }
@@ -1165,32 +1170,32 @@ footer img {
   margin-left: 5%;
   margin-right: 5%;
   text-align: justify;
-  padding: 30px;
+  padding: 30px 0;
 }
 
 @media all and (max-width: 812px) {
   .text-box--links {
-    padding: 20px;
+    padding: 20px 0;
   }
 }
 
 @media all and (max-width: 460px) {
   .text-box--links {
-    padding: 10px;
+    padding: 10px 0;
   }
 }
 
 .site-link {
-  color: #00B200;
+  color: #00b200;
 }
 
 .site-link--species {
-  color: #00B200;
+  color: #00b200;
   font-style: italic;
 }
 
 .site-link:hover, .site-link--species:hover {
-  color: #00B200;
+  color: #00b200;
 }
 
 @media all and (max-width: 812px) {
@@ -1312,6 +1317,24 @@ footer img {
 @media all and (max-width: 460px) {
   .header--status {
     margin-top: 15px;
+  }
+}
+
+.my-list1 li, .my-list2 li {
+  font-size: 20px;
+}
+
+@media all and (max-width: 812px) {
+  .my-list1 li, .my-list2 li {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .my-list1 li, .my-list2 li {
+    font-size: 16px;
+    border-radius: 20px;
   }
 }
 

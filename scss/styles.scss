@@ -10,8 +10,7 @@ $colors: (
     red: red,
     red-lighter: #ff1110,
     maroon: #800000,
-    green: #00B200,
-    light-green: #14FF4c
+    green: #00b200
 );
 
 @function color($color-name) {
@@ -954,13 +953,14 @@ footer img {
     margin-top: 0;
     width: 90%;
     max-width: 1200px;
+    padding: 30px 0;
 
     @include tablet {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 25px;
     }
     @include mobile {
-        font-size: 14px;
+        font-size: 16px;
         border-radius: 20px;
     }
 }
@@ -970,12 +970,13 @@ footer img {
     align-self: center; /* center about-box in viewport*/ 
     margin-left: 5%;
     margin-right: 5%;
-    text-align: justify;
-    padding: 30px; 
+    text-align: justify; 
 
     @include tablet {
-        padding: 20px;
-        letter-spacing: -0.052rem;
+        padding: 20px 0;
+    } 
+    @include mobile { 
+        letter-spacing: -0.038rem;
     }
 }
 
@@ -983,13 +984,13 @@ footer img {
 .text-box--species {
     @extend %text-box-template;
     flex: 1;
-    padding: 30px;
+    padding: 30px 0;
 }
 
 .text-box--species-media {
     @extend %text-box-template;
     flex: 1;
-    padding: 10px 30px;
+    padding: 10px 0;
     border-radius: 30px;
     margin-top: 40px;
 
@@ -1006,14 +1007,14 @@ footer img {
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
-    padding: 30px; 
+    padding: 30px 0; 
 
     @include tablet {
-        padding: 20px;
+        padding: 20px 0;
     }
 
     @include mobile {
-        padding: 10px;
+        padding: 10px 0;
     }
 }
 
@@ -1131,6 +1132,19 @@ footer img {
         margin-top: 15px;
     }
 }
+.my-list1 li, .my-list2 li {
+    font-size: 20px;
+
+    @include tablet {
+        font-size: 18px;
+        line-height: 25px; 
+        
+    }
+    @include mobile {
+        font-size: 16px;
+        border-radius: 20px;
+    }
+}
 
 
 .my-list1 {
@@ -1138,6 +1152,7 @@ footer img {
     margin-left: 20px;
     list-style: none;
     text-align: left;
+    
 
     @include tablet {
         letter-spacing: -0.052rem;
