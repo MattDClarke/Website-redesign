@@ -996,7 +996,7 @@ footer img {
 
 @media all and (max-width: 812px) {
   .filter-no-item.filter-no-item-active {
-    font-size: 10px;
+    font-size: 0.875rem;
     width: 260px;
   }
 }
