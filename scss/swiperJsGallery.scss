@@ -27,23 +27,43 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 /* ................................................ swiper gallery .......................................................... */
   
 .swiper-container {
-    // width: 500px;
     width: 650px;
-    height: auto;
     margin-top: 13px;
     padding-bottom: 15px;
-    //box-shadow: 10px 0 12px rgba(0, 0, 0, 1);
 
 @include small-screen {
     width: 90vw;
     }
 }
-  
+
+// .swiper-slide {
+//     //height: 360px; // Not sure if I need to change...
+   
+// }
+
+.aspect-ratio_130-59 { // first img of school talks swiper gallery
+    min-height: 295px;
+
+    @include small-screen {
+        min-height: calc((0.3592 * 100vw) + 19.251px); // from linear equation
+    }
+}
+
+.aspect-ratio_325-226 { // first img of Hebius miyajimae swiper gallery
+    min-height: 452px;
+
+    @include small-screen {
+        min-height: calc((0.6003 * 100vw) + 10.634px);
+    }
+}
+
+
 .swiper-slide img {
-    height: 100%;
+    height: auto;
     width: 100%;
     object-fit: cover;
     border: 30px solid #0e0e0e; /* move next and prev buttons off img */
+    color: white;
 
 @include small-screen {
     border: 16px solid #0e0e0e;
@@ -54,9 +74,6 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     cursor: pointer;
 }
   
-.swiper-slide {
-    height: 360px;
-}
   
 .swiper-pagination {
     padding: 10px;
@@ -135,7 +152,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
   
 /* ................................................ modal .......................................................... */
 .modal {
-    display:none;
+    display: none;
     position: fixed;
     z-index: 2;
     left: 0;

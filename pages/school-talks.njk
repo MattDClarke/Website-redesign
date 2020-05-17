@@ -64,28 +64,28 @@
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img class="swiper-lazy swiper-slide-img" src="images-school-talks/school-talks-img-1.jpg" alt="school talk image 1">
+                    <div class="swiper-slide aspect-ratio_130-59">
+                        <img class="swiper-lazy swiper-slide-img" src="images-school-talks/school-talks-img-1.jpg" alt="school talk image 1" width="650" height="295">
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-2.jpg" alt="school talk image 2">
+                    <div class="swiper-slide aspect-ratio_130-59">
+                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-2.jpg" alt="school talk image 2" width="650" height="455">
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-3.jpg" alt="school talk image 3">
+                    <div class="swiper-slide aspect-ratio_130-59">
+                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-3.jpg" alt="school talk image 3" width="650" height="456">
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-4.jpg" alt="school talk image 4">
+                    <div class="swiper-slide aspect-ratio_130-59">
+                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-4.jpg" alt="school talk image 4" width="650" height="845">
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>    
                     </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-5.jpg" alt="school talk image 5">
+                    <div class="swiper-slide aspect-ratio_130-59">
+                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-5.jpg" alt="school talk image 5" width="650" height="456">
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-6.jpg" alt="school talk image 6">
+                    <div class="swiper-slide aspect-ratio_130-59">
+                        <img class="swiper-lazy swiper-slide-img" data-src="images-school-talks/school-talks-img-6.jpg" width="650" height="518">
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
                 </div>
@@ -163,8 +163,10 @@
 
         effect: 'coverflow',
         coverflowEffect: {
-            rotate: 60,
+            rotate: 90,
+            slideShadows: false,
         },
+
 
         });
 
@@ -196,13 +198,16 @@
 
         effect: 'coverflow',
         coverflowEffect: {
-            rotate: 60,
+            rotate: 90,
+            slideShadows: false,
         },
+
 
         });
 
-        swiper[0].controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
-        swiperModal[0].controller.control = swiper;
+        swiper.controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
+        swiperModal.controller.control = swiper;
+
     </script>
 
 {% endblock %}

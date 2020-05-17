@@ -6,7 +6,6 @@
 /* ................................................ swiper gallery .......................................................... */
 .swiper-container {
   width: 650px;
-  height: auto;
   margin-top: 13px;
   padding-bottom: 15px;
 }
@@ -17,13 +16,34 @@
   }
 }
 
+.aspect-ratio_130-59 {
+  min-height: 295px;
+}
+
+@media all and (max-width: 700px) {
+  .aspect-ratio_130-59 {
+    min-height: calc((0.3592 * 100vw) + 19.251px);
+  }
+}
+
+.aspect-ratio_325-226 {
+  min-height: 452px;
+}
+
+@media all and (max-width: 700px) {
+  .aspect-ratio_325-226 {
+    min-height: calc((0.6003 * 100vw) + 10.634px);
+  }
+}
+
 .swiper-slide img {
-  height: 100%;
+  height: auto;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border: 30px solid #0e0e0e;
   /* move next and prev buttons off img */
+  color: white;
 }
 
 @media all and (max-width: 700px) {
@@ -34,10 +54,6 @@
 
 .swiper-slide img:hover {
   cursor: pointer;
-}
-
-.swiper-slide {
-  height: 360px;
 }
 
 .swiper-pagination {
