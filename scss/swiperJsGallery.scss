@@ -1,5 +1,6 @@
 $colors: (
     black: black,
+    dark-grey: #0e0e0e,
     white: white,
     off-white: #d8d8d8,
     yellow: rgb(255, 230, 0),
@@ -57,13 +58,19 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     }
 }
 
+.swiper-container--modal img {
+    color: color(black); // hide alt text
+}
+
+.swiper-container img {
+    color: color(dark-grey); // hide alt text
+}
 
 .swiper-slide img {
     height: auto;
     width: 100%;
     object-fit: cover;
     border: 30px solid #0e0e0e; /* move next and prev buttons off img */
-    color: white;
 
 @include small-screen {
     border: 16px solid #0e0e0e;

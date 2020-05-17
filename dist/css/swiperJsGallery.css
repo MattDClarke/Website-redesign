@@ -36,6 +36,14 @@
   }
 }
 
+.swiper-container--modal img {
+  color: black;
+}
+
+.swiper-container img {
+  color: #0e0e0e;
+}
+
 .swiper-slide img {
   height: auto;
   width: 100%;
@@ -43,7 +51,6 @@
      object-fit: cover;
   border: 30px solid #0e0e0e;
   /* move next and prev buttons off img */
-  color: white;
 }
 
 @media all and (max-width: 700px) {

@@ -52,3 +52,11 @@ function closeModal() {
 
     modal.style.display = 'none';
 }
+
+
+// hide image broken icon when images are lazy loading
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.querySelectorAll('img').forEach(function(img){
+       img.onerror = function(){this.style.display='none';};
+    })
+ });
