@@ -66,6 +66,11 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     color: color(dark-grey); // hide alt text
 }
 
+body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-coverflow.swiper-container-3d.swiper-container-initialized.swiper-container-horizontal.swiper-container-autoheight > div.swiper-wrapper > div:nth-child(1n) > img[data-src=""] {
+    visibility: hidden;
+}
+
+
 .swiper-slide img {
     height: auto;
     width: 100%;
