@@ -525,14 +525,14 @@ footer {
   padding-bottom: 20px;
 }
 
-footer img {
+footer video {
   width: 100px;
   height: 100%;
   border-radius: 5px;
 }
 
 @media all and (max-width: 812px) {
-  footer img {
+  footer video {
     width: 75px;
   }
 }
