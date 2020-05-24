@@ -533,57 +533,6 @@ footer video {
 }
 
 
-/* ...................................................... gallery filter ...................................................... */
-
-.filter-categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    span {
-        padding:0.25rem;
-
-        @include tablet {
-            padding: 0.25rem;
-        }
-    }
-}
-
-.filter-label { 
-    display: block; /* allow bottom and top margin to be set (push away filter labels above or below) */ 
-    margin-right:0.5rem; 
-    padding:0.5rem 0.75rem; 
-    border-radius:0.5rem; 
-    font-size:1rem;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-    background: color(white);
-    transition: all 0.3s ease 0s;
-  
-    &:hover {
-      cursor: pointer;
-    }    
-
-    @include tablet {
-        font-size: 0.9rem;
-        padding:0.4rem 0.6rem; 
-        margin-right: 0.1rem;
-    }
-}
-  
-.filter-input {
-    position: absolute; /* align over label.. good for better for accessibilty on some touch devices for discoverability. https://css-tricks.com/the-checkbox-hack/ */
-    display: flex;
-    z-index: 1;
-    opacity: 0; /* hide */
-     
-    &:checked + label { // adjacent sibling selector
-      background-color: color(yellow);
-      transform: translateX(3px);
-      box-shadow: none;
-    }
-}
-  
-
 /* ..................................................... gallery container ..................................................... */
 
 #gridCardsWithFilter {
@@ -864,78 +813,23 @@ footer video {
     }
 }
 
-
-/* ................................................... filtering the gallery ................................................... */
-
-
-.filtered-inclusive .filter-item, .filtered-exclusive .filter-item, .filter-no-item { 
-	display:none; 
-} /* filtered-inclusive/filtered-exclusive class applied via js */
-
-.filtered-inclusive .filter-item.selected, .filtered-exclusive .filter-item:not(.selected) { 
-  display: block;
-} /* filtered-inclusive/filtered-exclusive class applied via js */
-
-.filter-no-item.filter-no-item-active { /* message stating no filter results */
-	display:block; 
-    width: 400px;
-	background: color(red-lighter); 
-    color: color(white); 
-    font-size: 1rem;
-	padding: 1rem; 
-    justify-self: center;
-    text-align: center;
-    border-radius:0.25rem; 
-
-    @include tablet {
-        font-size: 0.875rem;
-        width: 260px;
-    }
-}
-
-
-.filter-mask-active { /* cover each card (animation effect) */
-    position:absolute; 
-	top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: color(dark-grey);
-    animation:filterMask 1s ease-in; 
-}
- 
-@keyframes filterMask { 
-	0% { opacity: 1 } 
-	100% { opacity: 0 } 
-}
-
-.filter-no-item-active {
-  animation:filterMaskNoItems 1s ease-in; 
-}
-
-@keyframes filterMaskNoItems { 
-	0% { opacity: 0; } 
-	100% { opacity: 1 }   /* covers briefly... a pulse */
-}
-
-
 /* ........................................................ gallery intro........................................................ */
 
 .gallery-intro {
     text-align: center;
     font-size: 20px;
     letter-spacing: 1.5px;
-    margin: 7px 20px 20px 20px;
+    margin: 40px 25px 20px 20px;
     color: color(white);
 
     @include tablet {
         font-size: 15px;
-        margin-top: 30px;
     }
     @include mobile {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 }  
+
 
 
 /* ........................................................ about.html ........................................................ */
