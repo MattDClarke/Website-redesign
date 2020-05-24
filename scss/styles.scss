@@ -1088,10 +1088,12 @@ footer video {
     text-align: center;
     margin-right: 20px;
     margin-top: 10px;
-    min-height: 445px;
+    min-height: 445px; // prevent img reflow when loading... give container a height
+    min-width: 280px;
 
     @include desktop {
         min-height: 318px;
+        min-width: 200px;
         width: 100%;
         padding-bottom: 30px;
         margin-right: 0px;

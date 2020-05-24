@@ -1235,11 +1235,13 @@ footer video {
   margin-right: 20px;
   margin-top: 10px;
   min-height: 445px;
+  min-width: 280px;
 }
 
 @media all and (max-width: 1280px) {
   .book-img-container {
     min-height: 318px;
+    min-width: 200px;
     width: 100%;
     padding-bottom: 30px;
     margin-right: 0px;
