@@ -582,11 +582,6 @@ footer video {
   max-height: 350px;
 }
 
-.filter-item:hover {
-  -webkit-transition: all 0.9s ease both;
-  transition: all 0.9s ease both;
-}
-
 .img-container {
   overflow: hidden;
   border-radius: 5px 5px 0 0;
