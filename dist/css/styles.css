@@ -551,7 +551,7 @@ footer video {
 }
 
 .home-container div {
-  font-size: 2em;
+  font-size: 1.2rem;
 }
 
 .home-container div a {
@@ -1009,18 +1009,11 @@ footer video {
   /* center about-box in viewport*/
   margin-left: 5%;
   margin-right: 5%;
-  text-align: justify;
 }
 
 @media all and (max-width: 812px) {
   .text-box {
     padding: 20px 0;
-  }
-}
-
-@media all and (max-width: 460px) {
-  .text-box {
-    letter-spacing: -0.038rem;
   }
 }
 
@@ -1037,13 +1030,13 @@ footer video {
           flex: 1;
   padding: 10px 0;
   border-radius: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @media all and (max-width: 460px) {
   .text-box--species-media {
-    font-size: 14px;
     border-radius: 20px;
+    margin-top: 0;
   }
 }
 
@@ -1233,7 +1226,6 @@ footer video {
 
 @media all and (max-width: 812px) {
   .my-list1 {
-    letter-spacing: -0.052rem;
     margin-top: 15px;
   }
 }
@@ -1247,7 +1239,6 @@ footer video {
 
 @media all and (max-width: 812px) {
   .my-list2 {
-    letter-spacing: -0.052rem;
     margin-top: 5px;
   }
 }
@@ -1275,14 +1266,10 @@ footer video {
   text-align: center;
   margin-right: 20px;
   margin-top: 10px;
-  min-height: 445px;
-  min-width: 280px;
 }
 
 @media all and (max-width: 1280px) {
   .book-img-container {
-    min-height: 318px;
-    min-width: 200px;
     width: 100%;
     padding-bottom: 30px;
     margin-right: 0px;
@@ -1406,7 +1393,6 @@ th.table-header {
 }
 
 .info-box-text {
-  text-align: justify;
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;

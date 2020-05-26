@@ -543,7 +543,7 @@ footer video {
 }
 
 .home-container div {
-    font-size: 2em;
+    font-size: 1.2rem;
 }
 
 .home-container div a {
@@ -903,15 +903,11 @@ footer video {
     align-self: center; /* center about-box in viewport*/ 
     margin-left: 5%;
     margin-right: 5%;
-    text-align: justify; 
 
     @include tablet {
         padding: 20px 0;
         
     } 
-    @include mobile { 
-        letter-spacing: -0.038rem;
-    }
 }
 
 
@@ -926,11 +922,11 @@ footer video {
     flex: 1;
     padding: 10px 0;
     border-radius: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
 
     @include mobile {
-        font-size: 14px;
         border-radius: 20px;
+        margin-top: 0;
     }
 }
 
@@ -1089,7 +1085,6 @@ footer video {
     
 
     @include tablet {
-        letter-spacing: -0.052rem;
         margin-top: 15px;
     }
 }
@@ -1101,7 +1096,6 @@ footer video {
     text-align: left;
 
     @include tablet {
-        letter-spacing: -0.052rem;
         margin-top: 5px;
     }
 }
@@ -1127,12 +1121,8 @@ footer video {
     text-align: center;
     margin-right: 20px;
     margin-top: 10px;
-    min-height: 445px; // prevent img reflow when loading... give container a height
-    min-width: 280px;
 
     @include desktop {
-        min-height: 318px;
-        min-width: 200px;
         width: 100%;
         padding-bottom: 30px;
         margin-right: 0px;
@@ -1228,7 +1218,6 @@ th.table-header {
 }
 
 .info-box-text {
-    text-align: justify;
     flex: 4;
     padding: 10px 0px;
     @include tablet {

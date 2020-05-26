@@ -276,8 +276,8 @@
 
         });
 
-        swiper[0].controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
-        swiperModal[0].controller.control = swiper;
+        swiper.controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
+        swiperModal.controller.control = swiper;
     </script>
 
 {% endblock %}
