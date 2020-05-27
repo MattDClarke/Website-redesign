@@ -543,18 +543,39 @@ footer video {
 }
 
 /* ..................................................... index (landing page) ..................................................... */
-.home-container {
-  width: 100%;
-  height: 100vh;
+.index-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  max-width: 100%;
   background-color: black;
+  padding-bottom: 20px;
   text-align: center;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.home-container div {
-  font-size: 1.2rem;
+@media all and (max-width: 991px) {
+  .index-container {
+    font-size: 1.25rem;
+  }
 }
 
-.home-container div a {
+@media all and (max-width: 812px) {
+  .index-container {
+    font-size: 1rem;
+  }
+}
+
+.index-container a {
   text-decoration: none;
   color: white;
   letter-spacing: 1.5px;
@@ -562,11 +583,11 @@ footer video {
   position: relative;
 }
 
-.home-container div a:hover {
+.index-container a:hover {
   cursor: pointer;
 }
 
-.home-container div a::after {
+.index-container a::after {
   content: '';
   display: block;
   height: 3px;
@@ -584,9 +605,25 @@ footer video {
   transition: transform ease 0.25s, -webkit-transform ease 0.25s;
 }
 
-.home-container div a:hover::after {
+.index-container a:hover::after {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
+}
+
+.index-container img {
+  width: 500px;
+  height: auto;
+}
+
+@media all and (max-width: 812px) {
+  .index-container img {
+    width: 80vw;
+    height: auto;
+  }
+}
+
+.index-container div {
+  margin: 5px 0;
 }
 
 /* ..................................................... gallery container ..................................................... */
