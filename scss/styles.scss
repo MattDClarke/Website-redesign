@@ -593,6 +593,8 @@ footer video {
 
     width: 500px;
     height: auto;
+    border: 1px solid color(white);
+    border-radius: 5px;
     
     @include tablet {
         width: 80vw;
