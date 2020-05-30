@@ -982,6 +982,22 @@ footer video {
   }
 }
 
+.img-container .icon-danger {
+  position: absolute;
+  border-radius: 3px;
+  width: 33.6px;
+  height: 28.8px;
+  top: 0px;
+  right: 0px;
+}
+
+@media all and (max-width: 812px) {
+  .img-container .icon-danger {
+    width: 23.52px;
+    height: 20.16px;
+  }
+}
+
 /* ........................................................ gallery intro........................................................ */
 .gallery-intro {
   text-align: center;

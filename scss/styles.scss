@@ -881,6 +881,23 @@ footer video {
     }
 }
 
+.img-container .icon-danger {
+    position: absolute;
+    //color: color(yellow);
+    //background-color: color(red);
+    border-radius: 3px;
+    //border: 4px solid color(red);
+    width: 33.6px; 
+    height: 28.8px; 
+    top: 0px;
+    right: 0px;
+
+    @include tablet {
+        width: 23.52px; 
+        height: 20.16px; 
+    }
+}
+
 /* ........................................................ gallery intro........................................................ */
 
 .gallery-intro {
