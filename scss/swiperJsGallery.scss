@@ -70,12 +70,11 @@ body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-c
     visibility: hidden;
 }
 
-
 .swiper-slide img {
     height: auto;
     width: 100%;
     object-fit: cover;
-    border: 30px solid #0e0e0e; /* move next and prev buttons off img */
+    border: 30px solid #0e0e0e; 
 
 @include small-screen {
     border: 16px solid #0e0e0e;

@@ -54,7 +54,6 @@ body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-c
   -o-object-fit: cover;
      object-fit: cover;
   border: 30px solid #0e0e0e;
-  /* move next and prev buttons off img */
 }
 
 @media all and (max-width: 700px) {
