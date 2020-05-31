@@ -28,7 +28,7 @@ function openModal() {
     // Allow swiper to work when modal opened. From the docs:  https://swiperjs.com/api/
     var mySwiper = document.querySelector('.swiper-container').swiper
     mySwiper.update();
-    var mySwiper2 = document.querySelector('.swiper-container--modal').swiper
+    var mySwiper2 = document.querySelector('.swiper-container-modal').swiper
     mySwiper2.update();
 
     modal.style.display ='block';
@@ -47,7 +47,7 @@ function closeModal() {
     // Allow swiper to work when modal opened. From the docs:  https://swiperjs.com/api/
     var mySwiper = document.querySelector('.swiper-container').swiper
     mySwiper.update();
-    var mySwiper2 = document.querySelector('.swiper-container--modal').swiper
+    var mySwiper2 = document.querySelector('.swiper-container-modal').swiper
     mySwiper2.update();
 
     modal.style.display = 'none';

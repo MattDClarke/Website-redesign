@@ -36,19 +36,11 @@
   }
 }
 
-.swiper-container--modal img {
-  color: black;
-}
-
-.swiper-container img {
-  color: #0e0e0e;
-}
-
-body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-coverflow.swiper-container-3d.swiper-container-initialized.swiper-container-horizontal.swiper-container-autoheight > div.swiper-wrapper > div:nth-child(1n) > img[data-src=""] {
+body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-container-main-coverflow.swiper-container-main-3d.swiper-container-initialized.swiper-container-main-horizontal.swiper-container-main-autoheight > div.swiper-wrapper > div:nth-child(1n) > img[data-src=""] {
   visibility: hidden;
 }
 
-.swiper-slide img {
+.swiper-slide-img {
   height: auto;
   width: 100%;
   -o-object-fit: cover;
@@ -57,12 +49,12 @@ body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-c
 }
 
 @media all and (max-width: 700px) {
-  .swiper-slide img {
+  .swiper-slide-img {
     border: 16px solid #0e0e0e;
   }
 }
 
-.swiper-slide img:hover {
+.swiper-slide-img:hover {
   cursor: pointer;
 }
 
@@ -146,6 +138,35 @@ body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-c
   background-color: white !important;
 }
 
+/* ................................................ thumbs .......................................................... */
+.gallery-thumbs {
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin-top: 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: auto;
+  opacity: 0.9;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.gallery-thumbs .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide-thumbs {
+  background-size: cover;
+  background-position: center;
+}
+
 /* ................................................ modal .......................................................... */
 .modal {
   display: none;
@@ -204,7 +225,7 @@ body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-c
 
 /* ............................................. modal swiper gallery ....................................................... */
 /* used ids higher specificity to override gallery styles */
-#swiper-container--modal {
+#swiper-container-modal {
   z-index: 3;
   width: 100%;
   height: 100%;
@@ -213,32 +234,32 @@ body > div > main > div.swiper-gallery > div.swiper-container.swiper-container-c
   border: 0;
 }
 
-#swiper-pagination--modal {
+#swiper-pagination-modal {
   display: none;
   /* if pagination not included in modal... index.html pagination buttons dnt change (black for active slide)*/
 }
 
-#swiper-button-next--modal {
+#swiper-button-next-modal {
   -webkit-transform: translateX(-40%);
           transform: translateX(-40%);
   color: white;
 }
 
 @media all and (max-width: 700px) {
-  #swiper-button-next--modal {
+  #swiper-button-next-modal {
     -webkit-transform: translateX(20%);
             transform: translateX(20%);
   }
 }
 
-#swiper-button-prev--modal {
+#swiper-button-prev-modal {
   -webkit-transform: translateX(40%);
           transform: translateX(40%);
   color: white;
 }
 
 @media all and (max-width: 700px) {
-  #swiper-button-prev--modal {
+  #swiper-button-prev-modal {
     -webkit-transform: translateX(-20%);
             transform: translateX(-20%);
   }
