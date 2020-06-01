@@ -162,9 +162,14 @@ body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-contai
   height: auto;
 }
 
+.gallery-thumbs .swiper-slide img:hover {
+  cursor: pointer;
+}
+
 .swiper-slide-thumbs {
   background-size: cover;
   background-position: center;
+  margin: auto 0;
 }
 
 /* ................................................ modal .......................................................... */

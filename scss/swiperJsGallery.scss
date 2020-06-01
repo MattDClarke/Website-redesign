@@ -37,12 +37,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     }
 }
 
-// .swiper-slide {
-//     //height: 360px; // Not sure if I need to change...
-   
-// }
-
-.aspect-ratio_130-59 { // first img of school talks swiper gallery
+.aspect-ratio_130-59 { // first img of school talks swiper gallery ... to prevent img reflow when image loading... swiper lazy load preloader in correct position
     min-height: 295px;
 
     @include small-screen {
@@ -162,25 +157,34 @@ body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-contai
     box-sizing: border-box;
     padding: 0;
     margin-top: 0;
-  }
-  .gallery-thumbs .swiper-slide {
+}
+
+
+.gallery-thumbs .swiper-slide {
     width: 25%;
     height: auto;
     opacity: 0.9;
-  }
-  .gallery-thumbs .swiper-slide-thumb-active {
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
     opacity: 1;
-  }
+}
   
-  .gallery-thumbs .swiper-slide img {
+.gallery-thumbs .swiper-slide img {
     width: 100%;
     height: auto;
-  }
 
-  .swiper-slide-thumbs {
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.swiper-slide-thumbs {
     background-size: cover;
     background-position: center;
-  }
+    margin: auto 0; // center images in thumb image strip
+}
+
 /* ................................................ modal .......................................................... */
 .modal {
     display: none;
