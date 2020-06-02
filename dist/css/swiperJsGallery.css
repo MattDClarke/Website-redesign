@@ -42,9 +42,6 @@ body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-contai
 
 .swiper-slide-img {
   height: auto;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   border: 30px solid #0e0e0e;
 }
 
@@ -56,6 +53,10 @@ body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-contai
 
 .swiper-slide-img:hover {
   cursor: pointer;
+}
+
+.swiper-slide-img-non-modal {
+  width: 100%;
 }
 
 .swiper-pagination {

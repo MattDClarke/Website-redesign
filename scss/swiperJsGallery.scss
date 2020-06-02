@@ -60,8 +60,8 @@ body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-contai
 
 .swiper-slide-img {
     height: auto;
-    width: 100%;
-    object-fit: cover;
+    
+    //object-fit: cover;
     border: 30px solid #0e0e0e; 
 
 @include small-screen {
@@ -71,6 +71,10 @@ body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-contai
   
 .swiper-slide-img:hover {
     cursor: pointer;
+}
+
+.swiper-slide-img-non-modal { // prevent wide modal images from incr. width (stretching) on desktop (only set for non-modal)
+    width: 100%; 
 }
   
   
