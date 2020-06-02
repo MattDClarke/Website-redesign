@@ -26,7 +26,8 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 }
   
 /* ................................................ swiper gallery .......................................................... */
-  
+ 
+
 .swiper-container {
     width: 650px;
     margin-top: 13px;
@@ -54,9 +55,9 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 }
 
 
-body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-container-main-coverflow.swiper-container-main-3d.swiper-container-initialized.swiper-container-main-horizontal.swiper-container-main-autoheight > div.swiper-wrapper > div:nth-child(1n) > img[data-src=""] {
-    visibility: hidden;
-}
+// body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-container-main-coverflow.swiper-container-main-3d.swiper-container-initialized.swiper-container-main-horizontal.swiper-container-main-autoheight > div.swiper-wrapper > div:nth-child(1n) > img[data-src=""] {
+//     visibility: hidden;
+// }
 
 .swiper-slide-img {
     height: auto;
@@ -162,7 +163,6 @@ body > div > main > div.swiper-gallery > div.swiper-container-main.swiper-contai
     padding: 0;
     margin-top: 0;
 }
-
 
 .gallery-thumbs .swiper-slide {
     width: 25%;

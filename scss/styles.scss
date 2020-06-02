@@ -927,19 +927,20 @@ footer video {
 
 %text-box-template {  /* SASS inheritance */
     color: color(white-lighter);
-    font-size: 20px;
-    line-height: 2rem;
+    font-size: 22px;
+    line-height: 36.8px;
     margin-top: 0;
     width: 90%;
     max-width: 1200px;
     padding: 30px 0;
 
     @include tablet {
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 20px;
+        line-height: 33px;
     }
     @include mobile {
-        font-size: 16px;
+        font-size: 19px;
+        line-height: 31.3px;
         border-radius: 20px;
     }
 }

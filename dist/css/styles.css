@@ -1035,8 +1035,8 @@ footer video {
 .text-box, .text-box--species, .text-box--species-media, .text-box--links {
   /* SASS inheritance */
   color: #ececec;
-  font-size: 20px;
-  line-height: 2rem;
+  font-size: 22px;
+  line-height: 36.8px;
   margin-top: 0;
   width: 90%;
   max-width: 1200px;
@@ -1045,14 +1045,15 @@ footer video {
 
 @media all and (max-width: 812px) {
   .text-box, .text-box--species, .text-box--species-media, .text-box--links {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 33px;
   }
 }
 
 @media all and (max-width: 460px) {
   .text-box, .text-box--species, .text-box--species-media, .text-box--links {
-    font-size: 16px;
+    font-size: 19px;
+    line-height: 31.3px;
     border-radius: 20px;
   }
 }
