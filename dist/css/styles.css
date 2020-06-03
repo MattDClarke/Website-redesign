@@ -1022,21 +1022,24 @@ footer video {
 /* ........................................................ gallery intro........................................................ */
 .gallery-intro {
   text-align: center;
-  font-size: 20px;
+  font-size: 20.5px;
   letter-spacing: 1.5px;
-  margin: 40px 25px 20px 20px;
+  margin: 35px 20px 30px 20px;
   color: white;
 }
 
 @media all and (max-width: 812px) {
   .gallery-intro {
-    font-size: 15px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 }
 
 @media all and (max-width: 460px) {
   .gallery-intro {
-    margin-top: 20px;
+    margin-top: 26px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1142,16 +1145,24 @@ footer video {
 }
 
 .site-link {
-  color: #00b200;
+  color: white;
+  text-decoration: underline;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+  text-decoration-thickness: 2px;
 }
 
 .site-link--species {
-  color: #00b200;
+  color: white;
+  text-decoration: underline;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+  text-decoration-thickness: 2px;
   font-style: italic;
 }
 
 .site-link:hover, .site-link--species:hover {
-  color: #00b200;
+  text-decoration-thickness: 4px;
 }
 
 @media all and (max-width: 812px) {
@@ -1190,63 +1201,66 @@ footer video {
 
 @media all and (max-width: 460px) {
   .header {
-    font-size: 21.5px;
+    font-size: 28px;
     margin-top: 20px;
   }
 }
 
 .header-links {
   text-align: left;
-  font-size: 28px;
+  font-size: 30px;
   margin-top: 25px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 @media all and (max-width: 812px) {
   .header-links {
-    font-size: 20.8px;
-    margin-top: 15px;
+    font-size: 26.3px;
+    margin-top: 28px;
   }
 }
 
 @media all and (max-width: 460px) {
   .header-links {
-    font-size: 18px;
+    font-size: 19.6px;
     margin-top: 10px;
   }
 }
 
 .header--name {
-  font-size: 35px;
-  margin-top: 25px;
+  font-size: 25px;
 }
 
 @media all and (max-width: 812px) {
   .header--name {
-    font-size: 26px;
+    font-size: 21.8px;
   }
 }
 
 @media all and (max-width: 460px) {
   .header--name {
-    font-size: 17.5px;
+    font-size: 16.4px;
   }
 }
 
 .header--species {
+  margin-top: 25px;
   text-decoration: underline;
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: 3px;
   line-height: 1.5em;
+  font-size: 35px;
 }
 
 @media all and (max-width: 812px) {
   .header--species {
-    font-size: 30px;
+    font-size: 30.6px;
   }
 }
 
 @media all and (max-width: 460px) {
   .header--species {
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 
@@ -1256,23 +1270,23 @@ footer video {
 
 @media all and (max-width: 812px) {
   .header--status, .header--danger {
-    font-size: 19px;
+    font-size: 21.8px;
   }
 }
 
 @media all and (max-width: 460px) {
   .header--status, .header--danger {
-    font-size: 12.5px;
+    font-size: 16.4px;
   }
 }
 
 .header--status {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 @media all and (max-width: 460px) {
   .header--status {
-    margin-top: 15px;
+    margin-top: 11.3px;
   }
 }
 
@@ -1459,13 +1473,21 @@ th.table-header {
   padding-bottom: 10px;
   padding-right: 15px;
   font-weight: 600;
+  font-size: 26px;
 }
 
 @media all and (max-width: 812px) {
   .info-box-header {
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 0;
     padding-right: 0;
+    font-size: 23.6px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .info-box-header {
+    font-size: 22.4px;
   }
 }
 
@@ -1485,6 +1507,7 @@ th.table-header {
 
 .header-box {
   text-align: center;
+  margin: 0 5px;
 }
 
 /* .............................................. swiper gallery - school talks ................................................. */

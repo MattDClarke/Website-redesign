@@ -913,19 +913,23 @@ footer video {
 
 .gallery-intro {
     text-align: center;
-    font-size: 20px;
+    font-size: 20.5px;
     letter-spacing: 1.5px;
-    margin: 40px 25px 20px 20px;
+    margin: 35px 20px 30px 20px;
     color: color(white);
 
     @include tablet {
-        font-size: 15px;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
-    @include mobile {
-        margin-top: 20px;
-    }
-}  
 
+    @include mobile {
+        margin-top: 26px;
+        margin-bottom: 10px;
+    }
+
+}  
 
 
 /* ........................................................ about.html ........................................................ */
@@ -1008,16 +1012,23 @@ footer video {
 
 
 .site-link {
-    color: color(green);
+    color: color(white);
+    text-decoration: underline;
+    text-decoration-color: color(red);
+    text-decoration-thickness: 2px;
+    
 }
 
 .site-link--species {
-    color: color(green);
+    color: color(white);
+    text-decoration: underline;
+    text-decoration-color: color(red);
+    text-decoration-thickness: 2px;
     font-style: italic;
 }
 
 .site-link:hover, .site-link--species:hover {
-    color: color(green);
+    text-decoration-thickness: 4px;
 }
 
 .about-box-bottom {
@@ -1051,7 +1062,7 @@ footer video {
         margin-top: 40px;
     }
     @include mobile {
-        font-size: 21.5px;
+        font-size: 28px;
         margin-top: 20px;
     }
 }
@@ -1059,15 +1070,17 @@ footer video {
 .header-links {
     @extend %header-template;
     text-align: left;
-    font-size: 28px;
+    font-size: 30px;
     margin-top: 25px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
 
     @include tablet {
-        font-size: 20.8px;
-        margin-top: 15px;
+        font-size: 26.3px;
+        margin-top: 28px;
     }
     @include mobile {
-        font-size: 18px;
+        font-size: 19.6px;
         margin-top: 10px;
     }    
 }
@@ -1075,28 +1088,29 @@ footer video {
 
 .header--name {
     @extend %header-template;
-    font-size: 35px;
-    margin-top: 25px;
+    font-size: 25px;
     @include tablet {
-        font-size: 26px;
+        font-size: 21.8px;
     }
     @include mobile {
-        font-size: 17.5px;
+        font-size: 16.4px;
     }
 }
 
 .header--species {
     @extend %header-template;
+    margin-top: 25px;
     text-decoration: underline;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 3px;
     line-height: 1.5em;
+    font-size: 35px;
 
     @include tablet {
-        font-size: 30px;
+        font-size: 30.6px;
 
     }
     @include mobile {
-        font-size: 20px;
+        font-size: 23px;
         
     }
 }
@@ -1106,18 +1120,18 @@ footer video {
     font-size: 25px;
 
     @include tablet {
-        font-size: 19px;
+        font-size: 21.8px;
     }
     @include mobile {
-        font-size: 12.5px;
+        font-size: 16.4px;
     }
 }
 
 .header--status {
-    margin-top: 30px;
+    margin-top: 15px;
 
     @include mobile {
-        margin-top: 15px;
+        margin-top: 11.3px;
     }
 }
 .my-list1 li, .my-list2 li {
@@ -1267,11 +1281,17 @@ th.table-header {
     padding-bottom: 10px;
     padding-right: 15px;
     font-weight: 600;
+    font-size: 26px;
 
     @include tablet {
-        padding-top: 10px;
+        padding-top: 20px;
         padding-bottom: 0;
         padding-right: 0;
+        font-size: 23.6px;
+    }
+
+    @include mobile {
+        font-size: 22.4px;
     }
 }
 
@@ -1287,6 +1307,7 @@ th.table-header {
 
 .header-box {
     text-align: center;
+    margin: 0 5px;
 }
 
 
