@@ -473,8 +473,30 @@ main {
   -webkit-transition: all 1s;
   transition: all 1s;
   /* for slowly decr opacity of main when text in search bar */
-  min-height: 100vh;
-  /* when filtering gallery (index.html)  when mildly venomous clicked (only 3 results)... prevent footer from showing  */
+  -webkit-animation: fadeInAnimation ease 1.5s;
+          animation: fadeInAnimation ease 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* make background fade when nav menu opened - toggled using JavaScript */
@@ -613,7 +635,6 @@ footer video {
 .index-container img {
   width: 500px;
   height: auto;
-  border: 1px solid white;
   border-radius: 5px;
 }
 
