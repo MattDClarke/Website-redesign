@@ -39,10 +39,11 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 }
 
 .aspect-ratio_130-59 { // first img of school talks swiper gallery ... to prevent img reflow when image loading... swiper lazy load preloader in correct position
-    min-height: 295px;
+    height: 295px; // also prevent swiper wrapper being too large when loading on a slow network (opposite of reflow)
+    
 
     @include small-screen {
-        min-height: calc((0.3592 * 100vw) + 19.251px); // from linear equation
+        height: calc((0.3592 * 100vw) + 19.251px); // from linear equation
     }
 }
 
