@@ -203,10 +203,6 @@ body.links .nav-links-page a {
           flex: 1;
 }
 
-.search-input:focus {
-  outline: none;
-}
-
 @media all and (max-width: 812px) {
   .search-input {
     font-size: 0.875rem;
@@ -470,6 +466,7 @@ body.links .nav-links-page a {
 
 /* ....................................................  nav filter list ..................................................... */
 main {
+  min-height: 100vh;
   -webkit-transition: all 1s;
   transition: all 1s;
   /* for slowly decr opacity of main when text in search bar */
@@ -1150,6 +1147,8 @@ footer video {
   -webkit-text-decoration-color: red;
           text-decoration-color: red;
   text-decoration-thickness: 2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .site-link--species {
@@ -1350,6 +1349,27 @@ footer video {
   margin-top: 0;
 }
 
+.my-list1--flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media all and (max-width: 812px) {
+  .my-list1--flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.my-list1--flex-container-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 /* ........................................................ book.html ........................................................ */
 .text-box--book {
   display: -webkit-box;
@@ -1530,5 +1550,112 @@ th.table-header {
   #header--school-talks {
     text-align: center;
   }
+}
+
+/* .............................................. contact form ................................................. */
+.form-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #d8d8d8;
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+@media all and (max-width: 812px) {
+  .form-contact {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .form-contact {
+    margin-top: 20px;
+    font-size: 19px;
+  }
+}
+
+.contact-input {
+  font-family: 'Montserrat', sans-serif;
+  width: 500px;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
+}
+
+@media all and (max-width: 812px) {
+  .contact-input {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .contact-input {
+    width: 90vw;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .contact-input {
+    font-size: 17px;
+  }
+}
+
+.contact-input:focus {
+  outline: none;
+  border: 1px solid red;
+}
+
+textarea {
+  max-width: 500px;
+  min-height: 200px;
+}
+
+@media all and (max-width: 600px) {
+  textarea {
+    max-width: 90vw;
+  }
+}
+
+.contact-label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  padding: 5px 10px 7px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: red;
+  color: white;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.contact-btn:hover {
+  cursor: pointer;
+  background-color: #ff1110;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.my-btn:focus {
+  outline-color: white;
 }
 /*# sourceMappingURL=styles.css.map */

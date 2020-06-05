@@ -156,7 +156,8 @@
 
 .gallery-thumbs .swiper-slide img {
   width: 100%;
-  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .gallery-thumbs .swiper-slide img:hover {
@@ -166,7 +167,6 @@
 .swiper-slide-thumbs {
   background-size: cover;
   background-position: center;
-  margin: auto 0;
 }
 
 /* ................................................ modal .......................................................... */

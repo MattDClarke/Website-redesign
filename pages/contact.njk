@@ -1,0 +1,30 @@
+{% extends "_layout.njk" %} 
+{% block title %}
+    Contact
+{% endblock %}
+{% block content %}
+
+    <div class="header-box">
+        <h1  class="header">CONTACT</h1>
+    </div> 
+
+    <form action="" method="POST" class="form-contact">
+        <div class="form-contact--group">
+            <label for="formName" class="contact-label">Name</label>
+            <input id="formName" class="contact-input" type="text" placeholder="John Doe" autofocus maxlength="50" required>
+        </div>
+        <div class="form-contact--group">
+            <label for="formEmail" class="contact-label">Email</label>
+            <input id="formEmail" class="contact-input" type="text" placeholder="johndoe@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required>   
+        </div>
+        <div class="form-contact--group">
+            <label for="formMessage" class="contact-label">Message</label>
+            <textarea id="formMessage" class="contact-input" maxlength="2000"></textarea>
+        </div>
+
+        <button class="contact-btn" type="submit">Submit</button>
+    </form>
+
+
+
+{% endblock %}

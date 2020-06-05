@@ -4,10 +4,10 @@
 <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="css/swiperJsGallery.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/28d5ded6ac.js" crossorigin="anonymous"></script>
@@ -704,7 +704,6 @@
             prevEl: '.swiper-button-prev',
         },
 
-        //preloadImages: false,
         // Enable lazy loading
         lazy: true,
         lazy: {
@@ -724,6 +723,7 @@
         thumbs: {
             swiper: galleryThumbs
         }
+        
         });
 
         // swiper - modal
@@ -757,12 +757,13 @@
             rotate: 60,
             slideShadows: false,
         },
-        loop: true,
+        loop: true
 
         });
 
         swiper.controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
         swiperModal.controller.control = swiper;
+
     </script>
 
 
@@ -770,7 +771,7 @@
     
     <footer>
     <div class="footer-img-container">
-        <a href="#">
+        <a href="contact.html">
             <video autoplay loop muted playsinline>
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.webm" type="video/webm"> <!-- quite new file format... smaller but not fully supported  -->
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.mp4" type="video/mp4">

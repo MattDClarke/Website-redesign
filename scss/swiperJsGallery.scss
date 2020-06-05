@@ -177,7 +177,8 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
   
 .gallery-thumbs .swiper-slide img {
     width: 100%;
-    height: auto;
+    //height: auto;
+    object-fit: cover;
 
     &:hover{
         cursor: pointer;
@@ -187,7 +188,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 .swiper-slide-thumbs {
     background-size: cover;
     background-position: center;
-    margin: auto 0; // center images in thumb image strip
+    //margin: auto 0; // center images in thumb image strip ... if height = auto
 }
 
 /* ................................................ modal .......................................................... */
