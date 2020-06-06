@@ -52,7 +52,7 @@ navSlide();
 
 
 
-// check window size, if it is larger than 850px, remove nav-active class from nav ul
+// check window size, if it is larger than 1000px, remove nav-active class from nav ul
 const mainContent = document.querySelector('.main-content');
 const mainCover = document.querySelector('.main-cover');
 const body = document.querySelector('body');
@@ -62,7 +62,7 @@ const navLinks = document.querySelectorAll('.nav-links li');
 
 // remove blur and close nav function
 function removeBlurAndClose() {
-if (window.innerWidth > 850) {
+if (window.innerWidth > 1000) {
   navUl.classList.remove("nav-active");
   mainContent.classList.remove('background-fade')
   mainCover.classList.remove('main-cover-opened');
@@ -79,7 +79,7 @@ if (window.innerWidth > 850) {
 
 // close nav drop down when user clicks outside of nav (if nav-active)
 function exitNav() {
-if (window.innerWidth <= 850 && navUl.classList.contains("nav-active") == true) {
+if (window.innerWidth <= 1000 && navUl.classList.contains("nav-active") == true) {
   navUl.classList.remove("nav-active");
   mainContent.classList.remove('background-fade');
   mainCover.classList.remove('main-cover-opened');

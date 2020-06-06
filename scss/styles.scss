@@ -6,6 +6,7 @@ $colors: (
     grey: rgb(192, 192, 192),
     dark-grey: #0e0e0e,
     yellow: #fefb10,
+    orange: orange,
     light-yellow: #fdfa54,
     red: red,
     red-lighter: #ff1110,
@@ -22,7 +23,7 @@ $hover-zoom: scale(1.2);
 $desktop: 1280px; // large screen
 $gallery-images: 1200px; // change margin when gallery images decr in size
 $ipad: 1023px; // ipad wide view
-$menu-button: 991px; // width when Bootstrap menu aria appears
+$menu-button: 991px; // width when menu aria appears
 $tablet: 812px; // smaller sized screens --> decr size by about 1/2
 $tablet-mobile: 600px;
 $mobile: 460px; // small sized screens
@@ -102,17 +103,16 @@ body::-webkit-scrollbar-thumb {
 
 body.remove-scroll {
     overflow: hidden;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    grid-gap: 40px;
-    min-height: 100vh;
-
-    @include tablet {
-        grid-gap: 20px;
-    }
+    //min-height: 100vh;
 }  
 
 /* ........................................................... nav  .......................................................... */
@@ -261,8 +261,6 @@ body.links .nav-links-page a {
         margin: 0 5%;
     }
 }
-  
-
   
 .search-icon {
     position: absolute;
@@ -482,6 +480,13 @@ main {
     animation:fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
+    padding: 40px 0;
+
+    @include tablet {
+        padding: 20px 0;
+    }
+
 }
 
 @keyframes fadeInAnimation {
@@ -1395,11 +1400,11 @@ th.table-header {
 }
 
 
-.contact-input {
+.form-input {
     font-family: 'Montserrat', sans-serif;
     width: 500px;
     font-size: 20px;
-    border: 1px solid color(white);
+    border: 2px solid color(white);
     border-radius: 5px;
     padding: 0.5rem 0.5rem;
 
@@ -1417,16 +1422,19 @@ th.table-header {
 
     &:focus {
         outline: none;
-        border: 1px solid color(red);
+        border: 2px solid color(orange);
     }
 }
 
 textarea {
     max-width: 500px;
+    min-width: 500px;
     min-height: 200px;
+    max-height: 500px;
 
     @include tablet-mobile {
         max-width: 90vw;
+        min-width: 90vw;
     }
   }
 
@@ -1434,6 +1442,7 @@ textarea {
     display: block;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    letter-spacing: 1.5px;
 }
 
 .contact-btn {
@@ -1441,22 +1450,36 @@ textarea {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 2rem;
-    padding: 5px 10px 7px 10px;
+    padding: 12px 15px 12px 15px;
     border-radius: 5px;
     border: none;
     background-color: color(red);
     color: white;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 }
 
 
 .contact-btn:hover {
     cursor: pointer;
     background-color:color(red-lighter);
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 4px 0px rgba(255,255,255,0.3);
     transition: all 0.4s ease;
 }
 
-.my-btn:focus {
-    outline-color: color(white);
+
+.form-group small {
+    display: block;
+    visibility: hidden;
+}
+
+.form-group.success .form-input {
+    border-color: #2ecc71;
+}
+
+.form-group.error .form-input {
+    border-color: color(red);
+}
+
+.form-group.error small {
+    visibility: visible;
+    color: color(red);
 }

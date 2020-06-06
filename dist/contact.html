@@ -161,22 +161,102 @@
         <h1  class="header">CONTACT</h1>
     </div> 
 
-    <form action="" method="POST" class="form-contact">
-        <div class="form-contact--group">
+    <form id="form" action="https://formspree.io/xknqrybo" method="POST" class="form-contact" novalidate>
+        <div class="form-group">
             <label for="formName" class="contact-label">Name</label>
-            <input id="formName" class="contact-input" type="text" placeholder="John Doe" autofocus maxlength="50" required>
+            <input id="formName" name="name" class="form-input" type="text" autofocus maxlength="50" required>
+            <small>Error message</small>
         </div>
-        <div class="form-contact--group">
+        <div class="form-group">
             <label for="formEmail" class="contact-label">Email</label>
-            <input id="formEmail" class="contact-input" type="text" placeholder="johndoe@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required>   
+            <input id="formEmail" name="_replyto" class="form-input" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required>   
+            <small>Error message</small>
         </div>
-        <div class="form-contact--group">
-            <label for="formMessage" class="contact-label">Message</label>
-            <textarea id="formMessage" class="contact-input" maxlength="2000"></textarea>
+        <div class="form-group">
+            <label for="formUserMessage" class="contact-label">Message</label>
+            <textarea id="formUserMessage" name="message" class="form-input" maxlength="3000" required></textarea>
+            <small>Error message</small>
         </div>
 
-        <button class="contact-btn" type="submit">Submit</button>
+        <button class="contact-btn" type="submit" value="Send">Submit</button>
     </form>
+
+    <script>
+        const form = document.getElementById('form');
+        const name = document.getElementById('formName');
+        const email = document.getElementById('formEmail');
+        const userMessage = document.getElementById('formUserMessage');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            checkInputs();
+       });
+
+       function checkInputs() {
+            //get values
+            const nameValue = name.value.trim();
+            const emailValue = email.value.trim();
+            const userMessageValue = userMessage.value.trim();
+
+            if (nameValue === '') {
+                // show error
+                // add error class
+                setErrorFor(name, 'Please add your name');
+            } else {
+                // add success class
+                setSuccessFor(name);
+            }
+
+            if (emailValue === '') {
+                setErrorFor(email, 'Please add your email');
+            } else if (!isEmail(emailValue)) {
+                setErrorFor(email, 'Please add a valid email address');
+            } else {
+                setSuccessFor(email);
+            }
+
+            if (userMessageValue === '') {
+                // show error
+                // add error class
+                setErrorFor(userMessage, 'Please add a message');
+            } else {
+                // add success class
+                setSuccessFor(userMessage);
+            }
+
+            // submit form if no errors
+            if (!nameValue === '') && (!emailValue === '') && (isEmail(emailValue)) && (!userMessageValue === '') {
+            console.log("submitted");
+                form.submit();
+            }
+
+        }
+
+        function setErrorFor(input, message) {
+            const formGroup = input.parentElement; 
+            const small = formGroup.querySelector('small');
+
+            // add error message inside small
+            small.innerText = message;
+
+            // add error class
+            formGroup.className = 'form-group error';
+        }
+
+        function setSuccessFor(input) {
+            const formGroup = input.parentElement;
+            formGroup.className = 'form-group success';
+        }
+
+        function isEmail(email) {
+        	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+
+
+ 
+    </script>
 
 
 
