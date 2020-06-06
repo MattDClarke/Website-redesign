@@ -159,15 +159,12 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 
 
 .gallery-thumbs {
-    height: auto;
-    box-sizing: border-box;
     padding: 0;
     margin-top: 0;
 }
 
 .gallery-thumbs .swiper-slide {
     width: 25%;
-    height: auto;
     opacity: 0.9;
 }
 
@@ -177,18 +174,21 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
   
 .gallery-thumbs .swiper-slide img {
     width: 100%;
-    //height: auto;
+    height: 100px;
     object-fit: cover;
 
     &:hover{
         cursor: pointer;
+    }
+
+    @include small-screen {
+        height: 14vw;
     }
 }
 
 .swiper-slide-thumbs {
     background-size: cover;
     background-position: center;
-    //margin: auto 0; // center images in thumb image strip ... if height = auto
 }
 
 /* ................................................ modal .......................................................... */
