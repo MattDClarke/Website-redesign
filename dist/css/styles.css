@@ -6,13 +6,13 @@
 }
 
 body::-webkit-scrollbar {
-  width: 14px;
+  width: 16px;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #0e0e0e;
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   scrollbar-color: #800000 black;
 }
 
@@ -23,7 +23,10 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #800000;
   border-radius: 6px;
-  border: 3px solid black;
+}
+
+body.remove-scroll {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -47,6 +50,7 @@ nav {
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid white;
+  z-index: 3;
 }
 
 /* container to make minimum nav width */
@@ -263,6 +267,7 @@ body.links .nav-links-page a {
   display: none;
   cursor: pointer;
   width: 50%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* to make burger icon right aligned */
@@ -330,7 +335,7 @@ body.links .nav-links-page a {
             justify-content: start;
     width: 50%;
     margin-right: 0;
-    z-index: 1;
+    z-index: 4;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -353,7 +358,7 @@ body.links .nav-links-page a {
 .nav-active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-  z-index: 2;
+  z-index: 5;
 }
 
 @-webkit-keyframes navLinkFade {
@@ -385,7 +390,7 @@ body.links .nav-links-page a {
 .burger.close {
   width: 50%;
   color: black;
-  z-index: 3;
+  z-index: 6;
 }
 
 .close .line1 {
@@ -393,6 +398,8 @@ body.links .nav-links-page a {
   margin-left: 0;
   -webkit-transform: rotate(-45deg) translate(-5px, 6px);
           transform: rotate(-45deg) translate(-5px, 6px);
+  margin-top: 6px;
+  margin-bottom: 4px;
 }
 
 .close .line2 {
@@ -409,7 +416,7 @@ body.links .nav-links-page a {
 .search-ul {
   /* Remove default list styling */
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   list-style-type: none;
   width: calc(47.5% - 12px);
   -ms-grid-column-align: stretch;
@@ -494,6 +501,22 @@ main {
   100% {
     opacity: 1;
   }
+}
+
+.main-cover {
+  display: none;
+}
+
+.main-cover.main-cover-opened {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 /* make background fade when nav menu opened - toggled using JavaScript */

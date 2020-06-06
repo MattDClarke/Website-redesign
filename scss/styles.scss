@@ -79,13 +79,13 @@ $mobile: 460px; // small sized screens
 }
 
 body::-webkit-scrollbar {
-    width: 14px;
+    width: 16px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: color(dark-grey);
-    scrollbar-width: thin;
+    scrollbar-width: auto;
     scrollbar-color: color(maroon) color(black);
 }
 
@@ -97,7 +97,11 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: color(maroon);
     border-radius: 6px;
-    border: 3px solid color(black);
+}
+
+
+body.remove-scroll {
+    overflow: hidden;
 }
 
 .wrapper {
@@ -118,6 +122,7 @@ nav {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid color(white);
+    z-index: 3;
 }
       
   /* container to make minimum nav width */
@@ -248,10 +253,6 @@ body.links .nav-links-page a {
     cursor: pointer;
     flex: 1;
 
-    // &:focus {
-    //     outline: 1px solid color(red);
-    // }
-
     @include tablet {
         font-size: 0.875rem;
     }
@@ -306,6 +307,7 @@ body.links .nav-links-page a {
     display: none;
     cursor: pointer;
     width: 50%;
+    -webkit-tap-highlight-color: transparent;
 }
     
   /* to make burger icon right aligned */
@@ -316,7 +318,7 @@ body.links .nav-links-page a {
     text-align: left;
 }
     
-.burger--container div{
+.burger--container div {
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: right;
@@ -339,6 +341,7 @@ body.links .nav-links-page a {
     width: 25px;
     height: 4px;
     background-color: color(white);
+ 
     
 }
 
@@ -362,7 +365,7 @@ body.links .nav-links-page a {
         justify-content: start;
         width: 50%;
         margin-right: 0;
-        z-index: 1;
+        z-index: 4;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
 
@@ -384,7 +387,7 @@ body.links .nav-links-page a {
     
 .nav-active {
     transform: translateX(0%);
-    z-index: 2;
+    z-index: 5;
 }
     
 @keyframes navLinkFade {
@@ -401,7 +404,7 @@ body.links .nav-links-page a {
 .burger.close {
     width: 50%;
     color: color(black);
-    z-index: 3;
+    z-index: 6;
 }
   
 .close {
@@ -409,6 +412,8 @@ body.links .nav-links-page a {
         width: 25px; 
         margin-left: 0;
         transform: rotate(-45deg) translate(-5px, 6px);
+        margin-top: 6px;
+        margin-bottom: 4px;
     }
     .line2 {
         margin-left: 0px;
@@ -423,7 +428,7 @@ body.links .nav-links-page a {
 .search-ul {
     /* Remove default list styling */
     position: absolute;
-    z-index: 1;
+    z-index: 4;
     list-style-type: none;
     width: calc(47.5% - 12px);
     justify-self: stretch;
@@ -487,6 +492,24 @@ main {
         opacity: 1;
     }
 }
+
+.main-cover {
+    display: none;
+}
+
+.main-cover.main-cover-opened {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+
     
   /* make background fade when nav menu opened - toggled using JavaScript */
 .main-content.background-fade {
@@ -658,10 +681,8 @@ footer video {
     border-radius: 5px 5px 0 0;
 }
 
-.img-container a:focus img{
-
-        border              : 2px solid orange;
-       
+.img-container a:focus img {
+    border: 2px solid orange;    
 }
   
 .gallery-image img {

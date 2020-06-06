@@ -4,6 +4,8 @@ const navSlide = () => {
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
   const mainContent = document.querySelector('.main-content');
+  const mainCover = document.querySelector('.main-cover');
+  const body = document.querySelector('body');
   // close search input (if open)
   var searchInputBox = document.getElementById('searchInput');
   const searchIcon = document.getElementById('search-icon');
@@ -36,7 +38,11 @@ const navSlide = () => {
     burger.classList.toggle('close');
     
     // add opacity to main content
-    mainContent.classList.toggle('background-fade')
+    mainContent.classList.toggle('background-fade');
+    // add opacity to main content
+    mainCover.classList.toggle('main-cover-opened');
+    // remove scroll
+    body.classList.toggle('remove-scroll');
   });  
 }
 
@@ -48,6 +54,8 @@ navSlide();
 
 // check window size, if it is larger than 850px, remove nav-active class from nav ul
 const mainContent = document.querySelector('.main-content');
+const mainCover = document.querySelector('.main-cover');
+const body = document.querySelector('body');
 const navUl = document.getElementById("navUl");
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelectorAll('.nav-links li');
@@ -57,6 +65,8 @@ function removeBlurAndClose() {
 if (window.innerWidth > 850) {
   navUl.classList.remove("nav-active");
   mainContent.classList.remove('background-fade')
+  mainCover.classList.remove('main-cover-opened');
+  body.classList.remove('remove-scroll');
   burger.classList.remove('close');
 
   // remove links style
@@ -71,7 +81,9 @@ if (window.innerWidth > 850) {
 function exitNav() {
 if (window.innerWidth <= 850 && navUl.classList.contains("nav-active") == true) {
   navUl.classList.remove("nav-active");
-  mainContent.classList.remove('background-fade')
+  mainContent.classList.remove('background-fade');
+  mainCover.classList.remove('main-cover-opened');
+  body.classList.remove('remove-scroll');
   burger.classList.remove('close');
 
   // remove links style
@@ -83,7 +95,7 @@ if (window.innerWidth <= 850 && navUl.classList.contains("nav-active") == true) 
 
 
 // Listen for main content click 
-mainContent.addEventListener('click',exitNav);
+mainCover.addEventListener('click',exitNav);
 
 // on window resize, call the remove blur and close nav function
 window.onresize = removeBlurAndClose;
@@ -102,11 +114,11 @@ var message = 'Search for a species'
 var speed = 100;
 
 searchIcon.addEventListener('click', () => {
-searchIcon.style.display = 'none';
-closeBtnSearch.style.display = 'block';
-searchInput.style.height = '40px';
-searchInput.style.cursor = 'text';
-searchInput.focus();
+  searchIcon.style.display = 'none';
+  closeBtnSearch.style.display = 'block';
+  searchInput.style.height = '40px';
+  searchInput.style.cursor = 'text';
+  searchInput.focus();
 
 typeWriter();
 
@@ -124,11 +136,11 @@ searchInput.addEventListener('focus', () => {
   })
 
 closeBtnSearch.addEventListener('click', () => {
-closeBtnSearch.style.display = 'none';
-searchIcon.style.display = 'block';
-searchInput.style.height = '0';
-searchInput.value = ''; // clear input
-searchFilter(); // to make UL display = none. (if user closes search when there are search results displayed)
+  closeBtnSearch.style.display = 'none';
+  searchIcon.style.display = 'block';
+  searchInput.style.height = '0';
+  searchInput.value = ''; // clear input
+  searchFilter(); // to make UL display = none. (if user closes search when there are search results displayed)
 
 })
 
