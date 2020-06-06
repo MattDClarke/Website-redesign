@@ -75,6 +75,7 @@ $mobile: 460px; // small sized screens
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body::-webkit-scrollbar {
@@ -248,7 +249,7 @@ body.links .nav-links-page a {
     flex: 1;
 
     // &:focus {
-    //     outline: none;
+    //     outline: 1px solid color(red);
     // }
 
     @include tablet {
@@ -655,6 +656,12 @@ footer video {
 .img-container {
     overflow: hidden;
     border-radius: 5px 5px 0 0;
+}
+
+.img-container a:focus img{
+
+        border              : 2px solid orange;
+       
 }
   
 .gallery-image img {
@@ -1432,17 +1439,3 @@ textarea {
 .my-btn:focus {
     outline-color: color(white);
 }
-
-// font-size: 22px;
-// line-height: 36.8px;
-// margin-top: 0;
-// width: 90%;
-// max-width: 1200px;
-// padding: 30px 0;
-
-// @include tablet {
-//     font-size: 20px;
-//     line-height: 33px;
-// }
-// @include mobile {
-//     font-size: 19px;

@@ -112,6 +112,17 @@ typeWriter();
 
 })
 
+searchInput.addEventListener('focus', () => {
+  searchIcon.style.display = 'none';
+  closeBtnSearch.style.display = 'block';
+  searchInput.style.height = '40px';
+  searchInput.style.cursor = 'text';
+  searchInput.focus();
+  
+  typeWriter();
+  
+  })
+
 closeBtnSearch.addEventListener('click', () => {
 closeBtnSearch.style.display = 'none';
 searchIcon.style.display = 'block';
