@@ -187,10 +187,9 @@
         const email = document.getElementById('formEmail');
         const userMessage = document.getElementById('formUserMessage');
 
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', (e) => {         
             e.preventDefault();
-
-            checkInputs();
+            checkInputs();        
        });
 
        function checkInputs() {
@@ -226,11 +225,9 @@
             }
 
             // submit form if no errors
-            if (!nameValue === '') && (!emailValue === '') && (isEmail(emailValue)) && (!userMessageValue === '') {
-            console.log("submitted");
-                form.submit();
+            if  (!(nameValue === '') && !(emailValue === '') && (isEmail(emailValue)) && !((userMessageValue === '')))  {
+                 form.submit();           
             }
-
         }
 
         function setErrorFor(input, message) {
@@ -250,15 +247,10 @@
         }
 
         function isEmail(email) {
-        	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
         }
-
-
-
- 
+	
     </script>
-
-
 
 
     </main>
