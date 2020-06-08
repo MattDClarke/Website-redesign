@@ -196,7 +196,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 .modal {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     left: 0;
     top: 0;
     height: 100vh;
@@ -215,7 +215,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 
 .close-btn-modal {
     position: absolute;  /* removed from normal flow of doc, positioned relative to its nearest ancestor (modal content)*/
-    z-index: 4;
+    z-index: 7;
     color:color(white);
     right: 10px;
     font-size: 30px;
@@ -236,7 +236,13 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
 /* used ids higher specificity to override gallery styles */
 
 #swiper-container-modal {
-    z-index:3;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
     width:100%;
     height:100%;
     overflow:hidden;

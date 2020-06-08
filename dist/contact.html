@@ -174,7 +174,7 @@
         </div>
         <div class="form-group">
             <label for="formUserMessage" class="contact-label">Message</label>
-            <textarea id="formUserMessage" name="message" class="form-input" maxlength="3000" required></textarea>
+            <textarea id="formUserMessage" name="message" class="form-input" maxlength="5000" required></textarea>
             <small>Error message</small>
         </div>
 
@@ -219,13 +219,15 @@
                 // show error
                 // add error class
                 setErrorFor(userMessage, 'Please add a message');
+            } else if (userMessageValue.length > 5000) {
+                setErrorFor(userMessage, 'Max length = 5000 characters')
             } else {
                 // add success class
                 setSuccessFor(userMessage);
             }
 
             // submit form if no errors
-            if  (!(nameValue === '') && !(emailValue === '') && (isEmail(emailValue)) && !((userMessageValue === '')))  {
+            if  ( !(nameValue === '') && !(emailValue === '') && (isEmail(emailValue)) && !(userMessageValue === '') && !(userMessageValue.length > 5000) )  {
                  form.submit();           
             }
         }

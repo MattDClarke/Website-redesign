@@ -20,6 +20,8 @@ $colors: (
 
 $hover-zoom: scale(1.2);
 
+$scroll-width: calc(100vw - 100%);
+
 $desktop: 1280px; // large screen
 $gallery-images: 1200px; // change margin when gallery images decr in size
 $ipad: 1023px; // ipad wide view
@@ -107,6 +109,8 @@ body.remove-scroll {
     right: 0;
     left: 0;
     top: 0;
+    bottom: 0;
+    padding-right: $scroll-width;
 }
 
 .wrapper {
@@ -122,7 +126,6 @@ nav {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid color(white);
-    z-index: 3;
 }
       
   /* container to make minimum nav width */
@@ -363,7 +366,7 @@ body.links .nav-links-page a {
         justify-content: start;
         width: 50%;
         margin-right: 0;
-        z-index: 4;
+        z-index: 2;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
 
@@ -385,7 +388,7 @@ body.links .nav-links-page a {
     
 .nav-active {
     transform: translateX(0%);
-    z-index: 5;
+    z-index: 3;
 }
     
 @keyframes navLinkFade {
@@ -402,7 +405,8 @@ body.links .nav-links-page a {
 .burger.close {
     width: 50%;
     color: color(black);
-    z-index: 6;
+    z-index: 4;
+    //padding-left: 16px;
 }
   
 .close {
@@ -426,7 +430,7 @@ body.links .nav-links-page a {
 .search-ul {
     /* Remove default list styling */
     position: absolute;
-    z-index: 4;
+    z-index: 2;
     list-style-type: none;
     width: calc(47.5% - 12px);
     justify-self: stretch;
@@ -474,7 +478,7 @@ body.links .nav-links-page a {
 /* ....................................................  nav filter list ..................................................... */
 //  Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp .
 
-main {
+.main-content {
     min-height: 100vh;
     transition: all 1s;  /* for slowly decr opacity of main when text in search bar */ 
     animation:fadeInAnimation ease 1.5s;
