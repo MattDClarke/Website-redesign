@@ -17,12 +17,12 @@
 }
 
 .aspect-ratio_130-59 {
-  height: 295px;
+  min-height: 295px;
 }
 
 @media all and (max-width: 700px) {
   .aspect-ratio_130-59 {
-    height: calc((0.3592 * 100vw) + 19.251px);
+    min-height: calc((0.3592 * 100vw) + 19.251px);
   }
 }
 
