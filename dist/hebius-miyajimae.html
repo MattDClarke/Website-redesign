@@ -784,9 +784,6 @@
             //loadOnTransitionStart: true,
         },
 
-        keyboard: {
-            enabled: true,
-        },
 
         effect: 'coverflow',
         coverflowEffect: {
@@ -799,25 +796,19 @@
 
         });
 
-
-        swiper.controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
-        swiperModal.controller.control = swiper;
-
+        // hacky attempt to fix initial height issue (extra space below image initially...)
         document.addEventListener('DOMContentLoaded', function() {
-            swiper.update();
-            swiperModal.update(); 
+           document.body.style.top = `1px`;
+           document.body.style.top = `0px`;
         });
 
         // Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
         // Get modal element
         var modal = document.getElementById('simpleModal');
         // Get open modal button
-        // var modalBtn = document.getElementsByClassName('swiper-slide-img')[0];
         var modalBtn = document.querySelectorAll('.swiper-slide-img'); // select all swiper-slides (outside modal)
-        //var modalBtn = document.getElementById('modalBtn');
         // close button
         var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0]; // returns an array... just get first one (only one element with this class)
-
 
         modalBtn.forEach(element => { 
             element.addEventListener('click', openModal); // add an click event listener for each swiper-slide (outside the modal)
@@ -828,25 +819,21 @@
 
 
         function openModal() {
-
             // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
             // When the modal is shown, we want a fixed body
             document.body.style.position = 'fixed'; // prevents scrolling
             document.body.style.top = `-${window.scrollY}px`; // subtract scroll top, add to body styles
 
-            // Allow swiper to work when modal opened. From the docs:  https://swiperjs.com/api/
-            //var mySwiper = document.querySelector('.swiper-container-main').swiper
-            swiper.update();
-            //var mySwiper2 = document.querySelector('.swiper-container-modal').swiper
-            swiperModal.update();
+            let swiperIndexPos = swiper.activeIndex;
+            swiperModal.slideTo(swiperIndexPos);
             swiperModal.lazy.load(); // need to initailize lazy load if modal opened
-
             modal.style.display ='block';
+            swiper.keyboard.disable();
+            swiperModal.keyboard.enable();
         }
 
 
-        function closeModal() {
-            
+        function closeModal() {          
             // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
             // When the modal is hidden...
             const scrollY = document.body.style.top; // retrieve scroll location
@@ -854,13 +841,11 @@
             document.body.style.top = '';
             window.scrollTo(0, parseInt(scrollY || '0') * -1);
             
-            // Allow swiper to work when modal opened. From the docs:  https://swiperjs.com/api/
-            //var mySwiper = document.querySelector('.swiper-container-main').swiper
-            swiper.update();
-            //var mySwiper2 = document.querySelector('.swiper-container-modal').swiper
-            swiperModal.update();
-
+            let swiperModalIndexPos = swiperModal.activeIndex;
+            swiper.slideTo(swiperModalIndexPos);
             modal.style.display = 'none';
+            swiperModal.keyboard.disable();
+            swiper.keyboard.enable();
         }
 
     </script>
