@@ -184,7 +184,7 @@
     <!-- Swiper -->
     <div class="swiper-container swiper-container-main">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide aspect-ratio_325-226">
                 <picture>
                     <source
                         type="image/webp"
@@ -199,14 +199,14 @@
                         images-hebius-miyajimae/Hebius-miyajimae-1-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
                     {# order of class and data-src is important for preloading next and prev slide #}
-                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal aspect-ratio_325-226" 
+                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="434"                        
                             data-src="images-hebius-miyajimae/Hebius-miyajimae-1-650px.jpg"  >
                 </picture>
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide aspect-ratio_325-226">
                 <picture>
                     <source
                         type="image/webp"
@@ -221,14 +221,14 @@
                         images-hebius-miyajimae/Hebius-miyajimae-2-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
                     {# order of class and data-src is important for preloading next and prev slide #}
-                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal aspect-ratio_325-226" 
+                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
                             data-src="images-hebius-miyajimae/Hebius-miyajimae-2-650px.jpg"  >
                 </picture>
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide aspect-ratio_325-226">
                 <picture>
                     <source
                         type="image/webp"
@@ -243,14 +243,14 @@
                         images-hebius-miyajimae/Hebius-miyajimae-3-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
                     {# order of class and data-src is important for preloading next and prev slide #}
-                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal aspect-ratio_325-226" 
+                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
                             data-src="images-hebius-miyajimae/Hebius-miyajimae-3-650px.jpg"  >
                 </picture>
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>    
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide aspect-ratio_325-226">
                 <picture>
                     <source
                         type="image/webp"
@@ -265,14 +265,14 @@
                         images-hebius-miyajimae/Hebius-miyajimae-4-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
                     {# order of class and data-src is important for preloading next and prev slide #}
-                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal aspect-ratio_325-226" 
+                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
                             data-src="images-hebius-miyajimae/Hebius-miyajimae-4-650px.jpg"  >
                 </picture>
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide aspect-ratio_325-226">
                 <picture>
                     <source
                         type="image/webp"
@@ -287,7 +287,7 @@
                         images-hebius-miyajimae/Hebius-miyajimae-5-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
                     {# order of class and data-src is important for preloading next and prev slide #}
-                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal aspect-ratio_325-226" 
+                    <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
                             data-src="images-hebius-miyajimae/Hebius-miyajimae-5-650px.jpg"  >
@@ -642,8 +642,12 @@
         swiper.controller.control = swiperModal; // Solution found: https://github.com/nolimits4web/Swiper/issues/1738 
         swiperModal.controller.control = swiper;
 
-        // Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
+        document.addEventListener('DOMContentLoaded', function() {
+            swiper.update();
+            swiperModal.update(); 
+        });
 
+        // Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
         // Get modal element
         var modal = document.getElementById('simpleModal');
         // Get open modal button
