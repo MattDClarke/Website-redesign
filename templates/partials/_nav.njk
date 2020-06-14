@@ -23,7 +23,7 @@
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
-        <input id="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50">
+        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
         <ul id="searchUL" class="search-ul"> 
             {% for name in names %}
                 <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>

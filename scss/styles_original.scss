@@ -154,7 +154,6 @@ nav {
 }
       
 .logo {
-    font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 23px;
     color: color(white);
     width: 50%;
@@ -480,8 +479,8 @@ body.links .nav-links-page a {
 
 .main-content {
     min-height: 100vh;
-    transition: all 1s;  /* for slowly decr opacity of main when text in search bar */ 
-    animation:fadeInAnimation ease 1.5s;
+    transition: all;  /* for slowly decr opacity of main when text in search bar */ 
+    animation:fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
@@ -576,79 +575,6 @@ footer video {
 .developer-link {
     text-decoration: none;
     color: color(white);
-}
-
-
-/* ..................................................... index (landing page) ..................................................... */
-
-.index-container {
-    display: flex;
-    width: 100vw;
-    height: 100%;
-    min-height: 100vh;
-    max-width: 100%;
-    background-color: color(black);
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 1.5rem;
-    align-items: center;
-    justify-content: center;
-
-    @include menu-button {
-        font-size: 1.25rem;
-    }
-
-    @include tablet {
-        font-size: 1rem;
-    }   
-}
-
-
-
-.index-container a {
-    text-decoration: none;
-    color: color(white);
-    letter-spacing: 1.5px;
-    font-weight: bold;
-    position: relative;   
-    
-    &:hover {
-        cursor: pointer;    
-    }
-
-    &::after {
-        content: '';
-        display: block;
-        height: 3px;
-        background: color(white);
-        position: absolute;
-        top: 1.2em;
-        left: 0;
-        right: 0;
-        border-radius: 10px;
-        transform: scale(0);
-        transition: transform ease 0.25s;    
-    }
-
-    &:hover::after {
-        transform: scale(1,1);
-    }
-}
-
-.index-container img {
-
-    width: 500px;
-    height: auto;
-    border-radius: 5px;
-    
-    @include tablet {
-        width: 80vw;
-        height: auto;
-    }
-}
-
-.index-container div {
-    margin: 5px 0;
 }
 
 /* ..................................................... gallery container ..................................................... */

@@ -85,7 +85,6 @@ nav {
 }
 
 .logo {
-  font-family: 'Montserrat Subrayada', sans-serif;
   font-size: 23px;
   color: white;
   width: 50%;
@@ -1620,4 +1619,4 @@ textarea {
   visibility: visible;
   color: red;
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles_original.css.map */

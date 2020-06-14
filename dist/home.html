@@ -4,10 +4,7 @@
 <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.min.css">
-    <!-- Swiper.js CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+    
     <link
         rel="preload"
         href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
@@ -24,6 +21,725 @@
     <meta name="Description" content=
     "Image gallery showing all of the snakes of Taiwan with links to species descriptions and additional photos."
 >
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        body::-webkit-scrollbar {
+            width: 16px
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0e0e0e;
+            scrollbar-width: auto;
+            scrollbar-color: maroon #000
+        }
+
+
+        body::-webkit-scrollbar-track {
+            background: #000
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: maroon;
+            border-radius: 6px
+        }
+
+        .wrapper {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-rows: auto 1fr auto;
+            grid-template-rows: auto 1fr auto
+        }
+
+        nav {
+            background-color: #000;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #fff
+        }
+
+        .nav--items {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 0
+        }
+
+        .website-logo {
+            height: 32px;
+            margin-bottom: -9px
+        }
+
+        @media all and (max-width: 812px) {
+            .website-logo {
+                height:28px
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .website-logo {
+                height:24px;
+                width: 210.917px
+            }
+        }
+
+        .logo {
+            font-size: 23px;
+            color: #fff;
+            width: 50%;
+            padding-left: 5%
+        }
+
+        .logo a {
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            color: #fff
+        }
+
+        .nav-links {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+            align-items: baseline;
+            width: 50%;
+            margin-right: 5%
+        }
+
+        .nav-links li {
+            list-style: none
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            position: relative
+        }
+
+        .nav-links a::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            top: 1.2em;
+            left: 0;
+            right: 0;
+            border-radius: 10px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: -webkit-transform ease 0.25s;
+            transition: -webkit-transform ease 0.25s;
+            transition: transform ease 0.25s;
+            transition: transform ease 0.25s, -webkit-transform ease 0.25s
+        }
+
+
+        .search-input-container {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto
+        }
+        
+
+        .search-input-spacer {
+            width: 50%;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            margin-left: 5%
+        }
+
+        @media all and (max-width: 600px) {
+            .search-input-spacer {
+                display:none
+            }
+        }
+
+        .search-input {
+            font-family: 'Montserrat', sans-serif;
+            height: 0;
+            border: 0;
+            border-radius: 5px;
+            margin-right: 40px;
+            padding-left: 14px;
+            -webkit-transition: height 1s ease;
+            transition: height 1s ease;
+            font-size: 1rem;
+            cursor: pointer;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1
+        }
+
+        @media all and (max-width: 812px) {
+            .search-input {
+                font-size:0.875rem
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .search-input {
+                margin:0 5%
+            }
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            height: 32px;
+            margin: 5.5px 0.5px 0.5px 5.5px;
+            cursor: pointer
+        }
+
+        @media all and (max-width: 812px) {
+            .search-icon {
+                height:28px
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .search-icon {
+                width:24px;
+                margin-bottom: -6px
+            }
+        }
+
+        .search-close {
+            position: absolute;
+            right: 10px;
+            display: none;
+            height: 23px;
+            font-size: 3rem;
+            cursor: pointer
+        }
+
+        @media all and (max-width: 812px) {
+            .search-close {
+                height:21.13px
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .search-close {
+                height:18.1px;
+                margin-bottom: -6px
+            }
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            width: 50%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .burger--container {
+            width: 25px;
+            margin: 0 auto;
+            margin-bottom: -8.4px;
+            text-align: left
+        }
+
+        .burger--container div {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: right;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease
+        }
+
+        .line1 {
+            width: 5px;
+            height: 2px;
+            margin-left: 20px;
+            background-color: #fff
+        }
+
+        .line2 {
+            width: 14px;
+            height: 3px;
+            margin-left: 11px;
+            background-color: #ff1110
+        }
+
+        .line3 {
+            width: 25px;
+            height: 4px;
+            background-color: #fff
+        }
+
+        @media (max-width: 1000px) {
+            body {
+                overflow-x:hidden
+            }
+
+            .nav-links {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                padding-top: 50px;
+                top: 0;
+                background-color: maroon;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: start;
+                width: 50%;
+                margin-right: 0;
+                z-index: 2;
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+                -webkit-transition: -webkit-transform 0.5s ease-in;
+                transition: -webkit-transform 0.5s ease-in;
+                transition: transform 0.5s ease-in;
+                transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in
+            }
+
+            .nav-links li {
+                opacity: 0;
+                padding: 10px
+            }
+
+            .nav-links li.nav-home {
+                padding-top: 20px
+            }
+
+            .burger {
+                display: block
+            }
+        }
+
+        .search-ul {
+            position: absolute;
+            z-index: 2;
+            list-style-type: none;
+            width: calc(47.5% - 12px);
+            -ms-grid-column-align: stretch;
+            justify-self: stretch;
+            padding: 0;
+            margin-top: 40px;
+            right: 40px;
+            display: none;
+            max-height: 306px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            background-color: #d8d8d8
+        }
+
+        @media all and (max-width: 812px) {
+            .search-ul {
+                max-height:277px
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .search-ul {
+                left:0;
+                width: 90%;
+                margin-left: 5%
+            }
+        }
+
+        .main-content {
+            min-height: 100vh;
+            transition: all;  /* for slowly decr opacity of main when text in search bar */ 
+            animation:fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+            padding: 40px 0;
+
+            @include tablet {
+                padding: 20px 0;
+            }
+
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media all and (max-width: 812px) {
+            .main-content {
+                padding:20px 0
+            }
+        }
+
+        .main-cover {
+            display: none
+        }
+
+        footer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            padding: 20px 5px;
+            background-color: #000;
+            color: #fff;
+            -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.1);
+            box-shadow: 0 0 1px rgba(255,255,255,0.1);
+            margin-top: 60px;
+            padding-top: 90px;
+            padding-bottom: 40px;
+            -webkit-clip-path: polygon(0px 100px, 100% 0px, 100% 100%, 0% 100%);
+            clip-path: polygon(0px 100px, 100% 0px, 100% 100%, 0% 100%)
+        }
+
+        @media all and (max-width: 812px) {
+            footer {
+                font-size:10px
+            }
+        }
+
+        .footer-img-container {
+            padding-bottom: 20px
+        }
+
+        footer video {
+            width: 100px;
+            height: 100%;
+            border-radius: 5px
+        }
+
+        @media all and (max-width: 812px) {
+            footer video {
+                width:75px
+            }
+        }
+
+        .developer-link {
+            text-decoration: none;
+            color: #fff
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .gallery-images {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: (200px)[auto-fit];
+            grid-template-columns: repeat(auto-fit, 200px);
+            grid-auto-flow: row;
+            grid-gap: 20px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin: 0;
+            padding: 1rem;
+            font-size: 75%
+        }
+
+        @media all and (max-width: 812px) {
+            .gallery-images {
+                -ms-grid-columns:(139px)[auto-fit];
+                grid-template-columns: repeat(auto-fit, 139px);
+                grid-gap: 10px;
+                font-size: 70%
+            }
+        }
+
+        .gallery-image {
+            position: relative;
+            border-radius: 5px;
+            background-color: #d8d8d8;
+            -webkit-box-shadow: 5px 7px 6px rgba(0,0,0,0.3);
+            box-shadow: 5px 7px 6px rgba(0,0,0,0.3);
+            max-height: 350px
+        }
+
+        .img-container {
+            overflow: hidden;
+            border-radius: 5px 5px 0 0
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 166.75px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            cursor: pointer;
+            -webkit-transition: all 0.9s ease;
+            transition: all 0.9s ease
+        }
+        @media all and (max-width: 812px) {
+            .gallery-image img {
+                height:116.7px
+            }
+        }
+
+        .img-adjust-2 {
+            -o-object-position: 13%;
+            object-position: 13%
+        }
+
+        .img-adjust-3 {
+            -o-object-position: 20%;
+            object-position: 20%
+        }
+
+        .img-adjust-4 {
+            -o-object-position: 25%;
+            object-position: 25%
+        }
+
+        .img-adjust-5 {
+            -o-object-position: 30%;
+            object-position: 30%
+        }
+
+        .img-adjust-6 {
+            -o-object-position: 35%;
+            object-position: 35%
+        }
+
+        .img-adjust-7 {
+            -o-object-position: 40%;
+            object-position: 40%
+        }
+
+        .img-adjust-8 {
+            -o-object-position: 60%;
+            object-position: 60%
+        }
+
+        .img-adjust-9 {
+            -o-object-position: 65%;
+            object-position: 65%
+        }
+
+        .img-adjust-10 {
+            -o-object-position: 70%;
+            object-position: 70%
+        }
+
+        .img-adjust-11 {
+            -o-object-position: 75%;
+            object-position: 75%
+        }
+
+        .img-adjust-12 {
+            -o-object-position: 80%;
+            object-position: 80%
+        }
+
+        .img-adjust-13 {
+            -o-object-position: 85%;
+            object-position: 85%
+        }
+
+        .img-adjust-14 {
+            -o-object-position: 90%;
+            object-position: 90%
+        }
+
+        .img-adjust-15 {
+            -o-object-position: 100%;
+            object-position: 100%
+        }
+
+        .gallery-image-text {
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            line-height: 5px
+        }
+
+        @media all and (max-width: 812px) {
+            .gallery-image-text {
+                padding-top:0px;
+                padding-left: 5px;
+                padding-right: 5px;
+                line-height: 3.5px
+            }
+        }
+
+        .scientific-name {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin-bottom: 7px;
+            height: 50px;
+            font-size: 13.5px;
+            font-style: italic;
+            line-height: 1.2em
+        }
+
+        @media all and (max-width: 812px) {
+            .scientific-name {
+                height:35px;
+                font-size: 12px;
+                margin-top: 5px;
+                margin-bottom: 10px
+            }
+        }
+
+        .common-name {
+            position: relative;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.2em;
+            padding-top: 10px
+        }
+
+        .common-name::before {
+            content: '';
+            display: block;
+            height: 2px;
+            background: silver;
+            position: absolute;
+            top: -0.4rem;
+            left: 0;
+            right: 0;
+            width: 100%;
+            border-radius: 10px
+        }
+
+        @media all and (max-width: 812px) {
+            .common-name {
+                font-size:15px;
+                padding-top: 7px;
+                margin-bottom: 15px
+            }
+        }
+
+        .chinese-name-container {
+            font-size: 11px;
+            margin-top: 23px;
+            line-height: 1px
+        }
+
+        @media all and (max-width: 812px) {
+            .chinese-name-container {
+                font-size:7.7px;
+                margin-top: 11.5px
+            }
+        }
+
+        .chinese-name-chars {
+            margin-bottom: 15px
+        }
+
+        @media all and (max-width: 812px) {
+            .chinese-name-chars {
+                margin-bottom:10px
+            }
+        }
+
+        .chinese-name-romanized {
+            margin-bottom: 25px
+        }
+
+        @media all and (max-width: 812px) {
+            .chinese-name-romanized {
+                margin-bottom:20px
+            }
+        }
+
+        .img-container {
+            position: relative
+        }
+
+        .img-container img {
+            display: block
+        }
+
+        .img-container .icon-danger {
+            position: absolute;
+            border-radius: 3px;
+            width: 33.6px;
+            height: 28.8px;
+            top: 0px;
+            right: 0px
+        }
+
+        @media all and (max-width: 812px) {
+            .img-container .icon-danger {
+                width:23.52px;
+                height: 20.16px
+            }
+        }
+
+        .gallery-intro {
+            text-align: center;
+            font-size: 20.5px;
+            letter-spacing: 1.5px;
+            margin: 35px 20px 30px 20px;
+            color: #fff
+        }
+
+        @media all and (max-width: 812px) {
+            .gallery-intro {
+                font-size:18px;
+                margin-top: 30px;
+                margin-bottom: 20px
+            }
+        }
+
+        @media all and (max-width: 460px) {
+            .gallery-intro {
+                margin-top:26px;
+                margin-bottom: 10px
+            }
+        }
+    </style>
+    <link rel="preload" href="css/styles_home.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/styles_home.min.css"></noscript>
+
     <title>Snakes of Taiwan: 
     Home
 </title>
@@ -57,7 +773,7 @@
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
-        <input id="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50">
+        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
         <ul id="searchUL" class="search-ul"> 
             
                 <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
@@ -179,7 +895,7 @@
         <section class="gallery-images">     
             <div class="gallery-image">                            
                 <div class="img-container">
-                    <a href="hebius-miyajimae.html">   
+                    <a href="hebius-miyajimae.html" aria-label="Maki's Keelback">   
                         <picture>
                             
                             <source 
@@ -235,7 +951,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Taiwan Coral Snake">   
                         <picture>
                             
                             <source 
@@ -291,7 +1007,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Hatori's Coral Snake">   
                         <picture>
                             
                             <source 
@@ -347,7 +1063,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Taiwan Kukri Snake">   
                         <picture>
                             
                             <source 
@@ -399,7 +1115,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Big-eyed Ratsnake">   
                         <picture>
                             
                             <source 
@@ -453,7 +1169,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Chinese Water Snake">   
                         <picture>
                             
                             <source 
@@ -506,7 +1222,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="plumbeous Water Snake">   
                         <picture>
                             
                             <source 
@@ -559,7 +1275,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Collered Reed Snake">   
                         <picture>
                             
                             <source 
@@ -612,7 +1328,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Asiatic Many-Toothed Snake">   
                         <picture>
                             
                             <source 
@@ -665,7 +1381,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Chinese Green Tree Viper">   
                         <picture>
                             
                             <source 
@@ -722,7 +1438,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Greater Green Snake">   
                         <picture>
                             
                             <source 
@@ -775,7 +1491,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Rein Snake">   
                         <picture>
                             
                             <source 
@@ -828,7 +1544,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Brahminy Blind Snake">   
                         <picture>
                             
                             <source 
@@ -881,7 +1597,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Formosan Odd-Scaled Snake">   
                         <picture>
                             
                             <source 
@@ -934,7 +1650,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Black Odd-Scaled Snake">   
                         <picture>
                             
                             <source 
@@ -987,7 +1703,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Dhaman (Oriental) Ratsnake">   
                         <picture>
                             
                             <source 
@@ -1040,7 +1756,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Chinese Ratsnake">   
                         <picture>
                             
                             <source 
@@ -1093,7 +1809,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Chinese Mountain Snake">   
                         <picture>
                             
                             <source 
@@ -1146,7 +1862,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Mock Viper">   
                         <picture>
                             
                             <source 
@@ -1199,7 +1915,7 @@
             </div> 
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Swinhoe's Grass Snake">   
                         <picture>
                             
                             <source 
@@ -1252,7 +1968,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Sauter's Water (Grass) Snake">   
                         <picture>
                             
                             <source 
@@ -1305,7 +2021,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Paiwan Keelback">   
                         <picture>
                             
                             <source 
@@ -1358,7 +2074,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Eastern Water Snake">   
                         <picture>
                             
                             <source 
@@ -1411,7 +2127,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="King Ratsnake">   
                         <picture>
                             
                             <source 
@@ -1464,7 +2180,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Buff Striped Keelback">   
                         <picture>
                             
                             <source 
@@ -1517,7 +2233,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Taiwan Beauty Snake">   
                         <picture>
                             
                             <source 
@@ -1570,7 +2286,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Burmese Python">   
                         <picture>
                             
                             <source 
@@ -1623,7 +2339,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Checkered Keelback">   
                         <picture>
                             
                             <source 
@@ -1676,7 +2392,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Mountain Keelback">   
                         <picture>
                             
                             <source 
@@ -1729,7 +2445,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Asian Tiger Snake">   
                         <picture>
                             
                             <source 
@@ -1786,7 +2502,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Russell's Viper">   
                         <picture>
                             
                             <source 
@@ -1843,7 +2559,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="False Viper">   
                         <picture>
                             
                             <source 
@@ -1900,7 +2616,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Taiwan Habu">   
                         <picture>
                             
                             <source 
@@ -1957,7 +2673,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Taiwan Mountain Pitviper">   
                         <picture>
                             
                             <source 
@@ -2014,7 +2730,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Alishan Habu">   
                         <picture>
                             
                             <source 
@@ -2071,7 +2787,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Hundred-Pacer (Chinese Moccasin)">   
                         <picture>
                             
                             <source 
@@ -2128,7 +2844,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Mandarin Ratsnake">   
                         <picture>
                             
                             <source 
@@ -2181,7 +2897,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="(Square-headed) Cat Snake">   
                         <picture>
                             
                             <source 
@@ -2234,7 +2950,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Taiwan Slug Snake">   
                         <picture>
                             
                             <source 
@@ -2287,7 +3003,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Red-banded Snake">   
                         <picture>
                             
                             <source 
@@ -2340,7 +3056,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Ringed Water Snake">   
                         <picture>
                             
                             <source 
@@ -2393,7 +3109,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Red Bamboo Snake">   
                         <picture>
                             
                             <source 
@@ -2446,7 +3162,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Ornate (red-bellied) Kukri Snake">   
                         <picture>
                             
                             <source 
@@ -2499,7 +3215,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="MacClelland's Coral Snake">   
                         <picture>
                             
                             <source 
@@ -2556,7 +3272,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Chinese Cobra">   
                         <picture>
                             
                             <source 
@@ -2613,7 +3329,7 @@
             </div>
             <div class="gallery-image ">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Formosa Wolf Snake">   
                         <picture>
                             
                             <source 
@@ -2666,7 +3382,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Black-banded Sea Krait">   
                         <picture>
                             
                             <source 
@@ -2723,7 +3439,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Many-banded Krait">   
                         <picture>
                             
                             <source 
@@ -2780,7 +3496,7 @@
             </div>
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Yellow-lipped Sea Krait">   
                         <picture>
                             
                             <source 
@@ -2837,7 +3553,7 @@
             </div> 
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Turtlehead Sea Snake">   
                         <picture>
                             
                             <source 
@@ -2894,7 +3610,7 @@
             </div> 
             <div class="gallery-image">
                 <div class="img-container">
-                    <a href="#.html">   
+                    <a href="#.html" aria-label="Common Sea Krait">   
                         <picture>
                             
                             <source 
@@ -2972,7 +3688,7 @@
     
     <footer>
     <div class="footer-img-container">
-        <a href="contact.html">
+        <a href="contact.html" aria-label="Contact the site creater">
             <video autoplay loop muted playsinline>
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.webm" type="video/webm"> <!-- quite new file format... smaller but not fully supported  -->
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.mp4" type="video/mp4">
@@ -2981,7 +3697,7 @@
     </div>
     <p>&copy;2020 Hans Breuer & William Christopher Murphy</p>
     <p>All images on this site are copyright of their respective owners and may only be used with their permission.</p>
-    <p><a href="#" class="developer-link">Site by Matthew Clarke.</a></p>
+    <p><a href="#" class="developer-link"  aria-label="Contact the site web developer">Site by Matthew Clarke.</a></p>
 </footer>
   </div> 
     

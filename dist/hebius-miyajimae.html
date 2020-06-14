@@ -4,10 +4,7 @@
 <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.min.css">
-    <!-- Swiper.js CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+    
     <link
         rel="preload"
         href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
@@ -27,6 +24,12 @@
     total length up to 60 cm. There are 17-19 rows of scales, all are strongly keeled. Head is slightly triangular; body is slender; 
     tail is very long. Eye is medium to large; iris is brown, dappled with coarse black pigment "
 >
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+    <link rel="stylesheet" href="css/styles_original.min.css">
+
     <title>Snakes of Taiwan: 
     Hebius miyajimae - Maki's Keelback
 </title>
@@ -60,7 +63,7 @@
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
-        <input id="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50">
+        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
         <ul id="searchUL" class="search-ul"> 
             
                 <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
@@ -855,7 +858,7 @@
     
     <footer>
     <div class="footer-img-container">
-        <a href="contact.html">
+        <a href="contact.html" aria-label="Contact the site creater">
             <video autoplay loop muted playsinline>
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.webm" type="video/webm"> <!-- quite new file format... smaller but not fully supported  -->
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.mp4" type="video/mp4">
@@ -864,7 +867,7 @@
     </div>
     <p>&copy;2020 Hans Breuer & William Christopher Murphy</p>
     <p>All images on this site are copyright of their respective owners and may only be used with their permission.</p>
-    <p><a href="#" class="developer-link">Site by Matthew Clarke.</a></p>
+    <p><a href="#" class="developer-link"  aria-label="Contact the site web developer">Site by Matthew Clarke.</a></p>
 </footer>
   </div> 
     
