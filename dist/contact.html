@@ -195,12 +195,12 @@
     </form>
 
     <script>
-        const form = document.getElementById('form');
+        const contactForm = document.getElementById('form');
         const name = document.getElementById('formName');
         const email = document.getElementById('formEmail');
         const userMessage = document.getElementById('formUserMessage');
 
-        form.addEventListener('submit', (e) => {         
+        contactForm.addEventListener('submit', (e) => {         
             e.preventDefault();
             checkInputs();        
        });
@@ -241,7 +241,7 @@
 
             // submit form if no errors
             if  ( !(nameValue === '') && !(emailValue === '') && (isEmail(emailValue)) && !(userMessageValue === '') && !(userMessageValue.length > 5000) )  {
-                 form.submit();           
+                 contactForm.submit();           
             }
         }
 
