@@ -859,6 +859,54 @@ footer video {
   }
 }
 
+.common-name-chinese, .common-name {
+  position: relative;
+  font-weight: 600;
+  line-height: 1.2em;
+  padding-top: 10px;
+}
+
+.common-name-chinese::before, .common-name::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: silver;
+  position: absolute;
+  top: -0.4rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 812px) {
+  .common-name-chinese, .common-name {
+    font-size: 15px;
+    padding-top: 7px;
+    margin-bottom: 15px;
+  }
+}
+
+.common-name {
+  font-size: 17px;
+}
+
+@media all and (max-width: 812px) {
+  .common-name {
+    font-size: 15px;
+  }
+}
+
+.common-name-chinese {
+  font-size: 1.5rem;
+}
+
+@media all and (max-width: 812px) {
+  .common-name-chinese {
+    font-size: 1.3rem;
+  }
+}
+
 .common-name {
   position: relative;
   font-size: 17px;

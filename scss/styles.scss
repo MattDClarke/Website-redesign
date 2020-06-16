@@ -779,8 +779,53 @@ footer video {
     }
 }
 
+%common-name-shared {
+    position: relative;
+    font-weight: 600;
+    line-height: 1.2em;
+    padding-top: 10px;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 2px;
+        background: color(grey);
+        position: absolute;
+        top: -0.4rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    @include tablet {
+        font-size: 15px;
+        padding-top: 7px;
+        margin-bottom: 15px;
+    }
+}
 
 .common-name {
+    font-size: 17px;
+
+    @include tablet {
+        font-size: 15px;
+    }
+}
+
+.common-name-chinese {
+    @extend %common-name-shared;
+    font-size: 1.5rem;
+    
+    @include tablet {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+.common-name  {
+    @extend %common-name-shared;
     position: relative;
     font-size: 17px;
     font-weight: 600;

@@ -1,177 +1,17 @@
-<!doctype html>
-<html lang="en-us">
-<head>
-<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link
-        rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-        as="style"
-        onload="this.onload=null;this.rel='stylesheet'"
-    >
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-            rel="stylesheet"
-            type="text/css"
-        >
-    </noscript>
-    <meta name="Description" content=
+{% set body_class = "home" %}
+{% extends "_layout_zh.njk" %} 
+{% block metaDescription %}
     "Image gallery showing all of the snakes of Taiwan with links to species descriptions and additional photos."
->
-    <link rel="stylesheet" href="css/styles.min.css">
-    
-    <title>Snakes of Taiwan: 
+{% endblock %}
+{% block title %}
     Home
-</title>
-
-</head>
-
-<body class="home">  
-  <div class="wrapper">
-    <nav>
-    <div class="nav--items">
-        <div class="logo">
-            <a href="home.html"><img src="images-nav/snakes-of-taiwan_logo.svg" alt="Snakes of Taiwan logo" class="website-logo"></a>
-        </div>
-        <ul id="navUl" class="nav-links">
-            <li class="nav-home"><a href="home.html">Home</a></li>
-            <li class="nav-about"><a href="about.html">About</a></li>
-            <li class="nav-school-talks"><a href="school-talks.html">School Talks</a></li>
-            <li class="nav-book"><a href="book.html">Book</a></li>
-            <li class="nav-links-page"><a href="links.html">Links</a></li>
-            <li><a href="home_zh.html" lang="zh-tw">中文</a></li>
-        </ul> 
-        <div class="burger">
-            <div class="burger--container">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-        <img src="images-nav/search.svg" alt="search button" id="search-icon" class="search-icon">
-        <img src="images-nav/close.svg" alt="close button" id="search-close" class="search-icon search-close">
-    </div>
-    <div id="nav-search-form" class="search-input-container">
-        <div class="search-input-spacer"></div>
-        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
-        <ul id="searchUL" class="search-ul"> 
-            
-                <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
-            
-                <li><a href="#">Taiwan Coral Snake<br><i>Sinomicrurus sauteri</i></a></li>
-            
-                <li><a href="#">Hatori&#39;s Coral Snake<br><i>Sinomicrurus hatori</i></a></li>
-            
-                <li><a href="#">Taiwan Kukri Snake<br><i>Oligodon formosanus</i></a></li>
-            
-                <li><a href="#">Big-eyed Ratsnake<br><i>Ptyas dhumnades</i></a></li>
-            
-                <li><a href="#">Chinese Water Snake<br><i>Myrrophis chinensis</i></a></li>
-            
-                <li><a href="#">Plumbeous Water Snake<br><i>Hypsiscopus plumbea</i></a></li>
-            
-                <li><a href="#">Collared Reed Snake<br><i>Calamaria pavimentata</i></a></li>
-            
-                <li><a href="#">Asiatic Many-Toothed Snake<br><i>Sibynophis chinensis chinensis</i></a></li>
-            
-                <li><a href="#">Chinese Green Tree Viper<br><i>Trimeresurus stejnegeri stejnegeri</i></a></li>
-            
-                <li><a href="#">Greater Green Snake<br><i>Ptyas major</i></a></li>
-            
-                <li><a href="#">Rein Snake<br><i>Gonyosoma frenatum</i></a></li>
-            
-                <li><a href="#">Brahminy Blind Snake<br><i>Indotyphlops braminus</i></a></li>
-            
-                <li><a href="#">Formosan Odd-Scaled Snake<br><i>Achalinus formosanus formosanus</i></a></li>
-            
-                <li><a href="#">Black Odd-Scaled Snake<br><i>Achalinus niger</i></a></li>
-            
-                <li><a href="#">Dhaman (Oriental) Ratsnake<br><i>Ptyas mucosa</i></a></li>
-            
-                <li><a href="#">Chinese Ratsnake<br><i>Ptyas korros</i></a></li>
-            
-                <li><a href="#">Chinese Mountain Snake<br><i>Plagiopholis styani</i></a></li>
-            
-                <li><a href="#">Mock Viper<br><i>Psammodynastes pulverulentus papenfussi</i></a></li>
-            
-                <li><a href="#">Swinhoe&#39;s Grass Snake<br><i>Rhabdophis swinhonis</i></a></li>
-            
-                <li><a href="#">Sauter&#39;s Water (Grass) Snake<br><i>Hebius sauteri</i></a></li>
-            
-                <li><a href="#">Paiwan Keelback<br><i>Hebius sp.</i></a></li>
-            
-                <li><a href="#">Eastern Water Snake<br><i>Sinonatrix percarinata suriki</i></a></li>
-            
-                <li><a href="#">King Ratsnake<br><i>Elaphe carinata</i></a></li>
-            
-                <li><a href="#">Buff Striped Keelback<br><i>Amphiesma stolatum</i></a></li>
-            
-                <li><a href="#">Taiwan Beauty Snake<br><i>Elaphe taeniura friesi</i></a></li>
-            
-                <li><a href="#">Burmese Python<br><i>Python molurus bivittatus</i></a></li>
-            
-                <li><a href="#">Checkered Keelback<br><i>Fowlea flavipuncatus</i></a></li>
-            
-                <li><a href="#">Mountain Keelback<br><i>Pseudoxenodon stejnegeri stejnegeri</i></a></li>
-            
-                <li><a href="#">Asian Tiger Snake<br><i>Rhabdophis tigrinus formosanus</i></a></li>
-            
-                <li><a href="#">Russell&#39;s Viper<br><i>Daboia russelli siamensis</i></a></li>
-            
-                <li><a href="#">False Viper<br><i>Pseuagkistrodon rudis</i></a></li>
-            
-                <li><a href="#">Taiwan Habu<br><i>Protobothrops mucrosquamatus</i></a></li>
-            
-                <li><a href="#">Taiwan Mountain Pitviper<br><i>Trimeresurus gracilis</i></a></li>
-            
-                <li><a href="#">Alishan Habu<br><i>Ovophis monticola makazayazaya</i></a></li>
-            
-                <li><a href="#">Hundred-Pacer (Chinese Moccasin)<br><i>Deinagkistrodon acutus</i></a></li>
-            
-                <li><a href="#">Mandarin Ratsnake<br><i>Euprepiophis mandarina</i></a></li>
-            
-                <li><a href="#">(Square-headed) Cat Snake<br><i>Boiga kraepelini</i></a></li>
-            
-                <li><a href="#">Taiwan Slug Snake<br><i>Pareas formosensis</i></a></li>
-            
-                <li><a href="#">Red-banded Snake<br><i>Lycodon rufozonatus</i></a></li>
-            
-                <li><a href="#">Ringed Water Snake<br><i>Sinonatrix annularis</i></a></li>
-            
-                <li><a href="#">Red Bamboo Ratsnake<br><i>Oreocryptophis porphyracea kawakamii</i></a></li>
-            
-                <li><a href="#">Ornate (Red-bellied) Kukri Snake<br><i>Oligodon ornatus</i></a></li>
-            
-                <li><a href="#">MacClelland&#39;s Coral Snake<br><i>Sinomicrurus macclellandi swinhoei</i></a></li>
-            
-                <li><a href="#">Chinese Cobra<br><i>Naja atra</i></a></li>
-            
-                <li><a href="#">Formosa Wolf Snake<br><i>Lycodon ruhstrati ruhstrati</i></a></li>
-            
-                <li><a href="#">Black-banded Sea Krait<br><i>Laticauda semifasciata</i></a></li>
-            
-                <li><a href="#">Many-banded Krait<br><i>Bungarus multicinctus multicinctus</i></a></li>
-            
-                <li><a href="#">Yellow-lipped Sea Krait<br><i>Laticauda colubrina</i></a></li>
-            
-                <li><a href="#">Turtlehead Sea Snake<br><i>Emydocephalus ijimae</i></a></li>
-            
-                <li><a href="#">Common Sea Krait<br><i>Laticauda laticaudata</i></a></li>
-            
-        </ul>
-    </div>
-</nav>
-    
-    <main class="main-content">
-            <div class="main-cover"></div>
-      
+{% endblock %}
+{% block content %}
 
     <div class="gallery-container">
 
         <section class="gallery-intro">
-            <div>Click images for data, photos, videos, stories, and links</div>
+            <div>點 擊圖片觀看詳細介紹、生態故事、更多圖片、影片與連結</div>
         </section>
         
         <section class="gallery-images">     
@@ -179,7 +19,7 @@
                 <div class="img-container">
                     <a href="hebius-miyajimae.html" aria-label="Maki's Keelback">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -194,7 +34,7 @@
                                 images-index-and-home/Hebius-miyajimae-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -224,10 +64,9 @@
                     <h1 class="scientific-name">
                         <span>Hebius miyajimae</span>
                     </h1>
-                    <div class="common-name">Maki's Keelback</div>
+                    <div class="common-name-chinese">金 絲蛇</div>
                     <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">金 絲蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(jin1si1she2)</div>
+                        <div class="chinese-name-chars" lang="en-us">Maki's Keelback</div>
                     </div>
                 </div>    
             </div>
@@ -235,7 +74,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Taiwan Coral Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -250,7 +89,7 @@
                                 images-index-and-home/Sinomicrurus-sauteri-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -291,7 +130,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Hatori's Coral Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -306,7 +145,7 @@
                                 images-index-and-home/Sinomicrurus-hatori-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -347,7 +186,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Taiwan Kukri Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -362,7 +201,7 @@
                                 images-index-and-home/Oligodon-formosanus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -399,7 +238,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Big-eyed Ratsnake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -414,7 +253,7 @@
                                 images-index-and-home/Ptyas-dhumnades-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -453,7 +292,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Chinese Water Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -468,7 +307,7 @@
                                 images-index-and-home/Myrrophis-chinensis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -506,7 +345,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="plumbeous Water Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -521,7 +360,7 @@
                                 images-index-and-home/Hypsiscopus-plumbea-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -559,7 +398,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Collered Reed Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -574,7 +413,7 @@
                                 images-index-and-home/Calamaria-pavimentata-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -612,7 +451,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Asiatic Many-Toothed Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -627,7 +466,7 @@
                                 images-index-and-home/Sibynophis-chinensis-chinensis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -665,7 +504,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Chinese Green Tree Viper">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -680,7 +519,7 @@
                                 images-index-and-home/Trimeresurus-stejnegeri-stejnegeri-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -722,7 +561,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Greater Green Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -737,7 +576,7 @@
                                 images-index-and-home/Ptyas-major-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -775,7 +614,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Rein Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -790,7 +629,7 @@
                                 images-index-and-home/Gonyosoma-frenatum-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -828,7 +667,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Brahminy Blind Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -843,7 +682,7 @@
                                 images-index-and-home/Indotyphlops-braminus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -881,7 +720,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Formosan Odd-Scaled Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -896,7 +735,7 @@
                                 images-index-and-home/Achalinus-formosanus-formosanus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -934,7 +773,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Black Odd-Scaled Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -949,7 +788,7 @@
                                 images-index-and-home/Achalinus-niger-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -987,7 +826,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Dhaman (Oriental) Ratsnake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1002,7 +841,7 @@
                                 images-index-and-home/Ptyas-mucosa-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1040,7 +879,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Chinese Ratsnake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1055,7 +894,7 @@
                                 images-index-and-home/Ptyas-korros-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1093,7 +932,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Chinese Mountain Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1108,7 +947,7 @@
                                 images-index-and-home/Plagiopholis-styani-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1146,7 +985,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Mock Viper">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1161,7 +1000,7 @@
                                 images-index-and-home/Psammodynastes-pulverulentus-papenfussi-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1199,7 +1038,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Swinhoe's Grass Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1214,7 +1053,7 @@
                                 images-index-and-home/Rhabdophis-swinhonis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1252,7 +1091,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Sauter's Water (Grass) Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1267,7 +1106,7 @@
                                 images-index-and-home/Hebius-sauteri-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1305,7 +1144,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Paiwan Keelback">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1320,7 +1159,7 @@
                                 images-index-and-home/Hebius-sp-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1358,7 +1197,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Eastern Water Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1373,7 +1212,7 @@
                                 images-index-and-home/Sinonatrix-percarinata-suriki-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1411,7 +1250,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="King Ratsnake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1426,7 +1265,7 @@
                                 images-index-and-home/Elaphe-carinata-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1464,7 +1303,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Buff Striped Keelback">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1479,7 +1318,7 @@
                                 images-index-and-home/Amphiesma-stolatum-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1517,7 +1356,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Taiwan Beauty Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1532,7 +1371,7 @@
                                 images-index-and-home/Elaphe-taeniura-friesi-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1570,7 +1409,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Burmese Python">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1585,7 +1424,7 @@
                                 images-index-and-home/Python-molurus-bivittatus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1623,7 +1462,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Checkered Keelback">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1638,7 +1477,7 @@
                                 images-index-and-home/Fowlea-flavipuncatus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1676,7 +1515,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Mountain Keelback">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1691,7 +1530,7 @@
                                 images-index-and-home/Pseudoxenodon-stejnegeri-stejnegeri-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1729,7 +1568,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Asian Tiger Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1744,7 +1583,7 @@
                                 images-index-and-home/Rhabdophis-tigrinus-formosanus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1786,7 +1625,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Russell's Viper">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1801,7 +1640,7 @@
                                 images-index-and-home/Daboia-russelli-siamensis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1843,7 +1682,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="False Viper">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1858,7 +1697,7 @@
                                 images-index-and-home/Pseuagkistrodon-rudis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1900,7 +1739,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Taiwan Habu">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1915,7 +1754,7 @@
                                 images-index-and-home/Protobothrops-mucrosquamatus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -1957,7 +1796,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Taiwan Mountain Pitviper">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -1972,7 +1811,7 @@
                                 images-index-and-home/Trimeresurus-gracilis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2014,7 +1853,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Alishan Habu">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2029,7 +1868,7 @@
                                 images-index-and-home/Ovophis-monticola-makazayazaya-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2071,7 +1910,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Hundred-Pacer (Chinese Moccasin)">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2086,7 +1925,7 @@
                                 images-index-and-home/Deinagkistrodon-acutus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2128,7 +1967,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Mandarin Ratsnake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2143,7 +1982,7 @@
                                 images-index-and-home/Euprepiophis-mandarina-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2181,7 +2020,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="(Square-headed) Cat Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2196,7 +2035,7 @@
                                 images-index-and-home/Boiga-kraepelini-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2234,7 +2073,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Taiwan Slug Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2249,7 +2088,7 @@
                                 images-index-and-home/Pareas-formosensis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2287,7 +2126,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Red-banded Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2302,7 +2141,7 @@
                                 images-index-and-home/Lycodon-rufozonatus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2340,7 +2179,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Ringed Water Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2355,7 +2194,7 @@
                                 images-index-and-home/Sinonatrix-annularis-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2393,7 +2232,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Red Bamboo Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2408,7 +2247,7 @@
                                 images-index-and-home/Oreocryptophis-porphyracea-kawakamii-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2446,7 +2285,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Ornate (red-bellied) Kukri Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2461,7 +2300,7 @@
                                 images-index-and-home/Oligodon-ornatus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2499,7 +2338,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="MacClelland's Coral Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2514,7 +2353,7 @@
                                 images-index-and-home/Sinomicrurus-macclellandi-swinhoei-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2556,7 +2395,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Chinese Cobra">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2571,7 +2410,7 @@
                                 images-index-and-home/Naja-atra-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2613,7 +2452,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Formosa Wolf Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2628,7 +2467,7 @@
                                 images-index-and-home/Lycodon-ruhstrati-ruhstrati-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2666,7 +2505,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Black-banded Sea Krait">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2681,7 +2520,7 @@
                                 images-index-and-home/Laticauda-semifasciata-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2723,7 +2562,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Many-banded Krait">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2738,7 +2577,7 @@
                                 images-index-and-home/Bungarus-multicinctus-multicinctus-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2780,7 +2619,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Yellow-lipped Sea Krait">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2795,7 +2634,7 @@
                                 images-index-and-home/Laticauda-colubrina-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2837,7 +2676,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Turtlehead Sea Snake">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2852,7 +2691,7 @@
                                 images-index-and-home/Emydocephalus-ijimae-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2894,7 +2733,7 @@
                 <div class="img-container">
                     <a href="#.html" aria-label="Common Sea Krait">   
                         <picture>
-                            
+                            {# webp images #}
                             <source 
                                 type="image/webp" 
                                 srcset="
@@ -2909,7 +2748,7 @@
                                 images-index-and-home/Laticauda-laticaudata-h-200px_2x.webp 2x
                                 ">
 
-                            
+                            {# jpeg images #}
                             <source 
                                 type="image/jpeg" 
                                 srcset="
@@ -2965,25 +2804,4 @@
         }
     </script>
 
-
-    </main>
-    
-    <footer>
-    <div class="footer-img-container">
-        <a href="contact.html" aria-label="Contact the site creater">
-            <video autoplay loop muted playsinline>
-                <source src="images-footer/footer-logo_Chinese-astrology_animated.webm" type="video/webm"> <!-- quite new file format... smaller but not fully supported  -->
-                <source src="images-footer/footer-logo_Chinese-astrology_animated.mp4" type="video/mp4">
-            </video>
-        </a>
-    </div>
-    <p>&copy;2020 Hans Breuer & William Christopher Murphy</p>
-    <p>All images on this site are copyright of their respective owners and may only be used with their permission.</p>
-    <p><a href="#" class="developer-link"  aria-label="Contact the site web developer">Site by Matthew Clarke.</a></p>
-</footer>
-  </div> 
-    
-  <script src="js/nav.js"></script>
-
-</body>
-</html> 
+{% endblock %} 
