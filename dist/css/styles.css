@@ -85,7 +85,6 @@ nav {
 }
 
 .logo {
-  font-family: 'Montserrat Subrayada', sans-serif;
   font-size: 23px;
   color: white;
   width: 50%;
@@ -1257,14 +1256,14 @@ footer video {
   }
 }
 
-.my-list1 {
+.my-list1--flex-container-item {
   margin-top: 30px;
   list-style: none;
   text-align: left;
 }
 
 @media all and (max-width: 812px) {
-  .my-list1 {
+  .my-list1--flex-container-item {
     margin-top: 15px;
   }
 }
@@ -1281,7 +1280,7 @@ footer video {
   }
 }
 
-.my-list1 li::before, .my-list2 li::before {
+.my-list1--flex-container-item li::before, .my-list2 li::before {
   content: "\2022";
   color: red;
   display: inline-block;

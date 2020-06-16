@@ -1119,7 +1119,7 @@ footer video {
 }
 
 
-.my-list1 {
+.my-list1--flex-container-item {
     margin-top: 30px;
     list-style: none;
     text-align: left;
@@ -1140,7 +1140,7 @@ footer video {
     }
 }
 
-.my-list1 li::before, .my-list2 li::before {
+.my-list1--flex-container-item li::before, .my-list2 li::before {
     content: "\2022";
     color: color(red);
     display: inline-block; 
