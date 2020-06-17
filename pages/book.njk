@@ -1,5 +1,16 @@
 {% set body_class = "book" %}
 {% extends "_layout.njk" %} 
+{% block analytics %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169851286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169851286-1');
+    </script>
+{% endblock %}
 {% block metaDescription %}
     " Want to know what it's like to prowl the wilds of Taiwan to photograph snakes and other wild critters? 
 This book tells it all! In A Cobra Hijacked My Camera Bag!, Hans Breuer searches for a new pet ratsnake in 

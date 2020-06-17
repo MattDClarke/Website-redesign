@@ -1,5 +1,16 @@
 {% set body_class = "about" %}
 {% extends "_layout.njk" %} 
+{% block analytics %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169851286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169851286-1');
+    </script>
+{% endblock %}
 {% block metaDescription %}
     "Snakesoftaiwan.com was conceived out of the need for a complete, 
     comprehensive and informative one-stop web site on the snakes of Taiwan. 

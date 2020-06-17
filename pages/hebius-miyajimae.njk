@@ -1,5 +1,16 @@
 
 {% extends "_layout.njk" %} 
+{% block analytics %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169851286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169851286-1');
+    </script>
+{% endblock %}
 {% block metaDescription %}
     "Family: Colubridae, subfamily Natricinae. Max. length: 60 cm. Occurrence in Taiwan: Mainly in northern Taiwan, 
     at altitudes of 500-1000 m. Endangered. (Distribution map). Global Distribution: Endemic to Taiwan. Description: Small snake; 
