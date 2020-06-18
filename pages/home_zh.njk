@@ -1,15 +1,10 @@
 {% set body_class = "home" %}
 {% extends "_layout_zh.njk" %} 
-{% block analytics %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169851286-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-169851286-1');
-    </script>
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="zh-TW" href="#" />
+     <link rel="alternate" hreflang="zh" href="#" />
+     <link rel="alternate" hreflang="en-US" href="#" />
+     <link rel="alternate" hreflang="en" href="#" />
 {% endblock %}
 {% block metaDescription %}
     "Image gallery showing all of the snakes of Taiwan with links to species descriptions and additional photos."
@@ -22,7 +17,7 @@
     <div class="gallery-container">
 
         <section class="gallery-intro">
-            <div>點 擊圖片觀看詳細介紹、生態故事、更多圖片、影片與連結</div>
+            <div id="text-chinese">點 擊圖片觀看詳細介紹、生態故事、更多圖片、影片與連結</div>
         </section>
         
         <section class="gallery-images">     
@@ -72,13 +67,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         <span>Hebius miyajimae</span>
                     </h1>
-                    <div class="common-name-chinese">金 絲蛇</div>
-                    <div class="chinese-name-container">
-                        <div class="chinese-name-chars" lang="en-us">Maki's Keelback</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">金 絲蛇</div>
+                    <div class="common-name-english" lang="en-US">Maki's Keelback</div>
                 </div>    
             </div>
             <div class="gallery-image">
@@ -127,14 +120,11 @@
                     </a>
                 </div>
                 <div  class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Sinomicrurus sauteri
                     </h1>
-                    <div class="common-name">Taiwan Coral Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">梭 德氏帶紋赤蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(suo1de2shi4dai4wen2chi4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">梭 德氏帶紋赤蛇</div>
+                    <div class="common-name-english" lang="en-US">Taiwan Coral Snake</div>
                 </div>                
             </div>
             <div class="gallery-image">
@@ -183,14 +173,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Sinomicrurus hatori
                     </h1>
-                    <div class="common-name">Hatori's Coral Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">羽鳥氏帶紋赤蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(yu3niao3shi4dai4wen2chi4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">羽鳥氏帶紋赤蛇</div>
+                    <div class="common-name-english" lang="en-US">Hatori's Coral Snake</div>
                 </div>                
             </div>
             <div class="gallery-image">
@@ -235,14 +222,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Oligodon formosanus
                     </h1>
-                    <div class="common-name">Taiwan Kukri Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">赤背松柏根</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(chi4bei4song1bo2gen1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">赤背松柏根</div>
+                    <div class="common-name-english" lang="en-US">Taiwan Kukri Snake</div>
                 </div>               
             </div>
             <div class="gallery-image">
@@ -289,14 +273,11 @@
 
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Ptyas dhumnades
                     </h1>
-                    <div class="common-name">Big-eyed Ratsnake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">過 山刀</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(guo4shan1dao1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">過 山刀</div>
+                    <div class="common-name-english" lang="en-US">Big-eyed Ratsnake</div>
                 </div>               
             </div>
             <div class="gallery-image">
@@ -342,14 +323,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Myrrophis chinensis
                     </h1>
-                    <div class="common-name">Chinese Water Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">唐 水蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(tang2shui3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">唐 水蛇</div>
+                    <div class="common-name-english" lang="en-US">Chinese Water Snake</div>
                 </div>               
             </div>
             <div class="gallery-image">
@@ -395,14 +373,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Hypsiscopus plumbea
                     </h1>
-                    <div class="common-name">Plumbeous Water Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">鉛 色水蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(shui3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">鉛 色水蛇</div>
+                    <div class="common-name-english" lang="en-US">Plumbeous Water Snake</div>
                 </div>               
             </div>
             <div class="gallery-image">
@@ -448,14 +423,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Calamaria pavimentata
                     </h1>
-                    <div class="common-name">Collared Reed Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">鐵 線蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(tie3xian4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">鐵 線蛇</div>
+                    <div class="common-name-english" lang="en-US">Collared Reed Snake</div>
                 </div>                
             </div>
             <div class="gallery-image">
@@ -501,14 +473,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Sibynophis chinensis chinensis
                     </h1>
-                    <div class="common-name">Asiatic Many-Toothed Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">黑 頭蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(hei1tou2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">黑 頭蛇</div>
+                    <div class="common-name-english" lang="en-US">Asiatic Many-Toothed Snake</div>
                 </div>            
             </div>
             <div class="gallery-image">
@@ -558,14 +527,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Trimeresurus stejnegeri stejnegeri
                     </h1>
-                    <div class="common-name">Chinese Green Tree Viper</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">赤尾青竹絲</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(chi4wei2qing1zhu2si1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">赤尾青竹絲</div>
+                    <div class="common-name-english" lang="en-US">Chinese Green Tree Viper</div>
                 </div>           
             </div>
             <div class="gallery-image">
@@ -611,14 +577,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Ptyas major
                     </h1>
-                    <div class="common-name">Greater Green Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">青蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(qing1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">青蛇</div>
+                    <div class="common-name-english" lang="en-US">Greater Green Snake</div>
                 </div>           
             </div>
             <div class="gallery-image">
@@ -664,14 +627,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Gonyosoma frenatum
                     </h1>
-                    <div class="common-name">Rein Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">灰 腹綠錦蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(hui1fu2lü4jin3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">灰 腹綠錦蛇</div>
+                    <div class="common-name-english" lang="en-US">Rein Snake</div>
                 </div>               
             </div>
             <div class="gallery-image">
@@ -717,14 +677,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Indotyphlops braminus
                     </h1>
-                    <div class="common-name">Brahminy Blind Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">盲 蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(mang2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">盲 蛇</div>
+                    <div class="common-name-english" lang="en-US">Brahminy Blind Snake</div>
                 </div>               
             </div>
             <div class="gallery-image">
@@ -770,14 +727,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Achalinus formosanus formosanus
                     </h1>
-                    <div class="common-name">Formosan Odd-Scaled Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">台 灣標蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(tai2wan1biao1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">台 灣標蛇</div>
+                    <div class="common-name-english" lang="en-US">Formosan Odd-Scaled Snake</div>
                 </div>      
             </div>
             <div class="gallery-image">
@@ -823,14 +777,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Achalinus niger
                     </h1>
-                    <div class="common-name">Black Odd-Scaled Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">標 蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(biao1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">標 蛇</div>
+                    <div class="common-name-english" lang="en-US">Black Odd-Scaled Snake</div>
                 </div>             
             </div>
             <div class="gallery-image">
@@ -876,14 +827,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Ptyas mucosa
                     </h1>
-                    <div class="common-name">Dhaman (Oriental) Ratsnake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">南 蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(nan2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">南 蛇</div>
+                    <div class="common-name-english" lang="en-US">Dhaman (Oriental) Ratsnake</div>
                 </div>             
             </div>
             <div class="gallery-image">
@@ -929,14 +877,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Ptyas korros
                     </h1>
-                    <div class="common-name">Chinese Ratsnake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">細 紋南蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(xi4wen2nan2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">細 紋南蛇</div>
+                    <div class="common-name-english" lang="en-US">Chinese Ratsnake</div>
                 </div>   
             </div>
             <div class="gallery-image">
@@ -982,14 +927,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Plagiopholis styani
                     </h1>
-                    <div class="common-name">Chinese Mountain Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">福建頸 斑蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(fu2jian4jing1ban1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">福建頸 斑蛇</div>
+                    <div class="common-name-english" lang="en-US">Chinese Mountain Snake</div>
                 </div>     
             </div>
             <div class="gallery-image">
@@ -1035,14 +977,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Psammodynastes pulverulentus papenfussi
                     </h1>
-                    <div class="common-name">Mock Viper</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">茶 斑蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(cha2ban1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">茶 斑蛇</div>
+                    <div class="common-name-english" lang="en-US">Mock Viper</div>
                 </div>       
             </div> 
             <div class="gallery-image">
@@ -1088,14 +1027,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Rhabdophis swinhonis
                     </h1>
-                    <div class="common-name">Swinhoe's Grass Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">斯文豪氏游蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(si1wen2hao2shi4you2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">斯文豪氏游蛇</div>
+                    <div class="common-name-english" lang="en-US">Swinhoe's Grass Snake</div>
                 </div>                
             </div>
             <div class="gallery-image">
@@ -1141,14 +1077,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Hebius sauteri
                     </h1>
-                    <div class="common-name">Sauter's Water (Grass) Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">梭德氏游蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(suo1de2shi4you2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">梭德氏游蛇</div>
+                    <div class="common-name-english" lang="en-US">Sauter's Water (Grass) Snake</div>
                 </div>         
             </div>
             <div class="gallery-image">
@@ -1194,14 +1127,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Hebius sp.
                     </h1>
-                    <div class="common-name">Paiwan Keelback</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">排 灣腹鏈</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(pai2wan1fu4lian4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">排 灣腹鏈</div>
+                    <div class="common-name-english" lang="en-US">Paiwan Keelback</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1247,14 +1177,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Sinonatrix percarinata suriki
                     </h1>
-                    <div class="common-name">Eastern Water Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">白腹游蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(bai2fu2you2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">白腹游蛇</div>
+                    <div class="common-name-english" lang="en-US">Eastern Water Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1300,14 +1227,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Elaphe carinata
                     </h1>
-                    <div class="common-name">King Ratsnake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">臭 青公</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(chou4qing1gong1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">臭 青公</div>
+                    <div class="common-name-english" lang="en-US">King Ratsnake</div>
                 </div>   
             </div>
             <div class="gallery-image">
@@ -1353,14 +1277,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Amphiesma stolatum
                     </h1>
-                    <div class="common-name">Buff Striped Keelback</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">花 浪蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(hua1lang4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">花 浪蛇</div>
+                    <div class="common-name-english" lang="en-US">Buff Striped Keelback</div>
                 </div>    
             </div>
             <div class="gallery-image">
@@ -1406,14 +1327,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Elaphe taeniura friesi
                     </h1>
-                    <div class="common-name">Taiwan Beauty Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">黑 眉錦蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(hei1mei2jin3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">黑 眉錦蛇</div>
+                    <div class="common-name-english" lang="en-US">Taiwan Beauty Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1459,14 +1377,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Python molurus bivittatus
                     </h1>
-                    <div class="common-name">Burmese Python</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">緬甸蟒</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(mian3dian4mang3)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">緬甸蟒</div>
+                    <div class="common-name-english" lang="en-US">Burmese Python</div>
                 </div>         
             </div>
             <div class="gallery-image">
@@ -1512,14 +1427,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Fowlea flavipuncatus
                     </h1>
-                    <div class="common-name">Checkered Keelback</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">草 花蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(cao3hua1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">草 花蛇</div>
+                    <div class="common-name-english" lang="en-US">Checkered Keelback</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1565,14 +1477,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Pseudoxenodon stejnegeri stejnegeri
                     </h1>
-                    <div class="common-name">Mountain Keelback</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">史丹吉氏斜鱗蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(shi3dan1ji2shi4xie2lin2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">史丹吉氏斜鱗蛇</div>
+                    <div class="common-name-english" lang="en-US">Mountain Keelback</div>
                 </div>    
             </div>
             <div class="gallery-image">
@@ -1622,14 +1531,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Rhabdophis tigrinus formosanus
                     </h1>
-                    <div class="common-name">Asian Tiger Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">台 灣赤煉蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(tai2wan1chi4lian4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">台 灣赤煉蛇</div>
+                    <div class="common-name-english" lang="en-US">Asian Tiger Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1679,14 +1585,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Daboia russelli siamensis
                     </h1>
-                    <div class="common-name">Russell's Viper</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">鎖 蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(suo3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">鎖 蛇</div>
+                    <div class="common-name-english" lang="en-US">Russell's Viper</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1736,14 +1639,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Pseuagkistrodon rudis
                     </h1>
-                    <div class="common-name">False Viper</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">擬 龜殼花</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(ni3gui1ke3hua1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">擬 龜殼花</div>
+                    <div class="common-name-english" lang="en-US">False Viper</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1793,14 +1693,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Protobothrops mucrosquamatus
                     </h1>
-                    <div class="common-name">Taiwan Habu</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">龜 殼花</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(gui1ke3hua1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">龜 殼花</div>
+                    <div class="common-name-english" lang="en-US">Taiwan Habu</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1850,14 +1747,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Trimeresurus gracilis
                     </h1>
-                    <div class="common-name">Taiwan Mountain Pitviper</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">菊池氏龜殼花</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(ju2chi3shi4gui1ke3hua1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">菊池氏龜殼花</div>
+                    <div class="common-name-english" lang="en-US">Taiwan Mountain Pitviper</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1907,14 +1801,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Ovophis monticola makazayazaya
                     </h1>
-                    <div class="common-name">Alishan Habu</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">阿 里山龜殼花</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(a1li3shan1gui1ke3hua1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">阿 里山龜殼花</div>
+                    <div class="common-name-english" lang="en-US">Alishan Habu</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -1964,14 +1855,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Deinagkistrodon acutus
                     </h1>
-                    <div class="common-name">Hundred-Pacer (Chinese Moccasin)</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">百 步蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(bai3bu4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">百 步蛇</div>
+                    <div class="common-name-english" lang="en-US">Hundred-Pacer (Chinese Moccasin)</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2017,14 +1905,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Euprepiophis mandarina
                     </h1>
-                    <div class="common-name">Mandarin Ratsnake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">高 砂蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(gao1sha1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">高 砂蛇</div>
+                    <div class="common-name-english" lang="en-US">Mandarin Ratsnake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2070,14 +1955,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Boiga kraepelini
                     </h1>
-                    <div class="common-name">(Square-headed) Cat Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">大 頭蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(da4tou2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">大 頭蛇</div>
+                    <div class="common-name-english" lang="en-US">(Square-headed) Cat Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2123,14 +2005,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Pareas formosensis
                     </h1>
-                    <div class="common-name">Taiwan Slug Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">台灣鈍頭蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(tai2wan1dun4tou2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">台灣鈍頭蛇</div>
+                    <div class="common-name-english" lang="en-US">Taiwan Slug Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2176,14 +2055,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Lycodon rufozonatus
                     </h1>
-                    <div class="common-name">Red-banded Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">紅 斑蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(hong2ban1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">紅 斑蛇</div>
+                    <div class="common-name-english" lang="en-US">Red-banded Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2229,14 +2105,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Sinonatrix annularis
                     </h1>
-                    <div class="common-name">Ringed Water Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">赤 腹游蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(chi4fu2you2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">赤 腹游蛇</div>
+                    <div class="common-name-english" lang="en-US">Ringed Water Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2282,14 +2155,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Oreocryptophis porphyracea kawakamii
                     </h1>
-                    <div class="common-name">Red Bamboo Ratsnake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">紅 竹蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(hong2zhu2she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">紅 竹蛇</div>
+                    <div class="common-name-english" lang="en-US">Red Bamboo Ratsnake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2335,14 +2205,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Oligodon ornatus
                     </h1>
-                    <div class="common-name">Ornate (Red-bellied) Kukri Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">赤腹松柏根</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(chi4fu2song1bo2gen1)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">赤腹松柏根</div>
+                    <div class="common-name-english" lang="en-US">Ornate (Red-bellied) Kukri Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2392,14 +2259,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Sinomicrurus macclellandi swinhoei
                     </h1>
-                    <div class="common-name">MacClelland's Coral Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">環紋赤蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(huan2wen2chi4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">環紋赤蛇</div>
+                    <div class="common-name-english" lang="en-US">MacClelland's Coral Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2449,14 +2313,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Naja atra
                     </h1>
-                    <div class="common-name">Chinese Cobra</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">眼 鏡蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(yan3jing4she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">眼 鏡蛇</div>
+                    <div class="common-name-english" lang="en-US">Chinese Cobra</div>
                 </div>
             </div>
             <div class="gallery-image ">
@@ -2502,14 +2363,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Lycodon ruhstrati ruhstrati
                     </h1>
-                    <div class="common-name">Formosa Wolf Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">白梅花蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(bai2mei2hua1she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">白梅花蛇</div>
+                    <div class="common-name-english" lang="en-US">Formosa Wolf Snake</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2559,14 +2417,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Laticauda semifasciata
                     </h1>
-                    <div class="common-name">Black-banded Sea Krait</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">闊帶清斑海蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(kuo4dai4qing1ban1hai3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">闊帶清斑海蛇</div>
+                    <div class="common-name-english" lang="en-US">Black-banded Sea Krait</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2616,14 +2471,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Bungarus multicinctus multicinctus
                     </h1>
-                    <div class="common-name">Many-banded Krait</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">雨 傘節</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(yu3san3jie2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">雨 傘節</div>
+                    <div class="common-name-english" lang="en-US">Many-banded Krait</div>
                 </div>
             </div>
             <div class="gallery-image">
@@ -2673,14 +2525,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Laticauda colubrina
                     </h1>
-                    <div class="common-name">Yellow-lipped Sea Krait</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">黃 唇青斑海蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(huang2chun2qing1ban1hai3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">黃 唇青斑海蛇</div>
+                    <div class="common-name-english" lang="en-US">Yellow-lipped Sea Krait</div>
                 </div>
             </div> 
             <div class="gallery-image">
@@ -2730,14 +2579,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Emydocephalus ijimae
                     </h1>
-                    <div class="common-name">Turtlehead Sea Snake</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">飯 島氏海蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(fan4dao3shi4hai3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">飯 島氏海蛇</div>
+                    <div class="common-name-english" lang="en-US">Turtlehead Sea Snake</div>
                 </div>           
             </div> 
             <div class="gallery-image">
@@ -2787,14 +2633,11 @@
                     </a>
                 </div>
                 <div class="gallery-image-text">
-                    <h1 class="scientific-name">
+                    <h1 class="scientific-name" lang="en-US">
                         Laticauda laticaudata
                     </h1>
-                    <div class="common-name">Common Sea Krait</div>
-                    <div class="chinese-name-container">
-                        <div  class="chinese-name-chars" lang="zh-tw">黑唇清斑海蛇</div>
-                        <div class="chinese-name-romanized" lang="zh-tw">(hei1chun2qing1ban1hai3she2)</div>
-                    </div>
+                    <div class="common-name-chinese" id="text-chinese">黑唇清斑海蛇</div>
+                    <div class="common-name-english" lang="en-US">Common Sea Krait</div>
                 </div>
             </div> 
         </section>

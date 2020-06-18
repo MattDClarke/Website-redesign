@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat',  STXihei, "华文细黑", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
   background-color: #0e0e0e;
   scrollbar-width: auto;
   scrollbar-color: #800000 black;
@@ -40,6 +41,10 @@ body.remove-scroll {
   display: grid;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
+}
+
+#text-chinese {
+  font-weight: 100;
 }
 
 /* ........................................................... nav  .......................................................... */
@@ -893,7 +898,7 @@ footer video {
 
 @media all and (max-width: 812px) {
   .common-name {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -903,7 +908,7 @@ footer video {
 
 @media all and (max-width: 812px) {
   .common-name-chinese {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -966,6 +971,21 @@ footer video {
 @media all and (max-width: 812px) {
   .chinese-name-romanized {
     margin-bottom: 20px;
+  }
+}
+
+.common-name-english {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2em;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+@media all and (max-width: 812px) {
+  .common-name-english {
+    font-size: 14px;
+    padding-top: 0;
   }
 }
 

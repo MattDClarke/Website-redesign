@@ -4,11 +4,11 @@
             <a href="home_zh.html"><img src="images-nav/snakes-of-taiwan_logo.svg" alt="Snakes of Taiwan logo" class="website-logo"></a>
         </div>
         <ul id="navUl" class="nav-links">
-            <li class="nav-home"><a href="home_zh.html">主頁</a></li>
-            <li class="nav-about"><a href="about_zh.html">關於</a></li>
-            <li class="nav-school-talks"><a href="school-talks_zh.html">學校講座</a></li>
-            <li class="nav-book"><a href="book_zh.html">書</a></li>
-            <li class="nav-links-page"><a href="links_zh.html">鏈接</a></li>
+            <li class="nav-home"><a href="home_zh.html" id="text-chinese">主頁</a></li>
+            <li class="nav-about"><a href="#" id="text-chinese">關於</a></li>
+            <li class="nav-school-talks"><a href="#" id="text-chinese">學校講座</a></li>
+            <li class="nav-book"><a href="#" id="text-chinese">書</a></li>
+            <li class="nav-links-page"><a href="#" id="text-chinese">鏈接</a></li>
             <li><a href="home.html" lang="en-us">English</a></li>
         </ul> 
         <div class="burger">
@@ -26,7 +26,7 @@
         <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
         <ul id="searchUL" class="search-ul"> 
             {% for name in names %}
-                <li><a href="{{name.href}}">{{name.common}}<br><i>{{name.scientific}}</i></a></li>
+                <li><a href="{{name.hrefChinese}}">{{name.chinese}}<br><i lang="en-us">{{name.scientific}}</i></a></li>
             {% endfor %}
         </ul>
     </div>

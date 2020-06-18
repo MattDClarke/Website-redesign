@@ -86,7 +86,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat',  STXihei, "华文细黑", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
     background-color: color(dark-grey);
     scrollbar-width: auto;
     scrollbar-color: color(maroon) color(black);
@@ -118,6 +118,11 @@ body.remove-scroll {
     grid-template-rows: auto 1fr auto;
     //min-height: 100vh;
 }  
+
+// make Chinese font thinner
+#text-chinese {
+    font-weight: 100;
+}
 
 /* ........................................................... nav  .......................................................... */
 
@@ -809,7 +814,7 @@ footer video {
     font-size: 17px;
 
     @include tablet {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
@@ -818,7 +823,7 @@ footer video {
     font-size: 1.5rem;
     
     @include tablet {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -875,6 +880,20 @@ footer video {
     margin-bottom: 25px;
     @include tablet {
         margin-bottom: 20px;
+    }
+}
+
+// common English name class when lang = Chinese
+.common-name-english {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2em;
+    padding-top: 10px; 
+    margin-bottom: 15px; 
+
+    @include tablet {
+        font-size: 14px;  
+        padding-top: 0;
     }
 }
 
