@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  font-family: 'Montserrat',  STXihei, "华文细黑", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
+  font-family: Arial, Helvetica, sans-serif,  STXihei, "华文细黑", "Microsoft YaHei", "Microsoft JhengHei";
   background-color: #0e0e0e;
   scrollbar-width: auto;
   scrollbar-color: #800000 black;
@@ -220,25 +220,24 @@ body.links .nav-links-page a {
   }
 }
 
-.search-icon {
+.search-btn {
   position: absolute;
   right: 10px;
   height: 32px;
-  margin: 5.5px 0.5px 0.5px 5.5px;
+  margin: 2px 10px 2px 5.5px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
   cursor: pointer;
 }
 
-@media all and (max-width: 812px) {
-  .search-icon {
-    height: 28px;
+@media all and (max-width: 991px) {
+  .search-btn {
+    margin-bottom: -6px;
   }
 }
 
-@media all and (max-width: 600px) {
-  .search-icon {
-    width: 24px;
-    margin-bottom: -6px;
-  }
+.search-btn img {
+  margin: 1px;
 }
 
 .search-close {
@@ -246,21 +245,22 @@ body.links .nav-links-page a {
   right: 10px;
   display: none;
   height: 23px;
-  font-size: 3rem;
+  margin: 2px 10px 2px 5.5px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 24px;
+  border: 0;
   cursor: pointer;
 }
 
-@media all and (max-width: 812px) {
-  .search-close {
-    height: 21.13px;
-  }
-}
-
-@media all and (max-width: 600px) {
+@media all and (max-width: 991px) {
   .search-close {
     height: 18.1px;
     margin-bottom: -6px;
   }
+}
+
+.search-close img {
+  width: 100%;
 }
 
 /* ........................................................ nav burger ........................................................ */
@@ -268,6 +268,8 @@ body.links .nav-links-page a {
   display: none;
   cursor: pointer;
   width: 50%;
+  text-align: center;
+  margin-bottom: -16.4px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -275,8 +277,45 @@ body.links .nav-links-page a {
 .burger--container {
   width: 25px;
   margin: 0 auto;
-  margin-bottom: -8.4px;
   text-align: left;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  outline: none;
+}
+
+.burger--container:hover {
+  cursor: pointer;
+}
+
+.burger--container:focus {
+  -webkit-animation: pulseAnimation ease 1s;
+          animation: pulseAnimation ease 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes pulseAnimation {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulseAnimation {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .burger--container div {
@@ -1174,7 +1213,8 @@ footer video {
 }
 
 .site-link:hover, .site-link--species:hover {
-  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: #800000;
+          text-decoration-color: #800000;
 }
 
 @media all and (max-width: 812px) {

@@ -96,10 +96,9 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     color: color(white);
 }
   
-.swiper-button-prev:focus {
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+// .swiper-button-prev:focus {
+//     outline: none;
+// }
 
 .swiper-button-next, .swiper-button-prev {
     top: calc(50% - 10px); // vertically center
@@ -115,10 +114,9 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     color: color(white);
 }
   
-.swiper-button-next:focus {
-    outline: none;
-    -webkit-tap-highlight-color: color(white);
-}
+// .swiper-button-next:focus {
+//     outline: none;
+// }
   
 
 .swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
@@ -226,6 +224,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     text-decoration: none;
     cursor: pointer;
 }
+
 
 @keyframes modalOpen {
     from{opacity: 0}

@@ -14,19 +14,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         {% block hrefLanguage %}{% endblock %}
-    <link
-        rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-        as="style"
-        onload="this.onload=null;this.rel='stylesheet'"
-    >
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-            rel="stylesheet"
-            type="text/css"
-        >
-    </noscript>
     <meta name="Description" content={% block metaDescription %}{% endblock %}>
     <link rel="stylesheet" href="css/styles.min.css">
     {% block headLinks %}{% endblock %}
@@ -44,7 +31,7 @@
       {% endblock %}
     </main>
     
-    {% include "partials/_footer.njk" %}
+    {% include "partials/_footer_zh.njk" %}
   </div> 
     
   <script src="js/nav_zh.js"></script>

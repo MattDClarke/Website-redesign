@@ -19,19 +19,6 @@
      <link rel="alternate" hreflang="en-US" href="#" />
      <link rel="alternate" hreflang="en" href="#" />
 
-    <link
-        rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-        as="style"
-        onload="this.onload=null;this.rel='stylesheet'"
-    >
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-            rel="stylesheet"
-            type="text/css"
-        >
-    </noscript>
     <meta name="Description" content=
     "Image gallery showing all of the snakes of Taiwan with links to species descriptions and additional photos."
 >
@@ -59,14 +46,14 @@
             <li><a href="home.html" lang="en-us">English</a></li>
         </ul> 
         <div class="burger">
-            <div class="burger--container">
+            <button class="burger--container" tabindex="0">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>
+            </button>
         </div>
-        <img src="images-nav/search.svg" alt="search button" id="search-icon" class="search-icon">
-        <img src="images-nav/close.svg" alt="close button" id="search-close" class="search-icon search-close">
+        <button id="search-btn" class="search-btn"><img src="images-nav/search.svg" alt="search button"></button>                      
+        <button id="search-close" class="search-close"><img src="images-nav/close.svg" alt="close button"></button>
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
@@ -192,7 +179,7 @@
         <section class="gallery-images">     
             <div class="gallery-image">                            
                 <div class="img-container">
-                    <a href="hebius-miyajimae.html" aria-label="Maki's Keelback">   
+                    <a href="#" aria-label="Maki's Keelback">   
                         <picture>
                             
                             <source 
@@ -2832,7 +2819,7 @@
     
     <footer>
     <div class="footer-img-container">
-        <a href="contact.html" aria-label="Contact the site creater">
+        <a href="#" aria-label="Contact the site creater">
             <video autoplay loop muted playsinline>
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.webm" type="video/webm"> <!-- quite new file format... smaller but not fully supported  -->
                 <source src="images-footer/footer-logo_Chinese-astrology_animated.mp4" type="video/mp4">

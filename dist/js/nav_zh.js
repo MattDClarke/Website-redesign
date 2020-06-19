@@ -8,7 +8,7 @@ const navSlide = () => {
   const body = document.querySelector('body');
   // close search input (if open)
   var searchInputBox = document.getElementById('searchInput');
-  const searchIcon = document.getElementById('search-icon');
+  const searchIcon = document.getElementById('search-btn');
   const closeBtnSearch = document.getElementById('search-close');
   
   burger.addEventListener('click',()=> {
@@ -103,7 +103,7 @@ window.onresize = removeBlurAndClose;
 
 //-------------------------------------------------- nav search  --------------------------------------------------------------//
 
-const searchIcon = document.getElementById('search-icon');
+const searchIcon = document.getElementById('search-btn');
 const searchInput = document.getElementById('searchInput');
 
 // close btn
@@ -124,16 +124,7 @@ typeWriter();
 
 })
 
-searchInput.addEventListener('focus', () => {
-  searchIcon.style.display = 'none';
-  closeBtnSearch.style.display = 'block';
-  searchInput.style.height = '40px';
-  searchInput.style.cursor = 'text';
-  searchInput.focus();
-  
-  typeWriter();
-  
-  })
+
 
 closeBtnSearch.addEventListener('click', () => {
   closeBtnSearch.style.display = 'none';
@@ -191,4 +182,5 @@ function searchFilter() {
 
   
   document.getElementById('searchInput').addEventListener('keyup', searchFilter);
-  
+
+ 

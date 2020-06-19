@@ -19,19 +19,6 @@
      <link rel="alternate" hreflang="zh-TW" href="#" />
      <link rel="alternate" hreflang="zh" href="#" />
 
-    <link
-        rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-        as="style"
-        onload="this.onload=null;this.rel='stylesheet'"
-    >
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-            rel="stylesheet"
-            type="text/css"
-        >
-    </noscript>
     <meta name="Description" content=
     "Family: Colubridae, subfamily Natricinae. Max. length: 60 cm. Occurrence in Taiwan: Mainly in northern Taiwan, 
     at altitudes of 500-1000 m. Endangered. (Distribution map). Global Distribution: Endemic to Taiwan. Description: Small snake; 
@@ -66,21 +53,21 @@
             <li><a href="home_zh.html" lang="zh-tw">中文</a></li>
         </ul> 
         <div class="burger">
-            <div class="burger--container">
+            <button class="burger--container" tabindex="0">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>
+            </button>
         </div>
-        <img src="images-nav/search.svg" alt="search button" id="search-icon" class="search-icon">
-        <img src="images-nav/close.svg" alt="close button" id="search-close" class="search-icon search-close">
+        <button id="search-btn" class="search-btn"><img src="images-nav/search.svg" alt="search button"></button>                      
+        <button id="search-close" class="search-close"><img src="images-nav/close.svg" alt="close button"></button>
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
         <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
         <ul id="searchUL" class="search-ul"> 
             
-                <li><a href="#">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
+                <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
             
                 <li><a href="#">Taiwan Coral Snake<br><i>Sinomicrurus sauteri</i></a></li>
             
@@ -200,7 +187,7 @@
 
     <div id="simpleModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn-modal">&times;</span>
+            <span id="modalClose" class="close-btn-modal" tabindex="0">&times;</span>
             <!-- Swiper modal -->
             <div id="swiper-container-modal" class="swiper-container-modal">
                 <div class="swiper-wrapper">
