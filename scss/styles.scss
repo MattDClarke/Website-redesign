@@ -86,7 +86,8 @@ body::-webkit-scrollbar {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif,  STXihei, "华文细黑", "Microsoft YaHei", "Microsoft JhengHei";
+    font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+    letter-spacing: 0.02rem;
     background-color: color(dark-grey);
     scrollbar-width: auto;
     scrollbar-color: color(maroon) color(black);
@@ -249,7 +250,8 @@ body.links .nav-links-page a {
 }
 
 .search-input {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
     height: 0;
     border: 0;
     border-radius: 5px;
@@ -909,29 +911,34 @@ footer video {
     }
 }
 
-.chinese-name-container {
-    font-size: 11px;
+.chinese-name-container {   
     margin-top: 23px;
-    line-height: 1px;
-
-    @include tablet {
-        font-size: 7.7px;
+    
+    @include tablet {    
         margin-top: 11.5px;
     }
 }
 
 .chinese-name-chars {
+    font-size: 1rem;
     margin-bottom: 15px;
+    
 
     @include tablet {
-        margin-bottom: 10px;
+        font-size: 0.875rem;
     }
 }
 
 .chinese-name-romanized {
+    font-size: 11px;
+    line-height: 1px;
     margin-bottom: 25px;
+
     @include tablet {
+        font-size: 7.7px;
         margin-bottom: 20px;
+        letter-spacing: 0.001rem;
+
     }
 }
 
@@ -1450,7 +1457,8 @@ th.table-header {
 
 
 .form-input {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
     width: 500px;
     font-size: 20px;
     border: 2px solid color(white);
@@ -1495,7 +1503,8 @@ textarea {
 }
 
 .contact-btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 2rem;

@@ -5,7 +5,7 @@
         </div>
         <ul id="navUl" class="nav-links">
             <li class="nav-home"><a href="home_zh.html" id="text-chinese">主頁</a></li>
-            <li class="nav-about"><a href="#" id="text-chinese">關於</a></li>
+            <li class="nav-about"><a href="about_zh.html" id="text-chinese">關於</a></li>
             <li class="nav-school-talks"><a href="#" id="text-chinese">學校講座</a></li>
             <li class="nav-book"><a href="#" id="text-chinese">書</a></li>
             <li class="nav-links-page"><a href="#" id="text-chinese">鏈接</a></li>
@@ -23,7 +23,7 @@
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
-        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
+        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="物種搜尋" >
         <ul id="searchUL" class="search-ul"> 
             {% for name in names %}
                 <li><a href="{{name.hrefChinese}}">{{name.chinese}}<br><i lang="en-us">{{name.scientific}}</i></a></li>
