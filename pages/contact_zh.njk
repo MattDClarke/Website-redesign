@@ -1,4 +1,4 @@
-{% extends "_layout.njk" %} 
+{% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
      <link rel="alternate" hreflang="en-US" href="#" />
      <link rel="alternate" hreflang="en" href="#" />
@@ -6,7 +6,7 @@
      <link rel="alternate" hreflang="zh" href="#" />
 {% endblock %}
 {% block metaDescription %}
-    "Contact us - information about the book, the school education program or any other enquiries."
+    "與我們聯繫-有關這本書，學校教育計劃或任何其他查詢的信息。"
 {% endblock %}
 {% block title %}
     Contact
@@ -14,27 +14,27 @@
 {% block content %}
 
     <div class="header-box">
-        <h1  class="header">CONTACT</h1>
+        <h1 class="header" id="text-chinese">聯繫</h1>
     </div> 
 
     <form id="form" action="https://formspree.io/xknqrybo" method="POST" class="form-contact" novalidate>
         <div class="form-group">
-            <label for="formName" class="contact-label">Name</label>
+            <label for="formName" class="contact-label" style="font-weight:100;">名稱</label>
             <input id="formName" name="name" class="form-input" type="text" autofocus maxlength="50" required>
-            <small>Error message</small>
+            <small style="font-weight:100;">Error message</small>
         </div>
         <div class="form-group">
-            <label for="formEmail" class="contact-label">Email</label>
+            <label for="formEmail" class="contact-label" style="font-weight:100;">電子郵件</label>
             <input id="formEmail" name="_replyto" class="form-input" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required>   
-            <small>Error message</small>
+            <small style="font-weight:100;">Error message</small>
         </div>
         <div class="form-group">
-            <label for="formUserMessage" class="contact-label">Message</label>
+            <label for="formUserMessage" class="contact-label" style="font-weight:100;">信息</label>
             <textarea id="formUserMessage" name="message" class="form-input" maxlength="5000" required></textarea>
-            <small>Error message</small>
+            <small style="font-weight:100;">Error message</small>
         </div>
 
-        <button class="contact-btn" type="submit" value="Send">Submit</button>
+        <button class="contact-btn" type="submit" value="Send" style="font-weight:100;">提交</button>
     </form>
 
     <script>
@@ -57,16 +57,16 @@
             if (nameValue === '') {
                 // show error
                 // add error class
-                setErrorFor(name, 'Please add your name');
+                setErrorFor(name, '請加上你的名字');
             } else {
                 // add success class
                 setSuccessFor(name);
             }
 
             if (emailValue === '') {
-                setErrorFor(email, 'Please add your email');
+                setErrorFor(email, '請添加您的電子郵件');
             } else if (!isEmail(emailValue)) {
-                setErrorFor(email, 'Please add a valid email address');
+                setErrorFor(email, '請添加一個有效的電子郵件地址');
             } else {
                 setSuccessFor(email);
             }
@@ -74,9 +74,9 @@
             if (userMessageValue === '') {
                 // show error
                 // add error class
-                setErrorFor(userMessage, 'Please add a message');
+                setErrorFor(userMessage, '請添加一條消息');
             } else if (userMessageValue.length > 5000) {
-                setErrorFor(userMessage, 'Max length = 5000 characters')
+                setErrorFor(userMessage, '最大長度= 5000個字符')
             } else {
                 // add success class
                 setSuccessFor(userMessage);

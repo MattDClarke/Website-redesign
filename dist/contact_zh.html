@@ -14,23 +14,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-     <link rel="alternate" hreflang="zh-TW" href="#" />
-     <link rel="alternate" hreflang="zh" href="#" />
      <link rel="alternate" hreflang="en-US" href="#" />
      <link rel="alternate" hreflang="en" href="#" />
+     <link rel="alternate" hreflang="zh-TW" href="#" />
+     <link rel="alternate" hreflang="zh" href="#" />
 
     <meta name="Description" content=
-    "snakesoftaiwan.com 提供了完整的台灣蛇類訊息。在我們建立這個網站之前，只有一些前人探勘所留下的資料可供參考，而且很多都已經是過時的資訊。"
+    "與我們聯繫-有關這本書，學校教育計劃或任何其他查詢的信息。"
 >
     <link rel="stylesheet" href="css/styles.min.css">
     
     <title>&#21488;&#28771;&#34503;&#39006; - Snakes of Taiwan: 
-    關於這個網站
+    Contact
 </title>
 
 </head>
 
-<body class="about">  
+<body class="">  
   <div class="wrapper">
     <nav>
     <div class="nav--items">
@@ -170,63 +170,102 @@
             <div class="main-cover"></div>
       
 
-    <div class="about-col">
-        <h1 class="header" id="text-chinese">關於這個網站</h1>
-        <div class="text-box" id="text-chinese">
-            <p>
-                <span lang="en-US" id="text-english">snakesoftaiwan.com</span> 提供了完整的台灣蛇類訊息。在我們建立這個網站之前，只有一些前人探勘所留下的資料可供參考，而且很多都已經是過時的資訊。另外本站還設立了英文頁面，希望將來不管在英文或是中文上都可以為大家提供最新的資訊。
-            </p>
-            <p>
-                本站的架構分類跟一般以筆劃或是拼音的索引不同，您可在 <a class="site-link" href="home_zh.html">主選單</a> 看到我們是以各種蛇類的花紋與顏色來排列順序，可使您更快速的尋找所需要台灣蛇種資訊。
-            </p>
-            <p>
-                本網站作者只是兩個癡迷於蛇類的業餘愛好者，並非專業的爬蟲學家。如果您有在文章中發現任何錯誤的資訊、連結甚至是錯字，歡迎您 <a class="site-link" href="contact_zh.html">聯絡我們</a> 來進行更新與改正!
-            </p>
+    <div class="header-box">
+        <h1 class="header" id="text-chinese">聯繫</h1>
+    </div> 
+
+    <form id="form" action="https://formspree.io/xknqrybo" method="POST" class="form-contact" novalidate>
+        <div class="form-group">
+            <label for="formName" class="contact-label" style="font-weight:100;">名稱</label>
+            <input id="formName" name="name" class="form-input" type="text" autofocus maxlength="50" required>
+            <small style="font-weight:100;">Error message</small>
         </div>
-    </div>
-
-    <div class="about-col">
-        <h1 class="header about-header-credits" id="text-chinese">製作群</h1>
-        <div class="text-box" id="text-chinese">
-            <p> 
-                在此我們要感謝下列朋友們的慷慨相助，要是沒有他們的資訊和圖片提供，我想這個網站永遠不會有見光的一天：
-            </p>
-            <div class="my-list1">
-                <div class="my-list1--flex-container">
-                    <ul class="my-list1--flex-container-item">
-                        <li>向高世<span lang="en-US" id="text-english">(Hsiang Gao-shih)</span></li>
-                        <li>梁彧禎</li>
-                        <li>汪仁傑</li>                                                        
-                        <li>游崇瑋 <span lang="en-US" id="text-english">(Chungweiyou)</span></li>                
-                        <li>蜥蜴</li>                       
-                        <li>奎志明</li>                
-                        <li>鍾承翰 <span lang="en-US" id="text-english">(Hank Chung)</span></li>               
-                        <li>蔡添順 <span lang="en-US" id="text-english">(Tein-Shun Tsai)</span></li>
-                    </ul>
-                    <ul class="my-list1--flex-container-item">
-                        <li>林家蔚</li>
-                        <li lang="en-US" id="text-english">Tim Borski</li>   
-                        <li lang="en-US" id="text-english">Bill Love</li>
-                        <li lang="en-US" id="text-english">Kevin Messenger</li>
-                        <li lang="en-US" id="text-english">Gary Nafis</li>
-                        <li lang="en-US" id="text-english">Gerrut Norval</li>
-                        <li lang="en-US" id="text-english">Sabrina (badpythons.de)</li>   
-                        <li lang="en-US" id="text-english">Sina Zacharys</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="form-group">
+            <label for="formEmail" class="contact-label" style="font-weight:100;">電子郵件</label>
+            <input id="formEmail" name="_replyto" class="form-input" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required>   
+            <small style="font-weight:100;">Error message</small>
         </div>
-    </div>
-
-
-    <div class="about-col">
-        <div class="text-box about-box-bottom" id="text-chinese">
-            <p>  
-                我們特別感謝花了大量的時間將這些深澳的東西翻成中文的譯者： 周信甫
-            </p>
+        <div class="form-group">
+            <label for="formUserMessage" class="contact-label" style="font-weight:100;">信息</label>
+            <textarea id="formUserMessage" name="message" class="form-input" maxlength="5000" required></textarea>
+            <small style="font-weight:100;">Error message</small>
         </div>
-    </div>
 
+        <button class="contact-btn" type="submit" value="Send" style="font-weight:100;">提交</button>
+    </form>
+
+    <script>
+        const contactForm = document.getElementById('form');
+        const name = document.getElementById('formName');
+        const email = document.getElementById('formEmail');
+        const userMessage = document.getElementById('formUserMessage');
+
+        contactForm.addEventListener('submit', (e) => {         
+            e.preventDefault();
+            checkInputs();        
+       });
+
+       function checkInputs() {
+            //get values
+            const nameValue = name.value.trim();
+            const emailValue = email.value.trim();
+            const userMessageValue = userMessage.value.trim();
+
+            if (nameValue === '') {
+                // show error
+                // add error class
+                setErrorFor(name, '請加上你的名字');
+            } else {
+                // add success class
+                setSuccessFor(name);
+            }
+
+            if (emailValue === '') {
+                setErrorFor(email, '請添加您的電子郵件');
+            } else if (!isEmail(emailValue)) {
+                setErrorFor(email, '請添加一個有效的電子郵件地址');
+            } else {
+                setSuccessFor(email);
+            }
+
+            if (userMessageValue === '') {
+                // show error
+                // add error class
+                setErrorFor(userMessage, '請添加一條消息');
+            } else if (userMessageValue.length > 5000) {
+                setErrorFor(userMessage, '最大長度= 5000個字符')
+            } else {
+                // add success class
+                setSuccessFor(userMessage);
+            }
+
+            // submit form if no errors
+            if  ( !(nameValue === '') && !(emailValue === '') && (isEmail(emailValue)) && !(userMessageValue === '') && !(userMessageValue.length > 5000) )  {
+                 contactForm.submit();           
+            }
+        }
+
+        function setErrorFor(input, message) {
+            const formGroup = input.parentElement; 
+            const small = formGroup.querySelector('small');
+
+            // add error message inside small
+            small.innerText = message;
+
+            // add error class
+            formGroup.className = 'form-group error';
+        }
+
+        function setSuccessFor(input) {
+            const formGroup = input.parentElement;
+            formGroup.className = 'form-group success';
+        }
+
+        function isEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+	
+    </script>
 
 
     </main>
