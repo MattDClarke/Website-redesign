@@ -1,188 +1,35 @@
-<!doctype html>
-<html lang="en-us">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169851286-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-169851286-1');
-    </script>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+{% extends "_layout_zh.njk" %} 
+{% block hrefLanguage %}
      <link rel="alternate" hreflang="en-US" href="#" />
      <link rel="alternate" hreflang="en" href="#" />
      <link rel="alternate" hreflang="zh-TW" href="#" />
      <link rel="alternate" hreflang="zh" href="#" />
-
-    <meta name="Description" content=
-    "Family: Colubridae, subfamily Natricinae. Max. length: 60 cm. Occurrence in Taiwan: Mainly in northern Taiwan, 
-    at altitudes of 500-1000 m. Endangered. (Distribution map). Global Distribution: Endemic to Taiwan. Description: Small snake; 
-    total length up to 60 cm. There are 17-19 rows of scales, all are strongly keeled. Head is slightly triangular; body is slender; 
-    tail is very long. Eye is medium to large; iris is brown, dappled with coarse black pigment "
->
-    <link rel="stylesheet" href="css/styles.min.css">
-    
+{% endblock %}
+{% block metaDescription %}
+    "相關影片:	美麗又稀有的金絲蛇. 更多美圖:	台灣四大美蛇之一的金絲蛇 - 轉自 自然生活記趣. 家族:	黃頷蛇科，Natricinae 亞種 Colubridae, 
+    subfamily Natricinae. 最大體長:	60 cm. 台灣棲地分布: 主要分布在北台灣海拔500 - 1000 m的地方。瀕危。 (線上分布地圖). 世界棲地分布: 
+    台灣特有種。外觀描述: Small snake; total length up to 60 cm. There are 17-19 rows of scales, all are strongly keeled. 
+    Head is slightly triangular; body is slender; tail is very long. Eye is medium to large; iris is brown, 
+    dappled with coarse black pigment and pupil is round, jet black with red margin. "
+{% endblock %}
+{% block headLinks %}
     <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block title %}
+    Hebius miyajimae - 金絲蛇
+{% endblock %}
 
-    <title>Snakes of Taiwan: 
-    Hebius miyajimae - Maki's Keelback
-</title>
-
-</head>
-
-<body class="">  
-  <div class="wrapper">
-    <nav>
-    <div class="nav--items">
-        <div class="logo">
-            <a href="home.html"><img src="images-nav/snakes-of-taiwan_logo.svg" alt="Snakes of Taiwan logo" class="website-logo"></a>
-        </div>
-        <ul id="navUl" class="nav-links">
-            <li class="nav-home"><a href="home.html">Home</a></li>
-            <li class="nav-about"><a href="about.html">About</a></li>
-            <li class="nav-school-talks"><a href="school-talks.html">School Talks</a></li>
-            <li class="nav-book"><a href="book.html">Book</a></li>
-            <li class="nav-links-page"><a href="links.html">Links</a></li>
-            <li><a href="home_zh.html" lang="zh-tw" id="text-chinese">中文</a></li>
-        </ul> 
-        <div class="burger">
-            <button class="burger--container" tabindex="0">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </button>
-        </div>
-        <button id="search-btn" class="search-btn"><img src="images-nav/search.svg" alt="search button"></button>                      
-        <button id="search-close" class="search-close"><img src="images-nav/close.svg" alt="close button"></button>
-    </div>
-    <div id="nav-search-form" class="search-input-container">
-        <div class="search-input-spacer"></div>
-        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
-        <ul id="searchUL" class="search-ul"> 
-            
-                <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
-            
-                <li><a href="#">Taiwan Coral Snake<br><i>Sinomicrurus sauteri</i></a></li>
-            
-                <li><a href="#">Hatori&#39;s Coral Snake<br><i>Sinomicrurus hatori</i></a></li>
-            
-                <li><a href="#">Taiwan Kukri Snake<br><i>Oligodon formosanus</i></a></li>
-            
-                <li><a href="#">Big-eyed Ratsnake<br><i>Ptyas dhumnades</i></a></li>
-            
-                <li><a href="#">Chinese Water Snake<br><i>Myrrophis chinensis</i></a></li>
-            
-                <li><a href="#">Plumbeous Water Snake<br><i>Hypsiscopus plumbea</i></a></li>
-            
-                <li><a href="#">Collared Reed Snake<br><i>Calamaria pavimentata</i></a></li>
-            
-                <li><a href="#">Asiatic Many-Toothed Snake<br><i>Sibynophis chinensis chinensis</i></a></li>
-            
-                <li><a href="#">Chinese Green Tree Viper<br><i>Trimeresurus stejnegeri stejnegeri</i></a></li>
-            
-                <li><a href="#">Greater Green Snake<br><i>Ptyas major</i></a></li>
-            
-                <li><a href="#">Rein Snake<br><i>Gonyosoma frenatum</i></a></li>
-            
-                <li><a href="#">Brahminy Blind Snake<br><i>Indotyphlops braminus</i></a></li>
-            
-                <li><a href="#">Formosan Odd-Scaled Snake<br><i>Achalinus formosanus formosanus</i></a></li>
-            
-                <li><a href="#">Black Odd-Scaled Snake<br><i>Achalinus niger</i></a></li>
-            
-                <li><a href="#">Dhaman (Oriental) Ratsnake<br><i>Ptyas mucosa</i></a></li>
-            
-                <li><a href="#">Chinese Ratsnake<br><i>Ptyas korros</i></a></li>
-            
-                <li><a href="#">Chinese Mountain Snake<br><i>Plagiopholis styani</i></a></li>
-            
-                <li><a href="#">Mock Viper<br><i>Psammodynastes pulverulentus papenfussi</i></a></li>
-            
-                <li><a href="#">Swinhoe&#39;s Grass Snake<br><i>Rhabdophis swinhonis</i></a></li>
-            
-                <li><a href="#">Sauter&#39;s Water (Grass) Snake<br><i>Hebius sauteri</i></a></li>
-            
-                <li><a href="#">Paiwan Keelback<br><i>Hebius sp.</i></a></li>
-            
-                <li><a href="#">Eastern Water Snake<br><i>Sinonatrix percarinata suriki</i></a></li>
-            
-                <li><a href="#">King Ratsnake<br><i>Elaphe carinata</i></a></li>
-            
-                <li><a href="#">Buff Striped Keelback<br><i>Amphiesma stolatum</i></a></li>
-            
-                <li><a href="#">Taiwan Beauty Snake<br><i>Elaphe taeniura friesi</i></a></li>
-            
-                <li><a href="#">Burmese Python<br><i>Python molurus bivittatus</i></a></li>
-            
-                <li><a href="#">Checkered Keelback<br><i>Fowlea flavipuncatus</i></a></li>
-            
-                <li><a href="#">Mountain Keelback<br><i>Pseudoxenodon stejnegeri stejnegeri</i></a></li>
-            
-                <li><a href="#">Asian Tiger Snake<br><i>Rhabdophis tigrinus formosanus</i></a></li>
-            
-                <li><a href="#">Russell&#39;s Viper<br><i>Daboia russelli siamensis</i></a></li>
-            
-                <li><a href="#">False Viper<br><i>Pseuagkistrodon rudis</i></a></li>
-            
-                <li><a href="#">Taiwan Habu<br><i>Protobothrops mucrosquamatus</i></a></li>
-            
-                <li><a href="#">Taiwan Mountain Pitviper<br><i>Trimeresurus gracilis</i></a></li>
-            
-                <li><a href="#">Alishan Habu<br><i>Ovophis monticola makazayazaya</i></a></li>
-            
-                <li><a href="#">Hundred-Pacer (Chinese Moccasin)<br><i>Deinagkistrodon acutus</i></a></li>
-            
-                <li><a href="#">Mandarin Ratsnake<br><i>Euprepiophis mandarina</i></a></li>
-            
-                <li><a href="#">(Square-headed) Cat Snake<br><i>Boiga kraepelini</i></a></li>
-            
-                <li><a href="#">Taiwan Slug Snake<br><i>Pareas formosensis</i></a></li>
-            
-                <li><a href="#">Red-banded Snake<br><i>Lycodon rufozonatus</i></a></li>
-            
-                <li><a href="#">Ringed Water Snake<br><i>Sinonatrix annularis</i></a></li>
-            
-                <li><a href="#">Red Bamboo Ratsnake<br><i>Oreocryptophis porphyracea kawakamii</i></a></li>
-            
-                <li><a href="#">Ornate (Red-bellied) Kukri Snake<br><i>Oligodon ornatus</i></a></li>
-            
-                <li><a href="#">MacClelland&#39;s Coral Snake<br><i>Sinomicrurus macclellandi swinhoei</i></a></li>
-            
-                <li><a href="#">Chinese Cobra<br><i>Naja atra</i></a></li>
-            
-                <li><a href="#">Formosa Wolf Snake<br><i>Lycodon ruhstrati ruhstrati</i></a></li>
-            
-                <li><a href="#">Black-banded Sea Krait<br><i>Laticauda semifasciata</i></a></li>
-            
-                <li><a href="#">Many-banded Krait<br><i>Bungarus multicinctus multicinctus</i></a></li>
-            
-                <li><a href="#">Yellow-lipped Sea Krait<br><i>Laticauda colubrina</i></a></li>
-            
-                <li><a href="#">Turtlehead Sea Snake<br><i>Emydocephalus ijimae</i></a></li>
-            
-                <li><a href="#">Common Sea Krait<br><i>Laticauda laticaudata</i></a></li>
-            
-        </ul>
-    </div>
-</nav>
-    
-    <main class="main-content">
-            <div class="main-cover"></div>
-      
+{% block content %}
     
     <div class="header-box">
         <h1 class="header--species">HEBIUS MIYAJIMAE</h1>
         <h2 class="header--name">Maki's Keelback</h2>
-        <h2 class="header--name"><span lang="zh-TW" id="text-chinese">金絲蛇</span> (jin1si1she2)</h2>
-        <h3 class="header--status">Status: Protected (Cat.I)</h3>
-        <h4 class="header--danger">Non-venomous</h4>
+        <h2 class="header--name"><span id="text-chinese">金絲蛇</span></h2>
+        <h3 class="header--status" id="text-chinese">保育等級: 保育類 <span id="text-english">(</span>第一級<span id="text-english">)</span></h3>
+        <h4 class="header--danger" id="text-chinese">無毒</h4>
     </div>                      
 
     <div id="simpleModal" class="modal">
@@ -210,7 +57,7 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-1-750px_modal.jpg 750w,
                                     images-hebius-miyajimae/Hebius-miyajimae-1-1024px_modal.jpg 1024w"
                                     sizes="100vw">
-                                
+                                {# order of class and data-src is important for preloading next and prev slide #}
                                 <img class="swiper-lazy swiper-slide-img" 
                                     width="1024"
                                     height="683"                        
@@ -240,7 +87,7 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-2-750px_modal.jpg 750w,
                                     images-hebius-miyajimae/Hebius-miyajimae-2-1024px_modal.jpg 1024w"
                                     sizes="100vw">
-                                
+                                {# order of class and data-src is important for preloading next and prev slide #}
                                 <img class="swiper-lazy swiper-slide-img" 
                                     width="1024"
                                     height="681"                        
@@ -270,7 +117,7 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-3-750px_modal.jpg 750w,
                                     images-hebius-miyajimae/Hebius-miyajimae-3-1024px_modal.jpg 1024w"
                                     sizes="100vw">
-                                
+                                {# order of class and data-src is important for preloading next and prev slide #}
                                 <img class="swiper-lazy swiper-slide-img" 
                                     width="1024"
                                     height="681"                        
@@ -300,7 +147,7 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-4-750px_modal.jpg 750w,
                                     images-hebius-miyajimae/Hebius-miyajimae-4-1024px_modal.jpg 1024w"
                                     sizes="100vw">
-                                
+                                {# order of class and data-src is important for preloading next and prev slide #}
                                 <img class="swiper-lazy swiper-slide-img" 
                                     width="1024"
                                     height="681"                        
@@ -330,7 +177,7 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-5-750px_modal.jpg 750w,
                                     images-hebius-miyajimae/Hebius-miyajimae-5-1024px_modal.jpg 1024w"
                                     sizes="100vw">
-                                
+                                {# order of class and data-src is important for preloading next and prev slide #}
                                 <img class="swiper-lazy swiper-slide-img" 
                                     width="1024"
                                     height="681"                        
@@ -368,7 +215,7 @@
                         images-hebius-miyajimae/Hebius-miyajimae-1-375px.jpg 375w,
                         images-hebius-miyajimae/Hebius-miyajimae-1-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
-                    
+                    {# order of class and data-src is important for preloading next and prev slide #}
                     <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="434"                        
@@ -391,7 +238,7 @@
                         images-hebius-miyajimae/Hebius-miyajimae-2-375px.jpg 375w,
                         images-hebius-miyajimae/Hebius-miyajimae-2-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
-                    
+                    {# order of class and data-src is important for preloading next and prev slide #}
                     <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
@@ -414,7 +261,7 @@
                         images-hebius-miyajimae/Hebius-miyajimae-3-375px.jpg 375w,
                         images-hebius-miyajimae/Hebius-miyajimae-3-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
-                    
+                    {# order of class and data-src is important for preloading next and prev slide #}
                     <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
@@ -437,7 +284,7 @@
                         images-hebius-miyajimae/Hebius-miyajimae-4-375px.jpg 375w,
                         images-hebius-miyajimae/Hebius-miyajimae-4-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
-                    
+                    {# order of class and data-src is important for preloading next and prev slide #}
                     <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
@@ -460,7 +307,7 @@
                         images-hebius-miyajimae/Hebius-miyajimae-5-375px.jpg 375w,
                         images-hebius-miyajimae/Hebius-miyajimae-5-650px.jpg 650w"
                         sizes="(max-width: 812px) 80vw, 500px">
-                    
+                    {# order of class and data-src is important for preloading next and prev slide #}
                     <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal" 
                             width="650"
                             height="432"                        
@@ -483,14 +330,14 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide-thumbs">     
                 <picture>
-                    
+                    {# webp images #}
                     <source 
                         type="image/webp" 
                         data-srcset="
                         images-hebius-miyajimae/Hebius-miyajimae-1-155px.webp,
                         images-hebius-miyajimae/Hebius-miyajimae-1-155px_2x.webp 2x">
 
-                    
+                    {# jpeg images #}
                     <source 
                         type="image/jpeg" 
                         data-srcset="
@@ -507,14 +354,14 @@
             </div>
             <div class="swiper-slide swiper-slide-thumbs">     
                 <picture>
-                    
+                    {# webp images #}
                     <source 
                         type="image/webp" 
                         data-srcset="
                         images-hebius-miyajimae/Hebius-miyajimae-2-155px.webp,
                         images-hebius-miyajimae/Hebius-miyajimae-2-155px_2x.webp 2x">
 
-                    
+                    {# jpeg images #}
                     <source 
                         type="image/jpeg" 
                         data-srcset="
@@ -531,14 +378,14 @@
             </div>
             <div class="swiper-slide swiper-slide-thumbs">     
                 <picture>
-                    
+                    {# webp images #}
                     <source 
                         type="image/webp" 
                         data-srcset="
                         images-hebius-miyajimae/Hebius-miyajimae-3-155px.webp,
                         images-hebius-miyajimae/Hebius-miyajimae-3-155px_2x.webp 2x">
 
-                    
+                    {# jpeg images #}
                     <source 
                         type="image/jpeg" 
                         data-srcset="
@@ -555,14 +402,14 @@
             </div>
             <div class="swiper-slide swiper-slide-thumbs">     
                 <picture>
-                    
+                    {# webp images #}
                     <source 
                         type="image/webp" 
                         data-srcset="
                         images-hebius-miyajimae/Hebius-miyajimae-4-155px.webp,
                         images-hebius-miyajimae/Hebius-miyajimae-4-155px_2x.webp 2x">
 
-                    
+                    {# jpeg images #}
                     <source 
                         type="image/jpeg" 
                         data-srcset="
@@ -579,14 +426,14 @@
             </div>
             <div class="swiper-slide swiper-slide-thumbs">     
                 <picture>
-                    
+                    {# webp images #}
                     <source 
                         type="image/webp" 
                         data-srcset="
                         images-hebius-miyajimae/Hebius-miyajimae-5-155px.webp,
                         images-hebius-miyajimae/Hebius-miyajimae-5-155px_2x.webp 2x">
 
-                    
+                    {# jpeg images #}
                     <source 
                         type="image/jpeg" 
                         data-srcset="
@@ -605,22 +452,22 @@
     </div>
  <!-------------------------------------------------------------------------- -->    
 
-    <div class="text-box-container">
+    <div class="text-box-container" id="text-chinese">
         <div class="text-box--species-media">
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Videos
+                <div class="info-box-header" id="text-chinese">          
+                    相關影片
                 </div>
                 <div class="info-box-text">
-                    <a class="site-link" href="http://www.youtube.com/watch?v=JQODyDZrBpk"><i>Hebius miyajimae</i> foraging</a>
+                    <a class="site-link" href="http://www.youtube.com/watch?v=JQODyDZrBpk">美麗又稀有的金絲蛇</a>
                 </div>
             </div>
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    More Photos
+                <div class="info-box-header" id="text-chinese">          
+                    更多美圖
                 </div>
                 <div class="info-box-text">
-                    <a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=510286"><i>Hebius miyajimae</i> in the wild</a>
+                    <a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=510286">台灣四大美蛇之一的金絲蛇 - 轉自 自然生活記趣</a>
                 </div>
             </div>
         </div>
@@ -629,44 +476,46 @@
     <div class="text-box-container text-box-container-info">
         <div class="text-box--species">
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Family
+                <div class="info-box-header" id="text-chinese">          
+                    家族
                 </div>
-                <div class="info-box-text">
-                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae">Natricinae</a>
+                <div class="info-box-text" id="text-chinese">
+                    黃頷蛇科，<a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae" lang="en-US" id="text-english">Natricinae</a> 亞種                   
+                    <br>
+                    <span lang="en-US" id="text-english">Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae">Natricinae</a></span> 
                 </div>
             </div>
 
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Max. length
+                <div class="info-box-header" id="text-chinese">          
+                    最大體長
                 </div>
-                <div class="info-box-text">
+                <div class="info-box-text" lang="en-US" id="text-english">
                     60 cm
                 </div>
             </div>
 
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Occurrence in Taiwan
+                <div class="info-box-header" id="text-chinese">          
+                    台灣棲地分布
                 </div>
-                <div class="info-box-text">
-                    Mainly in northern Taiwan, at altitudes of 500-1000 m. Endangered. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0072">Distribution map</a>).
-                </div>
-            </div>
-
-            <div class="species-info-box">
-                <div class="info-box-header">          
-                    Global Distribution
-                </div>
-                <div class="info-box-text">
-                    Endemic to Taiwan.
+                <div class="info-box-text" id="text-chinese">
+                    主要分布在北台灣海拔 <span lang="en-US" id="text-english">500-1000m</span>的地方。瀕危。<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0072"><span id="text-english">(</span>線上分布地圖<span id="text-english">)</span></a>.
                 </div>
             </div>
 
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Description
+                <div class="info-box-header" id="text-chinese">          
+                    世界棲地分布
+                </div>
+                <div class="info-box-text" id="text-chinese">
+                    台灣特有種。
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header" id="text-chinese">          
+                    外觀描述
                 </div>
                 <div class="info-box-text">
                     Small snake; total length up to 60 cm. There are 17-19 rows of scales, all are strongly keeled. Head is slightly triangular; body is slender; tail is very long. Eye is medium to large; iris is brown, dappled with coarse black pigment and pupil is round, jet black with red margin. Tongue is black, with whitish diverging point. Upper head is uniformly brown with a white spot above the base of jaw. The labials are generally white and may show dark sutures; there is a black stripe extending posteriorly from eye to posterior part of upper labials and connecting with the black stripe on upper body. Upper body and tail are distinctly marked with seven longitudinal stripes. From vertebral ridge to each side of body, they are: one broad stripe of dark brown with dark margins bilaterally, one dorsolateral stripe of yellow to tan (white on neck), one narrow stripe of dark brown to black, and one broad stripe of red (white on neck). Ventral head is white. Ventral body and tail are light yellow; the red flanks of upper body extend onto outer quarter or fifth of ventral scales and the small black spots near latero-ventral junction form a longitudinal stripe. Anal scale is divided and subcaudals are paired.
@@ -674,42 +523,43 @@
             </div>
 
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Biology & Ecology
+                <div class="info-box-header" id="text-chinese">          
+                    生態描述
                 </div>
-                <div class="info-box-text"> 	
-                    This diurnal or nocturnal snake inhabits humid mountain areas. It preys on frogs, toads or tadpoles, and has even been observed climbing into hollow trees to eat the tadpoles Eiffinger's treefrog (<i>Chirixalus eiffingeri</i>) lays there. Females produce about 3 long eggs of approximately 4 x1 cm per clutch.
-                    <i>H. miyajimae</i> is endangered by habitat destruction and construction of roads, on which many of these snakes are run over by passing vehicles.
-                </div>
-            </div>
-
-            <div class="species-info-box">
-                <div class="info-box-header">          
-                    Etymology
-                </div>
-                <div class="info-box-text">
-                    	<i>Amphiesma</i>: Greek for "garment, vestment", named in apposition to the epithet of the type species, <a class="site-link--species" href="#">Amphiesma stolatum</a>, which itself is classic Greek for "garment" (i.e. stole), in allusion to the pale bands that run down each side of the back.
-                        <i>miyajimae</i> : in honor of the Japanese national Miyajima, who collected the holotype in May of 1928.
-                        The Chinese name <span lang="zh-TW" id="text-chinese">金絲蛇</span> (jin1si1she2) means "Gold (<span lang="zh-TW" id="text-chinese">金</span>) Striped (<span lang="zh-TW" id="text-chinese">絲</span>) Snake (<span lang="zh-TW" id="text-chinese">蛇</span>)".
+                <div class="info-box-text" id="text-chinese"> 	
+                    日行性為主的蛇種，偶爾會在夜間出沒。喜歡棲息在潮濕的山區地帶。以獵取青蛙、蟾蜍與蝌蚪維生，曾經被人發現在離地面<span lang="en-US" id="text-english">1.6m</span>高的樹洞吞食艾氏樹蛙<span lang="en-US" id="text-english">(<i>Chirixalus eiffingeri</i>)</span>的蝌蚪。母蛇每次產卵約會產下3枚長形卵，每枚約長<span lang="en-US" id="text-english">4cm</span>寬<span lang="en-US" id="text-english">1cm</span>。
+                    <br>金絲蛇的棲地目前已經遭受到嚴重的破壞與人為的入侵。往往發現時都是被車輾過慘死在馬路上的屍體。
                 </div>
             </div>
 
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Notes
+                <div class="info-box-header" id="text-chinese">          
+                    學名與俗名
                 </div>
-                <div class="info-box-text">
-                    <i>Hebius miyajimae</i> resembles Hatori's Coral Snake (<a class="site-link--species" href="#">Sinomicrurus hatori</a>) and the Taiwan Coral Snake (<a class="site-link--species" href="#">Sinomicrurus sauteri)</a>. However, both coral snakes sport a broad white band across the back of the neck which is lacking in <i>H. miyajimae</i>; and the latter has a white spot behind each eye that neither of the coral snakes has.                
+                <div class="info-box-text" id="text-chinese">
+                    	<span lang="en-US" id="text-english"><i>Amphiesma</i>:</span> 來自希臘語有 "服裝, 祭帶" 的意思，轉為白話就是"腹鏈"，用來形容牠腹鱗兩側的鏈狀花紋。類似的還有 <a class="site-link--species" href="#"><i><span lang="en-US" id="text-english">Amphiesma stolatum</i> (</span>花 浪蛇<span id="text-english">)</span></a>.
+                        <br><i><span lang="en-US" id="text-english">miyajimae</i>:</span> 紀念日本人宮島氏<span lang="en-US" id="text-english">(Miyajima)</span>於<span id="text-english">1928</span>年<span id="text-english">5</span>月在台北採獲的模式標本。
+                        <br>金絲蛇，宮島氏腹鏈蛇，台北腹鏈蛇。
                 </div>
             </div>
 
             <div class="species-info-box">
-                <div class="info-box-header">          
-                    Further Info
+                <div class="info-box-header" id="text-chinese">          
+                    附註
+                </div>
+                <div class="info-box-text" id="text-chinese">
+                    金絲蛇 <span lang="en-US" id="text-english">(<i>Hebius miyajimae</i>)</span> 形似 羽鳥氏帶紋赤蛇 <span lang="en-US" id="text-english">(<a class="site-link--species" href="#">Sinomicrurus hatori</a>)</span> 與 梭德氏帶紋赤蛇 <span lang="en-US" id="text-english">(<a class="site-link--species" href="#">Sinomicrurus sauteri)</a></span>. 
+                    不過其實不難區分，羽鳥氏與梭德氏頸部是一條白色帶狀斑，而金絲蛇則是兩塊白色圓點。                
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header" id="text-chinese">          
+                    相關連結
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species">
-                    <li><a class="site-link" href="http://e-info.org.tw/node/40019">Article from the Taiwan Environmental Information Center</a></li>
-                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Amphiesma&species=miyajimae">Reptile Database</a></li>
+                    <li id="text-chinese"><a class="site-link" href="http://e-info.org.tw/node/40019">特有生物的哀愁 金絲蛇 - 轉自 環境資訊中心</a></li>
+                    <li lang="en-US" id="text-english"><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Amphiesma&species=miyajimae">Reptile Database</a></li>
                 </ul>
 
             </div>
@@ -869,25 +719,4 @@
 
     </script>
 
-
-    </main>
-    
-    <footer>
-    <div class="footer-img-container">
-        <a href="contact.html" aria-label="Contact the site creater">
-            <video autoplay loop muted playsinline>
-                <source src="images-footer/footer-logo_Chinese-astrology_animated.webm" type="video/webm"> <!-- quite new file format... smaller but not fully supported  -->
-                <source src="images-footer/footer-logo_Chinese-astrology_animated.mp4" type="video/mp4">
-            </video>
-        </a>
-    </div>
-    <p>&copy;2020 Hans Breuer & William Christopher Murphy</p>
-    <p>All images on this site are copyright of their respective owners and may only be used with their permission.</p>
-    <p><a href="#" class="developer-link"  aria-label="Contact the site web developer">Site by Matthew Clarke.</a></p>
-</footer>
-  </div> 
-    
-  <script src="js/nav.js"></script>
-
-</body>
-</html> 
+{% endblock %}

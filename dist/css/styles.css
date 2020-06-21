@@ -12,7 +12,6 @@ body::-webkit-scrollbar {
 
 body {
   font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
-  font-weight: 100;
   letter-spacing: 0.02rem;
   background-color: #0e0e0e;
   scrollbar-width: auto;
@@ -47,6 +46,10 @@ body.remove-scroll {
 
 #text-chinese {
   font-weight: 100;
+}
+
+#text-english {
+  font-weight: 400;
 }
 
 /* ........................................................... nav  .......................................................... */
