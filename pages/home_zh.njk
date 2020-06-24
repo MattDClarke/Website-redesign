@@ -16,7 +16,7 @@
 
     <div class="gallery-container">
 
-        <section class="gallery-intro" id="text-chinese">
+        <section class="gallery-intro">
             <div>點 擊圖片觀看詳細介紹、生態故事、更多圖片、影片與連結</div>
         </section>
         
@@ -70,7 +70,7 @@
                     <h1 class="scientific-name" lang="en-US">
                         <span>Hebius miyajimae</span>
                     </h1>
-                    <div class="common-name-chinese" id="text-chinese">金 絲蛇</div>
+                    <div class="common-name-chinese">金 絲蛇</div>
                     <div class="common-name-english" lang="en-US">Maki's Keelback</div>
                 </div>    
             </div>
@@ -2643,19 +2643,6 @@
         </section>
     </div>
 
-    <script>
-        if ('loading' in HTMLImageElement.prototype) {
-            // Native loading supported
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.src = img.dataset.src;
-            });
-        } else {
-            // dynamically import the LazySizes lib if native loading not supported
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
-            document.body.appendChild(script);
-        }
-    </script>
+    <script src="lazy.js"></script>
 
 {% endblock %} 

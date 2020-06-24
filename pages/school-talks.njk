@@ -1,16 +1,5 @@
 {% set body_class = "school-talks" %}
 {% extends "_layout.njk" %}
-{% block analytics %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169851286-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-169851286-1');
-    </script>
-{% endblock %} 
 {% block hrefLanguage %}
      <link rel="alternate" hreflang="en-US" href="#" />
      <link rel="alternate" hreflang="en" href="#" />
@@ -49,7 +38,7 @@
             <!-- Swiper modal -->
             <div id="swiper-container-modal" class="swiper-container-modal">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -69,17 +58,16 @@
                                     images-school-talks/school-talks-1-1200px_modal.jpg 1024w"
                                     sizes="100vw">
                                 {# order of class and data-src is important for preloading next and prev slide #}
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="1200"
                                     height="479"                        
                                     data-src="images-school-talks/images-school-talks/school-talks-1-1200px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Snake talks in schools image 1 - in modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -99,17 +87,16 @@
                                     images-school-talks/school-talks-2-800px_modal.jpg 800w"
                                     sizes="100vw">
                                 {# order of class and data-src is important for preloading next and prev slide #}
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="800"
                                     height="537"                        
                                     data-src="images-school-talks/images-school-talks/school-talks-2-800px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Snake talks in schools image 2 - in modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -129,17 +116,16 @@
                                     images-school-talks/school-talks-3-800px_modal.jpg 800w"
                                     sizes="100vw">
                                 {# order of class and data-src is important for preloading next and prev slide #}
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="800"
                                     height="537"                        
                                     data-src="images-school-talks/images-school-talks/school-talks-3-800px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Snake talks in schools image 3 - in modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -155,17 +141,16 @@
                                     images-school-talks/school-talks-4-600px_modal.jpg 600w"
                                     sizes="100vw">
                                 {# order of class and data-src is important for preloading next and prev slide #}
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="600"
                                     height="800"                        
                                     data-src="images-school-talks/images-school-talks/school-talks-4-600px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Snake talks in schools image 4 - in modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -185,17 +170,16 @@
                                     images-school-talks/school-talks-5-800px_modal.jpg 800w"
                                     sizes="100vw">
                                 {# order of class and data-src is important for preloading next and prev slide #}
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="800"
                                     height="537"                        
                                     data-src="images-school-talks/images-school-talks/school-talks-3-800px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Snake talks in schools image 5 - in modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -213,11 +197,10 @@
                                     images-school-talks/school-talks-6-750px_modal.jpg 750w"
                                     sizes="100vw">
                                 {# order of class and data-src is important for preloading next and prev slide #}
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="750"
                                     height="583"                        
                                     data-src="images-school-talks/images-school-talks/school-talks-6-750px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Snake talks in schools image 6 - in modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   

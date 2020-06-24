@@ -286,3 +286,14 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     }
 
 }
+
+.swiper-slide-modal {
+    height:100vh;
+}
+
+.swiper-slide-img-modal {
+    object-fit:contain; 
+    border:0; 
+    max-height:100vh; 
+    max-width:100vw;
+}
