@@ -7,12 +7,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        {% block hrefLanguage %}{% endblock %}
+    {% block hrefLanguage %}{% endblock %}
     <meta name="Description" content={% block metaDescription %}{% endblock %}>
     <link rel="stylesheet" href="css/styles.min.css">
     {% block headLinks %}{% endblock %}
+    {% block csp %}{% endblock %}
     <title>&#21488;&#28771;&#34503;&#39006; - Snakes of Taiwan: {% block title %}{% endblock %}</title>
-
 </head>
 
 <body class="{{ body_class }}">  {# Making an active navigation with a body class unique to each page https://www.smashingmagazine.com/2018/03/static-site-with-nunjucks/ #}

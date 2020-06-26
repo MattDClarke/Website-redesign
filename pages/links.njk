@@ -9,6 +9,9 @@
 {% block metaDescription %}
     "Links to resources about the herpetofauna and biodiversity of Taiwan, links to books, photo blogs, forms and general information about snakes"
 {% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
+{% endblock %}
 {% block title %}
     Links and literature
 {% endblock %}
@@ -20,7 +23,7 @@
     <h2 class="header-links">Taiwan Resources</h2>
         <ul class="my-list2">
             <li><a class="site-link" href="http://taibif.org.tw/BiotaTaiwanicaAlt/result_species.php">TARA</a><br>Taiwan Amphibian & Reptile Association</li>
-            <li><a class="site-link" href="https://www.snakesoftaiwan.com/BN016-Revise%20of%20Scientific%20Name%20of%20Reptiles%20of%20Taiwan.pdf">Taxonomic Revision of Taiwan's Reptiles & Amphibians</a><br>2009 paper by Hsiang Gao-shih (<span lang="zh-TW" id="text-chinese">向高世</span>)on a number of recent taxonomic revisions pertaining Taiwan's herpetofauna. (PDF, 5.6 MB)</li>
+            <li><a class="site-link" href="https://www.snakesoftaiwan.com/BN016-Revise%20of%20Scientific%20Name%20of%20Reptiles%20of%20Taiwan.pdf">Taxonomic Revision of Taiwan's Reptiles & Amphibians</a><br>2009 paper by Hsiang Gao-shih (<span lang="zh-TW" id="text-chinese">向高世</span>) on a number of recent taxonomic revisions pertaining Taiwan's herpetofauna. (PDF, 5.6 MB)</li>
             <li><a class="site-link" href="http://taibif.org.tw/BiotaTaiwanicaAlt/result_species.php">Biota Taiwanica</a><br>An ambitious project to map out the entire fauna and flora on the island. <a class="site-link" href="http://mepopedia.com/blog/index.php?/archives/1098-BiologyWildlife-Conservation-Eight-Years-on-Completing-Biota-Taiwanica.html">More info here</a></li>
             <li><a class="site-link" href="http://taibif.org.tw/index.php">Taiwan Biodiversity Information Facility</a><br>Taiwan biodiversity database.</li>
         </ul>        
