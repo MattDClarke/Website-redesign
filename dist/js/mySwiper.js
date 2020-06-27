@@ -13,23 +13,6 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
         loadPrevNext: true,
     },
     });
-
-// for thumb gallery where total number of images = 3
-var galleryThumbsThree = new Swiper('.gallery-thumbs-three', {
-    spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    loop: true,
-    //autoHeight: true, //enable auto height
-    // Enable lazy loading
-    preloadImages: false,
-    lazy: true,
-    lazy: {
-        loadPrevNext: true,
-    },
-    });
     
 
     var swiper = new Swiper('.swiper-container-main', {
@@ -73,47 +56,7 @@ var galleryThumbsThree = new Swiper('.gallery-thumbs-three', {
     
     });
 
-// for thumb gallery where total number of images = 3
-    var swiper = new Swiper('.swiper-container-main-three', {
-        autoHeight: true, //enable auto height
-        
-        //runCallbacksOnInit: true,
-        observer: true,
-        observeParents: true,
-        observeChildren: true,
-        spaceBetween: 0,
-    
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    
-        preloadImages: false,
-        // Enable lazy loading
-        lazy: true,
-        lazy: {
-            loadPrevNext: true,
-        },
-    
-        keyboard: {
-            enabled: true,
-        },
-    
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 60,
-            slideShadows: false,
-        },
-        loop: true,
-        thumbs: {
-            swiper: galleryThumbsThree
-        }
-        
-        });
+
 
     // swiper - modal
     var swiperModal = new Swiper('.swiper-container-modal', {
