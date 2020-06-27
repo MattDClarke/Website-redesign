@@ -1217,6 +1217,8 @@ footer video {
   -webkit-text-decoration-color: red;
           text-decoration-color: red;
   text-decoration-thickness: 2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   font-style: italic;
 }
 

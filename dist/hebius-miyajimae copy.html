@@ -3,13 +3,7 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169851286-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-169851286-1');
-    </script>
+    <script src="js/googleAnalytics.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,10 +25,12 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/swiperJsGallery.min.css">
 
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/js/swiper.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/css/swiper.min.css; font-src 'self' data: application/font-woff">
+
     <title>Snakes of Taiwan: 
     Hebius miyajimae - Maki's Keelback
 </title>
-
 </head>
 
 <body class="">  
@@ -69,7 +65,7 @@
             
                 <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
             
-                <li><a href="#">Taiwan Coral Snake<br><i>Sinomicrurus sauteri</i></a></li>
+                <li><a href="sinomicrurus-sauteri.html">Taiwan Coral Snake<br><i>Sinomicrurus sauteri</i></a></li>
             
                 <li><a href="#">Hatori&#39;s Coral Snake<br><i>Sinomicrurus hatori</i></a></li>
             
@@ -191,7 +187,7 @@
             <!-- Swiper modal -->
             <div id="swiper-container-modal" class="swiper-container-modal">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -211,17 +207,16 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-1-1024px_modal.jpg 1024w"
                                     sizes="100vw">
                                 
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="1024"
                                     height="683"                        
                                     data-src="images-hebius-miyajimae/Hebius-miyajimae-1-1024px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Hebius miyajimae image 1 - modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -241,17 +236,16 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-2-1024px_modal.jpg 1024w"
                                     sizes="100vw">
                                 
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="1024"
                                     height="681"                        
                                     data-src="images-hebius-miyajimae/Hebius-miyajimae-2-1024px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Hebius miyajimae image 2 - modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -271,17 +265,16 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-3-1024px_modal.jpg 1024w"
                                     sizes="100vw">
                                 
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="1024"
                                     height="681"                        
                                     data-src="images-hebius-miyajimae/Hebius-miyajimae-3-1024px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Hebius miyajimae image 3 - modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -301,17 +294,16 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-4-1024px_modal.jpg 1024w"
                                     sizes="100vw">
                                 
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="1024"
                                     height="681"                        
                                     data-src="images-hebius-miyajimae/Hebius-miyajimae-4-1024px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Hebius miyajimae image 4 - modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
                         </div>
                     </div>
-                    <div class="swiper-slide" style="height:100vh;">
+                    <div class="swiper-slide swiper-slide-modal">
                         <div class="swiper-zoom-container">
                             <picture>
                                 <source
@@ -331,11 +323,10 @@
                                     images-hebius-miyajimae/Hebius-miyajimae-5-1024px_modal.jpg 1024w"
                                     sizes="100vw">
                                 
-                                <img class="swiper-lazy swiper-slide-img" 
+                                <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                     width="1024"
                                     height="681"                        
                                     data-src="images-hebius-miyajimae/Hebius-miyajimae-5-1024px_modal.jpg"  
-                                    style="object-fit:contain; border:0; max-height:100vh; max-width:100vw;"
                                     aria-label="Hebius miyajimae image 5 - modal">
                             </picture>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
@@ -720,154 +711,7 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <!-- Initialize Swiper -->
-    <script>
-
-        var galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        loop: true,
-        //autoHeight: true, //enable auto height
-        // Enable lazy loading
-        preloadImages: false,
-        lazy: true,
-        lazy: {
-            loadPrevNext: true,
-        },
-        });
-
-
-        var swiper = new Swiper('.swiper-container-main', {
-        autoHeight: true, //enable auto height
-        
-        //runCallbacksOnInit: true,
-        observer: true,
-        observeParents: true,
-        observeChildren: true,
-        spaceBetween: 0,
-  
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        preloadImages: false,
-        // Enable lazy loading
-        lazy: true,
-        lazy: {
-            loadPrevNext: true,
-        },
-
-        keyboard: {
-            enabled: true,
-        },
-
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 60,
-            slideShadows: false,
-        },
-        loop: true,
-        thumbs: {
-            swiper: galleryThumbs
-        }
-        
-        });
-
-        // swiper - modal
-        var swiperModal = new Swiper('.swiper-container-modal', {
-        observer: true,
-        observeParents: true,
-        observeChildren: true,
-        spaceBetween: 0,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        zoom: {
-            maxRatio: 2,
-            toggle: true,  // enable zoom-in by double tapping slide
-        },
-
-        preloadImages: false,
-        // Enable lazy loading
-        lazy: true,
-        lazy: {
-            loadPrevNext: true,
-            //loadOnTransitionStart: true,
-        },
-
-
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 60,
-            slideShadows: false,
-        },
-        loop: true
-
-
-
-        });
-
-        // hacky attempt to fix initial height issue (extra space below image initially...)
-        document.addEventListener('DOMContentLoaded', function() {
-           document.body.style.top = `1px`;
-           document.body.style.top = `0px`;
-        });
-
-        // Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
-        // Get modal element
-        var modal = document.getElementById('simpleModal');
-        // Get open modal button
-        var modalBtn = document.querySelectorAll('.swiper-slide-img'); // select all swiper-slides (outside modal)
-        // close button
-        var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0]; // returns an array... just get first one (only one element with this class)
-
-        modalBtn.forEach(element => { 
-            element.addEventListener('click', openModal); // add an click event listener for each swiper-slide (outside the modal)
-        })
-
-        // Listen for close click
-        closeBtnModal.addEventListener('click', closeModal);
-
-
-        function openModal() {
-            // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
-            // When the modal is shown, we want a fixed body
-            document.body.style.position = 'fixed'; // prevents scrolling
-            document.body.style.top = `-${window.scrollY}px`; // subtract scroll top, add to body styles
-
-            let swiperIndexPos = swiper.activeIndex;
-            swiperModal.slideTo(swiperIndexPos);
-            swiperModal.lazy.load(); // need to initailize lazy load if modal opened
-            modal.style.display ='block';
-            swiper.keyboard.disable();
-            swiperModal.keyboard.enable();
-        }
-
-
-        function closeModal() {          
-            // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
-            // When the modal is hidden...
-            const scrollY = document.body.style.top; // retrieve scroll location
-            document.body.style.position = '';
-            document.body.style.top = '';
-            window.scrollTo(0, parseInt(scrollY || '0') * -1);
-            
-            let swiperModalIndexPos = swiperModal.activeIndex;
-            swiper.slideTo(swiperModalIndexPos);
-            modal.style.display = 'none';
-            swiperModal.keyboard.disable();
-            swiper.keyboard.enable();
-        }
-
-    </script>
+    <script src="js/mySwiper.js"></script>
 
 
     </main>
