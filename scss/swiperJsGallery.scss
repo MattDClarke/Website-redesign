@@ -39,7 +39,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     }
 }
 
-.aspect-ratio_130-59 { // first img of school talks swiper gallery ... to prevent img reflow when image loading... swiper lazy load preloader in correct position
+.aspect-ratio_130-59 { // based on first img (shortest) of school talks swiper gallery ... to prevent img reflow when image loading... swiper lazy load preloader in correct position
     min-height: 295px; // also prevent swiper wrapper being too large when loading on a slow network (opposite of reflow)
     
 
@@ -48,11 +48,20 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     }
 }
 
-.aspect-ratio_325-226 { // first img of Hebius miyajimae swiper gallery
+.aspect-ratio_325-226 { // based on first img (shortest) of Hebius miyajimae swiper gallery
     min-height: 452px;
 
     @include small-screen {
         min-height: calc((0.6003 * 100vw) + 10.634px);
+    }
+}
+
+
+.aspect-ratio_650-257 { // based on the fourth img (shortest) of H. plumbea swiper gallery
+    min-height: 257px;
+
+    @include small-screen {
+        min-height: calc(0.9 * 100vw);
     }
 }
 

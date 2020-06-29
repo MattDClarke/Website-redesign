@@ -95,8 +95,10 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
 
     // hacky attempt to fix initial height issue (extra space below image initially...)
     document.addEventListener('DOMContentLoaded', function() {
-        document.body.style.top = `1px`;
-        document.body.style.top = `0px`;
+        setTimeout(function(){  
+            swiper.update();
+        }, 40);
+        
     });
 
     // Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)

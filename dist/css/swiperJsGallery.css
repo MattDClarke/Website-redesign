@@ -36,6 +36,16 @@
   }
 }
 
+.aspect-ratio_650-257 {
+  min-height: 257px;
+}
+
+@media all and (max-width: 700px) {
+  .aspect-ratio_650-257 {
+    min-height: calc(0.9 * 100vw);
+  }
+}
+
 .swiper-slide-img {
   height: auto;
   border: 30px solid #0e0e0e;
