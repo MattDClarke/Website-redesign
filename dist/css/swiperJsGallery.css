@@ -42,7 +42,7 @@
 
 @media all and (max-width: 700px) {
   .aspect-ratio_650-257 {
-    min-height: calc(0.9 * 100vw);
+    min-height: calc((0.3002 * 100vw) + 21.49px);
   }
 }
 

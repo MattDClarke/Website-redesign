@@ -61,7 +61,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     min-height: 257px;
 
     @include small-screen {
-        min-height: calc(0.9 * 100vw);
+        min-height: calc((0.3002 * 100vw) + 21.49px);
     }
 }
 
