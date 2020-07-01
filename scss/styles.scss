@@ -86,11 +86,24 @@ body::-webkit-scrollbar {
 }
 
 body {
-    font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+    //font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+    font-family: Arial, sans-serif;
     letter-spacing: 0.02rem;
     background-color: color(dark-grey);
     scrollbar-width: auto;
     scrollbar-color: color(maroon) color(black);
+}
+
+:lang(zh-TW) {
+    font-family: "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", Arial, sans-serif;
+    //font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+    font-weight: 100;
+}
+
+:lang(en-US) {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
+    font-weight: 400px;
 }
 
 
@@ -121,9 +134,9 @@ body.remove-scroll {
 }  
 
 // make Chinese font thinner
-#text-chinese {
-    font-weight: 100;
-}
+// #text-chinese {
+//     font-weight: 100;
+// }
 
 // make English text on Chinese pages bolder
 #text-english {
@@ -222,6 +235,14 @@ nav {
         &:hover::after {
             transform: scale(1,1);
         }
+    }
+
+    a:lang(zh-TW){
+        font-weight: 100;
+    }
+
+    a:lang(en-US) {
+        font-weight: bold;
     }
 }
 
@@ -845,7 +866,6 @@ footer video {
 
 %common-name-shared {
     position: relative;
-    font-weight: 600;
     line-height: 1.2em;
     padding-top: 10px;
 
@@ -871,6 +891,7 @@ footer video {
 
 .common-name {
     font-size: 17px;
+    font-weight: 600;
 
     @include tablet {
         font-size: 14px;
@@ -880,6 +901,7 @@ footer video {
 .common-name-chinese {
     @extend %common-name-shared;
     font-size: 1.5rem;
+    font-weight: 100;
     
     @include tablet {
         font-size: 1.1rem;
@@ -1123,8 +1145,6 @@ footer video {
 .site-link:hover, .site-link--species:hover {
     text-decoration-color: color(maroon);
 }
-
-
 
 
 .about-box-bottom {
@@ -1547,3 +1567,4 @@ textarea {
     visibility: visible;
     color: color(red);
 }
+
