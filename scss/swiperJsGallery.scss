@@ -98,7 +98,17 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
         padding: 4px;
     }
 }
-  
+ 
+
+// .swiper-pagination-many-images {
+//     bottom: -6px;
+// }
+
+#swiper-pagination-many-images.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -6px;
+}
+
+
 .swiper-button-prev {
     position: absolute;
     transform: translateX(-40%);

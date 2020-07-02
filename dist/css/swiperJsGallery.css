@@ -76,6 +76,10 @@
   }
 }
 
+#swiper-pagination-many-images.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: -6px;
+}
+
 .swiper-button-prev {
   position: absolute;
   -webkit-transform: translateX(-40%);
