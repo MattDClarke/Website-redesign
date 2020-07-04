@@ -1174,7 +1174,7 @@ footer video {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 20px 0;
+  padding: 35px 0;
 }
 
 .text-box--species-media {
@@ -1183,13 +1183,39 @@ footer video {
           flex: 1;
   padding: 0px 0;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 33px;
+  position: relative;
+}
+
+.text-box--species-media::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: silver;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-box--species-media::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: silver;
+  position: absolute;
+  bottom: -33px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
 }
 
 @media all and (max-width: 460px) {
   .text-box--species-media {
     border-radius: 10px;
-    margin-top: 0;
   }
 }
 
@@ -1202,19 +1228,8 @@ footer video {
   margin-left: 5%;
   margin-right: 5%;
   text-align: justify;
-  padding: 30px 0;
-}
-
-@media all and (max-width: 812px) {
-  .text-box--links {
-    padding: 20px 0;
-  }
-}
-
-@media all and (max-width: 460px) {
-  .text-box--links {
-    padding: 10px 0;
-  }
+  padding-top: 30px;
+  padding-bottom: 0;
 }
 
 .site-link {
@@ -1227,7 +1242,7 @@ footer video {
   transition: all 0.5s ease;
 }
 
-.site-link--species {
+.site-link--species, .site-link--species-common-name {
   color: white;
   text-decoration: underline;
   -webkit-text-decoration-color: red;
@@ -1235,10 +1250,13 @@ footer video {
   text-decoration-thickness: 2px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.site-link--species {
   font-style: italic;
 }
 
-.site-link:hover, .site-link--species:hover {
+.site-link:hover, .site-link--species:hover, .site-link--species-common-name:hover {
   -webkit-text-decoration-color: #800000;
           text-decoration-color: #800000;
 }
@@ -1287,22 +1305,23 @@ footer video {
 .header-links {
   text-align: left;
   font-size: 30px;
-  margin-top: 25px;
   text-decoration: underline;
   text-decoration-thickness: 3px;
+}
+
+.header-links:lang(zh-TW) {
+  text-underline-position: under;
 }
 
 @media all and (max-width: 812px) {
   .header-links {
     font-size: 26.3px;
-    margin-top: 28px;
   }
 }
 
 @media all and (max-width: 460px) {
   .header-links {
     font-size: 19.6px;
-    margin-top: 10px;
   }
 }
 
@@ -1493,7 +1512,7 @@ footer video {
 }
 
 .book-text-2 {
-  margin-top: 20px;
+  margin-top: 0.75rem;
 }
 
 /* ........................................................ links.html ........................................................ */
@@ -1558,6 +1577,10 @@ th.table-header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 25px;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
 }
 
 @media all and (max-width: 991px) {
@@ -1573,22 +1596,20 @@ th.table-header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-right: 15px;
-  font-weight: 600;
   font-size: 25px;
 }
 
-@media all and (max-width: 991px) {
-  .info-box-header {
-    padding-bottom: 0;
-  }
+.info-box-header:lang(en-US) {
+  font-weight: 600;
+}
+
+.info-box-header:lang(zh-TW) {
+  font-weight: 100;
 }
 
 @media all and (max-width: 812px) {
   .info-box-header {
-    padding-top: 20px;
     padding-right: 0;
     font-size: 22.5px;
   }
@@ -1604,14 +1625,16 @@ th.table-header {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
-  padding: 10px 0px;
 }
 
 @media all and (max-width: 812px) {
   .info-box-text {
-    padding: 0;
     letter-spacing: -0.052rem;
   }
+}
+
+.info-box-paragraph {
+  margin-bottom: 0.75rem;
 }
 
 .header-box {

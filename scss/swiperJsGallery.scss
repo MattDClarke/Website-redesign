@@ -12,6 +12,7 @@ $colors: (
 
 
 $small-screen: 700px;  // for resizing img carousel ( ...)
+$mobile-pagination: 452px;  // for pagination margin of T. s. stejnegeri
 
 @mixin small-screen {
     @media all and (max-width: #{$small-screen}) {
@@ -19,6 +20,11 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
     }
 }
 
+@mixin mobile-pagination {
+    @media all and (max-width: #{$mobile-pagination}) {
+        @content;
+    }
+}
 
 
 * {
@@ -101,7 +107,7 @@ $small-screen: 700px;  // for resizing img carousel ( ...)
  
 
 #swiper-pagination-many-images.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-    @include small-screen {
+    @include mobile-pagination {
         bottom: -6px;
     } 
 }

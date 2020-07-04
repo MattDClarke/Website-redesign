@@ -76,7 +76,7 @@
   }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 452px) {
   #swiper-pagination-many-images.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -6px;
   }

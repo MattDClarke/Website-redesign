@@ -1090,7 +1090,7 @@ footer video {
 .text-box--species {
     @extend %text-box-template;
     flex: 1;
-    padding: 20px 0;
+    padding: 35px 0;
 }
 
 .text-box--species-media {
@@ -1098,11 +1098,37 @@ footer video {
     flex: 1;
     padding: 0px 0;
     border-radius: 20px;
-    margin-top: 20px;
+    margin-top: 33px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 2px;
+        background: color(grey);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background: color(grey);
+        position: absolute;
+        bottom: -33px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 10px;
+    }
 
     @include mobile {
         border-radius: 10px;
-        margin-top: 0;
     }
 }
 
@@ -1113,14 +1139,15 @@ footer video {
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
-    padding: 30px 0; 
+    padding-top: 30px; 
+    padding-bottom: 0;
 
     @include tablet {
-        padding: 20px 0;
+        //padding: 20px 0;
     }
 
     @include mobile {
-        padding: 10px 0;
+        //padding: 10px 0;
     }
 }
 
@@ -1133,18 +1160,28 @@ footer video {
     transition: all 0.5s ease;
 }
 
-.site-link--species {
+%site-link--species-template {
     color: color(white);
     text-decoration: underline;
     text-decoration-color: color(red);
     text-decoration-thickness: 2px;
     transition: all 0.5s ease;
+}
+
+.site-link--species {
+    @extend %site-link--species-template;
     font-style: italic;
 }
 
-.site-link:hover, .site-link--species:hover {
+.site-link--species-common-name {
+    @extend %site-link--species-template;
+}
+
+.site-link:hover, .site-link--species:hover, .site-link--species-common-name:hover {
     text-decoration-color: color(maroon);
 }
+
+
 
 
 .about-box-bottom {
@@ -1187,17 +1224,21 @@ footer video {
     @extend %header-template;
     text-align: left;
     font-size: 30px;
-    margin-top: 25px;
+    //margin-top: 0px;
     text-decoration: underline;
     text-decoration-thickness: 3px;
 
+    &:lang(zh-TW) {
+        text-underline-position: under;
+    }
+
     @include tablet {
         font-size: 26.3px;
-        margin-top: 28px;
+        //margin-top: 28px;
     }
     @include mobile {
         font-size: 19.6px;
-        margin-top: 10px;
+        //margin-top: 10px;
     }    
 }
 
@@ -1354,7 +1395,7 @@ footer video {
 }
 
 .book-text-2 {
-    margin-top: 20px;
+    margin-top: 0.75rem;
 }
 /* ........................................................ links.html ........................................................ */
 
@@ -1403,27 +1444,35 @@ th.table-header {
 .species-info-box {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 25px;
+    justify-content: baseline;
 
     @include menu-button {
         flex-direction: column;
     }
-
 }
 
 .info-box-header {
     flex: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    //padding-top: 10px;
+    //padding-bottom: 10px;
     padding-right: 15px;
-    font-weight: 600;
     font-size: 25px;
 
+    &:lang(en-US){
+        font-weight: 600;
+    }
+
+    &:lang(zh-TW){
+        font-weight: 100;
+    }
+
     @include menu-button {
-        padding-bottom: 0;
+        //padding-bottom: 0;
     }
 
     @include tablet {
-        padding-top: 20px;
+        //padding-top: 20px;
         padding-right: 0;
         font-size: 22.5px;
     }
@@ -1435,13 +1484,19 @@ th.table-header {
 
 .info-box-text {
     flex: 4;
-    padding: 10px 0px;
+    //padding: 10px 0px;
+
     @include tablet {
-        padding: 0;
+        //padding: 0;
         letter-spacing: -0.052rem;
     }
-
 }
+
+.info-box-paragraph {
+    margin-bottom: 0.75rem;
+}
+
+
 
 .header-box {
     text-align: center;
