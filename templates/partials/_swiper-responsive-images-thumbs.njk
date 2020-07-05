@@ -1,0 +1,29 @@
+<!-- Swiper thumbnails -->
+<div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+        {%- for i in species[0].imgNum %}
+        <div class="swiper-slide swiper-slide-thumbs"> 
+            <picture>
+                <source
+                    type="image/webp"
+                    data-srcset="
+                    images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-155px.webp,
+                    images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-155px_2x.webp 2x">
+                <source
+                    type="image/jpeg"
+                    data-srcset="
+                    images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-155px.jpg,
+                    images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-155px_2x.jpg 2x">
+                <img class="swiper-lazy" 
+                    data-src="images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-1-155px.jpg"                 
+                    width="{{- species[0].maxWidthThumbs -}}"
+                    height="{{- species[0].maxHeightThumbs -}}"                      
+                    aria-label="{{- species[0].speciesAltAttributeName }} image {{ i }} - thumbnail">
+            </picture>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>    
+        </div>
+        {%- endfor %}     
+    </div>
+</div>
+                
+

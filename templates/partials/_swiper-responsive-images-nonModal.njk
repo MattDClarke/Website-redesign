@@ -1,0 +1,35 @@
+<!-- Swiper non-Modal -->
+<div {{ species[0].manyImagesId }} class="swiper-container swiper-container-many swiper-container-main">
+    <div class="swiper-wrapper">
+        {%- for i in species[0].imgNum %}
+        <div class="swiper-slide aspect-ratio_{{ species[0].aspectRatio }}"> 
+            <picture>
+                <source
+                    type="image/webp"
+                    data-srcset="
+                    {%- set comma = joiner() -%}
+                    {%- for j in species[0].breakpointsNonModal %}
+                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ j }}px.webp {{ j }}w
+                    {%- endfor %}"
+                    sizes="(max-width: 700px) 90vw, 650px">
+                <source
+                    type="image/jpeg"
+                    data-srcset="
+                    {%- set comma = joiner() -%}
+                    {%- for j in species[0].breakpointsNonModal %}
+                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ j }}px.jpg {{ j }}w
+                    {%- endfor %}"
+                    sizes="(max-width: 700px) 90vw, 650px">
+                <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal"  
+                    width="{{- species[0].maxWidthNonModal -}}"
+                    height="{{- species[0].maxHeightNonModal -}}"                      
+                    data-src="images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ species[0].maxWidthNonModal }}px.jpg"  
+                    aria-label="{{- species[0].speciesAltAttributeName }} image {{ i }}">
+            </picture>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
+        </div>
+        {%- endfor %}     
+    </div>
+</div>
+                
+

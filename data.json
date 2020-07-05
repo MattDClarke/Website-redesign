@@ -305,5 +305,38 @@
       "scientific": "Laticauda laticaudata",
       "hrefChinese": "#",
       "chinese": "黑唇清斑海蛇"
-    }]
+    }],
+
+
+
+
+
+
+  "trimeresurusStejnegeriStejnegeriRespImgs": [{
+    "speciesLowerCaseHyphenated": "trimeresurus-stejnegeri-stejnegeri",
+    "speciesUpperCaseHyphenated": "Trimeresurus-stejnegeri-stejnegeri",
+    "speciesAltAttributeName": "Trimeresurus stejnegeri stejnegeri",
+    "imgNum": [1, 2, 3],
+    "breakpointsModal": [563, 650, 800, 1024],
+    "breakpointsNonModal": [563, 650],
+    "maxWidthModal": "800",
+    "maxHeightModal": "1024",
+    "maxWidthNonModal": "650",
+    "maxHeightNonModal": "681",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatio": "325_226",
+    "manyImagesId": " id=\"swiper-pagination-many-images\" "
+    }],
+
+  "sinomicrurusSauteriModal": [{
+    "imgNum": [1, 2],
+    "breakpoints": [563, 650],
+    "breakpointsNonModal": [563, 650],
+    "breakpointsThumbs": [563, 650],
+    "maxWidth": "650",
+    "maxHeight": "682"
+  }]    
+
+
 }
