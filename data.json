@@ -66,7 +66,7 @@
     "hrefChinese": "#",
     "chinese": "青蛇"
   }, {
-    "href": "#",
+    "href": "gonyosoma-frenatum.html",
     "common": "Rein Snake",
     "scientific": "Gonyosoma frenatum",
     "hrefChinese": "#",
@@ -316,27 +316,75 @@
     "speciesLowerCaseHyphenated": "trimeresurus-stejnegeri-stejnegeri",
     "speciesUpperCaseHyphenated": "Trimeresurus-stejnegeri-stejnegeri",
     "speciesAltAttributeName": "Trimeresurus stejnegeri stejnegeri",
-    "imgNum": [1, 2, 3],
-    "breakpointsModal": [563, 650, 800, 1024],
-    "breakpointsNonModal": [563, 650],
-    "maxWidthModal": "800",
-    "maxHeightModal": "1024",
-    "maxWidthNonModal": "650",
-    "maxHeightNonModal": "681",
+    "imgWidthsModal": [
+      [563, 650, 800],
+      [653, 650, 900]
+    ],
+    "imgHeightsModalMax": [
+      [500],
+      [600]
+
+    ],
+    "imgWidthsNonModal": [
+      [320, 563, 650],
+      [563, 640]
+    ],
+    "imgHeightsNonModalMax": [
+      [800],
+      [900]
+    ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatio": "325_226",
+    "aspectRatioClass": "325_226",
     "manyImagesId": " id=\"swiper-pagination-many-images\" "
     }],
 
-  "sinomicrurusSauteriModal": [{
-    "imgNum": [1, 2],
-    "breakpoints": [563, 650],
-    "breakpointsNonModal": [563, 650],
-    "breakpointsThumbs": [563, 650],
-    "maxWidth": "650",
-    "maxHeight": "682"
-  }]    
+
+  "gonyosomaFrenatumRespImgs": [{
+    "speciesLowerCaseHyphenated": "gonyosoma-frenatum",
+    "speciesUpperCaseHyphenated": "Gonyosoma-frenatum",
+    "speciesAltAttributeName": "Gonyosoma frenatum",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024]
+    ],
+    "imgHeightsModalMax": [
+      [681],
+      [681],
+      [681],
+      [681],
+      [681],
+      [762],
+      [681]
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650] 
+    ],
+    "imgHeightsNonModalMax": [
+      [432],
+      [432],
+      [432],
+      [432],
+      [432],
+      [484],
+      [432]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
+    }]
 
 
 }

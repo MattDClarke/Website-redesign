@@ -1,35 +1,43 @@
 <!-- Swiper non-Modal -->
-<div {{ species[0].manyImagesId }} class="swiper-container swiper-container-many swiper-container-main">
+<div {{ species[0].manyImagesId }} class="swiper-container swiper-container-main">
     <div class="swiper-wrapper">
-        {%- for i in species[0].imgNum %}
-        <div class="swiper-slide aspect-ratio_{{ species[0].aspectRatio }}"> 
+        {%- set numberOfImages = species[0].imgWidthsModal | length -%}
+        {%- for i in range(numberOfImages) %} 
+        <div class="swiper-slide aspect-ratio_{{ species[0].aspectRatioClass }}"> 
             <picture>
                 <source
                     type="image/webp"
                     data-srcset="
                     {%- set comma = joiner() -%}
-                    {%- for j in species[0].breakpointsNonModal %}
-                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ j }}px.webp {{ j }}w
+                    {%- for j in species[0].imgWidthsNonModal[i] %}
+                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.webp {{ j }}w
                     {%- endfor %}"
                     sizes="(max-width: 700px) 90vw, 650px">
                 <source
-                    type="image/jpeg"
+                    type="image/webp"
                     data-srcset="
                     {%- set comma = joiner() -%}
-                    {%- for j in species[0].breakpointsNonModal %}
-                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ j }}px.jpg {{ j }}w
+                    {%- for j in species[0].imgWidthsNonModal[i] %}
+                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.jpg {{ j }}w
                     {%- endfor %}"
                     sizes="(max-width: 700px) 90vw, 650px">
                 <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal"  
-                    width="{{- species[0].maxWidthNonModal -}}"
-                    height="{{- species[0].maxHeightNonModal -}}"                      
-                    data-src="images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ species[0].maxWidthNonModal }}px.jpg"  
-                    aria-label="{{- species[0].speciesAltAttributeName }} image {{ i }}">
+                    width="{{- species[0].imgWidthsNonModal[i] | last }}"
+                    height="{{- species[0].imgHeightsNonModalMax[i] }}"
+                    data-src="images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ species[0].imgWidthsNonModal[i] | last }}px.jpg"  
+                    aria-label="{{- species[0].speciesAltAttributeName }} image {{ i + 1 }}">            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
         {%- endfor %}     
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>
+
+
                 
 

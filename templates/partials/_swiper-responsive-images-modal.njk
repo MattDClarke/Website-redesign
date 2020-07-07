@@ -1,11 +1,12 @@
+
 <!-- Swiper Modal -->
 <div id="simpleModal" class="modal">
     <div class="modal-content">
         <span id="modalClose" class="close-btn-modal" tabindex="0">&times;</span>
-        <!-- Swiper modal -->
         <div id="swiper-container-modal" class="swiper-container-modal">
             <div class="swiper-wrapper">
-                {%- for i in species[0].imgNum %} 
+                {%- set numberOfImages = species[0].imgWidthsModal | length -%}
+                {%- for i in range(numberOfImages) %} 
                 <div class="swiper-slide swiper-slide-modal">
                     <div class="swiper-zoom-container">
                         <picture>
@@ -13,25 +14,26 @@
                                 type="image/webp"
                                 data-srcset="
                                 {%- set comma = joiner() -%}
-                                {%- for j in species[0].breakpointsModal %}
-                                {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ j }}px_modal.webp {{ j }}w
+                                {%- for j in species[0].imgWidthsModal[i] %}
+                                {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.webp {{ j }}w
                                 {%- endfor %}"
                                 sizes="100vw">
                             <source
                                 type="image/jpeg"
                                 data-srcset="
                                 {%- set comma = joiner() -%}
-                                {%- for j in species[0].breakpointsModal %}
-                                {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ j }}px_modal.jpg {{ j }}w
+                                {%- for j in species[0].imgWidthsModal[i] %}
+                                {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.jpg {{ j }}w
                                 {%- endfor %}"
                                 sizes="100vw">
                             <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
-                                width="{{- species[0].maxWidthModal -}}"
-                                height="{{- species[0].maxHeightModal -}}"                      
-                                data-src="images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i }}-{{ species[0].maxWidthModal }}px_modal.jpg"  
-                                aria-label="{{- species[0].speciesAltAttributeName }} image {{ i }} - modal">
+                                width="{{- species[0].imgWidthsModal[i] | last }}"
+                                height="{{- species[0].imgHeightsModalMax[i] }}"                     
+                                data-src="images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ species[0].imgWidthsModal[i] | last }}px.jpg"  
+                                aria-label="{{- species[0].speciesAltAttributeName }} image {{ i + 1 }} - modal">
                         </picture>
-                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
+                    </div>
                 </div>
                 {%- endfor %}
             </div>
@@ -44,3 +46,4 @@
     </div>
 </div>
                 
+
