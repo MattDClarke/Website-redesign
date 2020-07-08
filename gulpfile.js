@@ -401,9 +401,9 @@ gulp.task('images-swiper-gallery', function () {
               },
             }, 
             {
-              width: 1024,
+              width: 1000,
               rename: {
-                suffix: '-1024px',
+                suffix: '-1000px',
                 extname: '.jpg'
               },
 			}, 
@@ -441,14 +441,6 @@ gulp.task('images-swiper-gallery', function () {
               }
             },
             {
-              // Convert images to the webp format
-              width: 650,
-              rename: {
-                suffix: '-650px',
-                extname: '.webp'
-              }
-            },
-            {
               width: 650,
               rename: {
                 suffix: '-650px',
@@ -461,11 +453,11 @@ gulp.task('images-swiper-gallery', function () {
                 suffix: '-800px',
                 extname: '.webp'
               },
-            }, 
+            },
             {
-              width: 1024,
+              width: 1000,
               rename: {
-                suffix: '-1024px',
+                suffix: '-1000px',
                 extname: '.webp'
               },
             } 

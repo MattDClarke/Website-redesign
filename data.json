@@ -72,19 +72,19 @@
     "hrefChinese": "#",
     "chinese": "灰 腹綠錦蛇"
   }, {
-    "href": "#",
+    "href": "indotyphlops-braminus.html",
     "common": "Brahminy Blind Snake",
     "scientific": "Indotyphlops braminus",
     "hrefChinese": "#",
     "chinese": "盲 蛇"
   }, {
-    "href": "#",
+    "href": "achalinus-formosanus-formosanus.html",
     "common": "Formosan Odd-Scaled Snake",
     "scientific": "Achalinus formosanus formosanus",
     "hrefChinese": "#",
     "chinese": "台 灣標蛇"
   }, {
-    "href": "#",
+    "href": "achalinus-niger.html",
     "common": "Black Odd-Scaled Snake",
     "scientific": "Achalinus niger",
     "hrefChinese": "#",
@@ -312,34 +312,6 @@
 
 
 
-  "trimeresurusStejnegeriStejnegeriRespImgs": [{
-    "speciesLowerCaseHyphenated": "trimeresurus-stejnegeri-stejnegeri",
-    "speciesUpperCaseHyphenated": "Trimeresurus-stejnegeri-stejnegeri",
-    "speciesAltAttributeName": "Trimeresurus stejnegeri stejnegeri",
-    "imgWidthsModal": [
-      [563, 650, 800],
-      [653, 650, 900]
-    ],
-    "imgHeightsModalMax": [
-      [500],
-      [600]
-
-    ],
-    "imgWidthsNonModal": [
-      [320, 563, 650],
-      [563, 640]
-    ],
-    "imgHeightsNonModalMax": [
-      [800],
-      [900]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
-    "manyImagesId": " id=\"swiper-pagination-many-images\" "
-    }],
-
-
   "gonyosomaFrenatumRespImgs": [{
     "speciesLowerCaseHyphenated": "gonyosoma-frenatum",
     "speciesUpperCaseHyphenated": "Gonyosoma-frenatum",
@@ -384,7 +356,156 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325_226",
     "manyImagesId": ""
-    }]
+  }],
+
+
+  "indotyphlopsBraminusRespImgs": [{
+    "speciesLowerCaseHyphenated": "indotyphlops-braminus",
+    "speciesUpperCaseHyphenated": "Indotyphlops-braminus",
+    "speciesAltAttributeName": "Indotyphlops braminus",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 900],
+      [375, 563, 650, 800, 900],
+      [375, 563, 650, 800, 900],
+      [375, 563, 650, 800, 866],
+      [375, 563, 650, 800, 900],
+      [375, 563, 650, 800, 900],
+      [375, 563, 650, 800, 900],
+      [375, 563, 650, 705]
+    ],
+    "imgHeightsModalMax": [
+      [683],
+      [600],
+      [600],
+      [600],
+      [629],
+      [600],
+      [600],
+      [600],
+      [550]
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650] 
+    ],
+    "imgHeightsNonModalMax": [
+      [434],
+      [433],
+      [433],
+      [433],
+      [472],
+      [433],
+      [433],
+      [433],
+      [507]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
+  }],
+
+  "achalinusFormosanusFormosanusRespImgs": [{
+    "speciesLowerCaseHyphenated": "achalinus-formosanus-formosanus",
+    "speciesUpperCaseHyphenated": "Achalinus-formosanus-formosanus",
+    "speciesAltAttributeName": "Achalinus formosanus formosanus",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024]
+    ],
+    "imgHeightsModalMax": [
+      [680],
+      [680],
+      [680],
+      [683],
+      [680],
+      [680],
+      [680],
+      [680]
+
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650]
+    ],
+    "imgHeightsNonModalMax": [
+      [432],
+      [432],
+      [432],
+      [434],
+      [432],
+      [432],
+      [432],
+      [432]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
+  }],
+
+  "achalinusNigerRespImgs": [{
+    "speciesLowerCaseHyphenated": "achalinus-niger",
+    "speciesUpperCaseHyphenated": "Achalinus-niger",
+    "speciesAltAttributeName": "Achalinus niger",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1000],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024]
+    ],
+    "imgHeightsModalMax": [
+      [681],
+      [681],
+      [681],
+      [667],
+      [681],
+      [681]
+
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650]
+    ],
+    "imgHeightsNonModalMax": [
+      [432],
+      [432],
+      [432],
+      [434],
+      [432],
+      [432]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
+  }]
 
 
 }
