@@ -1,0 +1,162 @@
+
+{% set species = ptyasMucosaRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    "Colubridae, subfamily Colubrinae. Max. length: 260 cm. Occurrence in Taiwan: 
+    Widely distributed in Taiwan (mostly in the South), Kinmen, and Matsu, up to 1000 m altitude. 
+    (Distribution map) Global Distribution: Afghanistan, Iran, Turkmenistan, former U.S.S.R., Nepal, 
+    Pakistan, Bangladesh, India (Maharashtra, Karnataka, Andamans), Sri Lanka, South China (Zhejiang, 
+    Hubei, Jiangxi, Anhui, Fujian, Guangdong, Guangxi, Hainan, Yunnan, Tibet, Guizhou, Sichuan), Taiwan, 
+    Myanmar, Cambodia, Laos, West Malaysia, Thailand, Vietnam, Indonesia (Sumatra, Java). Description: Large snake; total length up to 260 cm. 
+    There are 14-19 (21) rows of smooth or feebly keeled scales. Head is oval to slightly triangular; body 
+    is slender to moderately heavy and tail is long. Eye is large;"
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }}  - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-NonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    More Photos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=8Gw2_3HnVgg"><i>P. mucosa</i> eating toad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Colubrinae">Colubrinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    260 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                   	Widely distributed in Taiwan (mostly in the South), Kinmen, and Matsu, up to 1000 m altitude. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0055">Distribution map</a>)
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+	                Afghanistan, Iran, Turkmenistan, former U.S.S.R., Nepal, Pakistan, Bangladesh, India (Maharashtra, Karnataka, Andamans), Sri Lanka, South China (Zhejiang, Hubei, Jiangxi, Anhui, Fujian, Guangdong, Guangxi, Hainan, Yunnan, Tibet, Guizhou, Sichuan), Taiwan, Myanmar, Cambodia, Laos, West Malaysia, Thailand, Vietnam, Indonesia (Sumatra, Java).
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Large snake; total length up to 260 cm. There are 14-19 (21) rows of smooth or feebly keeled scales. Head is oval to slightly triangular; body is slender to moderately heavy and tail is long. Eye is large; iris is dark brown to brown black dappled with dirty yellow to tan and pupil is large, round jet black, surrounded by ill-defined ring of dirty yellow. Nostril is prominent. The supraocular forms laterally protruding shelf over eye. There are 2-5 loreals at each side. Tongue is large, black to blue-black, with often dark gray fork tips. Upper head is uniform light to dark brown; the labials are distinct due to lines of black pigment on posterior margin of each scale. Upper body and tail are light to dark brown while some scales have dark brown or black margins and are arranged in various designs; the majority tend to form irregular ill-defined narrow bands around posterior body and tail. Juveniles are olive yellow dorsally, and bear transverse rows of white spots across body anteriorly. Ventral head is cream to light gray; some scales possess indistinct black posterior margins. Ventral body is cream to light gray, with pigmented areas on posterior margins that are progressively larger and darker in posterior part of body. Anal scale is divided and subcaudals are paired, distinctly marked dark brown to black.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <div class="info-box-paragraph">                 	          	
+                        This diurnal and semiarboreal snake inhabits forest floors and farmland as well as wetlands, 
+                        and may appear near human residences. It preys on frogs, toads, lizards, snakes, birds, mice, 
+                        and small mammals. Unlike many other nonvenomous snakes, <i>P. mucosa</i> does not constrict its prey, 
+                        but rather uses its body to press it onto the ground or other hard surfaces to suffocate it. 
+                        It mates in late spring and early summer; females produce 6-15 eggs of 4-5 x 2.5-4 cm per 
+                        clutch in summer and early fall. Hatchlings measure 36-41 cm in total length.
+                    </div>
+                    This snake moves rapidly and is very excitable. When threatened, it expands its throat and neck 
+                    longitudinally and produces a continuous hissing and/or growling sound. When captured, it whips 
+                    about violently and makes every attempt to bite and wrap itself tightly around the captor. In 
+                    captivity it strikes on the slightest provocation and may continue to manifest this attitude, 
+                    injuring or bruising its nose against the confinement walls when objects pass by. Some herpetologists 
+                    (Harry Greene, for one) believe both the neck inflation and the growling might be features mimicking 
+                    the King Cobra (<i>Ophiophagus hannah</i>).
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        <i>Ptyas</i> is Ancient Greek for a kind of serpent said to spit venom into the eyes of men;
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>mucosus</i>/<i>mucosa</i> is Latin for "slimy" (Origins unknown)
+                    </div>
+                    The Chinese name <span lang="zh-TW">南蛇</span> (nan2she2) means "Southern Snake"
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Ptyas&species=mucosa">Reptile Database</a></li>
+                    <li><a class="site-link" href="http://en.wikipedia.org/wiki/Ptyas_mucosus">Wikipedia</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+
+{% set species = ptyasKorrosRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    "Colubridae, subfamily Colubrinae. Max. length: 200 cm. Occurrence in Taiwan: 
+    Throughout Taiwan, up to 1000 m altitude. Less common in the North. Rare. Global Distribution: 
+    India (Assam, Arunachal Pradesh), Bangladesh, Indonesia (Sumatra, Borneo, Java, Bali), Laos, Thailand, 
+    Vietnam, West Malaysia, Singapore Island, Myanmar, Cambodia, South China (Zhejiang, Jiangxi, Fujian, 
+    Guangdong, Guangxi, Hainan, Hunan, Yunnan, Guizhou, Anhui), Taiwan. Description: Large snake; total 
+    length up to 200 cm. There are 11-17 rows of scales, which are smooth or feebly keeled posteriorly. 
+    Head is narrow, oval to slightly triangular; body is slender and tail is long. Eye is large;"
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }}  - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-NonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Videos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=kLRGrGu-eMQ"><i>P. korros</i> in tree</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Colubrinae">Colubrinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    200 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Throughout Taiwan, up to 1000 m altitude. Less common in the North. Rare.   
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    India (Assam, Arunachal Pradesh), Bangladesh, Indonesia (Sumatra, Borneo, Java, Bali), Laos, Thailand, Vietnam, West Malaysia, Singapore Island, Myanmar, Cambodia, South China (Zhejiang, Jiangxi, Fujian, Guangdong, Guangxi, Hainan, Hunan, Yunnan, Guizhou, Anhui), Taiwan.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Large snake; total length up to 200 cm. There are 11-17 rows of scales, which are smooth or feebly keeled posteriorly. Head is narrow, oval to slightly triangular; body is slender and tail is long. Eye is large; iris is dirty yellow to brown, heavily dappled or mottled with coarse black pigment and pupil is round, jet black, surrounded by narrow ring of dirty yellow. There are 2-4 loreals and a moderate rounded ridge from upper eye to nostril at each side. Tongue is large, with a dark gray to blue-black stem. Upper head is uniform dark olive brown and the sides are lighter in color; the labials are not black-edged. Upper body and tail are uniform dark olive to gray brown, with dark-edged scales mainly posteriorly resembling a net pattern. There are about 9 indistinct or grey longitudinal stripes along body. Juveniles have transverse rows of white spots across body anteriorly. Ventral head is creamy white to yellow. Ventral body is variable, usually yellow in neck region and anterior fifth to quarter of body, gradually merging with lighter yellow or dirty white posteriorly. Anal scale is divided and subcaudals are paired.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <div class="info-box-paragraph">                 	          	
+                        This semiarboreal, cathemeral (diurnal or nocturnal) snake inhabits the ground or trees in forests and farmland, and may appear near human residences. It preys on frogs, lizards, snakes, birds, eggs, and small mammals. Females produce 8-12 eggs per clutch in May and June; hatchlings measure about 26 cm in total length. This snake may be fairly nervous when captured and may whip about and thrash its body violently in an attempt to escape from its captor, but may be handled with little danger of biting after a few days.
+                    </div>
+                    <i>It can be identified by its relatively large eyes, the olive-colored tail with dark-edged 
+                    scales, and the faint pale brown banding which occurs on the thickest part of the body 
+                    (though this feature does not occur in mature adults).</i> (<a class="site-link" href="http://www.ecologyasia.com/verts/snakes/indo-chinese_rat_snake.htm">Source</a>)
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        <i>Ptyas</i> is Ancient Greek for a kind of serpent said to spit venom into the eyes of men;
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>korros</i>: according to Stejneger (1907), korros is a Javan word for a snake supposed to be <i>Coluber melanurus</i> 
+                        (that name has a tortured history, but is likely a species of <i>Coelognathus</i>), and Schlegel, in 
+                        naming Coluber <i>korros</i> (now <i>Ptyas korros</i>), misapplied the name.
+                    </div>
+                    The Chinese name <span lang="zh-TW">細紋南蛇</span> (xi4wen2nan2she2) literally means "fine-striped 
+                        (<span lang="zh-TW">細紋</span>) Ptyas mucosus (<span lang="zh-TW">南蛇</span>, aka Dhaman Ratsnake)"; as this species resembles <a class="site-link--species" href="ptyas-korros.html">P. mucosa</a>, 
+                        but has a slender body and thinner, almost faint stripes.
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://en.wikipedia.org/wiki/Ptyas_korros">Wikipedia</a></li>
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Ptyas&species=korros">Reptile Database</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

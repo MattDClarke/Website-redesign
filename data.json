@@ -90,19 +90,19 @@
     "hrefChinese": "#",
     "chinese": "標 蛇"
   }, {
-    "href": "#",
+    "href": "ptyas-mucosa.html",
     "common": "Dhaman (Oriental) Ratsnake",
     "scientific": "Ptyas mucosa",
     "hrefChinese": "#",
     "chinese": "南 蛇"
   }, {
-    "href": "#",
+    "href": "ptyas-korros.html",
     "common": "Chinese Ratsnake",
     "scientific": "Ptyas korros",
     "hrefChinese": "#",
     "chinese": "細 紋南蛇"
   }, {
-    "href": "#",
+    "href": "plagiopholis-styani.html",
     "common": "Chinese Mountain Snake",
     "scientific": "Plagiopholis styani",
     "hrefChinese": "#",
@@ -312,10 +312,19 @@
 
 
 
+  
+
+    
+
   "gonyosomaFrenatumRespImgs": [{
-    "speciesLowerCaseHyphenated": "gonyosoma-frenatum",
-    "speciesUpperCaseHyphenated": "Gonyosoma-frenatum",
-    "speciesAltAttributeName": "Gonyosoma frenatum",
+    "nameLowerCaseHyphenated": "gonyosoma-frenatum",
+    "nameUpperCaseHyphenated": "Gonyosoma-frenatum",
+    "name": "Gonyosoma frenatum",
+    "commonName": "Rein Snake",
+    "chineseName": "灰 腹綠錦蛇",
+    "chineseNameRomanized": "(hui1fu2lü4jin3she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -360,9 +369,14 @@
 
 
   "indotyphlopsBraminusRespImgs": [{
-    "speciesLowerCaseHyphenated": "indotyphlops-braminus",
-    "speciesUpperCaseHyphenated": "Indotyphlops-braminus",
-    "speciesAltAttributeName": "Indotyphlops braminus",
+    "nameLowerCaseHyphenated": "indotyphlops-braminus",
+    "nameUpperCaseHyphenated": "Indotyphlops-braminus",
+    "name": "Indotyphlops braminus",
+    "commonName": "Brahminy Blind Snake",
+    "chineseName": "盲 蛇",
+    "chineseNameRomanized": "(mang2she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 900],
@@ -413,10 +427,17 @@
     "manyImagesId": ""
   }],
 
+
   "achalinusFormosanusFormosanusRespImgs": [{
-    "speciesLowerCaseHyphenated": "achalinus-formosanus-formosanus",
-    "speciesUpperCaseHyphenated": "Achalinus-formosanus-formosanus",
-    "speciesAltAttributeName": "Achalinus formosanus formosanus",
+    "nameLowerCaseHyphenated": "achalinus-formosanus-formosanus",
+    "nameUpperCaseHyphenated": "Achalinus-formosanus-formosanus",
+    "name": "Achalinus formosanus formosanus",
+    "commonName": "Formosan Odd-Scaled Snake, Taiwan Burrowing Snake",
+    "chineseName": "台灣標蛇",
+    "chineseNameRomanized": "(tai2wan1biao1she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
+    
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -464,10 +485,16 @@
     "manyImagesId": ""
   }],
 
+
   "achalinusNigerRespImgs": [{
-    "speciesLowerCaseHyphenated": "achalinus-niger",
-    "speciesUpperCaseHyphenated": "Achalinus-niger",
-    "speciesAltAttributeName": "Achalinus niger",
+    "nameLowerCaseHyphenated": "achalinus-niger",
+    "nameUpperCaseHyphenated": "Achalinus-niger",
+    "name": "Achalinus niger",   
+    "commonName": "Black Odd-Scaled Snake",
+    "chineseName": "標蛇",
+    "chineseNameRomanized": "(biao1she2)",
+    "status": "Status: Protected (Cat.II)",
+    "danger": "Non-venomous",
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -505,7 +532,159 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325_226",
     "manyImagesId": ""
+  }],
+
+
+  "ptyasMucosaRespImgs": [{
+    "nameLowerCaseHyphenated": "ptyas-mucosa",
+    "nameUpperCaseHyphenated": "Ptyas-mucosa",
+    "name": "Ptyas mucosa",   
+    "commonName": "Dhaman (Oriental) Ratsnake",
+    "chineseName": "南蛇",
+    "chineseNameRomanized": "(nan2she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1023],
+      [375, 563, 650, 800, 1023],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1023],
+      [375, 563, 650, 768]
+    ],
+    "imgHeightsModalMax": [
+      [686],
+      [686],
+      [705],
+      [660],
+      [682],
+      [687],
+      [686],
+      [1024]
+
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650]
+    ],
+    "imgHeightsNonModalMax": [
+      [435],
+      [436],
+      [448],
+      [419],
+      [433],
+      [436],
+      [436],
+      [867]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
+  }],
+
+
+  "ptyasKorrosRespImgs": [{
+    "nameLowerCaseHyphenated": "ptyas-korros",
+    "nameUpperCaseHyphenated": "Ptyas-korros",
+    "name": "Ptyas korros",   
+    "commonName": "Chinese Ratsnake",
+    "chineseName": "細 紋南蛇",
+    "chineseNameRomanized": "(xi4wen2nan2she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024]
+    ],
+    "imgHeightsModalMax": [
+      [681],
+      [681],
+      [681],
+      [676],
+      [681],
+      [681]
+
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650]
+    ],
+    "imgHeightsNonModalMax": [
+      [432],
+      [432],
+      [432],
+      [429],
+      [432],
+      [432]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
+  }],
+
+
+  "plagiopholisStyaniRespImgs": [{
+    "nameLowerCaseHyphenated": "plagiopholis-styani",
+    "nameUpperCaseHyphenated": "Plagiopholis-styani",
+    "name": "Plagiopholis styani",   
+    "commonName": "Chinese Mountain Snake",
+    "chineseName": "福建頸 斑蛇",
+    "chineseNameRomanized": "(fu2jian4jing1ban1she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800],
+      [375, 563, 650, 800],
+      [375, 563, 650, 800],
+      [375, 563, 650, 800, 1024]
+    ],
+    "imgHeightsModalMax": [
+      [683],
+      [533],
+      [533],
+      [533],
+      [680]
+
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650]
+    ],
+    "imgHeightsNonModalMax": [
+      [434],
+      [433],
+      [433],
+      [433],
+      [432]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
   }]
+
 
 
 }

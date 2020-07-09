@@ -10,7 +10,7 @@
                     data-srcset="
                     {%- set comma = joiner() -%}
                     {%- for j in species[0].imgWidthsNonModal[i] %}
-                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.webp {{ j }}w
+                    {{ comma() -}} images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.webp {{ j }}w
                     {%- endfor %}"
                     sizes="(max-width: 700px) 90vw, 650px">
                 <source
@@ -18,14 +18,14 @@
                     data-srcset="
                     {%- set comma = joiner() -%}
                     {%- for j in species[0].imgWidthsNonModal[i] %}
-                    {{ comma() -}} images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.jpg {{ j }}w
+                    {{ comma() -}} images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.jpg {{ j }}w
                     {%- endfor %}"
                     sizes="(max-width: 700px) 90vw, 650px">
                 <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal"  
                     width="{{- species[0].imgWidthsNonModal[i] | last }}"
                     height="{{- species[0].imgHeightsNonModalMax[i] }}"
-                    data-src="images-{{- species[0].speciesLowerCaseHyphenated -}}/{{- species[0].speciesUpperCaseHyphenated -}}-{{ i + 1 }}-{{ species[0].imgWidthsNonModal[i] | last }}px.jpg"  
-                    aria-label="{{- species[0].speciesAltAttributeName }} image {{ i + 1 }}">            
+                    data-src="images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-{{ species[0].imgWidthsNonModal[i] | last }}px.jpg"  
+                    aria-label="{{- species[0].name }} image {{ i + 1 }}">            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>

@@ -1,0 +1,150 @@
+
+{% set species = plagiopholisStyaniRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    "Colubridae, subfamily Lycodontinae. Max. length: 40 cm. Occurrence in Taiwan: 
+    The only records In Taiwan are from Yangmingshan National Park near Taipei and 
+    around the Northern Cross-Island Highway. Very rare. Global Distribution: 
+    South China (Fujian, Guangdong, Guangxi, Jiangxi, Zhejiang, Anhui, Sichuan, SE Gansu), Taiwan. 
+    Description: Small snake; total length up to 40 cm. There are 15 rows of scales, all are smooth and glossy. 
+    Head is oval, with short snout and slightly large rostral (with a blackish spot), and not distinct 
+    from neck; body is stout and cylindrical; tail is short. Eye is medium-sized;"
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }}  - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-NonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    More Photos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://chungweiyou.pixnet.net/blog/post/23846484"><i>P. styani</i> in the wild</a> (scroll down)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://www.probertencyclopaedia.com/B_LYCODONTINAE.HTM">Lycodontinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    40 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    The only records In Taiwan are from Yangmingshan National Park near Taipei and around the Northern Cross-Island Highway. Very rare. 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    South China (Fujian, Guangdong, Guangxi, Jiangxi, Zhejiang, Anhui, Sichuan, SE Gansu), Taiwan.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Small snake; total length up to 40 cm. There are 15 rows of scales, all are smooth and glossy. Head is oval, with short snout and slightly large rostral (with a blackish spot), and not distinct from neck; body is stout and cylindrical; tail is short. Eye is medium-sized; iris is brown with diffused black pigment, the upper area is dirty white; pupil is round, jet black, surrounded by less distinct or narrow ring of dirty white. Tongue has brown stem and light gray fork tips. There are no loreals. Upper head, body and tail are red brown, olive brown, or green brown, with flecks of pink or black pigment on each scale, especially for those on the flanks of body; upper body and tail have a spotted pattern of black or light yellow. There is a dark and thick cross band on nape. The labials are dirty white to light yellow; the sutures are black. Ventral surface is dirty white to light yellow, speckled with small spots of dark pigment on chin plates, gulars, and sides of ventrals. Anal scale is entire, and subcaudals are paired.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <div class="info-box-paragraph">                 	          	
+                        This nocturnal snake inhabits mountainous forest floors between 500 and 1100 meters altidude. Its diet consists mainly of earthworms or arthropods. Females produce 5-11 eggs of 1.6-1.9 x 0.6-1.1 cm per clutch in summer. This snake is active and uses its head to burrow. When teased, it does not strike, but may flatten its body and expand its neck laterally.
+                    </div>
+                    This species is the "newest" member of Taiwan's snake family: it was officially recorded for the first time in Taiwan in 1999...
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        <i>Plagiopholis</i>: from Greek <i>plagios</i> = slanted, and <i>pholis</i> = scale, referring to the position of the scales.
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>styani</i>: named after Frederick William Styan (1858-1934), a Shanghai-based English tea merchant and ornithologist. (<a class="site-link" href="http://www.styan.net/pdfs/YeStyanChronicles7.pdf">more here, p.2</a>)
+                    </div>
+                    The Chinese name <span lang="zh-TW">福建頸斑蛇</span> (fu2jian4jing3ban1she2) literally means "Fujian (<span lang="zh-TW">福建</span>) Neck-Blotched (<span lang="zh-TW">頸斑</span>) Snake (<span lang="zh-TW">蛇</span>)".
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://e-info.org.tw/node/39407">Article from Taiwan Environmental Information Center</a></li>
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Plagiopholis&species=styani">Reptile Database</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

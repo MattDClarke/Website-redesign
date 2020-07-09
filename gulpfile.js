@@ -401,12 +401,12 @@ gulp.task('images-swiper-gallery', function () {
               },
             }, 
             {
-              width: 1000,
+              width: 1024,
               rename: {
-                suffix: '-1000px',
+                suffix: '-1024px',
                 extname: '.jpg'
               },
-			}, 
+			      }, 
 			
               // Convert images to the webp format 
               {
@@ -455,9 +455,9 @@ gulp.task('images-swiper-gallery', function () {
               },
             },
             {
-              width: 1000,
+              width: 1024,
               rename: {
-                suffix: '-1000px',
+                suffix: '-1024px',
                 extname: '.webp'
               },
             } 

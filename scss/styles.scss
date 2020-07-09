@@ -1257,6 +1257,7 @@ footer video {
 .header--species {
     @extend %header-template;
     margin-top: 25px;
+    text-transform: uppercase;
     text-decoration: underline;
     text-decoration-thickness: 3px;
     line-height: 1.5em;
