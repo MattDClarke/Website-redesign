@@ -108,7 +108,7 @@
     "hrefChinese": "#",
     "chinese": "福建頸 斑蛇"
   }, {
-    "href": "#",
+    "href": "psammodynastes-pulverulentus-papenfussi.html",
     "common": "Mock Viper",
     "scientific": "Psammodynastes pulverulentus papenfussi",
     "hrefChinese": "#",
@@ -678,6 +678,63 @@
       [433],
       [433],
       [432]
+    ],    
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325_226",
+    "manyImagesId": ""
+  }],
+
+
+  "psammodynastesPulverulentusPapenfussiRespImgs": [{
+    "nameLowerCaseHyphenated": "psammodynastes-pulverulentus-papenfussi",
+    "nameUpperCaseHyphenated": "Psammodynastes-pulverulentus-papenfussi",
+    "name": "Psammodynastes pulverulentus papenfussi",   
+    "commonName": "Mock Viper",
+    "chineseName": "茶 斑蛇",
+    "chineseNameRomanized": "(cha2ban1she2)",
+    "status": "Status: Protected (Cat. II)",
+    "danger": "Mildly venomous",
+    "imgWidthsModal": [
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 800, 1024],
+      [375, 563, 650, 768],
+      [375, 563, 650, 680]
+    ],
+    "imgHeightsModalMax": [
+      [687],
+      [531],
+      [680],
+      [682],
+      [680],
+      [687],
+      [1024],
+      [1024]
+
+    ],
+    "imgWidthsNonModal": [
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650],
+      [375, 563, 650]
+    ],
+    "imgHeightsNonModalMax": [
+      [436],
+      [431],
+      [432],
+      [433],
+      [432],
+      [436],
+      [867],
+      [979]
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",

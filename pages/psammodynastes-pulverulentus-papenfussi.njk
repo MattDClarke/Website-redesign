@@ -1,0 +1,225 @@
+
+{% set species = psammodynastesPulverulentusPapenfussiRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    "Colubridae, subfamily Boiginae. Max. length: 	65 cm. Occurrence in Taiwan: 
+    Throughout Taiwan and Orchid Island, up to 1000 m altitude. Common. (Distribution map) 
+    Global Distribution: The subspecies P. p. papenfussi is endemic to Taiwan.  
+    Description: Small snake; total length up to 65 cm (less in males), but most animals are smaller. 
+    There are 13-17 (17 at mid-body) rows of scales, which are smooth but not glossy. Head is elongate 
+    oval to slightly triangular and distinct from neck; body is slender; tail is long. Eye is large;"
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }}  - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-NonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Videos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=9b2_1NVderk">Juvenile <i>P. pulverulentus</i></a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=qpJdet0GfZM">Mock Vipers in Terrarium</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Field Reports
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.fieldherpforum.com/forum/viewtopic.php?f=2&t=1976"><i>Psammodynastes pulverulentus</i> - Badass Ruler of the Sands</a></li>
+                        <li><a class="site-link" href="http://www.fieldherpforum.com/forum/viewtopic.php?f=2&t=4827&p=58400">Dark Mock Viper</a></li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/xphrase.pl?keyword=boiginae">Boiginae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    65 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Throughout Taiwan and Orchid Island, up to 1000 m altitude. Common. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0082">Distribution map</a>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    The subspecies <i>P. p. papenfussi</i> is endemic to Taiwan.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Small snake; total length up to 65 cm (less in males), but most animals are smaller. There are 13-17 (17 at mid-body) rows of scales, which are smooth but not glossy. Head is elongate oval to slightly triangular and distinct from neck; body is slender; tail is long. Eye is large; iris is medium to dark brown, dappled and flecked with light brown and pupil is broadly elliptical on vertical axis. There is a prominent angular ridge from upper eye to end of snout. Tongue is dark brown to black; teeth are long, well developed, resembling fangs in upper jaw. There are three pairs of chin plates. Upper head is light to dark brown or even chocolate with a darker, longitudinal ''Y'' whose arms extend forward onto the ridge between eye and snout, basing at the posterior margin of the parietals, and extending posteriorly along the mid-dorsal line. The supralabials are lighter in color, mottled with white, dirt yellow or black. Upper body and tail are light to dark brown or even chocolate, tinged with scattered, diffuse, deep red and/or scattered deposits of diffuse dark brown to black which is more prominent anteriorly. Ventral head is white to light gray, mottled with tan, black or gray; the deposits of black on the infralabials may form a longitudinal line. Ventral body is light gray to dark gray brown, mottled with brown or gray pigment which concentrates to form light longitudinal lines. Anal scale is entire, and subcaudals are paired.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <div class="info-box-paragraph">          	
+                        The triangular head that is clearly distinct from the neck is very characteristic for this cathemeral 
+                        (diurnal and nocturnal), <i>opistoglyphous</i> (= rear-fanged, see footnote (<i>1</i>)) species. The shape of the head is 
+                        the reason this snake is often confused with pitvipers, and also the reason for its common English name. 
+                        Many members of the family Colubridae that are considered venomous are essentially harmless to humans, 
+                        because they either have small venom glands, relatively weak venom, or an inefficient system for venom delivery. 
+                        The Mock viper's venom is actually much less powerful and less harmful to humans than that of true vipers. The 
+                        teeth are adapted to feeding on heavy-scaled  vertebrates, like skinks, and other snakes, but <i>P. p. papenfussi</i> 
+                        also eats frogs.              	          	
+                    </div>
+                    <div class="info-box-paragraph">   
+                        This snake displays a very broad coloration range; some individuals are very dark 
+                        chocolate-colored, others are reddish-brown, gray, yellow, or almost black. Some have 
+                        hardly any head or body patterns, while others specimens show small spots or stripes.               	          	
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>P. p. papenfussi</i> is found in plains, including marshes, swamps and rice paddies, as 
+                        well as dry and wet forests. It almost never occurs close to human settlements. This 
+                        species is terrestrial, but may also be found in low bushes.                 	          	
+                    </div>
+                    <div class="info-box-paragraph"> 
+                        This snake is ovoviviparous and produces litters of 3 - 10 live young several times 
+                        a year. Juveniles are 15 to 18 cm long and resemble adults.                	          	
+                    </div>
+                    <div class="info-box-paragraph">  
+                        It is an irritable species that will form defensive coils and strike in viper-like 
+                        fashion when threatened. Its bite is strong and the animal will clamp down hard when 
+                        biting.               	          	
+                    </div>
+                    <div class="info-box-paragraph">  
+                        The dentures of this species are "unusual, because it has grooved rear fangs and front 
+                        fangs with shallow grooves. This is the only snake known to have fangs in both positions 
+                        on the maxillary. Harry Greene suggested the front fangs are used to snare hard-scaled, 
+                        slippery skinks (a group of lizards with a bony plate under each very smooth scale). 
+                        When Kate Jackson and Thomas Fritts looked at the fangs, however, they found grooves 
+                        in the front fangs. These grooves were not the deep folds with rounded edges that run 
+                        the length of the fang as in some rear fanged species. These teeth contained multiple 
+                        shallow grooves that could allow liquids from the mouth to enter a wound, increase the 
+                        ability of the fang to penetrate the prey, or facilitate pulling 
+                        the teeth out of the prey." (John C. Murphy, <a class="site-link" href="http://www.amazon.com/Secrets-Snake-Charmer-Snakes-Century/dp/1450221262/ref=sr_1_1?ie=UTF8&qid=1293792905&sr=8-1">Secrets of the Snake Charmer</a>, 2010)               	          	
+                    </div>
+                    <div class="info-box-paragraph">  
+                        See also <a class="site-link" href="http://people.whitman.edu/~jacksok/mockviper.pdf">"Does the Mock Viper Resemble a Protoelapid?" (Jackson & Fritts, 1996)</a> (PDF)               	          	
+                    </div>   
+                    As with most other rear-fanged species, not much is known about the Mock Viper's venom. 
+                    There are no reports of deaths or severe bites, but there may be swelling, redness and aching 
+                    muscles in the bite area. The venom might contain some kind of anti-coagulant in the venom, 
+                    because the bite wounds tend to bleed profusely.                                                                     
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                    	<i>Psammodynastes</i> :  <i>"The generic name is derived from the Greek psammos = sand, and 
+                        dynastes = ruler. These snakes, which do not live in sandy countries, were first 
+                        placed in the genus Psammophis, a group living mainly in sandy, arid areas that 
+                        could account for the unsuitable first part of the present name." (A Field Guide to 
+                        the Snakes of Borneo, Stuebing & Inger, 1999)</i>;    
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>pulverulentus</i>: "<i>comes from the Latin words pulveris = dusty, and lentus = full of, referring to the dusky coloration.</i>" (ibid.)
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>papenfussi</i> : in honor of American herpetologist Theodore J. Papenfuss.
+                    </div>
+                    The Chinese name <span lang="zh-TW">茶斑蛇</span> (cha2ban1she2) literally means "tea-striped snake", alluding to its coloration and pattern.
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Footnotes
+                </div>
+                <div class="info-box-text">
+	                (1) "<i>Opisthoglyphous snakes are similar to aglyphous (fangless) snakes, but possess weak venom, 
+                    which is injected by means of a pair of enlarged teeth at the back of the maxillae (upper jaw). 
+                    These "fangs" typically point backwards rather than straight down, possess a groove which channels 
+                    venom into the prey, and are located roughly halfway back in the mouth, which has led to the 
+                    vernacular name of "rear-fanged snakes</i>". (<a class="site-link" href="http://www.smarley.nl/main.php/v/Opisthoglyph/">Source</a>)
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Psammodynastes&species=pulverulentus">Reptile Database</a></li>
+                    <li><a class="site-link" href="http://www.ecologyasia.com/verts/snakes/common-mock-viper.htm">Ecology Asia</a></li>
+                    <li><a class="site-link" href="http://www.naturemalaysia.com/mock-viper.htm">Nature Malaysia</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}
