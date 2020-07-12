@@ -3,20 +3,24 @@
     <div class="swiper-wrapper">
         {%- set numberOfImages = species[0].imgWidthsModal | length -%}
         {%- for i in range(numberOfImages) %} 
+        {%- set numberPrefix = "0" -%}
+        {%- if i > 8 -%}
+            {%- set numberPrefix = "" -%}
+        {% endif %}
         <div class="swiper-slide swiper-slide-thumbs"> 
             <picture>
                 <source
                     type="image/webp"
                     data-srcset="
-                    images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-155px.webp,
-                    images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-155px_2x.webp 2x">
+                    images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-155px.webp,
+                    images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-155px_2x.webp 2x">
                 <source
                     type="image/jpeg"
                     data-srcset="
-                    images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-155px.jpg,
-                    images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-155px_2x.jpg 2x">
+                    images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-155px.jpg,
+                    images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-155px_2x.jpg 2x">
                 <img class="swiper-lazy" 
-                    data-src="images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-1-155px.jpg"                 
+                    data-src="images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-155px_2x.jpg"                 
                     width="{{- species[0].maxWidthThumbs -}}"
                     height="{{- species[0].maxHeightThumbs -}}"                      
                     aria-label="{{- species[0].name }} image {{ i + 1 }} - thumbnail">

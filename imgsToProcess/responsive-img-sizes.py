@@ -15,7 +15,10 @@ for filename in os.listdir('.'): # current directory
     w, h = im.size  # tuple
 
     # image sizes used depends on the max with of the original image
-    if (w >= 1024 ):
+    if (w > 1024 ):
+        imageSizes = [375, 563, 650, 800, 1024]
+        imageSizes.append(w)
+    elif (w == 1024 ):
         imageSizes = [375, 563, 650, 800, 1024]
     elif ( 800 < w < 1024 ):
         imageSizes = [375, 563, 650, 800]
@@ -33,7 +36,7 @@ for filename in os.listdir('.'): # current directory
 
     imgWidthsModal.append(imageSizes)
 
-imgWidthsModalOutput = '"imgWidthsModal": \n' + str(imgWidthsModal) + '\n'
+imgWidthsModalOutput = '"imgWidthsModal": \n' + str(imgWidthsModal) 
 
 
 
@@ -48,7 +51,7 @@ for filename in os.listdir('.'):
     maxHeight.append(h)
     imageHeightsModalMax.append(maxHeight)
 
-imageHeightsModalMaxOutput = '"imageHeightsModalMax": \n' + str(imageHeightsModalMax) + '\n'
+imageHeightsModalMaxOutput = '"imageHeightsModalMax": \n' + str(imageHeightsModalMax) 
 
 
 
@@ -74,7 +77,7 @@ for filename in os.listdir('.'):
 
     imgWidthsNonModal.append(imageSizes)
 
-imgWidthsNonModalOutput = '"imgWidthsNonModal": \n' + str(imgWidthsNonModal) + '\n'
+imgWidthsNonModalOutput = '"imgWidthsNonModal": \n' + str(imgWidthsNonModal)
 
 
 
@@ -95,10 +98,10 @@ for filename in os.listdir('.'):
 
     imgHeightsNonModalMax.append(maxHeight)
 
-imgHeightsNonModalMaxOutput = '"imgHeightsNonModalMax": \n' + str(imgHeightsNonModalMax) + '\n'
+imgHeightsNonModalMaxOutput = '"imgHeightsNonModalMax": \n' + str(imgHeightsNonModalMax) 
 
 
 
 # join all the img size arrays together
-responsiveImgSizesAll = imgWidthsModalOutput + ',' + imageHeightsModalMaxOutput + ',' +  imgWidthsNonModalOutput + ',' +  imgHeightsNonModalMaxOutput
+responsiveImgSizesAll = imgWidthsModalOutput + ', \n' + imageHeightsModalMaxOutput + ', \n' +  imgWidthsNonModalOutput + ', \n' +  imgHeightsNonModalMaxOutput
 print(responsiveImgSizesAll)

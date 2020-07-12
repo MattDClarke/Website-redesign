@@ -1,0 +1,178 @@
+
+{% set species = rhabdophisSwinhonisRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    "Colubridae, subfamily Natricinae. Max. length: 	70 cm. Occurrence in Taiwan: 
+    Throughout Taiwan, at altitudes of 500-1000 m. Not common. (Distribution map) 
+    Global Distribution: Endemic to Taiwan. Description: Small snake; total length up to 70 cm. 
+    There are 15-17 rows of scales, which are all keeled. Head is oval; body is moderately stout; 
+    tail is moderately long. Eye is medium to large;"
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }}  - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Videos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=Dqmbu8JR3TE"><i>R. swinhonis</i> in Yangmingshan National Park</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    More Photos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://blog.yam.com/ziming/article/6764744"><i>R. swinhonis</i> in the wild (1)</a></li>
+                        <li><a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=299479"><i>R. swinhonis</i> in the wild (2)</a></li>
+                        <li><a class="site-link" href="http://solane.photo-pt.org/index.php?load=read&id=28"><i>R. swinhonis</i> in the wild (3)</a></li>
+                        <li><a class="site-link" href="http://blog.xuite.net/snakejoan/snake/9187718"><i>R. swinhonis</i> in the wild (4)</a></li>
+                        <li><a class="site-link" href="http://www.ellison.idv.tw/ellisonblog/article.asp?id=624"><i>R. swinhonis</i> in the wild (5)</a> (with bonus beetle &#128513;)</li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae">Natricinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    70 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Throughout Taiwan, at altitudes of 500-1000 m. Not common. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0064">Distribution map</a>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    Endemic to Taiwan.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Small snake; total length up to 70 cm. There are 15-17 rows of scales, which are all keeled. Head is oval; body is moderately stout; tail is moderately long. Eye is medium to large; iris is dark gray brown and the pupil is round, jet black, surrounded by ring of gray. Tongue has a maroon stem and light gray fork tips. Top of head is uniform dark olive gray to olive brown and the sides are lighter. There is an oblique black band below eye and a larger black band on side of head above corner of mouth. Upper body is dark gray brown with ill-defined to fairly prominent square areas of black, usually arranged in checkerboard fashion especially in anterior two-thirds of body. There is a distinct, thick, and black chevron on the nape, whose apex points toward the body. Anterior or posterior to the cheveron bears a lighter brown to whitish area. The snake has enlarged rear fangs. Ventral head and neck are cream to dirty white. Ventral body is cream to light gray, mottled with deposits of coarse dark pigment; the pigmentation is progressively more intense posteriorly. Some individuals have blackish ventrals. Anal scale is divided and subcaudals are paired.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    This docile, diurnal snake inhabits the floors of forests, bushlands, and other humid 
+                    environments. It preys mainly on frogs and lays between 6 and 15 eggs per clutch. 
+                    When threatened, it may expand its throat and neck transversely, but hardly ever bites. 
+                    Its nuchal glands secrete a brown liquid whose purpose is yet to be determined, 
+                    but possibly serves as a predator deterrent when sprayed, similar to 
+                    <a class="site-link--species" href="rhabdophis-tigrinus-formosanus.html">Rhabdophis tigrinus formosanus</a>.                                                             
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                    	<i>Rhabdophis</i> comes from the Greek words <i>rhabdos</i>, meaning "rod" or "wand", and <i>ophis</i>, meaning "snake";    
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>swinhoei</i> : in honor of <a class="site-link" href="http://en.wikipedia.org/wiki/Swinhoe">Robert Swinhoe</a>, English naturalist, collector and first European consul in Taiwan, who collected the type specimen.
+                    </div>
+                    <div class="info-box-paragraph">
+                        The Chinese name <span lang="zh-TW">斯文豪氏游蛇</span> (si1wen2hao2shi4you2she2) 
+                        means "Swinhoe's (<span lang="zh-TW">斯文豪氏</span>) water (<span lang="zh-TW">游</span>, 
+                        actually: swimming) snake (<span lang="zh-TW">蛇</span>)".
+                    </div>
+                    In Mainland China, this species is called <span lang="zh-TW">台灣頸槽蛇</span> (tai2wan1jing3cao2she2), 
+                    meaning "Taiwan (<span lang="zh-TW">台灣</span>) neck-grooved (<span lang="zh-TW">頸槽</span>) 
+                    snake (<span lang="zh-TW">蛇</span>)", "neck-grooved" referring to its nuchal glands.                    
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Notes
+                </div>
+                <div class="info-box-text">
+	                This is the first recorded endemic snake species in Taiwan.
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://jcvi.org/reptiles/species.php?genus=Rhabdophis&species=swinhonis">Reptile Database</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

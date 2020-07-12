@@ -114,19 +114,19 @@
     "hrefChinese": "#",
     "chinese": "茶 斑蛇"
   }, {
-    "href": "#",
+    "href": "rhabdophis-swinhonis.html",
     "common": "Swinhoe's Grass Snake",
     "scientific": "Rhabdophis swinhonis",
     "hrefChinese": "#",
     "chinese": "斯文豪氏游蛇"
   }, {
-    "href": "#",
+    "href": "hebius-sauteri.html",
     "common": "Sauter's Water (Grass) Snake",
     "scientific": "Hebius sauteri",
     "hrefChinese": "#",
     "chinese": "梭德氏游蛇"
   }, {
-    "href": "#",
+    "href": "hebius-sp.html",
     "common": "Paiwan Keelback",
     "scientific": "Hebius sp.",
     "hrefChinese": "#",
@@ -312,7 +312,25 @@
 
 
 
+  "schoolTalksRespImgs": [{
+    "nameLowerCaseHyphenated": "school-talks",
+    "nameUpperCaseHyphenated": "School-talks",
+    "name": "School talks",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "130-59",
+    "manyImagesId": "",
+
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024, 1200], [375, 563, 650, 800], [375, 563, 650, 772], [375, 563, 650, 800], [375, 563, 650, 800], [375, 563, 600]],
+    "imageHeightsModalMax":
+    [[479], [537], [600], [537], [537], [800]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 600]],
+    "imgHeightsNonModalMax":
+    [[259], [436], [505], [436], [436], [800]]
   
+  }],
 
     
 
@@ -363,7 +381,7 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
   }],
 
@@ -423,7 +441,7 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
   }],
 
@@ -480,7 +498,7 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
   }],
 
@@ -529,7 +547,7 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
   }],
 
@@ -586,7 +604,7 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
   }],
 
@@ -635,7 +653,7 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
   }],
 
@@ -680,7 +698,7 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
   }],
 
@@ -737,8 +755,85 @@
     ],    
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
-    "aspectRatioClass": "325_226",
+    "aspectRatioClass": "325-226",
     "manyImagesId": ""
+  }],
+
+
+  "rhabdophisSwinhonisRespImgs": [{
+    "nameLowerCaseHyphenated": "rhabdophis-swinhonis",
+    "nameUpperCaseHyphenated": "Rhabdophis-swinhonis",
+    "name": "Rhabdophis swinhonis",
+    "commonName": "Swinhoe's Grass Snake",
+    "chineseName": "斯文豪氏游蛇",
+    "chineseNameRomanized": "(si1wen2hao2shi4you2she2)",
+    "status": "Status: Protected (Cat.III)",
+    "danger": "Non-venomous",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 843], [375, 563, 650, 800, 1024]],     
+    "imageHeightsModalMax":
+    [[761], [687], [618], [768], [703]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[483], [436], [392], [592], [446]]
+    
+  }],
+
+  "hebiusSpRespImgs": [{
+    "nameLowerCaseHyphenated": "hebius-sp",
+    "nameUpperCaseHyphenated": "Hebius-sp",
+    "name": "Hebius sp.",
+    "commonName": "Paiwan Keelback",
+    "chineseName": "排 灣腹鏈",
+    "chineseNameRomanized": "(pai2wan1fu4lian4she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],
+    "imageHeightsModalMax":
+    [[681], [681], [681], [681]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[432], [432], [432], [432]]
+  
+  }],
+
+
+  "sinonatrixPercarinataSurikiSpRespImgs": [{
+    "nameLowerCaseHyphenated": "sinonatrix-percarinata-suriki",
+    "nameUpperCaseHyphenated": "Sinonatrix-percarinata-suriki",
+    "name": "Sinonatrix percarinata suriki",
+    "commonName": "Eastern Water Snake",
+    "chineseName": "白腹游蛇",
+    "chineseNameRomanized": "(bai2fu2you2she2)",
+    "status": "Status: Not Protected",
+    "danger": "Non-venomous",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 946], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 957], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],
+    "imageHeightsModalMax":
+    [[687], [644], [768], [727], [741], [768], [683], [687], [685], [685], [685], [681]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[436], [408], [527], [461], [470], [521], [433], [436], [434], [434], [434], [432]]
+  
   }]
 
 

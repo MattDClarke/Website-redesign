@@ -43,7 +43,8 @@ gulp.task('watch', function(){
 // 1. book.html - fixed size images - uses srcset pixel density descriptors  
 // 2. index.html - responsive size images - uses srcset width descriptors  
 // 3. home.html - fixed size images - uses srcset pixel density descriptors  
-// 4. swiper gallery - responsive size images - uses src set width descriptors 
+// 4. swiper gallery - responsive size images - uses src set width descriptors
+// 5. swiper gallery thumbs - responsive size images for thumbs only 
 // * check task names to call specific task
 
 var gulp = require('gulp')
@@ -351,7 +352,78 @@ gulp.task('images-home', function () {
 
 /////////////////////////////////////////////////// 4. swiper gallery //////////////////////////////////////////////////////////
 // make sure all images min width = 650px
-gulp.task('images-swiper-gallery', function () {
+// images to create for school talks (created using responsive-img-sizes.py and stored in data.json)
+
+// school talks
+var imagesToCreate = [[375, 563, 650, 800, 1024, 1200], [375, 563, 650, 800], [375, 563, 650, 772], [375, 563, 650, 800], [375, 563, 650, 800], [375, 563, 600]]
+
+// loop through each image set and create correct images for each img
+
+gulp.task('images-swiper-gallery', function (respImages) {
+  for (let i = 0; i < imagesToCreate.length; i++) {
+    let count = i + 1;
+    const imageSet = imagesToCreate[i];
+
+    for (let j = 0; j < imageSet.length; j++) {
+
+      
+      let countString = count.toString();
+      let srcText = 'imgSrc/*' + countString + '.jpg';
+        gulp.src(srcText)
+        .pipe(
+          $.responsive(
+            {
+              '*.jpg': [
+                {
+                  width: imageSet[j], // for thumbnail img
+                  rename: {
+                    suffix: `-${imageSet[j]}px`,
+                    extname: '.jpg'
+                  },
+                },
+
+          
+                // Convert images to the webp format 
+                {
+                  width: imageSet[j], // for thumbnail img
+                  rename: {
+                    suffix: `-${imageSet[j]}px`,
+                    extname: '.webp'
+                  },
+                },
+              ]
+            },
+            {
+              // Global configuration for all images
+              // The output quality for JPEG, WebP output formats
+              quality: 80,
+              sharpen: {sigma: 1, radius: 2}, 
+              filter: 'Catrom', // good for when down sizing image - https://www.npmjs.com/package/gulp-image-resize/v/0.13.1
+              // Use progressive (interlace) scan for JPEG and PNG output
+              progressive: true,
+              // Strip all metadata
+              withMetadata: false,
+              // Do not emit the error when image is enlarged.
+              errorOnEnlargement: false
+            }
+          )
+        )
+        .pipe(gulp.dest('imgDist'))
+    }
+  }
+  respImages();
+  return gulp
+  
+})
+
+
+
+
+
+
+
+/////////////////////////////////////////////////// 5. swiper gallery thumbs //////////////////////////////////////////////////////////
+gulp.task('images-swiper-gallery-thumbs', function () {
   return gulp
     .src('imgSrc/*.jpg')
     .pipe(
@@ -372,95 +444,24 @@ gulp.task('images-swiper-gallery', function () {
                 extname: '.jpg'
               },
             },
-            {
-              width: 375,
-              rename: {
-                suffix: '-375px',
-                extname: '.jpg'
-              },
-            },
-            {
-              width: 563,
-              rename: {
-                suffix: '-563px',
-                extname: '.jpg'
-              },
-            },         
-            {
-              width: 650,
-              rename: {
-                suffix: '-650px',
-                extname: '.jpg'
-              },
-            },
-            {
-              width: 680,
-              rename: {
-                suffix: '-680px',
-                extname: '.jpg'
-              },
-            }, 
-            // {
-            //   width: 1024,
-            //   rename: {
-            //     suffix: '-1024px',
-            //     extname: '.jpg'
-            //   },
-			      // }, 
+
 			
-              // Convert images to the webp format 
-              {
-                width: 155, // for thumbnail img
-                rename: {
-                  suffix: '-155px',
-                  extname: '.webp'
-                },
-              },
-              {
-                width: 155 * 2,   
-                rename: {
-                  suffix: '-155px_2x',
-                  extname: '.webp'
-                },
-              },
-
+            // Convert images to the webp format 
             {
-              width: 375,
+              width: 155, // for thumbnail img
               rename: {
-                suffix: '-375px',
-                extname: '.webp'
-              }
-            },
-
-            {
-              // Convert images to the webp format
-              width: 563,
-              rename: {
-                suffix: '-563px',
-                extname: '.webp'
-              }
-            },
-            {
-              width: 650,
-              rename: {
-                suffix: '-650px',
+                suffix: '-155px',
                 extname: '.webp'
               },
             },
             {
-              width: 680,
+              width: 155 * 2,   
               rename: {
-                suffix: '-680px',
+                suffix: '-155px_2x',
                 extname: '.webp'
               },
             }
-            // {
-            //   width: 1024,
-            //   rename: {
-            //     suffix: '-1024px',
-            //     extname: '.webp'
-            //   },
-            // } 
+
           ]
         },
         {
@@ -481,3 +482,143 @@ gulp.task('images-swiper-gallery', function () {
     .pipe(gulp.dest('imgDist'))
 })
 
+
+
+
+
+
+
+
+
+// ORIGINAL TASK CODE (NO LOOPS)
+// /////////////////////////////////////////////////// 4. swiper gallery //////////////////////////////////////////////////////////
+// // make sure all images min width = 650px
+// gulp.task('images-swiper-gallery', function () {
+//   return gulp
+//     .src('imgSrc/*.jpg')
+//     .pipe(
+//       $.responsive(
+//         {
+//           '*.jpg': [
+//             {
+//               width: 155, // for thumbnail img
+//               rename: {
+//                 suffix: '-155px',
+//                 extname: '.jpg'
+//               },
+//             },
+//             {
+//               width: 155 * 2,   
+//               rename: {
+//                 suffix: '-155px_2x',
+//                 extname: '.jpg'
+//               },
+//             },
+//             {
+//               width: 375,
+//               rename: {
+//                 suffix: '-375px',
+//                 extname: '.jpg'
+//               },
+//             },
+//             {
+//               width: 563,
+//               rename: {
+//                 suffix: '-563px',
+//                 extname: '.jpg'
+//               },
+//             },         
+//             {
+//               width: 650,
+//               rename: {
+//                 suffix: '-650px',
+//                 extname: '.jpg'
+//               },
+//             },
+//             {
+//               width: 800,
+//               rename: {
+//                 suffix: '-800px',
+//                 extname: '.jpg'
+//               },
+//             }, 
+//             {
+//               width: 1200,
+//               rename: {
+//                 suffix: '-1200px',
+//                 extname: '.jpg'
+//               },
+// 			      }, 
+			
+//               // Convert images to the webp format 
+//               {
+//                 width: 155, // for thumbnail img
+//                 rename: {
+//                   suffix: '-155px',
+//                   extname: '.webp'
+//                 },
+//               },
+//               {
+//                 width: 155 * 2,   
+//                 rename: {
+//                   suffix: '-155px_2x',
+//                   extname: '.webp'
+//                 },
+//               },
+
+//             {
+//               width: 375,
+//               rename: {
+//                 suffix: '-375px',
+//                 extname: '.webp'
+//               }
+//             },
+
+//             {
+//               // Convert images to the webp format
+//               width: 563,
+//               rename: {
+//                 suffix: '-563px',
+//                 extname: '.webp'
+//               }
+//             },
+//             {
+//               width: 650,
+//               rename: {
+//                 suffix: '-650px',
+//                 extname: '.webp'
+//               },
+//             },
+//             {
+//               width: 800,
+//               rename: {
+//                 suffix: '-800px',
+//                 extname: '.webp'
+//               },
+//             },
+//             {
+//               width: 1200,
+//               rename: {
+//                 suffix: '-1200px',
+//                 extname: '.webp'
+//               },
+//             } 
+//           ]
+//         },
+//         {
+//           // Global configuration for all images
+//           // The output quality for JPEG, WebP output formats
+//           quality: 80,
+//           sharpen: {sigma: 1, radius: 2}, 
+//           filter: 'Catrom', // good for when down sizing image - https://www.npmjs.com/package/gulp-image-resize/v/0.13.1
+//           // Use progressive (interlace) scan for JPEG and PNG output
+//           progressive: true,
+//           // Strip all metadata
+//           withMetadata: false,
+//           // Do not emit the error when image is enlarged.
+//           errorOnEnlargement: false
+//         }
+//       )
+//     )
+//     .pipe(gulp.dest('imgDist'))
+// })

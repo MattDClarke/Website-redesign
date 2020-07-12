@@ -7,6 +7,10 @@
             <div class="swiper-wrapper">
                 {%- set numberOfImages = species[0].imgWidthsModal | length -%}
                 {%- for i in range(numberOfImages) %} 
+                {%- set numberPrefix = "0" -%}
+                {%- if i > 8 -%}
+                    {%- set numberPrefix = "" -%}
+                {% endif %}
                 <div class="swiper-slide swiper-slide-modal">
                     <div class="swiper-zoom-container">
                         <picture>
@@ -15,7 +19,7 @@
                                 data-srcset="
                                 {%- set comma = joiner() -%}
                                 {%- for j in species[0].imgWidthsModal[i] %}
-                                {{ comma() -}} images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.webp {{ j }}w
+                                {{ comma() -}} images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-{{ j }}px.webp {{ j }}w
                                 {%- endfor %}"
                                 sizes="100vw">
                             <source
@@ -23,13 +27,13 @@
                                 data-srcset="
                                 {%- set comma = joiner() -%}
                                 {%- for j in species[0].imgWidthsModal[i] %}
-                                {{ comma() -}} images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-{{ j }}px.jpg {{ j }}w
+                                {{ comma() -}} images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-{{ j }}px.jpg {{ j }}w
                                 {%- endfor %}"
                                 sizes="100vw">
                             <img class="swiper-lazy swiper-slide-img swiper-slide-img-modal" 
                                 width="{{- species[0].imgWidthsModal[i] | last }}"
-                                height="{{- species[0].imgHeightsModalMax[i] }}"                     
-                                data-src="images-{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ i + 1 }}-{{ species[0].imgWidthsModal[i] | last }}px.jpg"  
+                                height="{{- species[0].imageHeightsModalMax[i] }}"                     
+                                data-src="images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-{{ species[0].imgWidthsModal[i] | last }}px.jpg"  
                                 aria-label="{{- species[0].name }} image {{ i + 1 }} - modal">
                         </picture>
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   

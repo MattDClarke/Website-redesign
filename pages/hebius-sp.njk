@@ -1,0 +1,152 @@
+
+{% set species = hebiusSpRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    ""
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }}  - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div>
+                    <div class="info-box-paragraph">
+                        This is a recently discovered, yet undescribed species pending assignment of a scientific name.
+                    </div>   
+                    <div class="info-box-paragraph">
+                        The first publication to portray this species in more detail is the following new field guide on the reptiles & amphibians of Taiwan:
+                    </div>  
+                    <div class="info-box-paragraph">
+                        <a class="site-link" href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010455301"><span lang="zh-TW">台灣兩棲爬行類圖鑑</span>, 2009, by <span lang="zh-TW">向高世</span>, <span lang="zh-TW">李鵬翔</span> & <span lang="zh-TW">楊懿如</span></a>
+                    </div>  
+                    All information below was taken from this book.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    More Photos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=594235">Paiwan Keelback in the wild</a></li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae">Natricinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    89 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Currently, the only records are from a few small locations in Southern Taiwan, between 500 and 1300 meters altitude. 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    Endemic to Taiwan
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    With a total length up to 89 cm, this medium-sized snake is the largest of the known keelback species in Taiwan. The background color of the body is grey to olive, while the head is medium brown. There are 19 rows of dorsal scales. The front third of the body bears incomplete yellow stripes; including a conspicuous "V"-shaped stripe on the nape of the neck. The ventral scales are bright yellow. 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    Like most <a class="site-link" href="http://www.tiscali.co.uk/reference/dictionaries/difficultwords/data/d0008748.html">natricine</a> snakes, the cathemeral (diurnal and nocturnal) Paiwan Keelback can be found close to streams and ponds, as well as in wetlands, where it preys mostly on frogs and lizards. When approached, the snake displays fierce defense behavior. The female is markedly bigger than the male. Judging from the hatchlings observed in May and June, it is assumed that this species starts mating in spring.                                                            
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        The English and Chinese common name "Paiwan Keelback/ <span lang="zh-TW">排灣腹鏈蛇</span> (pai2wan1fu4lian4she2)" 
+                        was chosen in honor of the aboriginal Paiwan tribe in whose vicinity the snake was 
+                        discovered.
+                    </div>
+                    <i>sp.</i> : This species is currently being described. No proper scientific name has been selected yet.              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}
