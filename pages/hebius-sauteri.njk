@@ -1,0 +1,147 @@
+
+{% set species = hebiusSauteriRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    ""
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }}  - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae">Natricinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    76 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Common throughout Taiwan, up to 1000 m altitude. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0065">Distribution map</a>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    Taiwan, South China (Jiangxi, Guangxi, Guangdong, Fujian, Sichuan, Hubei...), N. Vietnam.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Medium to large snake; total length up to 200 cm. There are 15-27 (19-21 at mid-body and 23-27 at neck) rows of smooth and glossy scales; the dorsolateral scales are strongly oblique. Head is broad, roughly triangular and slightly distinct from neck; body is moderately heavy, slightly flattened, and may be considerably flattened when angry; tail is short. Nostrils large and conspicuous. Eye is medium-sized; iris is dark dirty yellow dappled with dark gray black to blue-black and pupil is round, jet black. There are no loreals. Tongue is dark gray to blue-black, with stem possibly lighter in color than forks. Fangs are rigid, short to medium length, and located anterior to middle of upper law. Upper head is light gray tan to dark gray-black, usually the same color as upper body and tail; sides of head are lighter in color. Individuals bearing other colors in dorsal surface, such as white, yellow or brown may be found. There may be irregular or scattered crosslines of white to light gray along upper body and a spectacle-like mark on the upper face of the expanded neck (hood); however, the designs on the hood may range from partial figures to non-symmetrical patterns. Ventral head and neck are white to light gray or light orange; there may be one pair of small dark spots followed by a dark transverse band on the ventral face of hood. The color of ventral body and tail may be white to gray, dark gray mottled with white, or blackish. The populations in different geographic regions of Taiwan reveal a unique composition of ventral coloration: the eastern population is exclusively blackish (100%), the central and southern populations are mainly white to gray (both 80%), and the proportions of blackish and white-gray morphs in the northern population are 60% and 30%, respectively. Anal scale is entire, and subcaudals are paired.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    Sauter's Water Snake (or Grass Snake), Amphiesma sauteri, is the serpent you're most likely to 
+                    encounter in leaf-littered drainage and roadside ditches in Taiwan and South China. Leaf litter is 
+                    home to earthworms, grubs, and other tiny moisture-loving critters, and that's what these snakes eat. 
+                    They hardly ever exceed two feet in length, have the sweetest demeanor one could hope for, and keep 
+                    the musking to a minimum - perfect training snakes for newbie <a class="site-link" href="http://en.wikipedia.org/wiki/Herping">herpers</a>  
+                    and <a class="site-link" href="http://en.wikipedia.org/wiki/Ophidiophobia">ophidiophobes</a> alike. Apart from ditches, these cathemeral (diurnal or nocturnal) snakes also inhabit other humid environments, 
+                    such as ponds and rivers. They prey on earthworms, slugs, tadpoles, and frogs. Females produce about 
+                    5 eggs of approximately 2.5 x1.5 cm per clutch. The juveniles tend to be very dark and round-headed, 
+                    but get lighter and more pointy-snouted with age.                                                            
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        <i>Amphiesma</i>:   Greek for "garment, vestment", named in apposition to the epithet of the 
+                        type species, <a class="site-link--species" href=".html">Amphiesma stolatum</a>, which itself is classic Greek for "garment" (i.e. stole), 
+                        in allusion to the pale bands that run down each side of the back.
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>sauteri</i>: in honor of <a class="site-link" href="http://taiwanheute.nat.gov.tw/ct.asp?xItem=41966&CtNode=1580">Hans Sauter</a>, a Taiwan-based German entomologist who collected the 
+                        type specimen for <i>A. sauteri</i>.
+                    </div>
+                    The Chinese name <span lang="zh-TW">梭德氏游蛇</span> (suo1de2shi4you2she2) means "Sauter's (<span lang="zh-TW">梭德氏</span>, suo1de2shi4) 
+                    water or swimming snake (<span lang="zh-TW">游蛇</span>, you2she2)".   
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Notes
+                </div>
+                <div class="info-box-text">
+	                The taxon name of this species follows the opinion of DAVID et al. (2007)
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Amphiesma&species=sauteri">Reptile Database</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

@@ -316,6 +316,7 @@
     "nameLowerCaseHyphenated": "school-talks",
     "nameUpperCaseHyphenated": "School-talks",
     "name": "School talks",
+    "chineseName": "學校講座",
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "130-59",
@@ -333,6 +334,61 @@
   }],
 
     
+  "hebiusMiyajimaeRespImgs": [{
+    "nameLowerCaseHyphenated": "hebius-miyajimae",
+    "nameUpperCaseHyphenated": "Hebius-miyajimae",
+    "name": "Hebius miyajimae",
+    "commonName": "Maki's Keelback",
+    "chineseName": "金 絲蛇",
+    "chineseNameRomanized": "(jin1si1she2)",
+    "status": "Status: Protected (Cat.I)",
+    "statusChinese": "保育等級: 保育類 (第一級)",
+    "danger": "Non-venomous",
+    "dangerChinese":"無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],     
+    "imageHeightsModalMax":
+    [[683], [681], [681], [681], [681]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[433], [432], [432], [432], [432]]
+  
+  }],
+
+  "hebiusSauteriRespImgs": [{
+    "nameLowerCaseHyphenated": "hebius-sauteri",
+    "nameUpperCaseHyphenated": "Hebius-sauteri",
+    "name": "Hebius sauteri",
+    "commonName": "Sauter's Watersnake",
+    "chineseName": "梭德氏游蛇",
+    "chineseNameRomanized": "(suo1de2shi4you2she2)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese":"無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 687]],
+    "imageHeightsModalMax":
+    [[687], [687], [687], [687], [716], [768], [687], [687], [687], [1024]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[436], [436], [436], [436], [454], [487], [436], [436], [436], [968]]
+
+
+ }],
+
 
   "gonyosomaFrenatumRespImgs": [{
     "nameLowerCaseHyphenated": "gonyosoma-frenatum",

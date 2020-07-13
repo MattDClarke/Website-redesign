@@ -1,15 +1,46 @@
+# 2 functions: (1): name images files and (2): create json output for responsive images
+
+
+# (1)
+# name the image files. 
+# Add the images to imgsToProcess folder, name them "01.jpg, 02.jpg,..., 11.jpg"
+# Add species name to the variable 'imgNamePrefix' below
+
+# (2)
 # create .json output for responsive images (widths and heights) (responsive images made using gulp)
 # need to CD into imgsToProcess directory
-import os
+
+import os, re, time
 from PIL import Image
 
 
+# (1): name files
+# species name, first letter of the first word capitalized, hyphenated between words
+imgNamePrefix = 'Hebius-sauteri'
 
+# match end of img file name 
+r = re.compile(r'(\d)?\d(\.jpg)')
+
+for filename in os.listdir('.'): # current directory
+    if not (filename.endswith('.jpg')):
+        continue # skip python files
+    
+    mo = r.search(filename)
+    if mo:
+        os.rename(filename, imgNamePrefix + '-' + filename)
+
+
+
+# pause a bit to make sure all images created
+time.sleep(1)
+
+
+# (2): create json output for responsive images
 # Loop over all files in the working directory.
 imgWidthsModal = []
 for filename in os.listdir('.'): # current directory
     if not (filename.endswith('.jpg')):
-        continue # skip python file
+        continue # skip python files
 
     im = Image.open(filename)
     w, h = im.size  # tuple

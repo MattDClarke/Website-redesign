@@ -1,0 +1,47 @@
+<!-- Swiper non-Modal -->
+<div {{ species[0].manyImagesId }} class="swiper-container swiper-container-main">
+    <div class="swiper-wrapper">
+        {%- set numberOfImages = species[0].imgWidthsModal | length -%}
+        {%- for i in range(numberOfImages) %} 
+        {%- set numberPrefix = "0" -%}
+        {%- if i > 8 -%}
+            {%- set numberPrefix = "" -%}
+        {% endif %}
+        <div class="swiper-slide aspect-ratio_{{ species[0].aspectRatioClass }}"> 
+            <picture>
+                <source
+                    type="image/webp"
+                    data-srcset="
+                    {%- set comma = joiner() -%}
+                    {%- for j in species[0].imgWidthsNonModal[i] %}
+                    {{ comma() -}} images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-{{ j }}px.webp {{ j }}w
+                    {%- endfor %}"
+                    sizes="(max-width: 700px) 90vw, 650px">
+                <source
+                    type="image/webp"
+                    data-srcset="
+                    {%- set comma = joiner() -%}
+                    {%- for j in species[0].imgWidthsNonModal[i] %}
+                    {{ comma() -}} images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-{{ j }}px.jpg {{ j }}w
+                    {%- endfor %}"
+                    sizes="(max-width: 700px) 90vw, 650px">
+                <img class="swiper-lazy swiper-slide-img swiper-slide-img-non-modal"  
+                    width="{{- species[0].imgWidthsNonModal[i] | last }}"
+                    height="{{- species[0].imgHeightsNonModalMax[i] }}"
+                    data-src="images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-{{ species[0].imgWidthsNonModal[i] | last }}px.jpg"  
+                    aria-label="{{- species[0].chineseName }} 圖片 {{ i + 1 }}">            
+            </picture>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
+        </div>
+        {%- endfor %}     
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+
+                
+

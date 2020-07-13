@@ -351,11 +351,13 @@ gulp.task('images-home', function () {
 
 
 /////////////////////////////////////////////////// 4. swiper gallery //////////////////////////////////////////////////////////
-// make sure all images min width = 650px
 // images to create for school talks (created using responsive-img-sizes.py and stored in data.json)
+// EXCLUDING thumbnail images ... create using: gulp images-swiper-gallery-thumbs
+// Array of arrays from "imgWidthsModal": ... in data.json
+// H. miyajimae 
+var imagesToCreate = [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 687]]
 
-// school talks
-var imagesToCreate = [[375, 563, 650, 800, 1024, 1200], [375, 563, 650, 800], [375, 563, 650, 772], [375, 563, 650, 800], [375, 563, 650, 800], [375, 563, 600]]
+
 
 // loop through each image set and create correct images for each img
 
@@ -375,17 +377,16 @@ gulp.task('images-swiper-gallery', function (respImages) {
             {
               '*.jpg': [
                 {
-                  width: imageSet[j], // for thumbnail img
+                  width: imageSet[j], 
                   rename: {
                     suffix: `-${imageSet[j]}px`,
                     extname: '.jpg'
                   },
                 },
-
           
-                // Convert images to the webp format 
+                // Convert images to webp format 
                 {
-                  width: imageSet[j], // for thumbnail img
+                  width: imageSet[j], 
                   rename: {
                     suffix: `-${imageSet[j]}px`,
                     extname: '.webp'
@@ -490,7 +491,7 @@ gulp.task('images-swiper-gallery-thumbs', function () {
 
 
 
-// ORIGINAL TASK CODE (NO LOOPS)
+// ORIGINAL images-swiper-gallery TASK CODE (NO LOOPS)
 // /////////////////////////////////////////////////// 4. swiper gallery //////////////////////////////////////////////////////////
 // // make sure all images min width = 650px
 // gulp.task('images-swiper-gallery', function () {
