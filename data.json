@@ -361,6 +361,34 @@
   
   }],
 
+
+  "sinomicrurusSauteriRespImgs": [{
+    "nameLowerCaseHyphenated": "sinomicrurus-sauteri",
+    "nameUpperCaseHyphenated": "Sinomicrurus-sauteri",
+    "name": "Sinomicrurus sauteri",
+    "commonName": "Taiwan Coral Snake",
+    "chineseName": "梭 德氏帶紋赤蛇",
+    "chineseNameRomanized": "(suo1de2shi4dai4wen2chi4she2)",
+    "status": "Status: Protected (Cat.II)",
+    "statusChinese": "保育等級: 保育類 (第二級)",
+    "danger": "HIGHLY VENOMOUS!",
+    "dangerChinese":"劇毒!",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 700], [375, 563, 650, 700], [375, 563, 650, 700], [375, 563, 650, 700], [375, 563, 650, 700], [375, 563, 650, 681]],
+    "imageHeightsModalMax":
+    [[466], [466], [466], [466], [466], [1024]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[432], [432], [432], [432], [432], [977]]
+
+  }],  
+
+
   "hebiusSauteriRespImgs": [{
     "nameLowerCaseHyphenated": "hebius-sauteri",
     "nameUpperCaseHyphenated": "Hebius-sauteri",
@@ -390,6 +418,134 @@
  }],
 
 
+ "sinomicrurusHatoriRespImgs": [{
+  "nameLowerCaseHyphenated": "sinomicrurus-hatori",
+  "nameUpperCaseHyphenated": "Sinomicrurus-hatori",
+  "name": "Sinomicrurus hatori",
+  "commonName": "Hatori's Coral Snake",
+  "chineseName": "羽鳥氏帶紋赤蛇",
+  "chineseNameRomanized": "(yu3niao3shi4dai4wen2chi4she2)",
+  "status": "Status: Protected (Cat.II)",
+  "statusChinese": "保育等級: 保育類 (第二級)",
+  "danger": "HIGHLY VENOMOUS!",
+  "dangerChinese":"劇毒!",
+  "maxWidthThumbs": "155",
+  "maxHeightThumbs": "200",
+  "aspectRatioClass": "325-226",
+  "manyImagesId": "",
+  "imgWidthsModal": 
+  [[375, 563, 650, 800], [375, 563, 650, 800, 1024], [375, 563, 650, 800]],
+  "imageHeightsModalMax":
+  [[533], [681], [533]],
+  "imgWidthsNonModal":
+  [[375, 563, 650], [375, 563, 650], [375, 563, 650]],
+  "imgHeightsNonModalMax":
+  [[433], [432], [433]]
+ }],
+
+
+ "oligodonFormosanusRespImgs": [{
+  "nameLowerCaseHyphenated": "oligodon-formosanus",
+  "nameUpperCaseHyphenated": "Oligodon-formosanus",
+  "name": "Oligodon formosanus",
+  "commonName": "Taiwan Kukri Snake",
+  "chineseName": "赤背松柏根",
+  "chineseNameRomanized": "(chi4bei4song1bo2gen1)",
+  "status": "Status: Not Protected",
+  "statusChinese": "保育等級: 非保育類",
+  "danger": "Non-venomous",
+  "dangerChinese":"無毒",
+  "maxWidthThumbs": "155",
+  "maxHeightThumbs": "200",
+  "aspectRatioClass": "325-226",
+  "manyImagesId": "",
+  "imgWidthsModal": 
+  [[375, 563, 650, 800, 1013], [375, 563, 650, 800, 929], [375, 563, 650, 800, 917], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 680]],
+  "imageHeightsModalMax":
+  [[768], [768], [768], [768], [680], [680], [682], [1024]],
+  "imgWidthsNonModal":
+  [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+  "imgHeightsNonModalMax":
+  [[492], [537], [544], [487], [431], [431], [432], [978]]
+ }],
+
+  "ptyasDhumnadesRespImgs": [{
+    "nameLowerCaseHyphenated": "ptyas-dhumnades",
+    "nameUpperCaseHyphenated": "Ptyas-dhumnades",
+    "name": "Ptyas dhumnades",
+    "commonName": "Big-eyed Ratsnake",
+    "chineseName": "過 山刀",
+    "chineseNameRomanized": "(guo4shan1dao1)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese":"無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 
+    1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 683], [375, 563, 650, 687]],
+    "imageHeightsModalMax":
+    [[687], [682], [680], [682], [654], [687], [687], [687], [1024], [1024]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[436], [432], [431], [432], [415], [436], [436], [436], [974], [968]]
+  }],
+
+  "myrrophisChinensisRespImgs": [{
+    "nameLowerCaseHyphenated": "myrrophis-chinensis",
+    "nameUpperCaseHyphenated": "Myrrophis-chinensis",
+    "name": "Myrrophis chinensis",
+    "commonName": "Chinese Water Snake",
+    "chineseName": "唐 水蛇",
+    "chineseNameRomanized": "(tang2shui3she2)",
+    "status": "Status: Protected (Category II)",
+    "statusChinese": "保育等級: 保育類 (第二級)",
+    "danger": "Mildly venomous",
+    "dangerChinese":"微毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],
+    "imageHeightsModalMax":
+    [[682], [683], [683]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[432], [433], [433]]
+  }],
+
+  "hypsiscopusPlumbeaRespImgs": [{
+    "nameLowerCaseHyphenated": "hypsiscopus-plumbea",
+    "nameUpperCaseHyphenated": "Hypsiscopus-plumbea",
+    "name": "Hypsiscopus plumbea",
+    "commonName": "Plumbeous Water Snake",
+    "chineseName": "(鉛色)水蛇",
+    "chineseNameRomanized": "(qian1se4shui3she2)",
+    "status": "Status: Protected (Category III)",
+    "statusChinese": "保育等級: 保育類 (第三級)",
+    "danger": "Mildly venomous",
+    "dangerChinese":"微毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "650-257",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 
+    1000]],
+    "imageHeightsModalMax":
+    [[506], [593], [414], [334], [472], [446]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[328], [385], [269], [217], [306], [289]]
+  }],
+
   "gonyosomaFrenatumRespImgs": [{
     "nameLowerCaseHyphenated": "gonyosoma-frenatum",
     "nameUpperCaseHyphenated": "Gonyosoma-frenatum",
@@ -398,7 +554,15 @@
     "chineseName": "灰 腹綠錦蛇",
     "chineseNameRomanized": "(hui1fu2lü4jin3she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese":"無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
+
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -434,11 +598,8 @@
       [432],
       [484],
       [432]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ]   
+
   }],
 
 
@@ -448,9 +609,17 @@
     "name": "Indotyphlops braminus",
     "commonName": "Brahminy Blind Snake",
     "chineseName": "盲 蛇",
+    "chineseName2": "鉤盲蛇",
     "chineseNameRomanized": "(mang2she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 900],
@@ -494,11 +663,8 @@
       [433],
       [433],
       [507]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ]    
+
   }],
 
 
@@ -510,7 +676,13 @@
     "chineseName": "台灣標蛇",
     "chineseNameRomanized": "(tai2wan1biao1she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
     
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
@@ -551,11 +723,8 @@
       [432],
       [432],
       [432]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ]    
+
   }],
 
 
@@ -567,7 +736,14 @@
     "chineseName": "標蛇",
     "chineseNameRomanized": "(biao1she2)",
     "status": "Status: Protected (Cat.II)",
+    "statusChinese": "保育等級: 保育類 (第二級)",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -600,11 +776,8 @@
       [434],
       [432],
       [432]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ]    
+
   }],
 
 
@@ -616,7 +789,14 @@
     "chineseName": "南蛇",
     "chineseNameRomanized": "(nan2she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1023],
@@ -657,11 +837,8 @@
       [436],
       [436],
       [867]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ]  
+
   }],
 
 
@@ -673,7 +850,14 @@
     "chineseName": "細 紋南蛇",
     "chineseNameRomanized": "(xi4wen2nan2she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -706,11 +890,8 @@
       [429],
       [432],
       [432]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ] 
+
   }],
 
 
@@ -722,7 +903,14 @@
     "chineseName": "福建頸 斑蛇",
     "chineseNameRomanized": "(fu2jian4jing1ban1she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800],
@@ -751,11 +939,8 @@
       [433],
       [433],
       [432]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ]    
+
   }],
 
 
@@ -767,7 +952,14 @@
     "chineseName": "茶 斑蛇",
     "chineseNameRomanized": "(cha2ban1she2)",
     "status": "Status: Protected (Cat. II)",
+    "statusChinese": "保育等級: 保育類 (第二級)",
     "danger": "Mildly venomous",
+    "dangerChinese": "",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "微毒",
+
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800],
@@ -808,11 +1000,8 @@
       [436],
       [867],
       [979]
-    ],    
-    "maxWidthThumbs": "155",
-    "maxHeightThumbs": "200",
-    "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    ]    
+
   }],
 
 
@@ -822,13 +1011,17 @@
     "name": "Rhabdophis swinhonis",
     "commonName": "Swinhoe's Grass Snake",
     "chineseName": "斯文豪氏游蛇",
+    "chineseName2": "台灣頸槽蛇",
     "chineseNameRomanized": "(si1wen2hao2shi4you2she2)",
+    "chineseNameRomanized2": "(tai2wan1jing3cao2she2)",
     "status": "Status: Protected (Cat.III)",
+    "statusChinese": "保育等級: 保育類 (第三級)",
     "danger": "Non-venomous",
+    "dangerChinese":"無毒",
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
-    "manyImagesId": "",
+    "manyImagesId": "",    
 
     "imgWidthsModal": 
     [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 843], [375, 563, 650, 800, 1024]],     
@@ -841,6 +1034,7 @@
     
   }],
 
+
   "hebiusSpRespImgs": [{
     "nameLowerCaseHyphenated": "hebius-sp",
     "nameUpperCaseHyphenated": "Hebius-sp",
@@ -849,7 +1043,9 @@
     "chineseName": "排 灣腹鏈",
     "chineseNameRomanized": "(pai2wan1fu4lian4she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
@@ -875,7 +1071,9 @@
     "chineseName": "白腹游蛇",
     "chineseNameRomanized": "(bai2fu2you2she2)",
     "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
     "danger": "Non-venomous",
+    "dangerChinese": "無毒",
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
