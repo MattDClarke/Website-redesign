@@ -1,0 +1,215 @@
+{% set species = elapheCarinataRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    ""
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }} - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Videos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=_KSvANeYVHs&NR=1"><i>Elaphe c. carinata</i> in ditch 1</a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=AQ5lDlgnptU"><i>Elaphe c. carinata</i> in ditch 2</a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=dqpumiTAJmU"><i>Elaphe c. carinata</i> vs. rat</a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=ZX-9egMPVG4"><i>Elaphe c. carinata</i> in terrarium</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Field Reports
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.fieldherpforum.com/forum/viewtopic.php?f=2&t=1137">Big Fat Stinking Goddess</a></li>
+                        <li><a class="site-link" href="http://120.124.77.4/tbgweb/cgi-bin/topic.cgi?forum=38&topic=1393"><i>E. carinata</i> eating Taiwan Habu (<i>Protobothrops mucrosquamatus</i>)</a></li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Colubrinae">Colubrinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    240 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Common throughout Taiwan and Orchid Island, up to 2000 m altitude. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0077">Distribution map</a>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    N. Vietnam (Hong River), Taiwan, C/South China (Gansu, Guangdong, Guangxi, Fujian, Zhejiang, Anhuei, Sichuan, Yunnan, Guizhou, Henan, Hebei, Hunan, Hubei, Jiangxi, Jiangsu, Shanxi, Shandong, Shaanxi), Japan (Ryukyu islands).
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Large snake; 
+                    total length up to 240 cm. There are 17-25 (21-25 at mid-body) rows of 
+                    scales, which are heavily keeled except for those in the first or second 
+                    rows. Head is elongate, slightly triangular; body is moderately heavy or 
+                    stout; tail is long. Eye is large; iris is light brown to rusty brown, 
+                    dappled with very fine flecks of dark brown and pupil is round to 
+                    vertically oval, jet black, surrounded by ring of golden orange. Tongue is 
+                    flesh-colored to red, with stem usually red and fork tips dark gray to 
+                    black. Upper head is olive gray to olive brown, and its dorsal shields are 
+                    distinct due to black pigment in sutures or along margins. Upper body is 
+                    olive yellow to olive brown, and most scales are distinct due to black 
+                    pigment on margins. Some individuals are uniform in color, however 
+                    others possess ill-defined cross markings on back or ill-defined bands due 
+                    to combination of scales with black margins and areas with black skin 
+                    between scales, and in other areas white skin may show between scales. 
+                    Posterior half of upper body and all upper tail are more uniform in 
+                    appearance. Ventral head is white to cream; lower labials are usually well 
+                    marked with black pigment on anterior margins. Ventral neck is cream white 
+                    to light gray, and pigmentation of irregular size and shape is 
+                    progressively greater and more intensive toward mid and posterior part of 
+                    ventral body while spots on outer quarter or third of the ventrals tend to 
+                    form broken longitudinal lines. Anal scale is divided and subcaudals are 
+                    paired. In the young the head may be less distinctly marked than in 
+                    adults. There is a minimum of black pigment along sutures of head shields 
+                    and the body scales may lack the black margins so characteristic to 
+                    adults. Some young individuals have dark cross bands anteriorly along the 
+                    vertebral line, and one or two light brown longitudinal stripes on sides 
+                    of body and extending onto tail while the ventrals may have little or no 
+                    pigment.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <div class="info-box-paragraph">
+                        <i>E. c. carinata</i> is one of the largest and heaviest snakes in Taiwan and venerated by many farmers 
+                        for its legendary rat-killing prowess. Some farmers, however, scared by the snake's formidable threat 
+                        behavior and overestimating its danger, often kill the snake on sight.
+                    </div>
+                    <div class="info-box-paragraph">
+                        A diurnal or nocturnal snake, <i>E.c. carinata</i> inhabits shrub and wooded areas as well as agricultural areas, 
+                        and is often found in open fields, meadows, rice paddies and even farmhouses. It mates in spring; females 
+                        produce 8-14 eggs of approximately 5x3 cm per clutch in summer and habitually protect them. It preys 
+                        extensively on mice, birds, bird eggs or frogs, and sometimes on grasshoppers, beetles, lizards or snakes.
+                    </div>
+                    <div class="info-box-paragraph">
+                        In fact, it prefers snakes to pretty much everything else, even venomous ones such as cobras, 
+                        kraits and habus. While it is not known whether it is completely immune to the venom of these 
+                        species, it certainly appears highly resistant against it, as this <a class="site-link" href="http://120.124.77.4/tbgweb/cgi-bin/topic.cgi?forum=38&topic=1393">photo series</a> of 
+                        an <i>E. carinata</i> killing and eating a Taiwan habu (<a class="site-link--species" href="protobothrops-mucrosquamatus.html">Protobothrops mucrosquamatus</a>) attests.
+                    </div>
+                    <div class="info-box-paragraph">
+                        In the wild it is active and moves quickly. It is vicious, strikes readily and attempts to bite; 
+                        some individuals held in captivity for months remain aggressive and cannot be handled with ease. 
+                        This snake has well-developed anal glands that can emit a very nauseous secretion.
+                    </div>
+                    In Taiwanese snake restaurants, <i>E. carinata</i> is the most commonly found species on the menu.
+                     Fortunately, due to a number of developments, the number of snake eateries in Taiwan has now 
+                     dwindled considerably.                                     
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        The common English name "King Ratsnake" refers to its habit of eating other snakes.
+                    </div>
+                    <div class="info-box-paragraph">
+                        "<i>The generic name Elaphe is derived from the Greek word elaphos which means "stag". 
+                        Unfortunately, <a class="site-link" href="http://en.wikipedia.org/wiki/Leopold_Fitzinger">Leopold Fitzinger</a> (1833) failed to give a reason why he chose this name. 
+                        One could guess that it refers to the antler-like marking on the head of the type species 
+                        Elaphe quatuorlineata sauromates, which also occurs in many other species.</i>" (<a class="site-link" href="http://books.google.com/books?id=q6o32VP0BHQC&pg=PA13&lpg=PA13&dq=%22failed+to+give+a+reason+why+he+chose%22&source=bl&ots=eRhFqoUdLc&sig=UiwMBSO3opVHDpGDd4p4FfhIQuM&hl=en&ei=wsbySpO9B42QkQWSlsGyAw&sa=X&oi=book_result&ct=result&resnum=1&ved=0CAgQ6AEwAA#v=">Source</a>)
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>Carinata</i> is Latin for "keeled" and refers to the snake's scalation.
+                    </div>
+                    The Chinese name <span lang="zh-TW">臭青 公/母</span> (chou4qing1gong1/mu3) means "Stinking God/Goddess" and refers 
+                    "<i>to this species' highly developed post-anal glands, that when picked up are frequently emptied, 
+                    with a very strong, bad odor</i>". (<a class="site-link" href="http://www.ratsnakes.com/Ecarinata.html">Source</a>)                
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Elaphe&species=carinata">Reptile Database</a></li>
+                    <li><a class="site-link" href="http://www.zoo-logic.co.uk/stinksnake.html"><i>E. c. carinata</i> - caresheet</a></li>
+                    <li><a class="site-link" href="http://www.ratsnakes.com/Ecarinata.html"><i>E. c. carinata</i> - Info on ratsnakes.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

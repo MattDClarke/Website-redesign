@@ -132,13 +132,13 @@
     "hrefChinese": "#",
     "chinese": "排 灣腹鏈"
   }, {
-    "href": "#",
+    "href": "sinonatrix-percarinata-suriki.html",
     "common": "Eastern Water Snake",
     "scientific": "Sinonatrix percarinata suriki",
     "hrefChinese": "#",
     "chinese": "白腹游蛇"
   }, {
-    "href": "#",
+    "href": "elaphe-carinata.html",
     "common": "King Ratsnake",
     "scientific": "Elaphe carinata",
     "hrefChinese": "#",
@@ -321,7 +321,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "130-59",
     "manyImagesId": "",
-
     "imgWidthsModal": 
     [[375, 563, 650, 800, 1024, 1200], [375, 563, 650, 800], [375, 563, 650, 772], [375, 563, 650, 800], [375, 563, 650, 800], [375, 563, 600]],
     "imageHeightsModalMax":
@@ -329,11 +328,9 @@
     "imgWidthsNonModal":
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 600]],
     "imgHeightsNonModalMax":
-    [[259], [436], [505], [436], [436], [800]]
-  
+    [[259], [436], [505], [436], [436], [800]] 
   }],
-
-    
+   
   "hebiusMiyajimaeRespImgs": [{
     "nameLowerCaseHyphenated": "hebius-miyajimae",
     "nameUpperCaseHyphenated": "Hebius-miyajimae",
@@ -349,7 +346,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": 
     [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],     
     "imageHeightsModalMax":
@@ -357,10 +353,8 @@
     "imgWidthsNonModal":
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
     "imgHeightsNonModalMax":
-    [[433], [432], [432], [432], [432]]
-  
+    [[433], [432], [432], [432], [432]] 
   }],
-
 
   "sinomicrurusSauteriRespImgs": [{
     "nameLowerCaseHyphenated": "sinomicrurus-sauteri",
@@ -385,9 +379,7 @@
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
     "imgHeightsNonModalMax":
     [[432], [432], [432], [432], [432], [977]]
-
   }],  
-
 
   "hebiusSauteriRespImgs": [{
     "nameLowerCaseHyphenated": "hebius-sauteri",
@@ -404,7 +396,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": 
     [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 687]],
     "imageHeightsModalMax":
@@ -413,8 +404,6 @@
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
     "imgHeightsNonModalMax":
     [[436], [436], [436], [436], [454], [487], [436], [436], [436], [968]]
-
-
  }],
 
 
@@ -442,7 +431,6 @@
   "imgHeightsNonModalMax":
   [[433], [432], [433]]
  }],
-
 
  "oligodonFormosanusRespImgs": [{
   "nameLowerCaseHyphenated": "oligodon-formosanus",
@@ -546,6 +534,108 @@
     [[328], [385], [269], [217], [306], [289]]
   }],
 
+  "calamariaPavimentataRespImgs": [{
+    "nameLowerCaseHyphenated": "calamaria-pavimentata",
+    "nameUpperCaseHyphenated": "Calamaria-pavimentata",
+    "name": "Calamaria pavimentata",
+    "commonName": "Collared Reed Snake",
+    "chineseName": "鐵 線蛇",
+    "chineseNameRomanized": "(tie3xian4she2)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese":"無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal":
+    [[375, 563, 650, 800, 1024, 1280, 1920, 2048], [375, 563, 650, 800, 999], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1023], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],
+    "imageHeightsModalMax":
+    [[1360], [768], [687], [686], [759], [683], [698]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[431], [499], [436], [435], [481], [433], [443]]
+  }],
+
+  "sibynophisChinensisChinensisRespImgs": [{
+    "nameLowerCaseHyphenated": "sibynophis-chinensis-chinensis",
+    "nameUpperCaseHyphenated": "Sibynophis-chinensis-chinensis",
+    "name": "Sibynophis chinensis chinensis",
+    "commonName": "Asiatic Many-Toothed Snake",
+    "chineseName": "黑 頭蛇",
+    "chineseNameRomanized": "(hei1tou2she2)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese":"無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024, 1280, 1920, 2144], [375, 563, 650, 800, 1024]],   
+    "imageHeightsModalMax":
+    [[768], [687], [687], [1424], [681]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[487], [436], [436], [431], [432]]
+  }],
+
+  "trimeresurusStejnegeriStejnegeriRespImgs": [{
+    "nameLowerCaseHyphenated": "trimeresurus-stejnegeri-stejnegeri",
+    "nameUpperCaseHyphenated": "Trimeresurus-stejnegeri-stejnegeri",
+    "name": "Trimeresurus stejnegeri stejnegeri",
+    "commonName": "Chinese Green Tree Viper",
+    "commonName2": "Bamboo Viper",
+    "chineseName": "赤尾青竹絲",
+    "chineseNameRomanized": "(chi4wei2qing1zhu2si1)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "VENOMOUS!",
+    "dangerChinese":"有毒!",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "id=\"swiper-pagination-many-images\"",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 835], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 882], [375, 563, 650, 800, 943], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 681], [375, 563, 650, 687], [375, 563, 650, 681]],
+    "imageHeightsModalMax":
+    [[681], [687], [687], [687], [768], [704], [687], [768], [766], [687], [768], [768], [687], [741], [683], [680], [687], [1024], [1024], [1024]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], 
+    [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[432], [436], [436], [436], [597], [446], [436], [487], [486], [436], [565], [529], [436], [470], [433], [431], [436], [977], [968], [977]]
+  }],
+
+  "ptyasMajorRespImgs": [{
+    "nameLowerCaseHyphenated": "ptyas-major",
+    "nameUpperCaseHyphenated": "Ptyas-major",
+    "name": "Ptyas major",
+    "commonName": "Greater Green Snake",
+    "chineseName": "青蛇",
+    "chineseNameRomanized": "(qing1she2)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese":"無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 955], [375, 563, 650, 800], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 515], [375, 563, 615], [375, 563, 650, 681], [375, 563, 650, 800, 1024, 1043]],
+    "imageHeightsModalMax":
+    [[687], [738], [687], [768], [532], [712], [687], [768], [768], [1024], [1391]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 515], [375, 563, 615], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[436], [468], [436], [522], [432], [451], [436], [768], [768], [977], [866]]
+  }],
+
   "gonyosomaFrenatumRespImgs": [{
     "nameLowerCaseHyphenated": "gonyosoma-frenatum",
     "nameUpperCaseHyphenated": "Gonyosoma-frenatum",
@@ -561,8 +651,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
-
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -599,9 +687,7 @@
       [484],
       [432]
     ]   
-
   }],
-
 
   "indotyphlopsBraminusRespImgs": [{
     "nameLowerCaseHyphenated": "indotyphlops-braminus",
@@ -618,8 +704,7 @@
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
-    "manyImagesId": "",
-    
+    "manyImagesId": "",  
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 900],
@@ -664,9 +749,7 @@
       [433],
       [507]
     ]    
-
   }],
-
 
   "achalinusFormosanusFormosanusRespImgs": [{
     "nameLowerCaseHyphenated": "achalinus-formosanus-formosanus",
@@ -682,8 +765,7 @@
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
-    "manyImagesId": "",
-    
+    "manyImagesId": "",   
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -724,9 +806,7 @@
       [432],
       [432]
     ]    
-
   }],
-
 
   "achalinusNigerRespImgs": [{
     "nameLowerCaseHyphenated": "achalinus-niger",
@@ -743,7 +823,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -759,7 +838,6 @@
       [667],
       [681],
       [681]
-
     ],
     "imgWidthsNonModal": [
       [375, 563, 650],
@@ -777,9 +855,7 @@
       [432],
       [432]
     ]    
-
   }],
-
 
   "ptyasMucosaRespImgs": [{
     "nameLowerCaseHyphenated": "ptyas-mucosa",
@@ -796,7 +872,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1023],
@@ -816,7 +891,6 @@
       [687],
       [686],
       [1024]
-
     ],
     "imgWidthsNonModal": [
       [375, 563, 650],
@@ -838,9 +912,7 @@
       [436],
       [867]
     ]  
-
   }],
-
 
   "ptyasKorrosRespImgs": [{
     "nameLowerCaseHyphenated": "ptyas-korros",
@@ -857,7 +929,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800, 1024],
@@ -873,7 +944,6 @@
       [676],
       [681],
       [681]
-
     ],
     "imgWidthsNonModal": [
       [375, 563, 650],
@@ -891,9 +961,7 @@
       [432],
       [432]
     ] 
-
   }],
-
 
   "plagiopholisStyaniRespImgs": [{
     "nameLowerCaseHyphenated": "plagiopholis-styani",
@@ -910,7 +978,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800],
@@ -924,7 +991,6 @@
       [533],
       [533],
       [680]
-
     ],
     "imgWidthsNonModal": [
       [375, 563, 650],
@@ -940,9 +1006,7 @@
       [433],
       [432]
     ]    
-
   }],
-
 
   "psammodynastesPulverulentusPapenfussiRespImgs": [{
     "nameLowerCaseHyphenated": "psammodynastes-pulverulentus-papenfussi",
@@ -959,7 +1023,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "微毒",
-
     "imgWidthsModal": [
       [375, 563, 650, 800, 1024],
       [375, 563, 650, 800],
@@ -979,7 +1042,6 @@
       [687],
       [1024],
       [1024]
-
     ],
     "imgWidthsNonModal": [
       [375, 563, 650],
@@ -1001,9 +1063,7 @@
       [867],
       [979]
     ]    
-
   }],
-
 
   "rhabdophisSwinhonisRespImgs": [{
     "nameLowerCaseHyphenated": "rhabdophis-swinhonis",
@@ -1022,7 +1082,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",    
-
     "imgWidthsModal": 
     [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 843], [375, 563, 650, 800, 1024]],     
     "imageHeightsModalMax":
@@ -1030,10 +1089,8 @@
     "imgWidthsNonModal":
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
     "imgHeightsNonModalMax":
-    [[483], [436], [392], [592], [446]]
-    
+    [[483], [436], [392], [592], [446]]  
   }],
-
 
   "hebiusSpRespImgs": [{
     "nameLowerCaseHyphenated": "hebius-sp",
@@ -1050,7 +1107,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": 
     [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],
     "imageHeightsModalMax":
@@ -1059,11 +1115,9 @@
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
     "imgHeightsNonModalMax":
     [[432], [432], [432], [432]]
-  
   }],
 
-
-  "sinonatrixPercarinataSurikiSpRespImgs": [{
+  "sinonatrixPercarinataSurikiRespImgs": [{
     "nameLowerCaseHyphenated": "sinonatrix-percarinata-suriki",
     "nameUpperCaseHyphenated": "Sinonatrix-percarinata-suriki",
     "name": "Sinonatrix percarinata suriki",
@@ -1078,7 +1132,6 @@
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
     "manyImagesId": "",
-
     "imgWidthsModal": 
     [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 946], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 957], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],
     "imageHeightsModalMax":
@@ -1087,9 +1140,33 @@
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
     "imgHeightsNonModalMax":
     [[436], [408], [527], [461], [470], [521], [433], [436], [434], [434], [434], [432]]
-  
-  }]
+  }],
 
+  "elapheCarinataRespImgs": [{
+    "nameLowerCaseHyphenated": "elaphe-carinata",
+    "nameUpperCaseHyphenated": "Elaphe-carinata",
+    "name": "Elaphe carinata carinata",
+    "commonName": "King Ratsnake",
+    "chineseName": "臭 青公",
+    "chineseNameRomanized": "(chou4qing1gong1)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1023], [375, 
+    563, 650, 800, 1024]],
+    "imageHeightsModalMax":
+    [[687], [648], [788], [681], [674], [1024]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[436], [411], [500], [432], [428], [650]]
+  }]
 
 
 }

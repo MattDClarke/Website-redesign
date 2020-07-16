@@ -1,0 +1,154 @@
+{% set species = sinonatrixPercarinataSurikiRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    ""
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }} - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae">Natricinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    100 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Throughout Taiwan, at elevations of 500-1000 m. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0069">Distribution map</a>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    Endemic to Taiwan.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    This snake is 
+                    small to medium size; total length up to 100 cm. There are 17-19 (19 at 
+                    mid-body) rows of scales, all strongly keeled except for the outermost 
+                    row. Head is oval to slightly triangular; body is moderately stout and 
+                    round; tail is long. Eye is medium to large; iris is yellow, darkened by 
+                    coarse diffuse black pigment, and pupil is round, slightly off center 
+                    (toward upper part of eye), black surrounded by ring of dull yellow. 
+                    Tongue is flesh-colored, darkened by diffuse black pigment. Upper head is 
+                    uniform dusty gray to olive gray; the labials are slightly lighter than 
+                    upper head due to light gray mottling. Upper body and tail are gray to 
+                    dark gray, with irregular cross bands of black or darker gray. Ventral 
+                    head and neck are dirty white to light cream gray, and the following 
+                    scales are tinted with gray which become progressively more intense posteriorly. 
+                    Ventral body and tail also bear scattered quadrangular or irregular marks 
+                    of blackish pigment which are irregularly arranged on sides. Anal scale is 
+                    divided and subcaudals are paired.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <div class="info-box-paragraph">
+                        This cathemeral (diurnal or nocturnal) snake inhabits rivers, creeks and 
+                        (to a lesser degree) ponds and is especially fond of very clean water. 
+                        It preys on shrimps, tadpoles, frogs, and fish. Females produce 4-25 eggs 
+                        per clutch in summer and habitually protect them; hatchlings measure about 
+                        17 cm in total length.
+                    </div>
+                    When disturbed, the snake can become quite aggressive; it may strike and attempt to bite, 
+                    and also empty its anal glands for extra olfactory effect.                                                             
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        <i>Sinonatrix</i>: "<i>Sino</i>" is New Latin for "Chinese"; <i>natrix</i> is Latin for "water snake";
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>percarinata</i> is Latin for "keeled", referring to the snake's keeled scales.
+                    </div>
+                    <div class="info-box-paragraph">
+                        The subspecies epithet <i>suriki</i> is a term used by certain Taiwanese tribes to describe 
+                        the animal's aggressiveness.
+                    </div>
+                    The Chinese name <span lang="zh-TW">白腹游蛇</span> (bai2fu4you2she2) literally means "white-bellied (<span lang="zh-TW">白腹</span>) 
+                    swimming snake (<span lang="zh-TW">游蛇</span>)".              
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Sinonatrix&species=percarinata">Reptile Database</a></li>
+                    <li><a class="site-link" href="http://ub-dok.uni-trier.de/diss/diss45/20030217/20030217.pdf">Population Ecology of Genus <i>Sinonatrix</i> in Taiwan (PDF)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

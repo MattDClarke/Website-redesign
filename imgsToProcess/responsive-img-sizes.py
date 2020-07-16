@@ -16,7 +16,7 @@ from PIL import Image
 
 # (1): name files
 # species name, first letter of the first word capitalized, hyphenated between words
-imgNamePrefix = 'Hypsiscopus-plumbea'
+imgNamePrefix = 'xxxx'
 
 # match end of img file name 
 r = re.compile(r'(\d)?\d(\.jpg)')
@@ -46,7 +46,17 @@ for filename in os.listdir('.'): # current directory
     w, h = im.size  # tuple
 
     # image sizes used depends on the max with of the original image
-    if (w > 1024 ):
+    if ( w > 1920 ):
+        imageSizes = [375, 563, 650, 800, 1024, 1280, 1920]
+        imageSizes.append(w)
+    elif (w == 1920 ):
+        imageSizes = [375, 563, 650, 800, 1024, 1280, 1920]
+    elif ( 1280 < w < 1920 ):
+        imageSizes = [375, 563, 650, 800, 1024, 1280]
+        imageSizes.append(w)
+    elif ( w == 1280 ):
+        imageSizes = [375, 563, 650, 800, 1024, 1280]
+    elif ( 1024 < w < 1280 ):
         imageSizes = [375, 563, 650, 800, 1024]
         imageSizes.append(w)
     elif (w == 1024 ):
@@ -63,6 +73,11 @@ for filename in os.listdir('.'): # current directory
         imageSizes = [375, 563, 650]
     elif ( 563 < w < 650 ):
         imageSizes = [375, 563]
+        imageSizes.append(w)
+    elif ( w == 563 ):
+        imageSizes = [375, 563]
+    elif ( 375 < w < 563 ):
+        imageSizes = [375]
         imageSizes.append(w)
 
     imgWidthsModal.append(imageSizes)

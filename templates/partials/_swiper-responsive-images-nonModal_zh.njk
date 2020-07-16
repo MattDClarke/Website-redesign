@@ -1,5 +1,5 @@
 <!-- Swiper non-Modal -->
-<div {{ species[0].manyImagesId }} class="swiper-container swiper-container-main">
+<div {{ species[0].manyImagesId | safe }} class="swiper-container swiper-container-main">
     <div class="swiper-wrapper">
         {%- set numberOfImages = species[0].imgWidthsModal | length -%}
         {%- for i in range(numberOfImages) %} 

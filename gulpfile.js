@@ -354,11 +354,9 @@ gulp.task('images-home', function () {
 // images to create for school talks (created using responsive-img-sizes.py and stored in data.json)
 // EXCLUDING thumbnail images ... create using: gulp images-swiper-gallery-thumbs
 // Array of arrays from "imgWidthsModal": ... in data.json
-// hypsiscopus-plumbea
-var imagesToCreate =  [[375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 
-  1000]]
-
-
+// King Ratsnake
+var imagesToCreate = [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1023], [375, 
+  563, 650, 800, 1024]]
 
 
 // loop through each image set and create correct images for each img
@@ -367,9 +365,10 @@ gulp.task('images-swiper-gallery', function (respImages) {
   for (let i = 0; i < imagesToCreate.length; i++) {
     let count = i + 1;
     const imageSet = imagesToCreate[i];
+    console.log(`Image set ${i}, ${imageSet}`);
 
     for (let j = 0; j < imageSet.length; j++) {
-
+      console.log(`Width of image ${imageSet[j]}`);
       
       let countString = count.toString();
       let srcText = 'imgSrc/*' + countString + '.jpg';

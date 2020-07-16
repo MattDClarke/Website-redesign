@@ -34,7 +34,7 @@
 #### Name images and get responsive image sizes info in json format   
 - cd into imgsToProcess
 - in resposive-img-sizes.py, change ```imgNamePrefix``` variable to species name or page name (first letter of the first word capitalized, hyphenated between words) 
-- run ``` py responsive-img-sizes.py```
+- run ```py responsive-img-sizes.py```
 - The images will be renamed and json output for the responsive images will be printed in the terminal
 - copy the output in terminal, add to data.json:
 ```
