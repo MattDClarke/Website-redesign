@@ -144,13 +144,13 @@
     "hrefChinese": "#",
     "chinese": "臭 青公"
   }, {
-    "href": "#",
+    "href": "amphiesma-stolatum.html",
     "common": "Buff Striped Keelback",
     "scientific": "Amphiesma stolatum",
     "hrefChinese": "#",
     "chinese": "花 浪蛇"
   }, {
-    "href": "#",
+    "href": "elaphe-taeniura-friesi.html",
     "common": "Taiwan Beauty Snake",
     "scientific": "Elaphe taeniura friesi",
     "hrefChinese": "#",
@@ -1166,6 +1166,82 @@
     [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
     "imgHeightsNonModalMax":
     [[436], [411], [500], [432], [428], [650]]
+  }],
+
+  "amphiesmaStolatumRespImgs": [{
+    "nameLowerCaseHyphenated": "amphiesma-stolatum",
+    "nameUpperCaseHyphenated": "Amphiesma-stolatum",
+    "name": "Amphiesma stolatum",
+    "commonName": "Buff Striped Keelback",
+    "chineseName": "花 浪蛇",
+    "chineseNameRomanized": "(hua1lang4she2)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal":
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]], 
+    "imageHeightsModalMax":
+    [[768], [681], [768], [681]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[487], [432], [487], [432]]
+  }],
+
+  "elapheTaeniuraFriesiRespImgs": [{
+    "nameLowerCaseHyphenated": "elaphe-taeniura-friesi",
+    "nameUpperCaseHyphenated": "Elaphe-taeniura-friesi",
+    "name": "Elaphe taeniura friesi",
+    "commonName": "Taiwan Beauty Snake",
+    "chineseName": "黑 眉錦蛇",
+    "chineseNameRomanized": "(hei1mei2jin3she2)",
+    "status": "Status: Protected (Cat. III)",
+    "statusChinese": "保育等級:保育類(第三級)",
+    "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 994], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 687]],
+    "imageHeightsModalMax":
+    [[768], [687], [687], [768], [687], [639], [687], [687], [687], [681], [1024]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 
+    650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[487], [436], [436], [502], [436], [405], [436], [436], [436], [432], [968]]
+  }],
+
+  "pythonMolurusBivittatusRespImgs": [{
+    "nameLowerCaseHyphenated": "python-molurus-bivittatus",
+    "nameUpperCaseHyphenated": "Python-molurus-bivittatus",
+    "name": "Python molurus bivittatus",
+    "commonName": "Burmese Python",
+    "chineseName": "緬甸蟒",
+    "chineseNameRomanized": "(mian3dian4mang3)",
+    "status": "Status: Not Protected",
+    "statusChinese": "保育等級: 非保育類",
+    "danger": "Non-venomous",
+    "dangerChinese": "無毒",
+    "maxWidthThumbs": "155",
+    "maxHeightThumbs": "200",
+    "aspectRatioClass": "325-226",
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1000], [375, 550], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 600], [375, 563, 650, 800, 1024], [375, 563, 650, 669]],
+    "imageHeightsModalMax":
+    [[533], [596], [591], [768], [719], [515], [768], [768], [400], [768], [1000]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 550], [375, 563, 650], [375, 563, 650], [375, 563, 600], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[433], [387], [384], [487], [467], [515], [487], [487], [400], [487], [971]]
   }]
 
 

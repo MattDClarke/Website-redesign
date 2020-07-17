@@ -1,0 +1,193 @@
+{% set species = pythonMolurusBivittatusRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    ""
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }} - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Videos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.naturefootage.com/video_clips/RBA01_048">Burmese Python in the Wild</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    More Photos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://photovalet.com/ARSV01P10_10.html">Close-ups at Photovalet.com</a></li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Pythonidae">Pythoninae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    360 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Only on the <a class="site-link" href="http://en.wikipedia.org/wiki/Kinmen">Kinmen archipelago</a> (<span lang="zh-TW">金門</span>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    The Burmese python is a subspecies of <i>Python molurus</i>, which is found throughout 
+                    southeast Asia, from Pakistan to Indonesia (though absent from the Philippines). 
+                    The subspecies bivittatus has the largest range of the three subspecies - 
+                    including southern China, Indochina, Burma, and portions of Indonesia 
+                    (Borneo, Java, Sumatra, and the Celeb Islands). (<a class="site-link" href="http://www.seaworld.org/animal-info/animal-bytes/animalia/eumetazoa/coelomates/deuterostomes/chordata/craniata/reptilia/squamata/burmese-python.htm">Source</a>)
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    This is one of the largest of all snakes, growing up to eight meters 
+                    (but usually seven) and weighing up to 190 pounds. Its coloration is a 
+                    light yellowish cream with a series of brown elongated rectangular 
+                    blotches edged with black. There is a lance-shaped mark on the head and neck. 
+                    There are a number of facial pits, which are sensitive to changes in temperature 
+                    and allow the python to locate warm-blooded prey hiding in concealed areas. (<a class="site-link" href="http://www.honoluluzoo.org/burmese_python.htm">Source</a>)
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <div class="info-box-paragraph">
+                        The nocturnal Burmese python lives in lowland forests and swamps, where it feeds on 
+                        mammals and birds. The snake uses its sharp backward pointing teeth to 
+                        seize its prey, then wraps its powerful body two or more times around the 
+                        prey while at the same time contracting its muscles, killing the prey by 
+                        asphyxiation.                                                                             
+                    </div>
+                    <div class="info-box-paragraph">
+                        Pythons move by undulating the ribs backwards and forwards by muscular action while the 
+                        ventral scales grip the substrate. They climb well and can suspend 
+                        themselves by their prehensile tail. They are also quite at home in the 
+                        water, being a good swimmer, and are able to stay submerged for up to half 
+                        an hour. In the northern parts of its global range they may hibernate for 
+                        some months during the cold season in a hollow tree, a hole in the 
+                        riverbank or under rocks. 
+                    </div>
+                    Sexual maturity is reached in 2-3 years. Pythons are oviparous, and after breeding in 
+                    early spring, an average of 12-36 eggs are laid, which the female coils 
+                    around to incubate. The incubation period is two months or more. The rate 
+                    of growth is influenced by the conditions under which the snake lives. 
+                    Pythons have been known to live up to 25 years (<a class="site-link" href="http://www.honoluluzoo.org/burmese_python.htm">Source</a>).                                                                           
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        <i>Python</i> : From Ancient Greek Πύθων (Puthōn), the name of the mythological 
+                        enormous serpent at Delphi slain by Apollo; from Πυθώ (Pūthō), the early 
+                        name of Delphi, from πυθώ (puthō), “‘to rot, to decay’”). (<a class="site-link" href="http://www.etymonline.com/index.php?term=python">Source</a>)
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>molurus</i> : after the Greek <i>molouros</i> = some kind of snake, the identity of 
+                        which is now uncertain (fide WALL 1921). (<a class="site-link" href="http://tigr.org/reptiles/species.php?genus=Python&species=molurus">Reptile Database</a>)
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>bivittatus</i>: from the Latin prefix <i>bi</i> = two or dual, and <i>vitta</i> = band or stripe
+                    </div>
+                    The Chinese name <span lang="zh-TW">緬甸蟒</span> (mian3dian4mang3) means "Burmese (<span lang="zh-TW">緬甸</span>) python (<span lang="zh-TW">蟒</span>)"            
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Notes
+                </div>
+                <div class="info-box-text">
+	                <i>P. molurus bivittatus</i> was reclassified in 2009 as <i>P. bivittatus bivittatus</i>. More info <a class="site-link" href="http://www.captivebredreptileforums.co.uk/boas-pythons/30542-new-burmese-classifications.html">here</a>.
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Python&species=bivittatus">Reptile Database</a></li>
+                    <li><a class="site-link" href="http://en.wikipedia.org/wiki/Burmese_Python">Wikipedia</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

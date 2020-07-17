@@ -1,0 +1,198 @@
+{% set species = elapheTaeniuraFriesiRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    ""
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }} - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Videos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=kAYsWWchI5k">Taiwan Beauty Snake eating mouse (1)</a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=c8Q77saURbE">Taiwan Beauty Snake eating mouse (2)</a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=LzzTkmTjdZQ">Hand-feeding Taiwan Beauty Snake</a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/watch?v=soRw96mn-LI">Taiwan Beauty Snake drinking</a></li>
+                        <li><a class="site-link" href="http://www.youtube.com/user/TheBeautySnake">More videos of Taiwan Beauty Snake feeding</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Field Reports
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://www.fieldherpforum.com/forum/viewtopic.php?f=2&t=198">Two Monster Taiwan Beauty Snakes</a></li>
+                    </ul>     
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    More Photos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=586002">Taiwan Beauty Snakes in the wild</a></li>
+                        <li><a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=302275">More Taiwan Beauty Snakes in the wild</a></li>
+                        <li><a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=589820">Juvenile Taiwan Beauty Snake in the wild</a></li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Colubrinae">Colubrinae</a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                    270 cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    Throughout Taiwan, up to 2000 m altitude. Not common. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0078">Distribution map</a>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    This subspecies is endemic to Taiwan.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+                    Large snake; 
+                    total length up to 280 cm. There are 17-25 (25 at mid-body) rows of 
+                    scales, which are feebly keeled except those on the flanks. Head is 
+                    roughly triangular; body is moderately heavy or robust; tail is long. Eye 
+                    is medium to large; iris is olive gray to dirty yellow, darkened by fine 
+                    diffuse black pigment, and a broad gray black to black horizontal band 
+                    runs across eye and appears as continuation of prominent dark band behind 
+                    eye; pupil is round, jet black with ring of dull yellow. Tongue is large, 
+                    with black to blue-black stem which is darker than fork tips. Upper head 
+                    is olive yellow to dark olive gray and may be tinged with brown; the 
+                    labials are lighter. There is a prominent black band extending from eye 
+                    near to corner of mouth. The general color of the upper body is olive 
+                    yellow to yellow gray tinged with varying shades of green and black. In 
+                    the anterior two-thirds of body, there are two dorsal rows of black 
+                    blotches and two on the flanks. On the posterior body, the designs turn 
+                    into a broad median stripe of olive yellow and two lateral series of broad 
+                    dark (which appear as two intact lateral stripes in tail), beneath which 
+                    there are two light yellow to yellow stripes. Ventral head and neck are 
+                    white to cream. The other areas of the ventral body and tail are yellow, 
+                    with few small irregular gray or gray black designs anteriorly followed by 
+                    more numerous and progressively darker designs posteriorly. Most designs 
+                    occur in outer quarter or third of the ventrals and form a pair of 
+                    longitudinal bands in posterior third of body and in tail. Anal scale is 
+                    divided and subcaudals are paired.
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    <i>Elaphe taeniurus friesei</i> is the largest snake in Taiwan. This cathemeral 
+                    (diurnal as well as nocturnal) ratsnake is found in grasslands and forests in lowlands 
+                    or mountains, as well as around human dwellings. It preys on frogs, birds, bird eggs, 
+                    and rodents. It mates in May; females produce 2-13 eggs of approximately 5x3 cm per 
+                    clutch in summer. Hatchlings measure about 40 cm in total length. It is quite agile, 
+                    moves fairly fast on the ground as well as in shrubs or trees. This snake is docile 
+                    and adapts well to captivity. When first confined, it may assume a defensive attitude 
+                    and emit low hissing sounds.                                                            
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        "<i>The genus Orthriophis is named for the early morning activity of its species. 
+                        Orthriophis stems from the Greek words orthros, meaning "dawn", and ophis = snake.</i>" (<a class="site-link" href="http://www.venomdoc.com/downloads/Utiger_Elaphe_Phylogeny.pdf">Source</a>)                                                 
+                    </div>
+                    <div class="info-box-paragraph">
+                        <i>taeniurus</i> stems from the Greek <i>taenia</i> = ribbon and <i>oura</i> = tail, referring to the striped tail.
+                    </div>
+                    The Chinese name <span lang="zh-TW">黑眉錦蛇</span> (hei1mei2jin3she2) means "Black-browed (<span lang="zh-TW">黑眉</span>) Beauty Snake (<span lang="zh-TW">錦蛇</span>)".               
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Orthriophis&species=taeniurus">Reptile Database</a></li>
+                    <li><a class="site-link" href="http://species.wikimedia.org/wiki/Orthriophis_taeniurus_friesei">Wikispecies</a></li>
+                    <li><a class="site-link" href="http://blogs.thatpetplace.com/thatreptileblog/2008/09/26/the-natural-history-and-captive-husbandry-of-the-taiwan-beauty-snake-or-chinese-ratsnake-orthriophis-formerly-%C3%A2%E2%82%AC%C5%93elaphe%C3%A2%E2%82%AC%C2%9D-taeniurus-friesei/">Natural History and Captive Husbandry of the Taiwan Beauty Snake</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

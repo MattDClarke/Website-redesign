@@ -354,9 +354,8 @@ gulp.task('images-home', function () {
 // images to create for school talks (created using responsive-img-sizes.py and stored in data.json)
 // EXCLUDING thumbnail images ... create using: gulp images-swiper-gallery-thumbs
 // Array of arrays from "imgWidthsModal": ... in data.json
-// King Ratsnake
-var imagesToCreate = [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1023], [375, 
-  563, 650, 800, 1024]]
+// Burmese Python
+var imagesToCreate = [[375, 563, 650, 800], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1000], [375, 550], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 600], [375, 563, 650, 800, 1024], [375, 563, 650, 669]]
 
 
 // loop through each image set and create correct images for each img
