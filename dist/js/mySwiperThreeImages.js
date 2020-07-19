@@ -20,9 +20,9 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     
     //runCallbacksOnInit: true,
     observer: true,
-    observeParents: true,
-    observeChildren: true,
-    spaceBetween: 0,
+    //observeParents: true,
+    //observeChildren: true,
+    //spaceBetween: 0,
 
     pagination: {
         el: '.swiper-pagination',
@@ -62,8 +62,8 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     var swiperModal = new Swiper('.swiper-container-modal', {
     observer: true,
     observeParents: true,
-    observeChildren: true,
-    spaceBetween: 0,
+    //observeChildren: true,
+    //spaceBetween: 0,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -89,9 +89,39 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     },
     loop: true
 
-
-
     });
+
+    var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0];
+    var nextBtn = document.getElementById('swiper-button-next-modal');
+    var prevBtn = document.getElementById('swiper-button-prev-modal');
+    var modalImg = document.querySelectorAll('.swiper-slide-img-modal');
+    swiperModal.on('zoomChange', function () {
+        if (swiperModal.zoom.scale === 1) {
+            // it was zoomed out when zoomChange event fired (click)... now zoomed in
+            swiperModal.keyboard.disable();
+            swiperModal.allowSlideNext = false;
+            swiperModal.allowSlidePrev = false;
+            closeBtnModal.classList.add("mySwiperBtnHide");
+            nextBtn.classList.add("mySwiperBtnHide");
+            prevBtn.classList.add("mySwiperBtnHide");
+            modalImg.forEach(element => { 
+                element.style.cursor = "zoom-out"; 
+            })
+        } 
+        else {
+            console.log("zoomed out");
+            swiperModal.keyboard.enable();
+            swiperModal.allowSlideNext = true;
+            swiperModal.allowSlidePrev = true;
+            closeBtnModal.classList.remove("mySwiperBtnHide");
+            nextBtn.classList.remove("mySwiperBtnHide");
+            prevBtn.classList.remove("mySwiperBtnHide");
+            modalImg.forEach(element => { 
+                element.style.cursor = "zoom-in"; 
+            })
+            swiperModal.update();
+        }
+    })   
 
     // hacky attempt to fix initial height issue (extra space below image initially...)
     document.addEventListener('DOMContentLoaded', function() {
@@ -103,7 +133,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     // Get modal element
     var modal = document.getElementById('simpleModal');
     // Get open modal button
-    var modalBtn = document.querySelectorAll('.swiper-slide-img'); // select all swiper-slides (outside modal)
+    var modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides (outside modal)
     // close button
     var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0]; // returns an array... just get first one (only one element with this class)
 

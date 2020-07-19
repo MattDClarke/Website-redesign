@@ -20,9 +20,9 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     
     //runCallbacksOnInit: true,
     observer: true,
-    observeParents: true,
-    observeChildren: true,
-    spaceBetween: 0,
+    //observeParents: true,
+    //observeChildren: true,
+    //spaceBetween: 0,
 
     pagination: {
         el: '.swiper-pagination',
@@ -62,16 +62,21 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     var swiperModal = new Swiper('.swiper-container-modal', {
     observer: true,
     observeParents: true,
-    observeChildren: true,
-    spaceBetween: 0,
+    //observeChildren: true,
+    //spaceBetween: 0,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     zoom: {
         maxRatio: 2,
+        minRatio: 2,
         toggle: true,  // enable zoom-in by double tapping slide
     },
+
+    // navigation: {
+    //     hideOnClick: true,
+    // },
 
     preloadImages: false,
     // Enable lazy loading
@@ -81,7 +86,6 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
         //loadOnTransitionStart: true,
     },
 
-
     effect: 'coverflow',
     coverflowEffect: {
         rotate: 60,
@@ -89,9 +93,39 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     },
     loop: true
 
-
-
     });
+
+    var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0];
+    var nextBtn = document.getElementById('swiper-button-next-modal');
+    var prevBtn = document.getElementById('swiper-button-prev-modal');
+    var modalImg = document.querySelectorAll('.swiper-slide-img-modal');
+    swiperModal.on('zoomChange', function () {
+        if (swiperModal.zoom.scale === 1) {
+            // it was zoomed out when zoomChange event fired (click)... now zoomed in
+            swiperModal.keyboard.disable();
+            swiperModal.allowSlideNext = false;
+            swiperModal.allowSlidePrev = false;
+            closeBtnModal.style.display = 'none';
+            nextBtn.style.display = 'none';
+            prevBtn.style.display = 'none';
+            modalImg.forEach(element => { 
+                element.style.cursor = "zoom-out"; 
+            })
+        } 
+        else {
+            console.log("zoomed out");
+            swiperModal.keyboard.enable();
+            swiperModal.allowSlideNext = true;
+            swiperModal.allowSlidePrev = true;
+            closeBtnModal.style.display = 'block';
+            nextBtn.style.display = 'block';
+            prevBtn.style.display = 'block';
+            modalImg.forEach(element => { 
+                element.style.cursor = "zoom-in"; 
+            })
+        }
+    })
+
 
     // hacky attempt to fix initial height issue (extra space below image initially...)
     document.addEventListener('DOMContentLoaded', function() {
@@ -105,9 +139,9 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     // Get modal element
     var modal = document.getElementById('simpleModal');
     // Get open modal button
-    var modalBtn = document.querySelectorAll('.swiper-slide-img'); // select all swiper-slides (outside modal)
+    var modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides (outside modal)
     // close button
-    var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0]; // returns an array... just get first one (only one element with this class)
+    //var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0]; // returns an array... just get first one (only one element with this class)
 
     modalBtn.forEach(element => { 
         element.addEventListener('click', openModal); // add an click event listener for each swiper-slide (outside the modal)

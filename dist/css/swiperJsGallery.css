@@ -57,12 +57,13 @@
   }
 }
 
-.swiper-slide-img:hover {
-  cursor: pointer;
-}
-
 .swiper-slide-img-non-modal {
   width: 100%;
+}
+
+.swiper-slide-img-non-modal:hover {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .swiper-pagination {
@@ -308,5 +309,10 @@
   border: 0;
   max-height: 100vh;
   max-width: 100vw;
+}
+
+.swiper-slide-img-modal {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 /*# sourceMappingURL=swiperJsGallery.css.map */
