@@ -1,0 +1,160 @@
+{% set species = ovophisMonticolaMakazayazayaRespImgs %}
+{% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    ""
+{% endblock %}
+{% block headLinks %}
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiperJsGallery.min.css">
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+{% endblock %}
+{% block title %}
+    {{ species[0].name }} - {{ species[0].commonName }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-box">
+        <h1 class="header--species">{{ species[0].name }}</h1>
+        <h2 class="header--name">{{ species[0].commonName }}</h2>
+        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h3 class="header--status">{{ species[0].status }}</h3>
+        <h4 class="header--danger">{{ species[0].danger }}</h4>
+    </div>                      
+
+    {% include "partials/_swiper-responsive-images-modal.njk" %}
+    {% include "partials/_swiper-responsive-images-nonModal.njk" %}
+    {% include "partials/_swiper-responsive-images-thumbs.njk" %}
+
+    <div class="text-box-container">
+        <div class="text-box--species-media">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Videos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    More Photos
+                </div>
+                <div class="info-box-text">
+                    <ul class="my-list2 info-box-text my-list-1--species">
+                        <li><a class="site-link" href=""></a></li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-box-container text-box-container-info">
+        <div class="text-box--species">
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Family
+                </div>
+                <div class="info-box-text">
+                    Colubridae, subfamily <a class="site-link" href=""></a>
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Max. length
+                </div>
+                <div class="info-box-text">
+                     cm
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Occurrence in Taiwan
+                </div>
+                <div class="info-box-text">
+                    (<a class="site-link" href="">Distribution map</a>) 
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Global Distribution
+                </div>
+                <div class="info-box-text">
+                    
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Description
+                </div>
+                <div class="info-box-text">
+
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Biology & Ecology
+                </div>
+                <div class="info-box-text"> 
+                    
+                    <a class="site-link--species" href=".html"></a>.                                                             
+                </div>
+            </div>
+
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Etymology
+                </div>
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+
+                    </div>
+                    <div class="info-box-paragraph">
+                        <a class="site-link" href=""></a>
+                    </div>
+
+                   <span lang="zh-TW"></span>                 
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Notes
+                </div>
+                <div class="info-box-text">
+	                
+                </div>
+            </div>
+            <div class="species-info-box">
+                <div class="info-box-header">          
+                    Further Info
+                </div>
+                <ul class="my-list2 info-box-text my-list-1--species">
+                    <li><a class="site-link" href="">Reptile Database</a></li>
+                    <li><a class="site-link" href=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/mySwiper.js"></script>
+
+{% endblock %}

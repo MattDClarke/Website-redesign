@@ -118,8 +118,8 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
             swiperModal.allowSlideNext = true;
             swiperModal.allowSlidePrev = true;
             closeBtnModal.style.display = 'block';
-            nextBtn.style.display = 'block';
-            prevBtn.style.display = 'block';
+            nextBtn.style.display = 'flex';
+            prevBtn.style.display = 'flex';
             modalImg.forEach(element => { 
                 element.style.cursor = "zoom-in"; 
             })

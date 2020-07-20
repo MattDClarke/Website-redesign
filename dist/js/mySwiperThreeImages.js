@@ -101,9 +101,9 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
             swiperModal.keyboard.disable();
             swiperModal.allowSlideNext = false;
             swiperModal.allowSlidePrev = false;
-            closeBtnModal.classList.add("mySwiperBtnHide");
-            nextBtn.classList.add("mySwiperBtnHide");
-            prevBtn.classList.add("mySwiperBtnHide");
+            closeBtnModal.style.display = 'none';
+            nextBtn.style.display = 'none';
+            prevBtn.style.display = 'none';
             modalImg.forEach(element => { 
                 element.style.cursor = "zoom-out"; 
             })
@@ -113,15 +113,15 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
             swiperModal.keyboard.enable();
             swiperModal.allowSlideNext = true;
             swiperModal.allowSlidePrev = true;
-            closeBtnModal.classList.remove("mySwiperBtnHide");
-            nextBtn.classList.remove("mySwiperBtnHide");
-            prevBtn.classList.remove("mySwiperBtnHide");
+            closeBtnModal.style.display = 'block';
+            nextBtn.style.display = 'flex';
+            prevBtn.style.display = 'flex';
             modalImg.forEach(element => { 
                 element.style.cursor = "zoom-in"; 
             })
-            swiperModal.update();
         }
-    })   
+    })
+
 
     // hacky attempt to fix initial height issue (extra space below image initially...)
     document.addEventListener('DOMContentLoaded', function() {
