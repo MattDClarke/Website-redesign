@@ -16,7 +16,7 @@ from PIL import Image
 
 # (1): name files
 # species name, first letter of the first word capitalized, hyphenated between words
-imgNamePrefix = 'xxx'
+imgNamePrefix = 'Rhabdophis-tigrinus-formosanus'
 
 # match end of img file name 
 r = re.compile(r'(\d)?\d(\.jpg)')
@@ -31,7 +31,7 @@ for filename in os.listdir('.'): # current directory
 
 
 
-# pause a bit to make sure all images created
+# pause a bit to make sure all images created (just incase... I did not check if this is needed...)
 time.sleep(1)
 
 

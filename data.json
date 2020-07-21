@@ -1258,7 +1258,16 @@
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024, 1280, 1824], [375, 563, 650, 768], [375, 563, 650, 800], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 952], [375, 
+    563, 650, 800, 1024], [375, 563, 650, 800, 847]],
+    "imageHeightsModalMax":
+    [[1187], [919], [600], [768], [768], [683], [768]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[422], [777], [487], [487], [524], [433], [589]]
   }],
 
   "pseudoxenodonStejnegeriStejnegeriRespImgs": [{
@@ -1275,7 +1284,15 @@
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    "manyImagesId": "",
+    "imgWidthsModal":
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]], 
+    "imageHeightsModalMax":
+    [[683], [683], [680]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[433], [433], [431]]
   }],
 
   "rhabdophisTigrinusFormosanusRespImgs": [{
@@ -1292,7 +1309,15 @@
     "maxWidthThumbs": "155",
     "maxHeightThumbs": "200",
     "aspectRatioClass": "325-226",
-    "manyImagesId": ""
+    "manyImagesId": "",
+    "imgWidthsModal": 
+    [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]],
+    "imageHeightsModalMax":
+    [[683], [681], [681], [681], [681], [681], [681], [681], [681], [681]],
+    "imgWidthsNonModal":
+    [[375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650], [375, 563, 650]],
+    "imgHeightsNonModalMax":
+    [[433], [432], [432], [432], [432], [432], [432], [432], [432], [432]]
   }],
 
   "daboiaRusselliSiamensisRespImgs": [{
@@ -1643,7 +1668,7 @@
     "chineseName": "黑唇清斑海蛇",
     "chineseNameRomanized": "(hei1chun2qing1ban1hai3she2)",
     "status": "Status: Not protected",
-    "statusChinese": "保育等級： 非保育類",
+    "statusChinese": "保育等級：非保育類",
     "danger": "HIGHLY VENOMOUS!",
     "dangerChinese": "劇毒!",
     "maxWidthThumbs": "155",

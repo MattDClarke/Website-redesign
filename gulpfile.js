@@ -354,8 +354,9 @@ gulp.task('images-home', function () {
 // images to create for school talks (created using responsive-img-sizes.py and stored in data.json)
 // EXCLUDING thumbnail images ... create using: gulp images-swiper-gallery-thumbs
 // Array of arrays from "imgWidthsModal": ... in data.json
-// Burmese Python
-var imagesToCreate = [[375, 563, 650, 800], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1000], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1000], [375, 550], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 600], [375, 563, 650, 800, 1024], [375, 563, 650, 669]]
+// species name - lowercase and hyphenated between words
+var speciesName = 'rhabdophis-tigrinus-formosanus'
+var imagesToCreate = [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024]]
 
 
 // loop through each image set and create correct images for each img
@@ -409,7 +410,7 @@ gulp.task('images-swiper-gallery', function (respImages) {
             }
           )
         )
-        .pipe(gulp.dest('imgDist'))
+        .pipe(gulp.dest(`dist/images/${speciesName}`))
     }
   }
   respImages();
@@ -480,7 +481,7 @@ gulp.task('images-swiper-gallery-thumbs', function () {
         }
       )
     )
-    .pipe(gulp.dest('imgDist'))
+    .pipe(gulp.dest(`dist/images/${speciesName}`))
 })
 
 
