@@ -8,7 +8,7 @@
 
 # (2)
 # create .json output for responsive images (widths and heights) (responsive images made using gulp)
-# need to CD into imgsToProcess directory
+# need to CD into imgSrc directory
 
 import os, re, time
 from PIL import Image
@@ -16,7 +16,7 @@ from PIL import Image
 
 # (1): name files
 # species name, first letter of the first word capitalized, hyphenated between words
-imgNamePrefix = 'Rhabdophis-tigrinus-formosanus'
+imgNamePrefix = 'Deinagkistrodon-acutus'
 
 # match end of img file name 
 r = re.compile(r'(\d)?\d(\.jpg)')
