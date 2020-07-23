@@ -75,7 +75,7 @@
 <br>
 
 #### Create all image variants using gulp-responsive-images
-- cd ..
+- cd .. (not required, gulp will still run task)
 - add "imgWidthsModal": array to gulpfile.js (add it as var imagesToCreate) for images-swiper-gallery task
 - add species name (lowercase, hyphenated) to gulpfile.js (add it as var speciesName)
 ```

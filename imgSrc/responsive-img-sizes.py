@@ -16,7 +16,7 @@ from PIL import Image
 
 # (1): name files
 # species name, first letter of the first word capitalized, hyphenated between words
-imgNamePrefix = 'Deinagkistrodon-acutus'
+imgNamePrefix = 'Laticauda-laticaudata'
 
 # match end of img file name 
 r = re.compile(r'(\d)?\d(\.jpg)')
