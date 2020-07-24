@@ -77,8 +77,32 @@
   }
 }
 
+@media all and (max-width: 341px) {
+  #swiper-pagination-many-images15.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -6px;
+  }
+}
+
+@media all and (max-width: 364px) {
+  #swiper-pagination-many-images16.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -6px;
+  }
+}
+
+@media all and (max-width: 409px) {
+  #swiper-pagination-many-images18.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -6px;
+  }
+}
+
 @media all and (max-width: 452px) {
-  #swiper-pagination-many-images.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  #swiper-pagination-many-images20.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -6px;
+  }
+}
+
+@media all and (max-width: 541px) {
+  #swiper-pagination-many-images24.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -6px;
   }
 }

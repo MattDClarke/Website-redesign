@@ -74,6 +74,8 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
         toggle: true,  // enable zoom-in by double tapping slide
     },
 
+
+
     // navigation: {
     //     hideOnClick: true,
     // },
@@ -120,6 +122,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
             closeBtnModal.style.display = 'block';
             nextBtn.style.display = 'flex';
             prevBtn.style.display = 'flex';
+            swiperModal.navigation.update();
             modalImg.forEach(element => { 
                 element.style.cursor = "zoom-in"; 
             })

@@ -12,7 +12,11 @@ $colors: (
 
 
 $small-screen: 700px;  // for resizing img carousel ( ...)
-$mobile-pagination: 452px;  // for pagination margin of T. s. stejnegeri
+$mobile-pagination15: 341px;  // for pagination of carousel with 15 images
+$mobile-pagination16: 364px;
+$mobile-pagination18: 409px;
+$mobile-pagination20: 452px;
+$mobile-pagination24: 541px;
 
 @mixin small-screen {
     @media all and (max-width: #{$small-screen}) {
@@ -20,12 +24,31 @@ $mobile-pagination: 452px;  // for pagination margin of T. s. stejnegeri
     }
 }
 
-@mixin mobile-pagination {
-    @media all and (max-width: #{$mobile-pagination}) {
+@mixin mobile-pagination15 {
+    @media all and (max-width: #{$mobile-pagination15}) {
         @content;
     }
 }
-
+@mixin mobile-pagination16 {
+    @media all and (max-width: #{$mobile-pagination16}) {
+        @content;
+    }
+}
+@mixin mobile-pagination18 {
+    @media all and (max-width: #{$mobile-pagination18}) {
+        @content;
+    }
+}
+@mixin mobile-pagination20 {
+    @media all and (max-width: #{$mobile-pagination20}) {
+        @content;
+    }
+}
+@mixin mobile-pagination24 {
+    @media all and (max-width: #{$mobile-pagination24}) {
+        @content;
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -115,8 +138,28 @@ $mobile-pagination: 452px;  // for pagination margin of T. s. stejnegeri
 }
  
 
-#swiper-pagination-many-images.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-    @include mobile-pagination {
+#swiper-pagination-many-images15.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    @include mobile-pagination15 {
+        bottom: -6px;
+    } 
+}
+#swiper-pagination-many-images16.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    @include mobile-pagination16 {
+        bottom: -6px;
+    } 
+}
+#swiper-pagination-many-images18.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    @include mobile-pagination18 {
+        bottom: -6px;
+    } 
+}
+#swiper-pagination-many-images20.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    @include mobile-pagination20 {
+        bottom: -6px;
+    } 
+}
+#swiper-pagination-many-images24.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    @include mobile-pagination24 {
         bottom: -6px;
     } 
 }
