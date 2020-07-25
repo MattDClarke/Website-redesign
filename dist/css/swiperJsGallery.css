@@ -77,7 +77,7 @@
   }
 }
 
-@media all and (max-width: 341px) {
+@media all and (max-width: 342px) {
   #swiper-pagination-many-images15.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -6px;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-@media all and (max-width: 409px) {
+@media all and (max-width: 408px) {
   #swiper-pagination-many-images18.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -6px;
   }
@@ -101,7 +101,7 @@
   }
 }
 
-@media all and (max-width: 541px) {
+@media all and (max-width: 542px) {
   #swiper-pagination-many-images24.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -6px;
   }

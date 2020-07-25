@@ -12,11 +12,11 @@ $colors: (
 
 
 $small-screen: 700px;  // for resizing img carousel ( ...)
-$mobile-pagination15: 341px;  // for pagination of carousel with 15 images
+$mobile-pagination15: 342px;  // for pagination of carousel with 15 images
 $mobile-pagination16: 364px;
-$mobile-pagination18: 409px;
+$mobile-pagination18: 408px;
 $mobile-pagination20: 452px;
-$mobile-pagination24: 541px;
+$mobile-pagination24: 542px;
 
 @mixin small-screen {
     @media all and (max-width: #{$small-screen}) {
