@@ -1,10 +1,10 @@
 {% set species = rhabdophisTigrinusFormosanusRespImgs %}
-{% extends "_layout.njk" %} 
+{% extends "_layout.njk" %}
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+    <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html"/>
+    <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html"/>
+    <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html"/>
+    <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html"/>
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -22,14 +22,16 @@
 {% endblock %}
 
 {% block content %}
-    
+
     <div class="header-box">
         <h1 class="header--species">{{ species[0].name }}</h1>
         <h2 class="header--name">{{ species[0].commonName }}</h2>
-        <h2 class="header--name"><span lang="zh-TW">{{ species[0].chineseName }}</span> {{ species[0].chineseNameRomanized }}</h2>
+        <h2 class="header--name">
+            <span lang="zh-TW">{{ species[0].chineseName }}</span>
+            {{ species[0].chineseNameRomanized }}</h2>
         <h3 class="header--status">{{ species[0].status }}</h3>
         <h4 class="header--danger">{{ species[0].danger }}</h4>
-    </div>                      
+    </div>
 
     {% include "partials/_swiper-responsive-images-modal.njk" %}
     {% include "partials/_swiper-responsive-images-nonModal.njk" %}
@@ -43,7 +45,15 @@
                 </div>
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a class="site-link" href=""></a></li>
+                        <li>
+                            <a class="site-link" href="http://www.youtube.com/watch?v=xkLGwEuLpFg">Asian Tiger Snake on the move (subspecies <i>R.t.tigrinus</i>)</a>
+                        </li>
+                        <li>
+                            <a class="site-link" href="http://www.youtube.com/watch?v=B4IWRsYIQNA">Asian Tiger Snake in the wild (subspecies <i>R.t.tigrinus</i>)</a>
+                        </li>
+                        <li>
+                            <a class="site-link" href="http://www.youtube.com/watch?v=ib8hC76ufZg">Asian Tiger Snake eating frog (subspecies <i>R.t.tigrinus</i>)</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -53,8 +63,15 @@
                 </div>
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a class="site-link" href=""></a></li>
-                    </ul>     
+                        <li>
+                            <a class="site-link" href="http://hoher.idv.tw/blog/read-1151.html">
+                                <i>Rhabdophis tigrinus formosanus</i> in the wild (Taiwan) (1)</a>
+                        </li>
+                        <li>
+                            <a class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=404413">
+                                <i>Rhabdophis tigrinus formosanus</i> in the wild (Taiwan) (2)</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -67,7 +84,7 @@
                     Family
                 </div>
                 <div class="info-box-text">
-                    Colubridae, subfamily <a class="site-link" href=""></a>
+                    Colubridae, subfamily <a class="site-link" href="http://en.wikipedia.org/wiki/Natricinae">Natricinae</a>
                 </div>
             </div>
 
@@ -76,7 +93,7 @@
                     Max. length
                 </div>
                 <div class="info-box-text">
-                     cm
+                    100 cm
                 </div>
             </div>
 
@@ -85,7 +102,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                    (<a class="site-link" href="">Distribution map</a>) 
+                    Throughout Taiwan, at altitudes above 1500 m. Rare. (<a class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0070">Distribution map</a>) 
                 </div>
             </div>
 
@@ -94,7 +111,7 @@
                     Global Distribution
                 </div>
                 <div class="info-box-text">
-                    
+                    This subspecies is endemic to Taiwan.
                 </div>
             </div>
 
@@ -103,7 +120,7 @@
                     Description
                 </div>
                 <div class="info-box-text">
-
+                    Small to medium-sized snake; total length up to 100 cm. There are 15-19 (17-19 at mid-body) rows of scales, all are strongly keeled. Head is oval and distinct from neck; body is moderately stout; tail is moderately long. Eye is medium to large; iris is dark brown and pupil is round, jet black, surrounded by ring of gray. Tongue is maroonish. The snake has a pair of nuchal glands and enlarged rear fangs (not directly connecting to venom glands). Upper head is olive at least anteriorly; there is a thick, curved cross band of yellow on the nape, to which a black cross band adjoins in the front and rear. The supralabials are yellow with black sutures, the black areas along the sutures below eye are broad. Upper body and tail bear green/yellow/orange and black spots arranged in alternating rows (totally 5 rows), creating a checkered appearance. Ventral head is whitish. Ventral scales on body and tail are blackish with (irregular) posterior margins of light green/yellow. Anal scale is divided and subcaudals are paired.
                 </div>
             </div>
 
@@ -111,9 +128,72 @@
                 <div class="info-box-header">          
                     Biology & Ecology
                 </div>
-                <div class="info-box-text"> 
-                    
-                    <a class="site-link--species" href=".html"></a>.                                                             
+                <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        This diurnal opistoglyphous (= rear-fanged, see footnote <i>(1)</i>) snake inhabits humid environments, including mountain rivers, creeks, and forest floors. It preys on frogs and toads, and occasionally on fish or snakes. Females produce 8-47 eggs per clutch in summer; hatchlings measure about 16 cm in total length. When threatened, the snake may rear its head and neck, and expand its neck transversely like a cobra.
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        This species is also the only known snake that is venomous and poisonous at the same time. (For the difference between the terms 'venomous' and 'poisonous' see footnote <i>(2)</i>).
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        Here's how:
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        <h5>POISON:</h5>
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        <i>The defensive behavior of this snake is very unusual. When threatened by a predator, the snake arches its neck toward the attacker and releases the contents of paired nuchal glands that lie in the dorsal skin. The product of those glands is distasteful and irritating to the eyes and contains compounds similar to those found in the skin glands of toads.</i> (<a class="site-link" href="http://www.answers.com/topic/yamakagashi">Source</a>)
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        The origin of the poison in these glands is a highly interesting aspect of this species, and was explained for the first time in a 2007 study by <a class="site-link" href="http://www.ncbi.nlm.nih.gov/pubmed/17284596">Hutchinson et al.</a> The study shows that Rhabdophis tigrinus becomes poisonous by sequestering toxins from its prey, which consists of venomous toads. The process allows the snakes to store in their neck glands some of the toxins from the toads they have eaten:
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        <i>Analyzing differences between snakes living on toad-rich and toad-deficient islands in Japan, researchers led by Deborah A. Hutchinson of Old Dominion University in Norfold, Virginia, found that the Japanese grass snake or Yamakagashi, as the snake is known locally, did not manufacture its own venom, but instead relied on that found in toxic toads: the researchers found that snakes living on Japan’s toad-free island of Kinkazan lacked the toad’s toxic bufadienolide compounds completely. Snakes from Ishima, where toads are plentiful, had high levels of bufadienolides. R. tigrinus from Honshu, where toad numbers vary, displayed a wide range of bufadienolide concentrations. Feeding R. tigrinus hatchlings toad-rich and toad-free diets confirmed these results.
+                    </div>
+
+                        <div class="info-box-paragraph">
+                        The study also found that snake mothers with high concentrations of the toxin are able to pass bufadienolide toxin on their offspring, helping protect them from predators. The Yamakagashi stores the sequestered toxins in 'a series of paired structures known as nuchal glands in the dorsal skin of the neck,' according to the researchers. When threatened, the snake takes a defensive position that exposes the toxin-containing nuchal glands to predators.
+                    </div>
+
+                        <div class="info-box-paragraph">
+                        While sequestering defensive toxins from prey is unusual among terrestrial vertebrates, it is not unknown. Research published last year by Valerie C. Clark of Cornell University showed that poison dart frogs (Dendrobates species) and their Madagascar counterparts, the Mantella frogs, sequester toxic skin chemicals, called alkaloids, from the ants they eat. These alkaloids protect the frogs from predation. Similarly, some garter snakes are known to store tetrodotoxin from ingested newts while birds in New Guinea appear to sequester poisons from insects.</i> (<a class="site-link" href="http://news.mongabay.com/2007/0129-snake.html">Source</a>)
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        The <a class="site-link" href="http://www.newscientist.com/article/dn11048-snakes-eat-poisonous-toads-and-steal-their-venom.html">NewScientist</a> notes:
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        <i>What is more, when attacked, snakes on different islands react differently. On Ishima, snakes stand their ground and rely on the toxins in their nuchal glands to repel the predator. On Kinkazan, the snakes flee. 'Snakes on Kinkazan have evolved to use their nuchal glands in defence less often than other populations of snakes, presumably due to their lack of defensive compounds,' says Hutchinson. Moreover, baby snakes benefit too. The team showed that snake mothers with high toxin levels pass on the compounds to their offspring. Snake hatchlings thus also enjoy the toad-derived protection.</i>
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        More details on this study can be found <a class="site-link" href="http://www.odu.edu/ao/alumni_magazine/SPR07/SnakeDefense.html">here</a>. The study itself, '<i>Dietary sequestration of defensive steroids in nuchal glands of the Asian snake Rhabdophis tigrinus</i>' by Deborah A. Hutchinson, Akira Mori et al. is available <a class="site-link" href="http://www.ncbi.nlm.nih.gov/pubmed/17284596">here</a>.
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        <h5>VENOM:</h5>
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        Many members of the family Colubridae that are considered venomous are essentially harmless to humans, because they either have small venom glands, relatively weak venom, or an inefficient system for venom delivery. While Rhabdophis tigrinus has small venom glands and delivers its venom inefficiently, said venom is certainly not weak. Although this snake is reluctant to bite, even defensively, the bite has been known to cause fatalities in humans. The venom acts very slowly, inhibiting the ability of the blood to clot and causing death by hemorrhage:
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        "<i>Three cases of serious envenomation by this species are reported (in Japan), all marked by delayed, spontaneous, superficial hemorrhaging and profound impairment of normal blood coagulation. In two cases these phenomena were accompanied by signs of severe internal hemorrhaging and hemolysis. Other symptoms may have resulted from transitory involvement of the central and autonomic nervous systems. Therapeutic measures applied in these cases are described, including the apparently effective use of a systemic antihemorrhagic drug. It is concluded that R. tigrinus is a dangerously venomous snake and potentially lethal to man.</i>" (<a class="site-link" href="http://www.jstor.org/pss/3892025">Source</a>)
+                    </div>
+
+                    <div class="info-box-paragraph">
+                        For this reason, <i>the small colubrid snakes of the genus Rhabdophis have a shady past in the pet trade. Because they resemble certain harmless garter snake-like species, they were imported into the U.S. and U.K. under the wrong names, and ended up causing medically-significant emergencies when they bit their new owners.</i> (<a class="site-link" href="http://www.strangeark.com/blogarchive/2007_01_01_archive.html">Source</a>)
+                        </div>
+                   The website www.toxinology.com provides a <a class="site-link" href="http://www.toxinology.com/fusebox.cfm?fuseaction=main.snakes.display&id=SN0002">detailed breakdown</a> of the contents and clinical effects of <i>R. tigrinus</i>' venom.
+
                 </div>
             </div>
 
@@ -123,21 +203,36 @@
                 </div>
                 <div class="info-box-text">
                     <div class="info-box-paragraph">
-
+                        <i>Rhabdophis</i> comes from the Greek words <i>rhabdos</i>, meaning "rod" or "wand", and <i>ophis</i>, meaning "snake";
                     </div>
                     <div class="info-box-paragraph">
-                        <a class="site-link" href=""></a>
+                        <i>tigrinus</i> is Latin for "tigerlike";
                     </div>
-
-                   <span lang="zh-TW"></span>                 
+                    <div class="info-box-paragraph">
+                        <i>formosanus</i> denotes the distribution of this subspecies, namely the island of Taiwan (formerly Formosa).
+                    </div>
+                    The Chinese name <span lang="zh-TW">台灣赤煉蛇</span> means "Taiwan (<span lang="zh-TW">台灣</span>) Red (<span lang="zh-TW">赤</span>) Smelted (<span lang="zh-TW">煉</span>) Snake (<span lang="zh-TW">蛇</span>)".
                 </div>
             </div>
             <div class="species-info-box">
                 <div class="info-box-header">          
-                    Notes
+                    Footnotes
                 </div>
-                <div class="info-box-text">
-	                
+                <div class="info-box-text">       	
+                    <div class="info-box-paragraph">
+                    (1) "<i>Opisthoglyphous snakes are similar to aglyphous (fangless) snakes, but possess weak venom, which is injected by means of a pair of enlarged teeth at the back of the maxillae (upper jaw). These "fangs" typically point backwards rather than straight down, possess a groove which channels venom into the prey, and are located roughly halfway back in the mouth, which has led to the vernacular name of "rear-fanged snakes</i>". (<a class="site-link" href="http://www.smarley.nl/main.php/v/Opisthoglyph/">Source</a>)
+                    </div>
+
+                    <div class="info-box-paragraph">
+                    (2) <i>The distinction between venom and poison
+                    </div>
+                    <div class="info-box-paragraph">
+                    There is a difference between organisms that are venomous and those that are poisonous, two commonly confused terms applied to plant and animal life:
+                    </div>
+                    <div class="info-box-paragraph">
+                    - <strong>Venomous</strong>...refers to animals that deliver (often, inject) venom into their prey when hunting or as a defense mechanism.
+                    </div>
+                    - <strong>Poisonous</strong>, on the other hand, describes plants or animals that are harmful when consumed or touched. A poison tends to be distributed over a large part of the body of the organism producing it, while venom is typically produced in organs specialized for the purpose.</i> (<a class="site-link" href="http://en.wikipedia.org/wiki/Venomous">Source</a>)
                 </div>
             </div>
             <div class="species-info-box">
@@ -145,8 +240,18 @@
                     Further Info
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species">
-                    <li><a class="site-link" href="">Reptile Database</a></li>
-                    <li><a class="site-link" href=""></a></li>
+                    <li>
+                        <a class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Rhabdophis&species=tigrinus">Reptile Database</a>
+                    </li>
+                    <li>
+                        <a class="site-link" href="http://en.wikipedia.org/wiki/Rhabdophis_tigrinus">Wikipedia</a>
+                    </li>
+                    <li>
+                        <a class="site-link" href="http://www.venomdoc.com/forums/viewtopic.php?t=641">Discussion of <i>R. tigrinus</i> on Dr. Bryan G. Fry's Venomdoc Forum</a>
+                    </li>
+                    <li>
+                        <a class="site-link" href="http://sciencelinks.jp/j-east/article/200003/000020000300A0011292.php">Taxonomic Status of the Taiwanese Populations of <i>Rhabdophis tigrinus</i></a>
+                    </li>
                 </ul>
             </div>
         </div>
