@@ -1651,6 +1651,11 @@ th.table-header {
   margin: 0 5px;
 }
 
+.translator-name {
+  text-align: center;
+  margin-top: 6rem;
+}
+
 /* .............................................. swiper gallery - school talks ................................................. */
 #header--school-talks {
   margin-top: 0;
