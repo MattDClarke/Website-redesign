@@ -377,10 +377,6 @@ $mobile-pagination24: 542px;
     max-width:100vw;
 }
 
-// html body div.wrapper main.main-content div#simpleModal.modal div.modal-content div#swiper-container-modal.swiper-container-modal.swiper-container-coverflow.swiper-container-3d.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.swiper-slide-modal.swiper-slide-next div.swiper-zoom-container picture img.swiper-lazy.swiper-slide-img.swiper-slide-img-modal.swiper-lazy-loaded {
-//     z-index: 999;
-// }
-
-.swiper-slide-img-modal { // prevent wide modal images from incr. width (stretching) on desktop (only set for non-modal)
-    cursor: zoom-in;  
+.swiper-slide-img-modal { 
+    cursor: pointer;  
 }

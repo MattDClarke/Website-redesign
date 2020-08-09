@@ -336,7 +336,6 @@
 }
 
 .swiper-slide-img-modal {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
+  cursor: pointer;
 }
 /*# sourceMappingURL=swiperJsGallery.css.map */

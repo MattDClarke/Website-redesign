@@ -50,14 +50,6 @@ const swiperModal = new Swiper('.swiper-container-modal', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  zoom: {
-    maxRatio: 2,
-    toggle: true, // enable zoom-in by double tapping slide
-  },
-
-  // navigation: {
-  //     hideOnClick: true,
-  // },
 
   preloadImages: false,
   lazy: {
@@ -68,53 +60,20 @@ const swiperModal = new Swiper('.swiper-container-modal', {
     crossFade: true,
   },
   loop: true,
+  updateOnWindowResize: true,
 });
 
+// Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
+const modal = document.getElementById('simpleModal');
+const modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides
 const closeBtnModal = document.querySelector('.close-btn-modal');
-const nextBtn = document.querySelector('#swiper-button-next-modal');
-const prevBtn = document.querySelector('#swiper-button-prev-modal');
-const modalImg = document.querySelectorAll('.swiper-slide-img-modal');
-swiperModal.on('zoomChange', function() {
-  if (swiperModal.zoom.scale === 1) {
-    // it was zoomed out when zoomChange event fired (click)... now zoomed in
-    swiperModal.keyboard.disable();
-    swiperModal.allowSlideNext = false;
-    swiperModal.allowSlidePrev = false;
-    closeBtnModal.style.display = 'none';
-    nextBtn.style.display = 'none';
-    prevBtn.style.display = 'none';
-    modalImg.forEach(element => {
-      element.style.cursor = 'zoom-out';
-    });
-  } else {
-    console.log('zoomed out');
-    swiperModal.keyboard.enable();
-    swiperModal.allowSlideNext = true;
-    swiperModal.allowSlidePrev = true;
-    closeBtnModal.style.display = 'block';
-    nextBtn.style.display = 'flex';
-    prevBtn.style.display = 'flex';
-    swiperModal.navigation.update();
-    modalImg.forEach(element => {
-      element.style.cursor = 'zoom-in';
-    });
-  }
-});
 
-// hacky attempt to fix initial height issue (extra space below image initially...)
+// hacky attempt to fix initial img height issue (extra space below image initially...)
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     swiper.update();
   }, 40);
 });
-
-// Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
-// Get modal element
-const modal = document.getElementById('simpleModal');
-// Get open modal button
-const modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides (outside modal)
-// close button
-// var closeBtnModal = document.getElementsByClassName('close-btn-modal')[0]; // returns an array... just get first one (only one element with this class)
 
 function openModal() {
   // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
@@ -131,8 +90,6 @@ function openModal() {
 }
 
 function closeModal() {
-  // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
-  // When the modal is hidden...
   const scrollY = document.body.style.top; // retrieve scroll location
   document.body.style.position = '';
   document.body.style.top = '';
@@ -145,8 +102,9 @@ function closeModal() {
   swiper.keyboard.enable();
 }
 
+// add an click event listener for each swiper-slide (outside the modal)
 modalBtn.forEach(element => {
-  element.addEventListener('click', openModal); // add an click event listener for each swiper-slide (outside the modal)
+  element.addEventListener('click', openModal);
 });
 
 // Listen for close click

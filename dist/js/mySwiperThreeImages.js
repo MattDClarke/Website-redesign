@@ -13,13 +13,7 @@ const galleryThumbs = new Swiper('.gallery-thumbs', {
 
 const swiper = new Swiper('.swiper-container-main', {
   autoHeight: true, // enable auto height
-
-  // runCallbacksOnInit: true,
   observer: true,
-  // observeParents: true,
-  // observeChildren: true,
-  // spaceBetween: 0,
-
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -52,22 +46,14 @@ const swiper = new Swiper('.swiper-container-main', {
 const swiperModal = new Swiper('.swiper-container-modal', {
   observer: true,
   observeParents: true,
-  // observeChildren: true,
-  // spaceBetween: 0,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  zoom: {
-    maxRatio: 2,
-    toggle: true, // enable zoom-in by double tapping slide
-  },
-
   preloadImages: false,
   lazy: {
     loadPrevNext: true,
   },
-
   effect: 'fade',
   fadeEffect: {
     crossFade: true,
@@ -75,47 +61,16 @@ const swiperModal = new Swiper('.swiper-container-modal', {
   loop: true,
 });
 
+// Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
+const modal = document.getElementById('simpleModal');
+const modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides (outside modal)
 const closeBtnModal = document.getElementsByClassName('close-btn-modal')[0];
-const nextBtn = document.getElementById('swiper-button-next-modal');
-const prevBtn = document.getElementById('swiper-button-prev-modal');
-const modalImg = document.querySelectorAll('.swiper-slide-img-modal');
-swiperModal.on('zoomChange', function() {
-  if (swiperModal.zoom.scale === 1) {
-    // it was zoomed out when zoomChange event fired (click)... now zoomed in
-    swiperModal.keyboard.disable();
-    swiperModal.allowSlideNext = false;
-    swiperModal.allowSlidePrev = false;
-    closeBtnModal.style.display = 'none';
-    nextBtn.style.display = 'none';
-    prevBtn.style.display = 'none';
-    modalImg.forEach(element => {
-      element.style.cursor = 'zoom-out';
-    });
-  } else {
-    console.log('zoomed out');
-    swiperModal.keyboard.enable();
-    swiperModal.allowSlideNext = true;
-    swiperModal.allowSlidePrev = true;
-    closeBtnModal.style.display = 'block';
-    nextBtn.style.display = 'flex';
-    prevBtn.style.display = 'flex';
-    modalImg.forEach(element => {
-      element.style.cursor = 'zoom-in';
-    });
-  }
-});
 
 // hacky attempt to fix initial height issue (extra space below image initially...)
 document.addEventListener('DOMContentLoaded', function() {
   document.body.style.top = `1px`;
   document.body.style.top = `0px`;
 });
-
-// Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
-// Get modal element
-const modal = document.getElementById('simpleModal');
-// Get open modal button
-const modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides (outside modal)
 
 function openModal() {
   // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
