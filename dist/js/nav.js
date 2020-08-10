@@ -14,7 +14,6 @@ const closeBtnSearch = document.querySelector('#search-close');
 // ----------------------------------------- nav search list  ------------------------------------------------------//
 
 // Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp
-
 function searchFilter() {
   // Declare variables
   // const main = document.querySelector('main');
@@ -133,10 +132,18 @@ window.onresize = removeBlurAndClose;
 // ------------------------------------------------- nav search  --------------------------------------------------------------//
 
 let count = 0;
-const message = 'Search for a species';
+const messageEnglish = 'Search for a species';
+const messageChinese = '尋找一個物種';
 const speed = 100;
+let message;
 
 function typeWriter() {
+  if (searchIcon.classList.contains('search-btn-zh')) {
+    message = messageChinese;
+  } else {
+    message = messageEnglish;
+  }
+
   if (count < message.length) {
     const msg = searchInput.getAttribute('placeholder') + message.charAt(count);
     searchInput.setAttribute('placeholder', msg);

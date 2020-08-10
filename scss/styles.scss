@@ -92,15 +92,26 @@ body {
     background-color: color(dark-grey);
     scrollbar-width: auto;
     scrollbar-color: color(maroon) color(black);
+
+    // &:lang(zh-TW) {
+    //     font-family: "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", Arial, sans-serif;
+    //     font-weight: 100;
+    // }
+
+    // &:lang(en-US) {
+    //     font-family: Arial, sans-serif;
+    //     letter-spacing: 0.02rem;
+    //     font-weight: 400px;
+    // }
+
 }
 
-:lang(zh-TW) {
+:lang(zh) {
     font-family: "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", Arial, sans-serif;
-    //font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     font-weight: 100;
 }
 
-:lang(en-US) {
+:lang(en) {
     font-family: Arial, sans-serif;
     letter-spacing: 0.02rem;
     font-weight: 400px;
@@ -455,7 +466,7 @@ body.links .nav-links-page a {
         margin-right: 0;
         z-index: 2;
         transform: translateX(100%);
-        // transition: transform 0.5s ease-in;
+        will-change: transform;
 
         li {
             opacity: 0;

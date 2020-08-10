@@ -18,12 +18,12 @@ body {
   scrollbar-color: #800000 black;
 }
 
-:lang(zh-TW) {
+:lang(zh) {
   font-family: "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", Arial, sans-serif;
   font-weight: 100;
 }
 
-:lang(en-US) {
+:lang(en) {
   font-family: Arial, sans-serif;
   letter-spacing: 0.02rem;
   font-weight: 400px;
@@ -403,6 +403,7 @@ body.links .nav-links-page a {
     z-index: 2;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    will-change: transform;
   }
   .nav-links li {
     opacity: 0;
