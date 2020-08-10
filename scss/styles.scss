@@ -497,6 +497,15 @@ body.links .nav-links-page a {
         transform: translateX(0%);
     }
 }
+
+@keyframes navSwipeClose {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
     
 .burger.close {
     width: 50%;
@@ -510,8 +519,9 @@ body.links .nav-links-page a {
         width: 25px; 
         margin-left: 0;
         transform: rotate(-45deg) translate(-5px, 6px);
-        margin-top: 6px;
+        margin-top: 6.5px;
         margin-bottom: 4px;
+        padding-bottom: 3px;
     }
     .line2 {
         margin-left: 0px;
@@ -520,6 +530,9 @@ body.links .nav-links-page a {
     .line3 {
         height: 2px;
         transform: rotate(45deg) translate(-5px, -6px);
+        margin-top: -1px;
+        margin-bottom: 5px;
+        padding-bottom: 3px;
     }
 }  
 

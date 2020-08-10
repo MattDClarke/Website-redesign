@@ -1,32 +1,64 @@
+const body = document.querySelector('body');
+const mainContent = document.querySelector('.main-content');
+const mainCover = document.querySelector('.main-cover');
+const burger = document.querySelector('.burger');
+const navUl = document.querySelector('#navUl');
+const navLinks = document.querySelectorAll('.nav-links li');
+
+const searchInput = document.querySelector('#searchInput');
+const searchIcon = document.querySelector('#search-btn');
+const closeBtnSearch = document.querySelector('#search-close');
+
 // ---------------------------------------------- Nav toggle ---------------------------------------------------------//
+
+// ----------------------------------------- nav search list  ------------------------------------------------------//
+
+// Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp
+
+function searchFilter() {
+  // Declare variables
+  // const main = document.querySelector('main');
+  const filter = searchInput.value.toUpperCase(); // user input
+  const ul = document.querySelector('#searchUL');
+  const li = ul.getElementsByTagName('li');
+
+  if (searchInput.value === '') {
+    ul.style.display = 'none';
+  } else {
+    ul.style.display = 'block';
+
+    // Loop through all list items, and hide those that don't match the search query
+    for (let i = 0; i < li.length; i += 1) {
+      const a = li[i].getElementsByTagName('a')[0];
+      const txtValue = a.innerText; // text of each list item (common and scientific name)
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        // if it is true (the substring {user input} occurs in the list item {name or scientific name})
+        li[i].style.display = 'block';
+      } else {
+        li[i].style.display = 'none';
+      }
+    }
+  }
+}
+
 const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links li');
-  const mainContent = document.querySelector('.main-content');
-  const mainCover = document.querySelector('.main-cover');
-  const body = document.querySelector('body');
   // close search input (if open)
-  const searchInputBox = document.getElementById('searchInput');
-  const searchIcon = document.getElementById('search-btn');
-  const closeBtnSearch = document.getElementById('search-close');
 
   burger.addEventListener('click', () => {
     // close search input (if open)... same effect as clicking close for search box
     closeBtnSearch.style.display = 'none';
     searchIcon.style.display = 'block';
-    searchInputBox.style.height = '0';
-    searchInputBox.value = ''; // clear input
+    searchInput.style.height = '0';
+    searchInput.value = ''; // clear input
     searchFilter(); // to make UL display = none. (if user closes search when there are search results displayed)
 
     // toggle nav
-    nav.classList.toggle('nav-active');
+    navUl.classList.toggle('nav-active');
 
-    // animate nav
-    if (nav.style.animation) {
-      nav.style.animation = '';
+    if (navUl.classList.contains('nav-active')) {
+      navUl.style.animation = 'navSwipeOpen 0.5s ease-in';
     } else {
-      nav.style.animation = `navSwipeOpen 0.5s ease-in`;
+      navUl.style.animation = 'navSwipeClose 0.5s ease-in';
     }
 
     // animate Links
@@ -46,7 +78,6 @@ const navSlide = () => {
 
     // add opacity to main content
     mainContent.classList.toggle('background-fade');
-    // add opacity to main content
     mainCover.classList.toggle('main-cover-opened');
     // remove scroll
     body.classList.toggle('remove-scroll');
@@ -57,13 +88,6 @@ const navSlide = () => {
 navSlide();
 
 // check window size, if it is larger than 1000px, remove nav-active class from nav ul
-const mainContent = document.querySelector('.main-content');
-const mainCover = document.querySelector('.main-cover');
-const body = document.querySelector('body');
-const navUl = document.getElementById('navUl');
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelectorAll('.nav-links li');
-
 // remove blur and close nav function
 function removeBlurAndClose() {
   if (window.innerWidth > 1000) {
@@ -72,10 +96,9 @@ function removeBlurAndClose() {
     mainCover.classList.remove('main-cover-opened');
     body.classList.remove('remove-scroll');
     burger.classList.remove('close');
-    navUl.style.animation = '';
-
+    navUl.style.animation = `navSwipeClose 0.5s ease-in`;
     // remove links style
-    navLinks.forEach((link, index) => {
+    navLinks.forEach(link => {
       link.style.animation = '';
     });
   }
@@ -85,17 +108,17 @@ function removeBlurAndClose() {
 function exitNav() {
   if (
     window.innerWidth <= 1000 &&
-    navUl.classList.contains('nav-active') == true
+    navUl.classList.contains('nav-active') === true
   ) {
     navUl.classList.remove('nav-active');
     mainContent.classList.remove('background-fade');
     mainCover.classList.remove('main-cover-opened');
     body.classList.remove('remove-scroll');
     burger.classList.remove('close');
-    navUl.style.animation = '';
+    navUl.style.animation = `navSwipeClose 0.5s ease-in`;
 
     // remove links style
-    navLinks.forEach((link, index) => {
+    navLinks.forEach(link => {
       link.style.animation = '';
     });
   }
@@ -107,17 +130,20 @@ mainCover.addEventListener('click', exitNav);
 // on window resize, call the remove blur and close nav function
 window.onresize = removeBlurAndClose;
 
-// -------------------------------------------------- nav search  --------------------------------------------------------------//
+// ------------------------------------------------- nav search  --------------------------------------------------------------//
 
-const searchIcon = document.getElementById('search-btn');
-const searchInput = document.getElementById('searchInput');
-
-// close btn
-const closeBtnSearch = document.getElementById('search-close');
-
-let i = 0;
+let count = 0;
 const message = 'Search for a species';
 const speed = 100;
+
+function typeWriter() {
+  if (count < message.length) {
+    const msg = searchInput.getAttribute('placeholder') + message.charAt(count);
+    searchInput.setAttribute('placeholder', msg);
+    count += 1;
+    setTimeout(typeWriter, speed);
+  }
+}
 
 searchIcon.addEventListener('click', () => {
   searchIcon.style.display = 'none';
@@ -137,54 +163,4 @@ closeBtnSearch.addEventListener('click', () => {
   searchFilter(); // to make UL display = none. (if user closes search when there are search results displayed)
 });
 
-function typeWriter() {
-  if (i < message.length) {
-    msg = searchInput.getAttribute('placeholder') + message.charAt(i);
-    searchInput.setAttribute('placeholder', msg);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-// ------------------------------------------------ nav search list  -------------------------------------------------------------//
-
-// Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp
-
-function searchFilter() {
-  // Declare variables
-  let input;
-  let filter;
-  let ul;
-  let li;
-  let a;
-  let i;
-  let txtValue;
-  input = document.getElementById('searchInput');
-  filter = input.value.toUpperCase(); // user input
-  ul = document.getElementById('searchUL');
-  li = ul.getElementsByTagName('li');
-  main = document.querySelector('main');
-  form = document.getElementById('nav-search-form');
-
-  if (input.value == '') {
-    ul.style.display = 'none';
-    main.style.opacity = '1';
-  } else {
-    ul.style.display = 'block';
-    main.style.opacity = '0';
-
-    // Loop through all list items, and hide those that don't match the search query
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName('a')[0];
-      txtValue = a.innerText; // text of each list item (common and scientific name)
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        // if it is true (the substring {user input} occurs in the list item {name or scientific name})
-        li[i].style.display = 'block';
-      } else {
-        li[i].style.display = 'none';
-      }
-    }
-  }
-}
-
-document.getElementById('searchInput').addEventListener('keyup', searchFilter);
+document.querySelector('#searchInput').addEventListener('keyup', searchFilter);
