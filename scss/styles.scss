@@ -106,15 +106,15 @@ body {
 
 }
 
-html:lang(zh-TW) {
+:lang(zh-TW) {
     font-family: "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", Arial, sans-serif;
     font-weight: 100;
 }
 
-html:lang(en-US) {
+:lang(en-US) {
     font-family: Arial, sans-serif;
     letter-spacing: 0.02rem;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 // div:lang(en-US) {
