@@ -18,12 +18,30 @@ body {
   scrollbar-color: #800000 black;
 }
 
-:lang(zh) {
+:lang(zh-TW) {
   font-family: "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", Arial, sans-serif;
   font-weight: 100;
 }
 
-:lang(en) {
+:lang(en-US) {
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.02rem;
+  font-weight: 400px;
+}
+
+div:lang(en-US) {
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.02rem;
+  font-weight: 400px;
+}
+
+span:lang(en-US) {
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.02rem;
+  font-weight: 400px;
+}
+
+a:lang(en-US) {
   font-family: Arial, sans-serif;
   letter-spacing: 0.02rem;
   font-weight: 400px;
