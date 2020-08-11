@@ -406,7 +406,6 @@ body.links .nav-links-page a {
     will-change: transform;
   }
   .nav-links li {
-    opacity: 0;
     padding: 10px;
   }
   .nav-links li.nav-home {

@@ -61,16 +61,16 @@ const navSlide = () => {
     }
 
     // animate Links
-    navLinks.forEach((link, index) => {
-      // if link has animation on it..
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        // must use back tick "`"
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-          0.3}s`;
-      }
-    });
+    // navLinks.forEach((link, index) => {
+    //   // if link has animation on it..
+    //   if (link.style.animation) {
+    //     link.style.animation = '';
+    //   } else {
+    //     // must use back tick "`"
+    //     link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
+    //       0.3}s`;
+    //   }
+    // });
 
     // burger animation
     burger.classList.toggle('close');
