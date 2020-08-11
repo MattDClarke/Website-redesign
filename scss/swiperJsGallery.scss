@@ -367,6 +367,9 @@ $mobile-pagination24: 542px;
 }
 
 .swiper-slide-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height:100vh;
 }
 

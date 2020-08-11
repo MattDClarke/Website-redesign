@@ -26,7 +26,7 @@
         <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="物種搜尋" >
         <ul id="searchUL" class="search-ul"> 
             {% for name in names %}
-                <li><a href="{{name.hrefChinese}}">{{name.chinese}}<br><i lang="en-us">{{name.scientific}}</i></a></li>
+                <li><a  lang="en-US" href="{{name.hrefChinese}}">{{name.chinese}}<br><i>{{name.scientific}}</i></a></li>
             {% endfor %}
         </ul>
     </div>
