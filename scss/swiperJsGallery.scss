@@ -4,6 +4,7 @@ $colors: (
     white: white,
     off-white: #d8d8d8,
     yellow: rgb(255, 230, 0),
+    orange: orange,
 );
 
 @function color($color-name) {
@@ -180,6 +181,10 @@ $mobile-pagination24: 542px;
 
 .swiper-button-next, .swiper-button-prev {
     top: calc(50% - 10px); // vertically center
+    &:focus {
+        outline: none !important;
+        color: color(orange);
+    }
 }
   
 .swiper-button-next::after, .swiper-button-prev::after {

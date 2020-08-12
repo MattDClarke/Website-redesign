@@ -122,6 +122,11 @@
   top: calc(50% - 10px);
 }
 
+.swiper-button-next:focus, .swiper-button-prev:focus {
+  outline: none !important;
+  color: orange;
+}
+
 .swiper-button-next::after, .swiper-button-prev::after {
   font-size: 2rem;
 }
