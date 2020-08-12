@@ -1,6 +1,6 @@
 <!-- Swiper non-Modal -->
 <div {{ species[0].manyImagesId | safe }} class="swiper-container swiper-container-main">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" tabindex="0" aria-label="click image to enlarge">
         {%- set numberOfImages = species[0].imgWidthsModal | length -%}
         {%- for i in range(numberOfImages) %} 
         {%- set numberPrefix = "0" -%}
@@ -29,7 +29,8 @@
                     width="{{- species[0].imgWidthsNonModal[i] | last }}"
                     height="{{- species[0].imgHeightsNonModalMax[i] }}"
                     data-src="images/{{- species[0].nameLowerCaseHyphenated -}}/{{- species[0].nameUpperCaseHyphenated -}}-{{ numberPrefix }}{{ i + 1 }}-{{ species[0].imgWidthsNonModal[i] | last }}px.jpg"  
-                    aria-label="{{- species[0].name }} image {{ i + 1 }}">            
+                    aria-label="{{- species[0].name }} image {{ i + 1 }}"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>

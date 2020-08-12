@@ -37,6 +37,13 @@
         <div class="logo">
             <a href="home.html"><img src="images/nav/snakes-of-taiwan_logo.svg" alt="Snakes of Taiwan logo" class="website-logo"></a>
         </div>
+        <div class="burger">
+            <button class="burger--container" aria-label="menu open and close">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </div>
         <ul id="navUl" class="nav-links">
             <li class="nav-home"><a href="home.html">Home</a></li>
             <li class="nav-about"><a href="about.html">About</a></li>
@@ -45,19 +52,13 @@
             <li class="nav-links-page"><a href="links.html">Links</a></li>
             <li><a href="home_zh.html" lang="zh-TW">中文</a></li>
         </ul> 
-        <div class="burger">
-            <button class="burger--container" tabindex="0" aria-label="menu button">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </button>
-        </div>
+
         <button id="search-btn" class="search-btn"><img src="images/nav/search.svg" alt="search button"></button>                      
         <button id="search-close" class="search-close"><img src="images/nav/close.svg" alt="close button"></button>
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
-        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
+        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50" tabindex="-1" aria-label="Species search">
         <ul id="searchUL" class="search-ul"> 
             
                 <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
@@ -182,7 +183,7 @@
 <!-- Swiper Modal -->
 <div id="simpleModal" class="modal">
     <div class="modal-content">
-        <span id="modalClose" class="close-btn-modal" tabindex="0">&times;</span>
+        <button id="modalClose" class="close-btn-modal">&times;</button>
         <div id="swiper-container-modal" class="swiper-container-modal">
             <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-slide-modal">
@@ -367,7 +368,7 @@
 
     <!-- Swiper non-Modal -->
 <div  class="swiper-container swiper-container-main">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" tabindex="0" aria-label="click image to enlarge">
         <div class="swiper-slide aspect-ratio_325-226"> 
             <picture>
                 <source
@@ -388,7 +389,8 @@
                     width="650"
                     height="436"
                     data-src="images/elaphe-carinata/Elaphe-carinata-01-650px.jpg"  
-                    aria-label="Elaphe carinata carinata image 1">            
+                    aria-label="Elaphe carinata carinata image 1"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -412,7 +414,8 @@
                     width="650"
                     height="411"
                     data-src="images/elaphe-carinata/Elaphe-carinata-02-650px.jpg"  
-                    aria-label="Elaphe carinata carinata image 2">            
+                    aria-label="Elaphe carinata carinata image 2"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -436,7 +439,8 @@
                     width="650"
                     height="500"
                     data-src="images/elaphe-carinata/Elaphe-carinata-03-650px.jpg"  
-                    aria-label="Elaphe carinata carinata image 3">            
+                    aria-label="Elaphe carinata carinata image 3"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -460,7 +464,8 @@
                     width="650"
                     height="432"
                     data-src="images/elaphe-carinata/Elaphe-carinata-04-650px.jpg"  
-                    aria-label="Elaphe carinata carinata image 4">            
+                    aria-label="Elaphe carinata carinata image 4"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -484,7 +489,8 @@
                     width="650"
                     height="428"
                     data-src="images/elaphe-carinata/Elaphe-carinata-05-650px.jpg"  
-                    aria-label="Elaphe carinata carinata image 5">            
+                    aria-label="Elaphe carinata carinata image 5"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -508,7 +514,8 @@
                     width="650"
                     height="650"
                     data-src="images/elaphe-carinata/Elaphe-carinata-06-650px.jpg"  
-                    aria-label="Elaphe carinata carinata image 6">            
+                    aria-label="Elaphe carinata carinata image 6"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>     

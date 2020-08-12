@@ -37,6 +37,13 @@
         <div class="logo">
             <a href="home.html"><img src="images/nav/snakes-of-taiwan_logo.svg" alt="Snakes of Taiwan logo" class="website-logo"></a>
         </div>
+        <div class="burger">
+            <button class="burger--container" aria-label="menu open and close">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </div>
         <ul id="navUl" class="nav-links">
             <li class="nav-home"><a href="home.html">Home</a></li>
             <li class="nav-about"><a href="about.html">About</a></li>
@@ -45,19 +52,13 @@
             <li class="nav-links-page"><a href="links.html">Links</a></li>
             <li><a href="home_zh.html" lang="zh-TW">中文</a></li>
         </ul> 
-        <div class="burger">
-            <button class="burger--container" tabindex="0" aria-label="menu button">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </button>
-        </div>
+
         <button id="search-btn" class="search-btn"><img src="images/nav/search.svg" alt="search button"></button>                      
         <button id="search-close" class="search-close"><img src="images/nav/close.svg" alt="close button"></button>
     </div>
     <div id="nav-search-form" class="search-input-container">
         <div class="search-input-spacer"></div>
-        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50"  aria-label="Species search" >
+        <input id="searchInput" name="searchInput" class="search-input" type="search" placeholder="" autocomplete="off" maxlength="50" tabindex="-1" aria-label="Species search">
         <ul id="searchUL" class="search-ul"> 
             
                 <li><a href="hebius-miyajimae.html">Maki&#39;s Keelback<br><i>Hebius miyajimae</i></a></li>
@@ -182,7 +183,7 @@
 <!-- Swiper Modal -->
 <div id="simpleModal" class="modal">
     <div class="modal-content">
-        <span id="modalClose" class="close-btn-modal" tabindex="0">&times;</span>
+        <button id="modalClose" class="close-btn-modal">&times;</button>
         <div id="swiper-container-modal" class="swiper-container-modal">
             <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-slide-modal">
@@ -863,7 +864,7 @@
 
     <!-- Swiper non-Modal -->
 <div id="swiper-pagination-many-images24" class="swiper-container swiper-container-main">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" tabindex="0" aria-label="click image to enlarge">
         <div class="swiper-slide aspect-ratio_325-226"> 
             <picture>
                 <source
@@ -884,7 +885,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-01-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 1">            
+                    aria-label="Pseuagkistrodon rudis rudis image 1"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -908,7 +910,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-02-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 2">            
+                    aria-label="Pseuagkistrodon rudis rudis image 2"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -932,7 +935,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-03-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 3">            
+                    aria-label="Pseuagkistrodon rudis rudis image 3"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -956,7 +960,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-04-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 4">            
+                    aria-label="Pseuagkistrodon rudis rudis image 4"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -980,7 +985,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-05-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 5">            
+                    aria-label="Pseuagkistrodon rudis rudis image 5"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1004,7 +1010,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-06-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 6">            
+                    aria-label="Pseuagkistrodon rudis rudis image 6"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1028,7 +1035,8 @@
                     width="650"
                     height="433"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-07-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 7">            
+                    aria-label="Pseuagkistrodon rudis rudis image 7"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1052,7 +1060,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-08-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 8">            
+                    aria-label="Pseuagkistrodon rudis rudis image 8"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1076,7 +1085,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-09-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 9">            
+                    aria-label="Pseuagkistrodon rudis rudis image 9"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1100,7 +1110,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-10-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 10">            
+                    aria-label="Pseuagkistrodon rudis rudis image 10"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1124,7 +1135,8 @@
                     width="650"
                     height="467"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-11-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 11">            
+                    aria-label="Pseuagkistrodon rudis rudis image 11"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1148,7 +1160,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-12-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 12">            
+                    aria-label="Pseuagkistrodon rudis rudis image 12"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1172,7 +1185,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-13-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 13">            
+                    aria-label="Pseuagkistrodon rudis rudis image 13"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1196,7 +1210,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-14-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 14">            
+                    aria-label="Pseuagkistrodon rudis rudis image 14"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1220,7 +1235,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-15-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 15">            
+                    aria-label="Pseuagkistrodon rudis rudis image 15"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1244,7 +1260,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-16-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 16">            
+                    aria-label="Pseuagkistrodon rudis rudis image 16"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1268,7 +1285,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-17-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 17">            
+                    aria-label="Pseuagkistrodon rudis rudis image 17"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1292,7 +1310,8 @@
                     width="650"
                     height="457"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-18-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 18">            
+                    aria-label="Pseuagkistrodon rudis rudis image 18"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1316,7 +1335,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-19-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 19">            
+                    aria-label="Pseuagkistrodon rudis rudis image 19"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1340,7 +1360,8 @@
                     width="650"
                     height="436"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-20-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 20">            
+                    aria-label="Pseuagkistrodon rudis rudis image 20"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1364,7 +1385,8 @@
                     width="650"
                     height="805"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-21-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 21">            
+                    aria-label="Pseuagkistrodon rudis rudis image 21"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1388,7 +1410,8 @@
                     width="650"
                     height="978"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-22-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 22">            
+                    aria-label="Pseuagkistrodon rudis rudis image 22"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1412,7 +1435,8 @@
                     width="650"
                     height="968"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-23-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 23">            
+                    aria-label="Pseuagkistrodon rudis rudis image 23"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>
@@ -1436,7 +1460,8 @@
                     width="650"
                     height="968"
                     data-src="images/pseuagkistrodon-rudis/Pseuagkistrodon-rudis-24-650px.jpg"  
-                    aria-label="Pseuagkistrodon rudis rudis image 24">            
+                    aria-label="Pseuagkistrodon rudis rudis image 24"
+                >            
             </picture>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
         </div>     

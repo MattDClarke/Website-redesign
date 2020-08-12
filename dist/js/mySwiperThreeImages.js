@@ -59,18 +59,25 @@ const swiperModal = new Swiper('.swiper-container-modal', {
     crossFade: true,
   },
   loop: true,
+  updateOnWindowResize: true,
 });
 
+const nonModalGalleryImgContainer = document.querySelector(
+  '.swiper-container-main'
+);
+const nonModalGalleryImgWrapper = nonModalGalleryImgContainer.querySelector(
+  '.swiper-wrapper'
+);
 // Create a Modal With HTML, CSS & JavaScript (https://www.youtube.com/watch?v=6ophW7Ask_0)
 const modal = document.getElementById('simpleModal');
-const modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides (outside modal)
-const closeBtnModal = document.getElementsByClassName('close-btn-modal')[0];
+const modalBtn = document.querySelectorAll('.swiper-slide-img-non-modal'); // select all swiper-slides
+const closeBtnModal = document.querySelector('.close-btn-modal');
 
-// hacky attempt to fix initial height issue (extra space below image initially...)
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.style.top = `1px`;
-  document.body.style.top = `0px`;
-});
+// close nav search if it is open
+const NavUl = document.querySelector('#searchUL');
+const NavSearchInput = document.querySelector('#searchInput');
+const NavSearchIcon = document.querySelector('#search-btn');
+const NavCloseBtnSearch = document.querySelector('#search-close');
 
 function openModal() {
   // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
@@ -84,11 +91,18 @@ function openModal() {
   modal.style.display = 'block';
   swiper.keyboard.disable();
   swiperModal.keyboard.enable();
+
+  // close nav search, if it is open and there are results displayeds
+  NavCloseBtnSearch.style.display = 'none';
+  NavSearchIcon.style.display = 'block';
+  NavSearchInput.style.height = '0';
+  NavSearchInput.value = ''; // clear input
+  NavUl.style.display = 'none';
+
+  document.addEventListener('keydown', closeModalWithKeyboard);
 }
 
 function closeModal() {
-  // prevent page scrolling when modal open: https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
-  // When the modal is hidden...
   const scrollY = document.body.style.top; // retrieve scroll location
   document.body.style.position = '';
   document.body.style.top = '';
@@ -99,11 +113,36 @@ function closeModal() {
   modal.style.display = 'none';
   swiperModal.keyboard.disable();
   swiper.keyboard.enable();
+  document.removeEventListener('keydown', closeModalWithKeyboard);
 }
 
+function openModalWithKeyboard(event) {
+  if (event.key === 'Enter') {
+    openModal();
+  }
+}
+
+// close modal using Escape key (hoisted)
+function closeModalWithKeyboard(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
+
+// hacky attempt to fix initial img height issue (extra space below image initially...)
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    swiper.update();
+  }, 40);
+});
+
+// add an click event listener for each swiper-slide (outside the modal)
 modalBtn.forEach(element => {
-  element.addEventListener('click', openModal); // add an click event listener for each swiper-slide (outside the modal)
+  element.addEventListener('click', openModal);
 });
 
 // Listen for close click
 closeBtnModal.addEventListener('click', closeModal);
+
+// open modal if non-modal image wrapper is in focus and enter is hit
+nonModalGalleryImgWrapper.addEventListener('keydown', openModalWithKeyboard);

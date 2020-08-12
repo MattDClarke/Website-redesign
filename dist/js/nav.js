@@ -3,8 +3,8 @@ const mainContent = document.querySelector('.main-content');
 const mainCover = document.querySelector('.main-cover');
 const burger = document.querySelector('.burger');
 const navUl = document.querySelector('#navUl');
-const navLinks = document.querySelectorAll('.nav-links li');
-
+// the anchors are the tabbable elements
+const navUlListAnchors = navUl.querySelectorAll('li a');
 const searchInput = document.querySelector('#searchInput');
 const searchIcon = document.querySelector('#search-btn');
 const closeBtnSearch = document.querySelector('#search-close');
@@ -56,21 +56,15 @@ const navSlide = () => {
 
     if (navUl.classList.contains('nav-active')) {
       navUl.style.animation = 'navSwipeOpen 0.5s ease-in';
+      navUlListAnchors.forEach(li => {
+        li.setAttribute('tabindex', 0);
+      });
     } else {
       navUl.style.animation = 'navSwipeClose 0.5s ease-in';
+      navUlListAnchors.forEach(li => {
+        li.setAttribute('tabindex', -1);
+      });
     }
-
-    // animate Links
-    // navLinks.forEach((link, index) => {
-    //   // if link has animation on it..
-    //   if (link.style.animation) {
-    //     link.style.animation = '';
-    //   } else {
-    //     // must use back tick "`"
-    //     link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-    //       0.3}s`;
-    //   }
-    // });
 
     // burger animation
     burger.classList.toggle('close');
@@ -96,9 +90,9 @@ function removeBlurAndClose() {
     body.classList.remove('remove-scroll');
     burger.classList.remove('close');
     navUl.style.animation = `navSwipeClose 0.5s ease-in`;
-    // remove links style
-    navLinks.forEach(link => {
-      link.style.animation = '';
+    // make navUlListAnchors un-tabbable
+    navUlListAnchors.forEach(li => {
+      li.setAttribute('tabindex', -1);
     });
   }
 }
@@ -115,19 +109,33 @@ function exitNav() {
     body.classList.remove('remove-scroll');
     burger.classList.remove('close');
     navUl.style.animation = `navSwipeClose 0.5s ease-in`;
+  }
+}
 
-    // remove links style
-    navLinks.forEach(link => {
-      link.style.animation = '';
+function listTabIndexChange() {
+  if (window.innerWidth > 1000) {
+    navUlListAnchors.forEach(li => {
+      li.setAttribute('tabindex', 0);
+    });
+  } else {
+    navUlListAnchors.forEach(li => {
+      li.setAttribute('tabindex', -1);
     });
   }
 }
 
+const resizeHandler = function() {
+  removeBlurAndClose();
+  listTabIndexChange();
+};
+
 // Listen for main content click
 mainCover.addEventListener('click', exitNav);
 
-// on window resize, call the remove blur and close nav function
-window.onresize = removeBlurAndClose;
+// on window resize, call the remove blur and close nav function and list tab index change function
+window.onresize = resizeHandler;
+// on page load - determine if li anchors should be tabbable based on window width
+window.onload = listTabIndexChange;
 
 // ------------------------------------------------- nav search  --------------------------------------------------------------//
 
@@ -157,13 +165,14 @@ searchIcon.addEventListener('click', () => {
   closeBtnSearch.style.display = 'block';
   searchInput.style.height = '40px';
   searchInput.style.cursor = 'text';
+  searchInput.setAttribute('tabindex', 0);
   searchInput.focus();
-
   typeWriter();
 });
 
 closeBtnSearch.addEventListener('click', () => {
   closeBtnSearch.style.display = 'none';
+  searchInput.setAttribute('tabindex', -1);
   searchIcon.style.display = 'block';
   searchInput.style.height = '0';
   searchInput.value = ''; // clear input

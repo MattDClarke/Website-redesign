@@ -46,6 +46,10 @@
   }
 }
 
+.swiper-wrapper:focus {
+  opacity: 0.8;
+}
+
 .swiper-slide-img {
   height: auto;
   border: 30px solid #0e0e0e;
@@ -233,6 +237,8 @@
   color: white;
   right: 10px;
   font-size: 30px;
+  background-color: black;
+  border: none;
 }
 
 .close-btn-modal:hover, .close-btn-modal:focus {

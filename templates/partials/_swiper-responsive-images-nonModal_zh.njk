@@ -1,6 +1,6 @@
 <!-- Swiper non-Modal -->
 <div {{ species[0].manyImagesId | safe }} class="swiper-container swiper-container-main">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" tabindex="0" aria-label="點擊圖片放大">
         {%- set numberOfImages = species[0].imgWidthsModal | length -%}
         {%- for i in range(numberOfImages) %} 
         {%- set numberPrefix = "0" -%}
