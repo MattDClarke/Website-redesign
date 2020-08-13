@@ -16,6 +16,16 @@
   }
 }
 
+.aspect-ratio_650-257 {
+  min-height: 257px;
+}
+
+@media all and (max-width: 700px) {
+  .aspect-ratio_650-257 {
+    min-height: calc((0.3002 * 100vw) + 21.49px);
+  }
+}
+
 .aspect-ratio_130-59 {
   min-height: 295px;
 }
@@ -36,13 +46,13 @@
   }
 }
 
-.aspect-ratio_650-257 {
-  min-height: 257px;
+.aspect-ratio_260-203 {
+  min-height: 507.5px;
 }
 
 @media all and (max-width: 700px) {
-  .aspect-ratio_650-257 {
-    min-height: calc((0.3002 * 100vw) + 21.49px);
+  .aspect-ratio_260-203 {
+    min-height: calc((0.6827 * 100vw) + 7.7008px);
   }
 }
 

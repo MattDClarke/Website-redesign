@@ -69,6 +69,14 @@ $mobile-pagination24: 542px;
     }
 }
 
+.aspect-ratio_650-257 { // based on the fourth img (shortest) of H. plumbea swiper gallery
+    min-height: 257px;
+
+    @include small-screen {
+        min-height: calc((0.3002 * 100vw) + 21.49px);
+    }
+}
+
 .aspect-ratio_130-59 { // based on first img (shortest) of school talks swiper gallery ... to prevent img reflow when image loading... swiper lazy load preloader in correct position
     min-height: 295px; // also prevent swiper wrapper being too large when loading on a slow network (opposite of reflow)
     
@@ -86,15 +94,13 @@ $mobile-pagination24: 542px;
     }
 }
 
-
-.aspect-ratio_650-257 { // based on the fourth img (shortest) of H. plumbea swiper gallery
-    min-height: 257px;
+.aspect-ratio_260-203 { // based on first img (shortest) of Hebius miyajimae swiper gallery
+    min-height: 507.5px;
 
     @include small-screen {
-        min-height: calc((0.3002 * 100vw) + 21.49px);
+        min-height: calc((0.6827 * 100vw) + 7.7008px);
     }
 }
-
 
 .swiper-wrapper:focus {
     opacity: 0.8;
@@ -197,11 +203,6 @@ $mobile-pagination24: 542px;
     color: color(white);
 }
   
-// .swiper-button-next:focus {
-//     outline: none;
-// }
-  
-
 .swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
     opacity: 0.6;
 }
@@ -235,11 +236,6 @@ $mobile-pagination24: 542px;
 .swiper-pagination-bullet-active {
     background-color: color(white) !important; // had to use !important.. override .swiper-pagination-bullet color
 }
-
-
-// .swiper-container-main .swiper-slide-active:hover {
-//     cursor: zoom-in;
-// }
 
 /* ................................................ thumbs .......................................................... */
 
