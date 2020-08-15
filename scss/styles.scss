@@ -237,6 +237,13 @@ nav {
         &:hover::after {
             transform: scale(1,1);
         }
+        &:focus::after {
+            transform: scale(1,1);
+        }
+
+        &:focus {
+            outline: none !important;
+        }
     }
 
     a:lang(zh-TW){

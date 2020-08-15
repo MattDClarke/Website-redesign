@@ -176,6 +176,15 @@ nav {
           transform: scale(1, 1);
 }
 
+.nav-links a:focus::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.nav-links a:focus {
+  outline: none !important;
+}
+
 .nav-links a:lang(zh-TW) {
   font-weight: 100;
 }
