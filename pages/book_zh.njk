@@ -1,0 +1,93 @@
+{% set body_class = "book" %}
+{% extends "_layout_zh.njk" %} 
+{% block hrefLanguage %}
+    <link rel="alternate" hreflang="en-US" href="book.html" />
+    <link rel="alternate" hreflang="en" href="book.html.html" />
+    <link rel="alternate" hreflang="zh-TW" href="book_zh.html_zh.html" />
+    <link rel="alternate" hreflang="zh" href="book_zh.html" />
+{% endblock %}
+{% block metaDescription %}
+    " Want to know what it's like to prowl the wilds of Taiwan to photograph snakes and other wild critters? 
+This book tells it all! In A Cobra Hijacked My Camera Bag!, Hans Breuer searches for a new pet ratsnake in 
+Taipei restaurants, loses a coral snake in his living room, confronts a cobra in complete darkness, and 
+assumes unorthodox yogic postures to photograph kraits, habus, and bamboo vipers. Between the tree ferns of 
+Taiwan's lush, rugged mountains"
+{% endblock %}
+{% block csp %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
+{% endblock %}
+{% block title %}
+    The Book: A Cobra Hijacked My Camera Bag!
+{% endblock %}
+{% block content %}
+
+    <div class="about-col" lang="en-US">
+        <h1 class="header">BOOK</h1>
+        <div class="text-box text-box--book">
+            <div class="book-img-container">
+                <picture>
+                    {# webp images #}
+                    <source 
+                        type="image/webp" 
+                        srcset="
+                        images/book/book-200px.webp,
+                        images/book/book-200px_2x.webp 2x,
+                        images/book/book-200px_3x.webp 3x
+                        "
+                        media="(max-width: 812px)">
+                    <source 
+                        type="image/webp" 
+                        srcset="
+                        images/book/book-280px.webp ,
+                        images/book/book-280px_2x.webp 2x,
+                        images/book/book-280px_3x.webp 3x 
+                        ">
+
+                    {# jpeg images #}
+                    <source 
+                        type="image/jpeg" 
+                        srcset="
+                        images/book/book-200px.jpg,
+                        images/book/book-200px_2x.jpg 2x,
+                        images/book/book-200px_3x.jpg 3x
+                        "
+                        media="(max-width: 812px)">
+                    <source 
+                        type="image/jpeg" 
+                        srcset="
+                        images/book/book-280px.jpg,
+                        images/book/book-280px_2x.jpg 2x,
+                        images/book/book-280px_3x.webp 3x
+                        ">
+
+                    <img src="images/book/book-280px.jpg" 
+                         alt="book cover - A Cobra Hijacked My Camera Bag!" 
+                         width="280" height="445">
+                </picture>
+            </div>
+            <div class="book-text-1">
+                <p>
+                    Want to know what it's like to prowl the wilds of Taiwan to photograph snakes and other wild critters? 
+                    This book tells it all! In <em>A Cobra Hijacked My Camera Bag!</em>, Hans Breuer searches for a new pet ratsnake in Taipei restaurants, 
+                    loses a coral snake in his living room, confronts a cobra in complete darkness, and assumes unorthodox yogic postures to photograph kraits, 
+                    habus, and bamboo vipers. Between the tree ferns of Taiwan's lush, rugged mountains, Hans draws us along to experience a fantastic variety 
+                    of snakes, along with turtles, civets, pangolins, and other representatives of the island's immense biodiversity. During his constant search 
+                    for reptiles and amphibians, Hans introduces the best of Taiwan with quirky humor, while educating the reader in remarkable detail. 
+                    Twenty-two years on the island, and fluency in Mandarin Chinese, has given Hans a broad experience with all facets of Taiwan life, 
+                    complementing his herpetological observations.
+                </p>
+            </div>
+            <div class="book-text-2">
+                <p>
+                    We learn about family relations, food and drinking customs, dealing with curious police 
+                    officers, and the aboriginal relationship to Taiwan's rich animal life. With this book in hand, you don't need a plane ticket to enjoy the 
+                    thrill of herping Taiwan, but after reading Hans' adventures, you might just book your next vacation there!
+                    More info on the <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="#">publisher's site</a>.
+                    <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.amazon.com/Hijacked-Camera-Snakes-Stories-Taiwan/dp/1616461292/ref=sr_1_1?ie=UTF8&qid=1349246447">Click here for a few five-star reviews on Amazon</a>.                    
+                    <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.amazon.com/Hijacked-Camera-Snakes-Stories-Taiwan/dp/1616461292/ref=sr_1_1?ie=UTF8&qid=1349246447">Buy the book RIGHT HERE</a>... or from your favorite online bookseller.
+                </p>
+            </div> 
+        </div>
+    </div>
+
+{% endblock %}

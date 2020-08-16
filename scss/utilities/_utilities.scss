@@ -1,0 +1,75 @@
+/* .................................... abstracts/ utilities ................................................ */
+$colors: (
+    black: black,
+    white: white,
+    white-lighter: rgb(236, 236, 236),
+    off-white: #d8d8d8,
+    grey: rgb(192, 192, 192),
+    dark-grey: #0e0e0e,
+    yellow: #fefb10,
+    orange: orange,
+    light-yellow: #fdfa54,
+    red: red,
+    red-lighter: #ff1110,
+    maroon: #800000,
+    green: #00b200
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$hover-zoom: scale(1.2);
+
+$scroll-width: calc(100vw - 100%);
+
+$desktop: 1280px; // large screen
+$gallery-images: 1200px; // change margin when gallery images decr in size
+$ipad: 1023px; // ipad wide view
+$menu-button: 991px; // width when menu aria appears
+$tablet: 812px; // smaller sized screens --> decr size by about 1/2
+$tablet-mobile: 600px;
+$mobile: 460px; // small sized screens
+
+
+@mixin desktop {
+    @media all and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin gallery-images {
+    @media all and (max-width: #{$gallery-images}) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media all and (max-width: #{$ipad}) {
+        @content;
+    }
+}
+
+@mixin menu-button {
+    @media all and (max-width: #{$menu-button}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media all and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet-mobile {
+    @media all and (max-width: #{$tablet-mobile}) {
+        @content;
+    }
+} 
+
+@mixin mobile {
+    @media all and (max-width: #{$mobile}) {
+        @content;
+    }
+}

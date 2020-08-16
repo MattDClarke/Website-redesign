@@ -1,77 +1,6 @@
-$colors: (
-    black: black,
-    white: white,
-    white-lighter: rgb(236, 236, 236),
-    off-white: #d8d8d8,
-    grey: rgb(192, 192, 192),
-    dark-grey: #0e0e0e,
-    yellow: #fefb10,
-    orange: orange,
-    light-yellow: #fdfa54,
-    red: red,
-    red-lighter: #ff1110,
-    maroon: #800000,
-    green: #00b200
-);
+@import 'utiities/utilities';
 
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-}
-
-$hover-zoom: scale(1.2);
-
-$scroll-width: calc(100vw - 100%);
-
-$desktop: 1280px; // large screen
-$gallery-images: 1200px; // change margin when gallery images decr in size
-$ipad: 1023px; // ipad wide view
-$menu-button: 991px; // width when menu aria appears
-$tablet: 812px; // smaller sized screens --> decr size by about 1/2
-$tablet-mobile: 600px;
-$mobile: 460px; // small sized screens
-
-
-@mixin desktop {
-    @media all and (max-width: #{$desktop}) {
-        @content;
-    }
-}
-
-@mixin gallery-images {
-    @media all and (max-width: #{$gallery-images}) {
-        @content;
-    }
-}
-
-@mixin ipad {
-    @media all and (max-width: #{$ipad}) {
-        @content;
-    }
-}
-
-@mixin menu-button {
-    @media all and (max-width: #{$menu-button}) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media all and (max-width: #{$tablet}) {
-        @content;
-    }
-}
-
-@mixin tablet-mobile {
-    @media all and (max-width: #{$tablet-mobile}) {
-        @content;
-    }
-} 
-
-@mixin mobile {
-    @media all and (max-width: #{$mobile}) {
-        @content;
-    }
-}
+/* .................................... base ................................................ */
 
 
 * {
@@ -86,7 +15,6 @@ body::-webkit-scrollbar {
 }
 
 body {
-    //font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     font-family: Arial, sans-serif;
     letter-spacing: 0.02rem;
     background-color: color(dark-grey);
@@ -129,22 +57,8 @@ body.remove-scroll {
 .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    //min-height: 100vh;
 }  
 
-// make Chinese font thinner
-// #text-chinese {
-//     font-weight: 100;
-// }
-
-// make English text on Chinese pages bolder
-#text-english {
-    font-weight: 400;
-}
-
-h5 {
-    font-weight: bold;
-}
 /* ........................................................... nav  .......................................................... */
 
 nav {
@@ -192,7 +106,6 @@ nav {
         color: color(white); 
     }
 }
-
 
 .nav-links {
     display: flex;
@@ -323,23 +236,7 @@ body.links .nav-links-page a {
 .search-btn img {
     margin: 1px;
 }
-// .search-icon {
-//     position: absolute;
-//     right: 10px;
-//     height: 32px;
-//     margin: 10px 0.5px 0.5px 5.5px;
-//     cursor: pointer;
-    
-//     @include tablet {
-//         height: 28px;
-//     }
 
-//     @include tablet-mobile {
-//         width: 24px;
-//         margin-bottom: -6px;
-//     }
-// }
-  
 
 .search-close {
     position: absolute;
@@ -371,10 +268,6 @@ body.links .nav-links-page a {
     text-align: center;
     margin-bottom: -16.4px; 
     -webkit-tap-highlight-color: transparent;
-    // &:focus {
-    //     outline: 0  ;
-    // }
-
 }
     
   /* to make burger icon right aligned */
@@ -406,9 +299,6 @@ body.links .nav-links-page a {
             transform: scale(1);
         }
     }
-
-
-
 
 }
     
@@ -1039,10 +929,7 @@ footer video {
 
 .img-container .icon-danger {
     position: absolute;
-    //color: color(yellow);
-    //background-color: color(red);
     border-radius: 3px;
-    //border: 4px solid color(red);
     width: 33.6px; 
     height: 28.8px; 
     top: 0px;
@@ -1172,14 +1059,6 @@ footer video {
     text-align: justify;
     padding-top: 30px; 
     padding-bottom: 0;
-
-    @include tablet {
-        //padding: 20px 0;
-    }
-
-    @include mobile {
-        //padding: 10px 0;
-    }
 }
 
 
@@ -1255,7 +1134,6 @@ footer video {
     @extend %header-template;
     text-align: left;
     font-size: 30px;
-    //margin-top: 0px;
     text-decoration: underline;
     text-decoration-thickness: 3px;
 
@@ -1265,11 +1143,9 @@ footer video {
 
     @include tablet {
         font-size: 26.3px;
-        //margin-top: 28px;
     }
     @include mobile {
         font-size: 19.6px;
-        //margin-top: 10px;
     }    
 }
 
@@ -1451,6 +1327,10 @@ th.table-header {
 
 /* ........................................................ species pages ........................................................ */
 
+h5 {
+    font-weight: bold;
+}
+
 .species-media {
     display: flex;
     justify-content: center;
@@ -1486,8 +1366,6 @@ th.table-header {
 
 .info-box-header {
     flex: 1;
-    //padding-top: 10px;
-    //padding-bottom: 10px;
     padding-right: 15px;
     font-size: 25px;
 
@@ -1499,12 +1377,7 @@ th.table-header {
         font-weight: 100;
     }
 
-    @include menu-button {
-        //padding-bottom: 0;
-    }
-
     @include tablet {
-        //padding-top: 20px;
         padding-right: 0;
         font-size: 22.5px;
     }
@@ -1516,10 +1389,8 @@ th.table-header {
 
 .info-box-text {
     flex: 4;
-    //padding: 10px 0px;
 
     @include tablet {
-        //padding: 0;
         letter-spacing: -0.052rem;
     }
 }

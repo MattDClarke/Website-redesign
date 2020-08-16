@@ -1,5 +1,11 @@
 {% set body_class = "book" %}
 {% extends "_layout.njk" %} 
+{% block hrefLanguage %}
+    <link rel="alternate" hreflang="en-US" href="book.html" />
+    <link rel="alternate" hreflang="en" href="book.html.html" />
+    <link rel="alternate" hreflang="zh-TW" href="book_zh.html_zh.html" />
+    <link rel="alternate" hreflang="zh" href="book_zh.html" />
+{% endblock %}
 {% block metaDescription %}
     " Want to know what it's like to prowl the wilds of Taiwan to photograph snakes and other wild critters? 
 This book tells it all! In A Cobra Hijacked My Camera Bag!, Hans Breuer searches for a new pet ratsnake in 

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* .................................... abstracts/ utilities ................................................ */
+/* .................................... base ................................................ */
 * {
   margin: 0;
   padding: 0;
@@ -53,14 +55,6 @@ body.remove-scroll {
   display: grid;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
-}
-
-#text-english {
-  font-weight: 400;
-}
-
-h5 {
-  font-weight: bold;
 }
 
 /* ........................................................... nav  .......................................................... */
@@ -1597,6 +1591,10 @@ th.table-header {
 }
 
 /* ........................................................ species pages ........................................................ */
+h5 {
+  font-weight: bold;
+}
+
 .species-media {
   display: -webkit-box;
   display: -ms-flexbox;
