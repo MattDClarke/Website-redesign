@@ -305,6 +305,7 @@ body.links .nav-links-page a {
 .burger--container {
   width: 25px;
   margin: 0 auto;
+  padding-bottom: 5px;
   text-align: left;
   background-color: rgba(255, 255, 255, 0);
   border: 0;
@@ -355,24 +356,20 @@ body.links .nav-links-page a {
 }
 
 .line1 {
-  width: 5px;
+  width: 25px;
   height: 2px;
-  margin-left: 20px;
-  /* to make burger icon right aligned */
   background-color: white;
 }
 
 .line2 {
-  width: 14px;
-  height: 3px;
-  margin-left: 11px;
-  /* to make burger icon right aligned */
+  width: 25px;
+  height: 2px;
   background-color: #ff1110;
 }
 
 .line3 {
   width: 25px;
-  height: 4px;
+  height: 2px;
   background-color: white;
 }
 
@@ -502,27 +499,17 @@ body.links .nav-links-page a {
 }
 
 .close .line1 {
-  width: 25px;
-  margin-left: 0;
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-          transform: rotate(-45deg) translate(-5px, 6px);
-  margin-top: 6.5px;
-  margin-bottom: 4px;
-  padding-bottom: 3px;
+  -webkit-transform: rotate(-225deg) translate(4.5px, -5.5px);
+          transform: rotate(-225deg) translate(4.5px, -5.5px);
 }
 
 .close .line2 {
-  margin-left: 0px;
   opacity: 0;
 }
 
 .close .line3 {
-  height: 2px;
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
           transform: rotate(45deg) translate(-5px, -6px);
-  margin-top: -1px;
-  margin-bottom: 5px;
-  padding-bottom: 3px;
 }
 
 .search-ul {

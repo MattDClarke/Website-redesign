@@ -9,6 +9,9 @@
 {% block metaDescription %}
     "圖像庫，顯示台灣的所有蛇，並帶有物種描述和其他照片的鏈接"
 {% endblock %}
+{% block headLinks %}
+    <link rel="stylesheet" href="css/home.min.css">
+{% endblock %}
 {% block csp %}
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
 {% endblock %}

@@ -9,6 +9,9 @@
 {% block metaDescription %}
     "鏈接到有關台灣的爬行動物和生物多樣性的資源，鏈接到有關蛇的書籍，照片博客，表格和一般信息"
 {% endblock %}
+{% block headLinks %}    
+    <link rel="stylesheet" href="css/infoPages.min.css">
+{% endblock %}
 {% block csp %}
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
 {% endblock %}

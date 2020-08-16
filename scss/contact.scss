@@ -1,0 +1,110 @@
+@import 'utilities/utilities';
+
+/* .............................................. contact form ................................................. */
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: color(off-white);
+    margin-top: 25px;
+    font-size: 22px;
+
+    @include tablet {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    @include mobile {
+        margin-top: 20px;
+        font-size: 19px;
+    }
+}
+
+
+.form-input {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
+    width: 500px;
+    font-size: 20px;
+    border: 2px solid color(white);
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+
+    @include tablet {
+        font-size: 18px;
+    }
+
+    @include tablet-mobile {
+        width: 90vw;
+    }
+
+    @include mobile {
+        font-size: 17px;
+    }
+
+    &:focus {
+        outline: none;
+        border: 2px solid color(orange);
+    }
+}
+
+textarea {
+    max-width: 500px;
+    min-width: 500px;
+    min-height: 200px;
+    max-height: 500px;
+
+    @include tablet-mobile {
+        max-width: 90vw;
+        min-width: 90vw;
+    }
+}
+
+.contact-label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.5px;
+}
+
+.contact-btn {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 12px 15px 12px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: color(red);
+    color: white;
+}
+
+
+.contact-btn:hover {
+    cursor: pointer;
+    background-color:color(red-lighter);
+    box-shadow: 1px 1px 4px 0px rgba(255,255,255,0.3);
+    transition: all 0.4s ease;
+}
+
+
+.form-group small {
+    display: block;
+    visibility: hidden;
+}
+
+.form-group.success .form-input {
+    border-color: #2ecc71;
+}
+
+.form-group.error .form-input {
+    border-color: color(red);
+}
+
+.form-group.error small {
+    visibility: visible;
+    color: color(red);
+}
+

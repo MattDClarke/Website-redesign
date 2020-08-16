@@ -9,6 +9,9 @@
 {% block metaDescription %}
     "snakesoftaiwan.com 提供了完整的台灣蛇類訊息。在我們建立這個網站之前，只有一些前人探勘所留下的資料可供參考，而且很多都已經是過時的資訊。"
 {% endblock %}
+{% block headLinks %}    
+    <link rel="stylesheet" href="css/infoPages.min.css">
+{% endblock %}
 {% block csp %}
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
 {% endblock %}
