@@ -1,0 +1,461 @@
+@import 'utilities/utilities';
+
+/* ........................................................ about.html ........................................................ */
+
+.about-col {
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* there is a heading... */
+}
+
+%text-box-template {  /* SASS inheritance */
+    color: color(white-lighter);
+    font-size: 22px;
+    line-height: 36.8px;
+    margin-top: 0;
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px 0;
+
+    @include tablet {
+        font-size: 20px;
+        line-height: 33px;
+    }
+    @include mobile {
+        font-size: 19px;
+        line-height: 31.3px;
+        border-radius: 20px;
+    }
+}
+
+.text-box {
+    @extend %text-box-template;
+    align-self: center; /* center about-box in viewport*/ 
+    margin-left: 5%;
+    margin-right: 5%;
+
+    @include tablet {
+        padding: 20px 0;
+        
+    } 
+}
+
+
+.text-box--species {
+    @extend %text-box-template;
+    flex: 1;
+    padding: 35px 0;
+}
+
+.text-box--species-media {
+    @extend %text-box-template;
+    flex: 1;
+    padding: 0px 0;
+    border-radius: 20px;
+    margin-top: 33px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 2px;
+        background: color(grey);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background: color(grey);
+        position: absolute;
+        bottom: -33px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    @include mobile {
+        border-radius: 10px;
+    }
+}
+
+.text-box--links {
+    @extend %text-box-template;
+    margin-bottom: 0px;
+    align-self: center; /* center about-box in viewport*/ 
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    padding-top: 30px; 
+    padding-bottom: 0;
+}
+
+
+.site-link {
+    color: color(white);
+    text-decoration: underline;
+    text-decoration-color: color(red);
+    text-decoration-thickness: 2px;
+    transition: all 0.5s ease;
+}
+
+%site-link--species-template {
+    color: color(white);
+    text-decoration: underline;
+    text-decoration-color: color(red);
+    text-decoration-thickness: 2px;
+    transition: all 0.5s ease;
+}
+
+.site-link--species {
+    @extend %site-link--species-template;
+    font-style: italic;
+}
+
+.site-link--species-common-name {
+    @extend %site-link--species-template;
+}
+
+.site-link:hover, .site-link--species:hover, .site-link--species-common-name:hover {
+    text-decoration-color: color(maroon);
+}
+
+
+
+
+.about-box-bottom {
+
+    @include tablet {
+        padding-top: 5px;
+    }
+}
+
+.about-box p {
+    margin-bottom: 0;
+}
+
+%header-template {
+    color: color(white-lighter);
+    letter-spacing: 3px;
+
+    @include ipad {
+        text-align: center;
+    }
+}
+
+.header {
+    @extend %header-template;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 35px;
+
+    @include tablet {
+        font-size: 33px;
+        margin-top: 40px;
+    }
+    @include mobile {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}
+
+.header-links {
+    @extend %header-template;
+    text-align: left;
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+
+    &:lang(zh-TW) {
+        text-underline-position: under;
+    }
+
+    @include tablet {
+        font-size: 26.3px;
+    }
+    @include mobile {
+        font-size: 19.6px;
+    }    
+}
+
+
+.header--name {
+    @extend %header-template;
+    font-size: 25px;
+    @include tablet {
+        font-size: 21.8px;
+    }
+    @include mobile {
+        font-size: 14px;
+    }
+}
+
+.header--species {
+    @extend %header-template;
+    margin-top: 25px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    line-height: 1.5em;
+    font-size: 35px;
+
+    @include tablet {
+        font-size: 30.6px;
+
+    }
+    @include mobile {
+        font-size: 23px;
+        
+    }
+}
+
+.header--status, .header--danger {
+    @extend %header-template;
+    font-size: 25px;
+
+    @include tablet {
+        font-size: 21.8px;
+    }
+    @include mobile {
+        font-size: 16.4px;
+    }
+}
+
+.header--status {
+    margin-top: 15px;
+
+    @include mobile {
+        margin-top: 11.3px;
+    }
+}
+
+.my-list1, .my-list2 {
+    margin-left: 0;
+}
+
+
+.my-list1 li, .my-list2 li {
+    font-size: 20px;
+
+    @include tablet {
+        font-size: 18px;
+        line-height: 25px; 
+        
+    }
+    @include mobile {
+        font-size: 16px;
+        border-radius: 20px;
+    }
+}
+
+
+.my-list1--flex-container-item {
+    margin-top: 30px;
+    list-style: none;
+    text-align: left;
+    
+
+    @include tablet {
+        margin-top: 15px;
+    }
+}
+
+.my-list2 {
+    margin-top: 15px;
+    list-style: none;
+    text-align: left;
+
+    @include tablet {
+        margin-top: 5px;
+    }
+}
+
+.my-list1--flex-container-item li::before, .my-list2 li::before {
+    content: "\2022";
+    color: color(red);
+    display: inline-block; 
+    font-size: 25px;
+    width: 0.5em;
+    margin-left: -0.5em;
+    top: 0;
+}
+
+.my-list-1--species {
+    margin-top: 0;
+}
+
+.my-list1--flex-container {
+    display: flex;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.my-list1--flex-container-item {
+    flex: 1;
+}
+
+/* ........................................................ book.html ........................................................ */
+
+.text-box--book {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-img-container {
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 10px;
+
+    @include desktop {
+        width: 100%;
+        padding-bottom: 30px;
+        margin-right: 0px;
+    }
+}
+
+.book-img {
+    width: 280px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 5px 7px 6px rgba(0,0,0,0.3);
+
+
+    @include tablet {
+        width: 200px;
+    }
+}
+
+.book-text-1 {
+    flex: 1;
+}
+
+.book-text-2 {
+    margin-top: 0.75rem;
+}
+/* ........................................................ links.html ........................................................ */
+
+th.table-header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 5px; 
+    font-size: 30px;
+
+    @include tablet {
+        font-size: 22.5px;
+        padding-top: 25px;
+ 
+    }
+    @include mobile {
+        font-size: 21px;
+        padding-top: 15px;
+    }
+}
+
+/* ........................................................ species pages ........................................................ */
+
+h5 {
+    font-weight: bold;
+}
+
+.species-media {
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.text-box-container {
+    margin-left: 5%;
+    margin-right: 5%;   
+    display: flex;
+    justify-content: center;
+}
+
+.text-box-container-info {
+    margin-top: 10px; 
+
+    @include tablet {
+        margin-top: 5px;
+    }
+}
+
+.species-info-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    justify-content: baseline;
+
+    @include menu-button {
+        flex-direction: column;
+    }
+}
+
+.info-box-header {
+    flex: 1;
+    padding-right: 15px;
+    font-size: 25px;
+
+    &:lang(en-US){
+        font-weight: 600;
+    }
+
+    &:lang(zh-TW){
+        font-weight: 100;
+    }
+
+    @include tablet {
+        padding-right: 0;
+        font-size: 22.5px;
+    }
+
+    @include mobile {
+        font-size: 21.5px;
+    }
+}
+
+.info-box-text {
+    flex: 4;
+
+    @include tablet {
+        letter-spacing: -0.052rem;
+    }
+}
+
+.info-box-paragraph {
+    margin-bottom: 0.75rem;
+}
+
+.info-box-paragraph2 {
+    margin-top: 0.75rem;
+}
+
+
+.header-box {
+    text-align: center;
+    margin: 0 5px;
+}
+
+.translator-name {
+    text-align: center;
+    margin-top: 6rem;
+}
+/* .............................................. swiper gallery - school talks ................................................. */
+
+#header--school-talks {
+    margin-top: 0;
+    text-align: left;
+    
+    @include ipad {
+        text-align: center;
+    }
+}

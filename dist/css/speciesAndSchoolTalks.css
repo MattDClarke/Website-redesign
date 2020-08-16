@@ -1,0 +1,553 @@
+/* .................................... abstracts/ utilities ................................................ */
+/* ........................................................ about.html ........................................................ */
+.about-col {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* there is a heading... */
+}
+
+.text-box, .text-box--species, .text-box--species-media, .text-box--links {
+  /* SASS inheritance */
+  color: #ececec;
+  font-size: 22px;
+  line-height: 36.8px;
+  margin-top: 0;
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px 0;
+}
+
+@media all and (max-width: 812px) {
+  .text-box, .text-box--species, .text-box--species-media, .text-box--links {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .text-box, .text-box--species, .text-box--species-media, .text-box--links {
+    font-size: 19px;
+    line-height: 31.3px;
+    border-radius: 20px;
+  }
+}
+
+.text-box {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /* center about-box in viewport*/
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media all and (max-width: 812px) {
+  .text-box {
+    padding: 20px 0;
+  }
+}
+
+.text-box--species {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 35px 0;
+}
+
+.text-box--species-media {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0px 0;
+  border-radius: 20px;
+  margin-top: 33px;
+  position: relative;
+}
+
+.text-box--species-media::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: silver;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-box--species-media::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: silver;
+  position: absolute;
+  bottom: -33px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 460px) {
+  .text-box--species-media {
+    border-radius: 10px;
+  }
+}
+
+.text-box--links {
+  margin-bottom: 0px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /* center about-box in viewport*/
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+
+.site-link {
+  color: white;
+  text-decoration: underline;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+  text-decoration-thickness: 2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.site-link--species, .site-link--species-common-name {
+  color: white;
+  text-decoration: underline;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+  text-decoration-thickness: 2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.site-link--species {
+  font-style: italic;
+}
+
+.site-link:hover, .site-link--species:hover, .site-link--species-common-name:hover {
+  -webkit-text-decoration-color: #800000;
+          text-decoration-color: #800000;
+}
+
+@media all and (max-width: 812px) {
+  .about-box-bottom {
+    padding-top: 5px;
+  }
+}
+
+.about-box p {
+  margin-bottom: 0;
+}
+
+.header, .header-links, .header--name, .header--species, .header--status, .header--danger {
+  color: #ececec;
+  letter-spacing: 3px;
+}
+
+@media all and (max-width: 1023px) {
+  .header, .header-links, .header--name, .header--species, .header--status, .header--danger {
+    text-align: center;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 35px;
+}
+
+@media all and (max-width: 812px) {
+  .header {
+    font-size: 33px;
+    margin-top: 40px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+}
+
+.header-links {
+  text-align: left;
+  font-size: 30px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.header-links:lang(zh-TW) {
+  text-underline-position: under;
+}
+
+@media all and (max-width: 812px) {
+  .header-links {
+    font-size: 26.3px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header-links {
+    font-size: 19.6px;
+  }
+}
+
+.header--name {
+  font-size: 25px;
+}
+
+@media all and (max-width: 812px) {
+  .header--name {
+    font-size: 21.8px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header--name {
+    font-size: 14px;
+  }
+}
+
+.header--species {
+  margin-top: 25px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  line-height: 1.5em;
+  font-size: 35px;
+}
+
+@media all and (max-width: 812px) {
+  .header--species {
+    font-size: 30.6px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header--species {
+    font-size: 23px;
+  }
+}
+
+.header--status, .header--danger {
+  font-size: 25px;
+}
+
+@media all and (max-width: 812px) {
+  .header--status, .header--danger {
+    font-size: 21.8px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header--status, .header--danger {
+    font-size: 16.4px;
+  }
+}
+
+.header--status {
+  margin-top: 15px;
+}
+
+@media all and (max-width: 460px) {
+  .header--status {
+    margin-top: 11.3px;
+  }
+}
+
+.my-list1, .my-list2 {
+  margin-left: 0;
+}
+
+.my-list1 li, .my-list2 li {
+  font-size: 20px;
+}
+
+@media all and (max-width: 812px) {
+  .my-list1 li, .my-list2 li {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .my-list1 li, .my-list2 li {
+    font-size: 16px;
+    border-radius: 20px;
+  }
+}
+
+.my-list1--flex-container-item {
+  margin-top: 30px;
+  list-style: none;
+  text-align: left;
+}
+
+@media all and (max-width: 812px) {
+  .my-list1--flex-container-item {
+    margin-top: 15px;
+  }
+}
+
+.my-list2 {
+  margin-top: 15px;
+  list-style: none;
+  text-align: left;
+}
+
+@media all and (max-width: 812px) {
+  .my-list2 {
+    margin-top: 5px;
+  }
+}
+
+.my-list1--flex-container-item li::before, .my-list2 li::before {
+  content: "\2022";
+  color: red;
+  display: inline-block;
+  font-size: 25px;
+  width: 0.5em;
+  margin-left: -0.5em;
+  top: 0;
+}
+
+.my-list-1--species {
+  margin-top: 0;
+}
+
+.my-list1--flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media all and (max-width: 812px) {
+  .my-list1--flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.my-list1--flex-container-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* ........................................................ book.html ........................................................ */
+.text-box--book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.book-img-container {
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+@media all and (max-width: 1280px) {
+  .book-img-container {
+    width: 100%;
+    padding-bottom: 30px;
+    margin-right: 0px;
+  }
+}
+
+.book-img {
+  width: 280px;
+  height: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media all and (max-width: 812px) {
+  .book-img {
+    width: 200px;
+  }
+}
+
+.book-text-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.book-text-2 {
+  margin-top: 0.75rem;
+}
+
+/* ........................................................ links.html ........................................................ */
+th.table-header {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+@media all and (max-width: 812px) {
+  th.table-header {
+    font-size: 22.5px;
+    padding-top: 25px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  th.table-header {
+    font-size: 21px;
+    padding-top: 15px;
+  }
+}
+
+/* ........................................................ species pages ........................................................ */
+h5 {
+  font-weight: bold;
+}
+
+.species-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.text-box-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text-box-container-info {
+  margin-top: 10px;
+}
+
+@media all and (max-width: 812px) {
+  .text-box-container-info {
+    margin-top: 5px;
+  }
+}
+
+.species-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 25px;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+
+@media all and (max-width: 991px) {
+  .species-info-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.info-box-header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 15px;
+  font-size: 25px;
+}
+
+.info-box-header:lang(en-US) {
+  font-weight: 600;
+}
+
+.info-box-header:lang(zh-TW) {
+  font-weight: 100;
+}
+
+@media all and (max-width: 812px) {
+  .info-box-header {
+    padding-right: 0;
+    font-size: 22.5px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .info-box-header {
+    font-size: 21.5px;
+  }
+}
+
+.info-box-text {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+@media all and (max-width: 812px) {
+  .info-box-text {
+    letter-spacing: -0.052rem;
+  }
+}
+
+.info-box-paragraph {
+  margin-bottom: 0.75rem;
+}
+
+.info-box-paragraph2 {
+  margin-top: 0.75rem;
+}
+
+.header-box {
+  text-align: center;
+  margin: 0 5px;
+}
+
+.translator-name {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+/* .............................................. swiper gallery - school talks ................................................. */
+#header--school-talks {
+  margin-top: 0;
+  text-align: left;
+}
+
+@media all and (max-width: 1023px) {
+  #header--school-talks {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=speciesAndSchoolTalks.css.map */

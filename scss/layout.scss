@@ -1,0 +1,584 @@
+@import 'utilities/utilities';
+
+/* .................................... base ................................................ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
+    background-color: color(dark-grey);
+    scrollbar-width: auto;
+    scrollbar-color: color(maroon) color(black);
+}
+
+:lang(zh-TW) {
+    font-family: "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", Arial, sans-serif;
+    font-weight: 100;
+}
+
+:lang(en-US) {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+}
+
+
+body::-webkit-scrollbar-track {
+    background: color(black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: color(maroon);
+    border-radius: 6px;
+}
+
+
+body.remove-scroll {
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-right: $scroll-width;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}  
+
+/* ........................................................... nav  .......................................................... */
+
+nav {
+    background-color: color(black);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid color(white);
+}
+      
+/* container to make minimum nav width */
+.nav--items {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.website-logo {
+    height: 32px;
+    margin-bottom: -9px;
+
+    @include tablet {
+        height: 28px;
+    }
+
+    @include tablet-mobile {
+    height: 24px;
+    width: 210.917px;
+    }
+}
+      
+.logo {
+    font-size: 23px;
+    color: color(white);
+    width: 50%;
+    padding-left: 5%;
+
+    a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: color(white); 
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;  /* align text of nav items and language select */
+    width: 50%; 
+    margin-right: 5%;
+
+    li {
+        list-style: none; 
+         
+        &:focus {
+            outline: none;
+        } 
+    }
+
+    a {
+        text-decoration: none;
+        color: color(white);
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        position: relative;   
+        
+        &:hover {
+            cursor: pointer;    
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: color(white);
+            position: absolute;
+            top: 1.2em;
+            left: 0;
+            right: 0;
+            border-radius: 10px;
+            transform: scale(0);
+            transition: transform ease 0.25s;    
+        }
+
+        &:hover::after {
+            transform: scale(1,1);
+        }
+        &:focus::after {
+            transform: scale(1,1);
+        }
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+
+    a:lang(zh-TW){
+        font-weight: 100;
+    }
+
+    a:lang(en-US) {
+        font-weight: bold;
+    }
+}
+
+// styling active page
+body.home .nav-home a,
+body.about .nav-about a,
+body.school-talks .nav-school-talks a,
+body.book .nav-book a,
+body.links .nav-links-page a {
+    border-bottom: 2px solid color(white);
+}
+
+
+/* ........................................................ nav search ........................................................ */
+
+.search-input-container {
+    position: relative;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-input-spacer {
+    width: 50%;
+    flex: 1;
+    margin-left: 5%;
+
+    @include tablet-mobile {
+        display: none;
+    }
+}
+
+.search-input {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02rem;
+    height: 0;
+    border: 0;
+    border-radius: 5px;
+    margin-right: 40px;
+    padding-left: 14px;
+    transition: height 1s ease;
+    font-size: 1rem;
+    cursor: pointer;
+    flex: 1;
+
+    @include tablet {
+        font-size: 0.875rem;
+    }
+
+    @include tablet-mobile {
+        margin: 0 5%;
+    }
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    height: 32px;
+    margin: 2px 10px 2px 5.5px;
+    background-color: rgba(255,255,255,0);
+    border: 0;  
+    cursor: pointer;
+    
+    @include menu-button {
+        margin-bottom: -6px;
+    }
+}
+  
+.search-btn img {
+    margin: 1px;
+}
+
+
+.search-close {
+    position: absolute;
+    right: 10px;
+    display: none;
+    height: 23px;
+    margin: 2px 10px 2px 5.5px;
+    background-color: rgba(255,255,255,0);
+    width: 24px;
+    border: 0;
+    cursor: pointer;
+    
+    @include menu-button {
+        height: 18.1px;
+        margin-bottom: -6px;
+    }
+}
+  
+.search-close img {
+    width: 100%;
+}
+  
+/* ........................................................ nav burger ........................................................ */
+  
+.burger {
+    display: none;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    margin-bottom: -16.4px; 
+    -webkit-tap-highlight-color: transparent;
+}
+    
+/* to make burger icon right aligned */
+.burger--container {
+    width: 25px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: rgba(255,255,255,0);
+    border: 0;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        animation:pulseAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+}
+
+
+
+    @keyframes pulseAnimation {
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+}
+    
+.burger--container div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+    transition: all 0.5s ease;
+}
+    
+.line1 {
+    width: 5px; 
+    height: 2px;
+    margin-left: 20px; /* to make burger icon right aligned */
+    background-color: color(white);  
+}
+.line2 {
+    width: 14px;
+    height: 3px;
+    margin-left: 11px; /* to make burger icon right aligned */
+    background-color: color(red-lighter);
+}
+.line3 {
+    width: 25px;
+    height: 4px;
+    background-color: color(white);
+ 
+    
+}
+
+
+/* ........................................................ nav mobile ........................................................ */
+    
+@media (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding-top: 50px;
+        top: 0;
+        background-color: color(maroon);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 50%;
+        margin-right: 0;
+        z-index: 2;
+        transform: translateX(100%);
+        will-change: transform;
+
+        li {
+            // opacity: 0;
+            padding: 10px;
+        }
+
+        li.nav-home {
+            padding-top: 20px;
+        }
+    }
+    
+    .burger {
+    display: block;
+    }
+}
+    
+    
+.nav-active {
+    transform: translateX(0%);
+    z-index: 3;
+}
+    
+@keyframes navLinkFade {
+    from {
+    opacity: 0;
+    transform: translateX(50px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0px);
+    }
+}
+
+@keyframes navSwipeOpen {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes navSwipeClose {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+    
+.burger.close {
+    width: 50%;
+    color: color(black);
+    z-index: 4;
+    //padding-left: 16px;
+}
+  
+.close {
+    .line1 {
+        width: 25px; 
+        margin-left: 0;
+        transform: rotate(-45deg) translate(-5px, 6px);
+        margin-top: 6.5px;
+        margin-bottom: 4px;
+        padding-bottom: 3px;
+    }
+    .line2 {
+        margin-left: 0px;
+        opacity: 0;
+    }
+    .line3 {
+        height: 2px;
+        transform: rotate(45deg) translate(-5px, -6px);
+        margin-top: -1px;
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+    }
+}  
+
+.search-ul {
+    /* Remove default list styling */
+    position: absolute;
+    z-index: 2;
+    list-style-type: none;
+    width: calc(47.5% - 12px);
+    justify-self: stretch;
+    padding: 0;
+    margin-top: 40px;
+    right: 40px;
+    display: none;
+    max-height: 306px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    background-color: color(off-white);
+
+    @include tablet {
+        max-height: 277px;
+    }
+
+    @include tablet-mobile {
+        left: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+  
+.search-ul li a {
+    border: 1px solid #ddd; 
+    margin-top: -1px;
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 6px 13px; 
+    text-align: left;
+    text-decoration: none; /* Remove default text underline */
+    font-size: 1rem; 
+    color: color(black); 
+    display: block; /* Make it into a block element to fill the whole list */
+
+    @include tablet {
+        font-size: 0.875rem;
+    }
+}
+  
+.search-ul li a:hover {
+    background-color: #eee; /* Add a hover effect to all links */
+}
+
+
+/* ....................................................  nav filter list ..................................................... */
+//  Modified from: https://www.w3schools.com/howto/howto_js_filter_lists.asp .
+
+.main-content {
+    min-height: 100vh;
+    transition: all;  /* for slowly decr opacity of main when text in search bar */ 
+    animation:fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    padding: 40px 0;
+
+    @include tablet {
+        padding: 20px 0;
+    }
+
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main-cover {
+    display: none;
+}
+
+.main-cover.main-cover-opened {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+
+    
+/* make background fade when nav menu opened - toggled using JavaScript */
+.main-content.background-fade {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    height: 100%;
+    bottom: 0;
+    left:0;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 20px 5px;
+    background-color: color(black);
+    color: color(white);
+    box-shadow: 0 0 1px  rgba(255,255,255,0.1);
+    margin-top: 60px;
+
+
+    // make footer slanted
+    padding-top: 90px;
+    padding-bottom: 40px;
+    clip-path: polygon(0px 100px, 100% 0px, 100% 100%, 0% 100%);
+
+
+    @include tablet {
+        font-size: 10px;
+    }
+}
+
+.footer-img-container {
+    padding-bottom: 20px;
+}
+
+footer video {
+    width: 100px;
+    height: 100%;
+    border-radius: 5px;
+
+    @include tablet {
+        width: 75px;
+    }
+}
+
+.developer-link {
+    text-decoration: none;
+    color: color(white);
+}
