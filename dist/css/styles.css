@@ -1323,7 +1323,6 @@ footer video {
 }
 
 .header, .header-links, .header--name, .header--species, .header--status, .header--danger {
-  color: #ececec;
   letter-spacing: 3px;
 }
 
@@ -1337,6 +1336,7 @@ footer video {
   text-align: center;
   margin-top: 25px;
   font-size: 35px;
+  color: #ececec;
 }
 
 @media all and (max-width: 812px) {

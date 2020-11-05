@@ -351,8 +351,8 @@ body.links .nav-links-page a {
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: right;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .line1 {
