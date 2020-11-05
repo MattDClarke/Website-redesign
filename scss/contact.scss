@@ -108,3 +108,29 @@ textarea {
     color: color(red);
 }
 
+
+
+%header-template {
+    letter-spacing: 3px;
+
+    @include ipad {
+        text-align: center;
+    }
+}
+
+.header {
+    @extend %header-template;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 35px;
+    color: color(white-lighter);
+
+    @include tablet {
+        font-size: 33px;
+        margin-top: 40px;
+    }
+    @include mobile {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}

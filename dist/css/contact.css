@@ -123,4 +123,35 @@ textarea {
   visibility: visible;
   color: red;
 }
+
+.header {
+  letter-spacing: 3px;
+}
+
+@media all and (max-width: 1023px) {
+  .header {
+    text-align: center;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 35px;
+  color: #ececec;
+}
+
+@media all and (max-width: 812px) {
+  .header {
+    font-size: 33px;
+    margin-top: 40px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .header {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+}
 /*# sourceMappingURL=contact.css.map */
