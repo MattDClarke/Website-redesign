@@ -10,8 +10,13 @@
 
 }
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body::-webkit-scrollbar {
-    width: 16px;
+    width: auto;
 }
 
 body {
@@ -51,7 +56,6 @@ body.remove-scroll {
     left: 0;
     top: 0;
     bottom: 0;
-    padding-right: $scroll-width;
 }
 
 .wrapper {
@@ -237,7 +241,6 @@ body.links .nav-links-page a {
     margin: 1px;
 }
 
-
 .search-close {
     position: absolute;
     right: 10px;
@@ -288,9 +291,7 @@ body.links .nav-links-page a {
         animation:pulseAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-}
-
-
+    }
 
     @keyframes pulseAnimation {
         50% {
@@ -330,9 +331,6 @@ body.links .nav-links-page a {
 /* ........................................................ nav mobile ........................................................ */
     
 @media (max-width: 1000px) {
-    body {
-        overflow-x: hidden;
-    }
     .nav-links {
         position: fixed;
         right: 0;
@@ -351,7 +349,6 @@ body.links .nav-links-page a {
         will-change: transform;
 
         li {
-            // opacity: 0;
             padding: 10px;
         }
 
@@ -369,17 +366,6 @@ body.links .nav-links-page a {
 .nav-active {
     transform: translateX(0%);
     z-index: 3;
-}
-    
-@keyframes navLinkFade {
-    from {
-    opacity: 0;
-    transform: translateX(50px);
-    }
-    to {
-    opacity: 1;
-    transform: translateX(0px);
-    }
 }
 
 @keyframes navSwipeOpen {
@@ -404,7 +390,6 @@ body.links .nav-links-page a {
     width: 50%;
     color: color(black);
     z-index: 4;
-    //padding-left: 16px;
 }
   
 .close {
@@ -476,7 +461,6 @@ body.links .nav-links-page a {
     animation:fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-
     padding: 40px 0;
 
     @include tablet {

@@ -8,8 +8,13 @@
           box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body::-webkit-scrollbar {
-  width: 16px;
+  width: auto;
 }
 
 body {
@@ -47,7 +52,6 @@ body.remove-scroll {
   left: 0;
   top: 0;
   bottom: 0;
-  padding-right: calc(100vw - 100%);
 }
 
 .wrapper {
@@ -375,9 +379,6 @@ body.links .nav-links-page a {
 
 /* ........................................................ nav mobile ........................................................ */
 @media (max-width: 1000px) {
-  body {
-    overflow-x: hidden;
-  }
   .nav-links {
     position: fixed;
     right: 0;
@@ -420,32 +421,6 @@ body.links .nav-links-page a {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
   z-index: 3;
-}
-
-@-webkit-keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
 }
 
 @-webkit-keyframes navSwipeOpen {
