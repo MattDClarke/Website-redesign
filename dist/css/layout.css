@@ -301,7 +301,6 @@ body.links .nav-links-page a {
   cursor: pointer;
   width: 50%;
   text-align: center;
-  margin-bottom: -16.4px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -351,30 +350,33 @@ body.links .nav-links-page a {
   }
 }
 
-.burger--container div {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  text-align: right;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.line1 {
+.burger--lines {
   width: 25px;
   height: 2px;
-  background-color: white;
+  background: #ff1110;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.line2 {
+.burger--lines::before,
+.burger--lines::after {
+  content: '';
+  position: absolute;
   width: 25px;
   height: 2px;
-  background-color: #ff1110;
+  background: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.line3 {
-  width: 25px;
-  height: 2px;
-  background-color: white;
+.burger--lines::before {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.burger--lines::after {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
 }
 
 /* ........................................................ nav mobile ........................................................ */
@@ -468,23 +470,23 @@ body.links .nav-links-page a {
 }
 
 .burger.close {
-  width: 50%;
-  color: black;
   z-index: 4;
 }
 
-.close .line1 {
-  -webkit-transform: rotate(-225deg) translate(4.5px, -5.5px);
-          transform: rotate(-225deg) translate(4.5px, -5.5px);
+.close .burger--lines {
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+  background: transparent;
 }
 
-.close .line2 {
-  opacity: 0;
+.close .burger--lines::before {
+  -webkit-transform: rotate(45deg) translate(17.5px, -17.5px);
+          transform: rotate(45deg) translate(17.5px, -17.5px);
 }
 
-.close .line3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -6px);
-          transform: rotate(45deg) translate(-5px, -6px);
+.close .burger--lines::after {
+  -webkit-transform: rotate(-45deg) translate(17.5px, 17.5px);
+          transform: rotate(-45deg) translate(17.5px, 17.5px);
 }
 
 .search-ul {
