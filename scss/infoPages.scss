@@ -216,6 +216,52 @@
     }
 }
 
+/* ................ animations ................ */
+// .header, .header--species {
+//     // opacity: 0.5;
+//     transform: translateX(3%);
+//     animation: animationHeader ease 1s;
+//     animation-iteration-count: 1;
+//     animation-fill-mode: forwards;
+// }
+
+// @keyframes animationHeader {
+// //   0% {
+// //     opacity: 0.5;
+// //     }
+//   20% {
+//     transform: translateX(3%);
+//   }
+//   100% {
+//     // opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// .text-box {
+//     // opacity: 0.5;
+//     transform: translateX(-3%);
+//     animation: animationText ease 1.2s;
+//     animation-iteration-count: 1;
+//     animation-fill-mode: forwards;    
+// }
+
+// @keyframes animationText {
+// //   0% {
+// //     opacity: 0.15;
+// //   }
+//   30% {
+//     transform: translateX(-3%);
+//   }
+//   100% {
+//     // opacity: 1;
+//     transform: translateX(0)
+//   }
+// }
+
+
+
+
 .header--status, .header--danger {
     @extend %header-template;
     font-size: 25px;

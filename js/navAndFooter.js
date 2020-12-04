@@ -9,6 +9,23 @@ const searchInput = document.querySelector('#searchInput');
 const searchIcon = document.querySelector('#search-btn');
 const closeBtnSearch = document.querySelector('#search-close');
 
+// prevent resize handler function being called too often
+function debounce(func, wait = 20, immediate = true) {
+  let timeout;
+  return function() {
+    const context = this;
+    const args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
 // ---------------------------------------------- Nav toggle ---------------------------------------------------------//
 
 // ----------------------------------------- nav search list  ------------------------------------------------------//
@@ -133,7 +150,8 @@ const resizeHandler = function() {
 mainCover.addEventListener('click', exitNav);
 
 // on window resize, call the remove blur and close nav function and list tab index change function
-window.onresize = resizeHandler;
+// window.onresize = resizeHandler;
+window.addEventListener('resize', debounce(resizeHandler, 50));
 // on page load - determine if li anchors should be tabbable based on window width
 window.onload = listTabIndexChange;
 
@@ -180,3 +198,17 @@ closeBtnSearch.addEventListener('click', () => {
 });
 
 document.querySelector('#searchInput').addEventListener('keyup', searchFilter);
+
+// ///////////////// footer ///////////
+const footerImg = document.querySelector('.footer-img-container');
+
+const observer = new IntersectionObserver(entries => {
+  // console.log(entries);
+  if (entries[0].intersectionRatio > 0) {
+    entries[0].target.style.animation = `slideIn 2s forwards ease`;
+  } else {
+    entries[0].target.style.animation = 'none';
+  }
+});
+
+observer.observe(footerImg);

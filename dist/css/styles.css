@@ -47,7 +47,6 @@ body.remove-scroll {
   left: 0;
   top: 0;
   bottom: 0;
-  padding-right: calc(100vw - 100%);
 }
 
 .wrapper {
@@ -1398,7 +1397,6 @@ footer video {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   line-height: 1.5em;
-  font-size: 35px;
 }
 
 @media all and (max-width: 812px) {

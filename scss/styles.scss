@@ -51,7 +51,7 @@ body.remove-scroll {
     left: 0;
     top: 0;
     bottom: 0;
-    padding-right: $scroll-width;
+    // padding-right: $scroll-width;
 }
 
 .wrapper {
@@ -1168,7 +1168,6 @@ footer video {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     line-height: 1.5em;
-    font-size: 35px;
 
     @include tablet {
         font-size: 30.6px;
@@ -1176,7 +1175,6 @@ footer video {
     }
     @include mobile {
         font-size: 23px;
-        
     }
 }
 

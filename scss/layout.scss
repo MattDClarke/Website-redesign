@@ -11,7 +11,6 @@
 }
 
 html {
-    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -20,10 +19,13 @@ body::-webkit-scrollbar {
 }
 
 body {
+    width: 100vw;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     letter-spacing: 0.02rem;
     background-color: color(dark-grey);
     scrollbar-width: auto;
+    overflow-y: scroll;
     scrollbar-color: color(maroon) color(black);
 }
 
@@ -269,7 +271,6 @@ body.links .nav-links-page a {
     cursor: pointer;
     width: 50%;
     text-align: center;
-    // margin-bottom: -16.4px; 
     -webkit-tap-highlight-color: transparent;
 }
     
@@ -303,13 +304,6 @@ body.links .nav-links-page a {
     }
 
 }
-    
-// .burger--container div {
-//     margin-top: 5px;
-//     margin-bottom: 5px;
-//     text-align: right;
-//     transition: all 0.5s;
-// }
 
 .burger--lines {
     width: 25px;
@@ -336,22 +330,6 @@ body.links .nav-links-page a {
 .burger--lines::after {
     transform: translateY(8px);
 }
-    
-// .line1 {
-//     width: 25px; 
-//     height: 2px;
-//     background-color: color(white);  
-// }
-// .line2 {
-//     width: 25px;
-//     height: 2px;
-//     background-color: color(red-lighter);
-// }
-// .line3 {
-//     width: 25px;
-//     height: 2px;
-//     background-color: color(white);
-// }
 
 
 /* ........................................................ nav mobile ........................................................ */
@@ -413,21 +391,10 @@ body.links .nav-links-page a {
 }
     
 .burger.close {
-    // width: 50%;
-    // color: color(black);
     z-index: 4;
 }
   
 .close {
-    // .line1 {
-    //     transform: rotate(-225deg) translate(4.5px, -5.5px);
-    // }
-    // .line2 {
-    //     opacity: 0;
-    // }
-    // .line3 {
-    //     transform: rotate(45deg) translate(-5px, -6px);
-    // }
     .burger--lines {
         transform: translateX(-25px);
         background: transparent;
@@ -443,6 +410,25 @@ body.links .nav-links-page a {
 
 
 }  
+
+#nav-search-form {
+    scrollbar-width: auto;
+    scrollbar-color: color(maroon) color(black);
+
+    ::-webkit-scrollbar-track {
+        background: color(black);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: color(maroon);
+        border-radius: 6px;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: auto;
+    }
+}
 
 .search-ul {
     /* Remove default list styling */
@@ -497,7 +483,7 @@ body.links .nav-links-page a {
 
 .main-content {
     min-height: 100vh;
-    transition: all;  /* for slowly decr opacity of main when text in search bar */ 
+    transition: all; 
     animation:fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -564,6 +550,14 @@ footer {
     margin-top: 60px;
 
 
+    background-color: #070707;
+    
+    // background-image: url(../images/footer/topography.svg);
+
+    // from https://www.heropatterns.com/
+    background-image: url(../images/footer/wiggle.svg);
+    background-attachment: fixed;
+
     // make footer slanted
     padding-top: 90px;
     padding-bottom: 40px;
@@ -574,9 +568,23 @@ footer {
         font-size: 10px;
     }
 }
+​path {
+    fill: blue;
+}​
 
 .footer-img-container {
     padding-bottom: 20px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(3%);
+        opacity: 0.15;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 footer video {

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/home.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
 {% endblock %}
 {% block title %}
     Home
@@ -2802,6 +2802,6 @@
         </section>
     </div>
 
-    <script src="js/lazy.js"></script>
+    <script   src="js/lazy.min.js"></script>
 
 {% endblock %} 

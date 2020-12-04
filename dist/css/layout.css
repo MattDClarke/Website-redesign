@@ -9,7 +9,6 @@
 }
 
 html {
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -18,10 +17,13 @@ body::-webkit-scrollbar {
 }
 
 body {
+  width: 100vw;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   letter-spacing: 0.02rem;
   background-color: #0e0e0e;
   scrollbar-width: auto;
+  overflow-y: scroll;
   scrollbar-color: #800000 black;
 }
 
@@ -489,6 +491,24 @@ body.links .nav-links-page a {
           transform: rotate(-45deg) translate(17.5px, 17.5px);
 }
 
+#nav-search-form {
+  scrollbar-width: auto;
+  scrollbar-color: #800000 black;
+}
+
+#nav-search-form ::-webkit-scrollbar-track {
+  background: black;
+}
+
+#nav-search-form ::-webkit-scrollbar-thumb {
+  background-color: #800000;
+  border-radius: 6px;
+}
+
+#nav-search-form ::-webkit-scrollbar {
+  width: auto;
+}
+
 .search-ul {
   /* Remove default list styling */
   position: absolute;
@@ -552,7 +572,6 @@ body.links .nav-links-page a {
   min-height: 100vh;
   -webkit-transition: all;
   transition: all;
-  /* for slowly decr opacity of main when text in search bar */
   -webkit-animation: fadeInAnimation ease 2s;
           animation: fadeInAnimation ease 2s;
   -webkit-animation-iteration-count: 1;
@@ -634,6 +653,9 @@ footer {
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
   margin-top: 60px;
+  background-color: #070707;
+  background-image: url(../images/footer/wiggle.svg);
+  background-attachment: fixed;
   padding-top: 90px;
   padding-bottom: 40px;
   -webkit-clip-path: polygon(0px 100px, 100% 0px, 100% 100%, 0% 100%);
@@ -646,8 +668,39 @@ footer {
   }
 }
 
+​path {
+  fill: blue;
+}
+
+​
 .footer-img-container {
   padding-bottom: 20px;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+    opacity: 0.15;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+    opacity: 0.15;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 footer video {
