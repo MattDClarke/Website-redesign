@@ -355,9 +355,8 @@ gulp.task('images-home', function () {
 // EXCLUDING thumbnail images ... create using: gulp images-swiper-gallery-thumbs
 // Array of arrays from "imgWidthsModal": ... in data.json
 // species name - lowercase and hyphenated between words
-var speciesName = 'laticauda-laticaudata'
-var imagesToCreate = [[375, 563, 650, 800], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 
-  650, 800, 1024], [375, 563, 650, 800, 1024]]
+var speciesName = 'pseudagkistrodon-rudis'
+var imagesToCreate = [[375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 1024], [375, 563, 650, 768], [375, 563, 650, 680], [375, 563, 650, 687], [375, 563, 650, 687]]
 
 
 // loop through each image set and create correct images for each img

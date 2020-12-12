@@ -191,10 +191,10 @@
       "chinese": "緬甸蟒"
     },
     {
-      "href": "fowlea-flavipuncatus.html",
+      "href": "fowlea-piscator.html",
       "common": "Checkered Keelback",
-      "scientific": "Fowlea flavipuncatus",
-      "hrefChinese": "fowlea-flavipuncatus_zh.html",
+      "scientific": "Fowlea piscator",
+      "hrefChinese": "fowlea-piscator_zh.html",
       "chinese": "草 花蛇"
     },
     {
@@ -219,10 +219,10 @@
       "chinese": "鎖 蛇"
     },
     {
-      "href": "pseuagkistrodon-rudis.html",
+      "href": "pseudagkistrodon-rudis.html",
       "common": "False Viper",
-      "scientific": "Pseuagkistrodon rudis",
-      "hrefChinese": "pseuagkistrodon-rudis_zh.html",
+      "scientific": "Pseudagkistrodon rudis",
+      "hrefChinese": "pseudagkistrodon-rudis_zh.html",
       "chinese": "擬 龜殼花"
     },
     {
@@ -4823,11 +4823,11 @@
       ]
     }
   ],
-  "fowleaFlavipuncatusRespImgs": [
+  "fowleapiscatorRespImgs": [
     {
-      "nameLowerCaseHyphenated": "fowlea-flavipuncatus",
-      "nameUpperCaseHyphenated": "Fowlea-flavipuncatus",
-      "name": "Fowlea flavipuncatus",
+      "nameLowerCaseHyphenated": "fowlea-piscator",
+      "nameUpperCaseHyphenated": "Fowlea-piscator",
+      "name": "Fowlea piscator",
       "commonName": "Checkered Keelback",
       "chineseName": "草 花蛇",
       "chineseNameRomanized": "(cao3hua1she2)",
@@ -5356,11 +5356,11 @@
       ]
     }
   ],
-  "pseuagkistrodonRudisRespImgs": [
+  "pseudagkistrodonRudisRespImgs": [
     {
-      "nameLowerCaseHyphenated": "pseuagkistrodon-rudis",
-      "nameUpperCaseHyphenated": "Pseuagkistrodon-rudis",
-      "name": "Pseuagkistrodon rudis rudis",
+      "nameLowerCaseHyphenated": "pseudagkistrodon-rudis",
+      "nameUpperCaseHyphenated": "Pseudagkistrodon-rudis",
+      "name": "Pseudagkistrodon rudis rudis",
       "commonName": "False Viper, False Habu",
       "chineseName": "擬 龜殼花",
       "chineseNameRomanized": "(ni3gui1ke3hua1)",

@@ -3,7 +3,7 @@
 
 # (1)
 # name the image files. 
-# Add the images to imgsToProcess folder, name them "01.jpg, 02.jpg,..., 11.jpg"
+# Add the images to imgsToProcess imgSrc folder, name them "01.jpg, 02.jpg,..., 11.jpg"
 # Add species name to the variable 'imgNamePrefix' below
 
 # (2)
@@ -16,7 +16,7 @@ from PIL import Image
 
 # (1): name files
 # species name, first letter of the first word capitalized, hyphenated between words
-imgNamePrefix = 'Laticauda-laticaudata'
+imgNamePrefix = 'Pseudagkistrodon-rudis'
 
 # match end of img file name 
 r = re.compile(r'(\d)?\d(\.jpg)')

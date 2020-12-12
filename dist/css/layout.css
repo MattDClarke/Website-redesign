@@ -9,7 +9,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  --scrollbar-width: calc(100vw - 100%);
 }
 
 body::-webkit-scrollbar {
@@ -48,12 +48,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 body.remove-scroll {
-  overflow: hidden;
+  overflow-y: hidden;
   position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  padding-right: calc(100vw - 100%);
 }
 
 .wrapper {
@@ -473,6 +470,7 @@ body.links .nav-links-page a {
 
 .burger.close {
   z-index: 4;
+  margin-right: calc(-1 * var(--scrollbar-width));
 }
 
 .close .burger--lines {
@@ -653,6 +651,7 @@ footer {
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
   margin-top: 60px;
+  overflow-x: hidden;
   background-color: #070707;
   background-image: url(../images/footer/wiggle.svg);
   background-attachment: fixed;
@@ -707,6 +706,7 @@ footer video {
   width: 100px;
   height: 100%;
   border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 @media all and (max-width: 812px) {

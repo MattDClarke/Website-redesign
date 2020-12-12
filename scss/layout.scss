@@ -11,7 +11,7 @@
 }
 
 html {
-    overflow-x: hidden;
+    --scrollbar-width: calc(100vw - 100%);
 }
 
 body::-webkit-scrollbar {
@@ -52,12 +52,9 @@ body::-webkit-scrollbar-thumb {
 
 
 body.remove-scroll {
-    overflow: hidden;
+    overflow-y: hidden;
     position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
+    padding-right: $scroll-width;
 }
 
 .wrapper {
@@ -119,6 +116,7 @@ nav {
     align-items: baseline;  /* align text of nav items and language select */
     width: 50%; 
     margin-right: 5%;
+    // padding-right: 16px;
 
     li {
         list-style: none; 
@@ -392,6 +390,7 @@ body.links .nav-links-page a {
     
 .burger.close {
     z-index: 4;
+    margin-right: calc(-1 * var(--scrollbar-width));
 }
   
 .close {
@@ -515,7 +514,6 @@ body.links .nav-links-page a {
     right: 0;
     bottom: 0;
     left: 0;
-    //background: rgba(0, 0, 0, 0.5);
     z-index: 2;
     transition: all 0.5s ease;
 }
@@ -548,12 +546,9 @@ footer {
     color: color(white);
     box-shadow: 0 0 1px  rgba(255,255,255,0.1);
     margin-top: 60px;
-
-
+    // some x-scroll occured on mobile due to footer img animation
+    overflow-x: hidden;
     background-color: #070707;
-    
-    // background-image: url(../images/footer/topography.svg);
-
     // from https://www.heropatterns.com/
     background-image: url(../images/footer/wiggle.svg);
     background-attachment: fixed;
@@ -591,6 +586,7 @@ footer video {
     width: 100px;
     height: 100%;
     border-radius: 5px;
+    -moz-border-radius: 5px;
 
     @include tablet {
         width: 75px;

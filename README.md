@@ -1,14 +1,15 @@
 # Redesign of snakesoftaiwan.com website
 <br>
 
-## Responsive image build process:
+## Responsive image build process
 
 - add first part of page info to data.json
+
 ```
-  "fowleaFlavipuncatusRespImgs": [{
-    "nameLowerCaseHyphenated": "fowlea-flavipuncatus",
-    "nameUpperCaseHyphenated": "Fowlea-flavipuncatus",
-    "name": "Fowlea flavipuncatus",
+  "fowleapiscatorRespImgs": [{
+    "nameLowerCaseHyphenated": "fowlea-piscator",
+    "nameUpperCaseHyphenated": "Fowlea-piscator",
+    "name": "Fowlea piscator",
     "commonName": "Checkered Keelback",
     "chineseName": "草 花蛇",
     "chineseNameRomanized": "(cao3hua1she2)",
@@ -25,7 +26,7 @@
 
 ```
 
-- Add original images to imgsToProcess file
+- Add original images to imgSrc file
 - Name the images as follows:
   - 01.jpg
   - 02.jpg
@@ -37,18 +38,21 @@
 
 <br>
 
-### Example using Fowlea flavipuncatus page
+### Example using *Fowlea piscator* page
+
 #### Name images and get responsive image sizes info in json format   
+
 - cd into imgSrc
-- in resposive-img-sizes.py, change ```imgNamePrefix``` variable to species name or page name (first letter of the first word capitalized, hyphenated between words) 
+- in responsive-img-sizes.py, change ```imgNamePrefix``` variable to species name or page name (first letter of the first word capitalized, hyphenated between words) 
 - run ```py responsive-img-sizes.py```
 - The images will be renamed and json output for the responsive images will be printed in the terminal
 - copy the output in terminal, add to data.json:
+
 ```
-  "fowleaFlavipuncatusRespImgs": [{
-    "nameLowerCaseHyphenated": "fowlea-flavipuncatus",
-    "nameUpperCaseHyphenated": "Fowlea-flavipuncatus",
-    "name": "Fowlea flavipuncatus",
+  "fowleapiscatorRespImgs": [{
+    "nameLowerCaseHyphenated": "fowlea-piscator",
+    "nameUpperCaseHyphenated": "Fowlea-piscator",
+    "name": "Fowlea piscator",
     "commonName": "Checkered Keelback",
     "chineseName": "草 花蛇",
     "chineseNameRomanized": "(cao3hua1she2)",
@@ -75,19 +79,23 @@
 <br>
 
 #### Create all image variants using gulp-responsive-images
+
 - cd .. (not required, gulp will still run task)
 - add "imgWidthsModal": array to gulpfile.js (add it as var imagesToCreate) for images-swiper-gallery task
 - add species name (lowercase, hyphenated) to gulpfile.js (add it as var speciesName)
+
 ```
-var speciesName = 'fowlea-flavipuncatus'
+var speciesName = 'fowlea-piscator'
 var imagesToCreate = [[375, 563, 650, 800, 1024, 1280, 1824], [375, 563, 650, 768], [375, 563, 650, 800], [375, 563, 650, 800, 1024], [375, 563, 650, 800, 952], [375, 
   563, 650, 800, 1024], [375, 563, 650, 800, 847]]
-``` 
+```
+
 <br>
 
 - run ```gulp images-swiper-gallery``` to create gallery and modal images
 - run ```gulp images-swiper-gallery-thumbs``` to create thumbnail images
 - the images will be saved to dist/images/{species name}
+
 > The subfolders will be created if they do not exist 
 
 <br>
@@ -105,12 +113,16 @@ var imagesToCreate = [[375, 563, 650, 800, 1024, 1280, 1824], [375, 563, 650, 76
     {% include "partials/_swiper-responsive-images-nonModal.njk" %}
     {% include "partials/_swiper-responsive-images-thumbs.njk" %}
   ```
-<br>
+
+  <br>
 
 - add the required html below the included partials
+
 - run ```gulp nunjucks```
+
 - school-talks.html will be created and added to the dist folder
 
 <br>
 
 > also add school-talks.html to home.njk href attribute and to names": "href": ... in data.json for anchor links from nav search and home page, respectively.
+
