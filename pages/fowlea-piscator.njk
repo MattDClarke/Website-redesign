@@ -1,10 +1,10 @@
 {% set species = fowleapiscatorRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -45,7 +45,6 @@
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=-KgyO-cMd18"><i>F. piscator</i> in a lotus pond</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=1tsUyKfyAbY&NR=1"><i>F. piscator</i></a> playing dead</li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://s270.photobucket.com/albums/jj99/woongson/?action=view&current=P1590507.flv">Young <i>F. piscator</i></a> eating a fish</li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +87,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                    Throughout Taiwan and Kinmen, up to 500 m altitude. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0067">Distribution map</a>) 
+                    Throughout Taiwan and Kinmen, up to 500 m altitude.
                 </div>
             </div>
 
@@ -176,6 +175,9 @@
                     Etymology
                 </div>
                 <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        In his original description of <i>Fowlea</i>, Theobald states "<i>Captured by E. Fowle, Esq., who is one of the very few who have liberally aided me in the study of our Indian reptiles.</i>"
+                    </div>
                     <div class="info-box-paragraph">
                         <i>piscator</i> is Latin for yellow and punctatus. Punctatus means spotted and refers to the dorsal color pattern, although it rarely has clear yellow spots. 
                     </div>

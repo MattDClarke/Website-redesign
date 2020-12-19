@@ -200,7 +200,7 @@ closeBtnSearch.addEventListener('click', () => {
 document.querySelector('#searchInput').addEventListener('keyup', searchFilter);
 
 // ///////////////// footer ///////////
-const footerImg = document.querySelector('.footer-img-container');
+const footerImg = document.querySelector('.footer-img-container a video');
 
 const observer = new IntersectionObserver(entries => {
   // console.log(entries);

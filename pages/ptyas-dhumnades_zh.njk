@@ -2,10 +2,10 @@
 {% set species = ptyasDhumnadesRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -89,7 +89,7 @@
                     台灣棲地分布
                 </div>
                 <div class="info-box-text">
-                    台灣全島海拔1800公尺以下，但是北部分布較多。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0054">分布地圖</a>)
+                    台灣全島海拔1800公尺以下，但是北部分布較多。
                 </div>
             </div>
 
@@ -137,7 +137,7 @@
                         <span lang="en-US"><i>Ptyas: </i></span> 是一個有關蛇毒噴入男人眼睛的希臘傳說。
                     </div>
                     <div class="info-box-paragraph">
-                        <span lang="en-US"><i>dhumnades</i></span>: <i>根據"<span lang="en-US">STEJNEGER</span> (1907) 的推測 <span lang="en-US">CANTOR</span> 可能是指 <span lang="en-US">Coluber dhumna</span> (= <span lang="en-US"><span lang="en-US">Coluber mucosus</span></span> "遊蛇"), 印度文則是“<span lang="en-US">dhamin</span>"</i>. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.jcvi.org/reptiles/species.php?genus=Ptyas&species=dhumnades" lang="en-US">Source</a>)
+                        <span lang="en-US"><i>dhumnades</i></span>: <i>根據"<span lang="en-US">STEJNEGER</span> (1907) 的推測 <span lang="en-US">CANTOR</span> 可能是指 <span lang="en-US">Coluber dhumna</span> (= <span lang="en-US"><span lang="en-US">Coluber mucosus</span></span> "遊蛇"), 印度文則是“<span lang="en-US">dhamin</span>"</i>.
                     </div>
 
                     過山刀、台灣鼠蛇、烏梢蛇(大陸名)、烏鳳蛇、黃風蛇、大眼蛇。

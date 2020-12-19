@@ -2,10 +2,10 @@
 {% set species = emydocephalusIjimaeRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -46,8 +46,6 @@
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=XHzoIF02l74">游動中的飯島氏海蛇</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=X70hRsSMuEk">到水面呼吸的飯島氏海蛇</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.naturefootage.com/video_clips/NZ36_047">穿梭於珊瑚間的飯島氏海蛇 </a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.naturefootage.com/video_clips/NZ36_046">穿梭於珊瑚間的飯島氏海蛇(近拍)</a></li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +118,7 @@
                     <div class="info-box-paragraph">
                         此日夜雙行的蛇種居住於珊瑚礁及佈滿岩石的海底。為胎生，母體一次大約會產下兩隻仔蛇。
                     </div>
-                    牠們唯一的食物來源為魚卵：「牠們利用硬化的吻部鱗片將魚卵由岩石上刮起，並利用鼻尖的尖刺挖起魚卵。牠們的顎部肌肉組織是很獨特的，毒牙較小，大概是由於他們需要利用吸力才能將魚卵吸入嘴裡。」　(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://scienceblogs.com/tetrapodzoology/2007/06/tet_zoo_picture_of_the_day_15.php">資料來源</a>) 
+                    牠們唯一的食物來源為魚卵：「牠們利用硬化的吻部鱗片將魚卵由岩石上刮起，並利用鼻尖的尖刺挖起魚卵。牠們的顎部肌肉組織是很獨特的，毒牙較小，大概是由於他們需要利用吸力才能將魚卵吸入嘴裡。」　(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.researchgate.net/publication/229786303_A_Novel_Foraging_Mode_in_Snakes_Browsing_by_the_Sea_Snake_Emydocephalus_annulatus_Serpentes_Hydrophiidae">資料來源</a>) 
                 </div>
             </div>
 

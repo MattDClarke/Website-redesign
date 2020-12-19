@@ -1,10 +1,10 @@
 {% set species = amphiesmaStolatumRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -43,7 +43,7 @@
                 </div>
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=-KgyO-cMd18"><i>Amphiesma stolatum</i></a></li>
+                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.youtube.com/watch?v=YhFKQzpWFqg"><i>Amphiesma stolatum</i></a></li>
                     </ul>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                    Throughout Taiwan, Matsu, and Orchid Island, up to 500 m altitude. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0071">Distribution map</a>) 
+                    Throughout Taiwan, Matsu, and Orchid Island, up to 500 m altitude.
                 </div>
             </div>
 
@@ -134,7 +134,7 @@
                     puddles and areas where frogs take refuge but very rarely enters the water itself. Humans frequently 
                     come in contact with this snake and in response it will dart out of danger and hide itself in neighbouring 
                     vegetation. If captured it will make no attempt to escape and will not attack 
-                    even if viciously molested.</i>" (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://members.fortunecity.com/ukp001/naja/colubridae/amphiesma_stolata.htm">Source</a>)                                                            
+                    even if viciously molested.</i>" (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.rufford.org/files/Hamadryad%20Vol.%2034_0.pdf">Source</a>)                                                            
                 </div>
             </div>
 
@@ -156,7 +156,6 @@
                     Further Info
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species">
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://members.fortunecity.com/ukp001/naja/colubridae/amphiesma_stolata.htm"><i>Amphiesma stolatum</i></a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Amphiesma&species=stolatum">Reptile Database</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Amphiesma_stolatum">Wikipedia</a></li>
                 </ul>

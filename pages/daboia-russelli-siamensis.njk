@@ -1,10 +1,10 @@
 {% set species = daboiaRusselliSiamensisRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -46,17 +46,6 @@
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=eIcrpUH4gQo"><i>D.russelli</i> in the wild</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.msnbc.msn.com/id/21134540/vp/31506229#31506229">50 <i>D.russelli</i></a> hatchlings</li>
                     </ul>
-                </div>
-            </div>
-            <div class="species-info-box">
-                <div class="info-box-header">          
-                    More Photos
-                </div>
-                <div class="info-box-text">
-                    <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://blog.yam.com/ziming/article/4928512"><i>D.russelli</i> in the wild</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.ellison.idv.tw/ellisonblog/article.asp?id=491">Juvenile <i>D.russelli</i></a></li>
-                    </ul>     
                 </div>
             </div>
         </div>
@@ -258,7 +247,6 @@
                 <ul class="my-list2 info-box-text my-list-1--species">
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Daboia&species=russelii">Reptile Database</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Daboia">Wikipedia</a></li>
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.engin.umich.edu/~cre/web_mod/viper/introduction.htm">Effect of <i>D. russelli</i> venom on the blood clotting mechanism and the kidneys</a></li>
                 </ul>
             </div>
         </div>

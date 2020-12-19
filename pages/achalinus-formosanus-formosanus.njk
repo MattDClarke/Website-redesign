@@ -2,10 +2,10 @@
 {% set species = achalinusFormosanusFormosanusRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     "Family: Colubridae, subfamily Xenoderminae. Max. length: 90 cm. Occurrence in Taiwan: 
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -51,7 +51,6 @@
                 </div>
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://solane.photo-pt.org/index.php?load=read&id=68"><i>Achalinus f. formosanus</i> in the wild (1)</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=241459"><i>Achalinus f. formosanus</i> in the wild (2)</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://tw.myblog.yahoo.com/x0001882/article?mid=2832&prev=2877&next=2806&l=a&fid=37&sc=1"><i>Achalinus f. formosanus</i> in the wild (3)</a></li>
                     </ul>
@@ -85,7 +84,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                   	Central and southern Taiwan at altitudes of 1000-2000 m. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0051">Distribution map</a>)
+                   	Central and southern Taiwan at altitudes of 1000-2000 m.
                 </div>
             </div>
 

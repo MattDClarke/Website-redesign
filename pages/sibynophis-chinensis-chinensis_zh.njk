@@ -2,10 +2,10 @@
 {% set species = sibynophisChinensisChinensisRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -44,7 +44,7 @@
                 </div>
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=MdupikSeCac">黑頭蛇剪輯與小短片</a></li>
+                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.youtube.com/watch?v=tfPRsO1ITQ0">黑頭蛇剪輯與小短片</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,9 +68,9 @@
                     家族
                 </div>
                 <div class="info-box-text">
-                    黃頜蛇科、<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/xphrase.pl?keyword=Sibynophinae" lang="en-US">Sibynophinae</a> 亞科。
+                    黃頜蛇科、<span lang="en-US">Sibynophinae</span> 亞科。
                     <br>
-                    <span lang="en-US">Colubridae, subfamily <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/xphrase.pl?keyword=Sibynophinae">Sibynophinae</a></span> 
+                    <span lang="en-US">Colubridae, subfamily Sibynophinae</span> 
                 </div>
             </div>
 
@@ -88,7 +88,7 @@
                     台灣棲地分布
                 </div>
                 <div class="info-box-text">
-                    台灣全島海拔500-1500公尺地帶。並不常見。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0059">分布地圖</a>)
+                    台灣全島海拔500-1500公尺地帶。並不常見。
                 </div>
             </div>
 

@@ -1,10 +1,10 @@
 {% set species = elapheCarinataRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -57,7 +57,6 @@
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.fieldherpforum.com/forum/viewtopic.php?f=2&t=1137">Big Fat Stinking Goddess</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://120.124.77.4/tbgweb/cgi-bin/topic.cgi?forum=38&topic=1393"><i>E. carinata</i> eating Taiwan Habu (<i>Protobothrops mucrosquamatus</i>)</a></li>
                     </ul>     
                 </div>
             </div>
@@ -89,7 +88,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                    Common throughout Taiwan and Orchid Island, up to 2000 m altitude. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0077">Distribution map</a>) 
+                    Common throughout Taiwan and Orchid Island, up to 2000 m altitude.
                 </div>
             </div>
 
@@ -158,8 +157,7 @@
                     <div class="info-box-paragraph">
                         In fact, it prefers snakes to pretty much everything else, even venomous ones such as cobras, 
                         kraits and habus. While it is not known whether it is completely immune to the venom of these 
-                        species, it certainly appears highly resistant against it, as this <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://120.124.77.4/tbgweb/cgi-bin/topic.cgi?forum=38&topic=1393">photo series</a> of 
-                        an <i>E. carinata</i> killing and eating a Taiwan habu (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link--species" href="protobothrops-mucrosquamatus.html">Protobothrops mucrosquamatus</a>) attests.
+                        species, it certainly appears highly resistant against it.
                     </div>
                     <div class="info-box-paragraph">
                         In the wild it is active and moves quickly. It is vicious, strikes readily and attempts to bite; 
@@ -200,7 +198,6 @@
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species">
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Elaphe&species=carinata">Reptile Database</a></li>
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.zoo-logic.co.uk/stinksnake.html"><i>E. c. carinata</i> - caresheet</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.ratsnakes.com/Ecarinata.html"><i>E. c. carinata</i> - Info on ratsnakes.com</a></li>
                 </ul>
             </div>

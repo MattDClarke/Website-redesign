@@ -2,10 +2,10 @@
 {% set species = elapheCarinataRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -58,7 +58,6 @@
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.fieldherpforum.com/forum/viewtopic.php?f=2&t=1137">發臭的肥美尤物</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://120.124.77.4/tbgweb/cgi-bin/topic.cgi?forum=38&topic=1393">臭青公 vs 龜殼花</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,7 +89,7 @@
                     台灣棲地分布
                 </div>
                 <div class="info-box-text">
-                    台灣全島、馬祖及蘭嶼 2000公尺以下中低海拔區域。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0077">分布地圖</a>) 
+                    台灣全島、馬祖及蘭嶼 2000公尺以下中低海拔區域。
                 </div>
             </div>
 
@@ -121,7 +120,7 @@
                         臭青公在台灣被農民視為重量級的傳奇滅鼠角色。
                     </div>
                     <div class="info-box-paragraph">
-                        日、夜皆會出沒的蛇類，喜歡棲息在灌木、林地和農業用地周圍。經常在草原、稻田、甚至是農舍發現其蹤影。主要以補食鼠類、鳥類、鳥蛋或青蛙維生。也曾以蝗蟲、甲蟲、蜥蜴或其他蛇類為食。不過其實臭青公最愛食用的還是蛇。尤其是毒蛇類的蛇，不管是眼鏡蛇、雨傘節、或是龜殼花都是牠的美食。雖然目前的資料無法得知牠是否對這些物種的毒性有完全的免疫力，但是可以肯定牠擁有很高的抵抗力。<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://120.124.77.4/tbgweb/cgi-bin/topic.cgi?forum=38&topic=1393">臭青公的晚餐</a> 這連結提供了臭青公大啖龜殼花(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link--species" href="protobothrops-mucrosquamatus_zh.html" lang="en-US">Protobothrops mucrosquamatus</a>)的連續照片。卵生。春季交配夏天產卵，每次產下一窩 8-14枚的蛋。每顆蛋大小約為 5x3 cm。經1-1.5個月孵化，有護卵的行為。
+                        日、夜皆會出沒的蛇類，喜歡棲息在灌木、林地和農業用地周圍。經常在草原、稻田、甚至是農舍發現其蹤影。主要以補食鼠類、鳥類、鳥蛋或青蛙維生。也曾以蝗蟲、甲蟲、蜥蜴或其他蛇類為食。不過其實臭青公最愛食用的還是蛇。尤其是毒蛇類的蛇，不管是眼鏡蛇、雨傘節、或是龜殼花都是牠的美食。雖然目前的資料無法得知牠是否對這些物種的毒性有完全的免疫力，但是可以肯定牠擁有很高的抵抗力。
                     </div>
                     在空曠的環境牠的行動非常迅速。當受到侵擾的時候會發起攻擊；有些被人捕捉回家馴養的個體，過了好幾個月仍然是野性十足。臭青公的肛門線極為發達，會發出強烈的惡臭。
                 </div>
@@ -151,7 +150,6 @@
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species" lang="en-US">
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Elaphe&species=carinata">Reptile Database</a></li>
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.zoo-logic.co.uk/stinksnake.html"><i>E. c. carinata</i> - caresheet</a></li>
                 </ul>
             </div>
             

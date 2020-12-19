@@ -2,10 +2,10 @@
 {% set species = bungarusMulticinctusMulticinctusRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -94,7 +94,7 @@
                 </div>
                 <div class="info-box-text">
                     遍布全台、金門、和馬祖、低海拔1000公尺
-                    以上森林、竹林、沼澤地區及居家附近。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0083">分布地圖</a>)
+                    以上森林、竹林、沼澤地區及居家附近。
                 </div>
             </div>
 
@@ -130,7 +130,7 @@
                     <div class="info-box-paragraph">
                         還好雨傘節並沒有很高的攻擊性，除非遭受到威脅或是挑釁才會做出攻擊行為。當牠們不安的時候，將會凍結動作以隱藏自己，或是趁機逃離。
                     </div>
-                    其中最著名的受害者是一位美國專門研究蝙蝠蛇科環蛇屬的 <span lang="en-US">Dr. Joseph "Joe" Slowinski</span>。2001年9月，他在緬甸偏遠地區做一項深度研究時， <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://outside.away.com/outside/adventure/200204/200204_bit_1.adp" lang="en-US">Dr. Joseph "Joe" Slowinski </a>遭受一隻未成年雨傘節咬傷。由於環境的偏遠，且其他隊員出外考察而將他孤立，使得他無法得到適當的救助來脫離死亡的魔掌。最後在被咬傷後28小時毒性發作身亡。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Joseph_Bruno_Slowinski" lang="en-US">Wikipedia</a>)
+                    其中最著名的受害者是一位美國專門研究蝙蝠蛇科環蛇屬的 <span lang="en-US">Dr. Joseph "Joe" Slowinski</span>。2001年9月，他在緬甸偏遠地區做一項深度研究時， <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.sciencemag.org/news/2001/09/venomous-bite-kills-snake-researcher" lang="en-US">Dr. Joseph "Joe" Slowinski </a>遭受一隻未成年雨傘節咬傷。由於環境的偏遠，且其他隊員出外考察而將他孤立，使得他無法得到適當的救助來脫離死亡的魔掌。最後在被咬傷後28小時毒性發作身亡。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Joseph_Bruno_Slowinski" lang="en-US">Wikipedia</a>)
                 </div>
             </div>
 
@@ -165,7 +165,7 @@
                 <ul class="my-list2 info-box-text my-list-1--species" lang="en-US">
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Bungarus&species=multicinctus">Reptile Database</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Krait">Wikipedia</a></li>
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.doctorbugs.com/Joseph_Slowinski.html">In Memory of Joe Slowinski</a></li>
+                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.doctorbugs.com/joseph-slowinski/">In Memory of Joe Slowinski</a></li>
                 </ul>
             </div>
 

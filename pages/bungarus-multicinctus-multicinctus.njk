@@ -1,10 +1,10 @@
 {% set species = bungarusMulticinctusMulticinctusRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -92,7 +92,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                    Common throughout Taiwan, Kinmen, and Matsu, up to 1000 m. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0083">Distribution map</a>) 
+                    Common throughout Taiwan, Kinmen, and Matsu, up to 1000 m.
                 </div>
             </div>
 
@@ -125,7 +125,7 @@
 
                     While <i>B. m. multicinctus</i> packs a powerful neurotoxic punch, it is not aggressive at all and seldom attempts to bite unless threatened or provoked. When disturbed, it will almost always either freeze to avoid detection, or try to flee.
 
-                    Among the more prominent victims of <i>B. m. multicinctus</i> was Dr. Joseph "Joe" Slowinski, an American herpetologist who specialized in kraits and other elapids. In September 2001, while doing research deep in an isolated region of Myanmar, <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://outside.away.com/outside/adventure/200204/200204_bit_1.adp">Dr. Slowinski was bitten</a> by a juvenile <i>B. m. multicinctus</i>. Despite the furious efforts of his comrades to keep him alive, the lack of adequate medical care or access to krait antivenom in the isolated jungle location proved to be insurmountable obstacles, and Dr. Slowinski died 28 hours later from the effects of the bite.
+                    Among the more prominent victims of <i>B. m. multicinctus</i> was Dr. Joseph "Joe" Slowinski, an American herpetologist who specialized in kraits and other elapids. In September 2001, while doing research deep in an isolated region of Myanmar, <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.sciencemag.org/news/2001/09/venomous-bite-kills-snake-researcher">Dr. Slowinski was bitten</a> by a juvenile <i>B. m. multicinctus</i>. Despite the furious efforts of his comrades to keep him alive, the lack of adequate medical care or access to krait antivenom in the isolated jungle location proved to be insurmountable obstacles, and Dr. Slowinski died 28 hours later from the effects of the bite.
                 </div>
             </div>
 
@@ -158,7 +158,7 @@
                 <ul class="my-list2 info-box-text my-list-1--species">
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Bungarus&species=multicinctus">Reptile Database</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Krait">Wikipedia</a></li>
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.doctorbugs.com/Joseph_Slowinski.html">In Memory of Joe Slowinski</a></li>
+                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.doctorbugs.com/joseph-slowinski/">In Memory of Joe Slowinski</a></li>
 
                 </ul>
             </div>

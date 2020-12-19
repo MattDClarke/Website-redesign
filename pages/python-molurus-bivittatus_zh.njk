@@ -2,10 +2,10 @@
 {% set species = pythonMolurusBivittatusRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -38,16 +38,6 @@
 
     <div class="text-box-container">
         <div class="text-box--species-media">
-            <div class="species-info-box">
-                <div class="info-box-header">          
-                    相關影片
-                </div>
-                <div class="info-box-text">
-                    <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.naturefootage.com/video_clips/RBA01_048">野生的緬甸蟒</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="species-info-box">
                 <div class="info-box-header">          
                     更多美圖
@@ -97,7 +87,7 @@
                     世界棲地分布
                 </div>
                 <div class="info-box-text">
-                    <i>緬甸蟒是屬於一種除了菲律賓之外從巴基斯坦到印度皆有其蹤影的蟒科底下的亞種。此亞種是以知三種內分布範圍最大的，在中國南部，中南半島，緬甸，印度還有一些島嶼(婆羅洲，爪哇，蘇門答臘和名人群島) 都可見到</i>。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.seaworld.org/animal-info/animal-bytes/animalia/eumetazoa/coelomates/deuterostomes/chordata/craniata/reptilia/squamata/burmese-python.htm" lang="en-US">Source</a>)
+                    <i>緬甸蟒是屬於一種除了菲律賓之外從巴基斯坦到印度皆有其蹤影的蟒科底下的亞種。此亞種是以知三種內分布範圍最大的，在中國南部，中南半島，緬甸，印度還有一些島嶼(婆羅洲，爪哇，蘇門答臘和名人群島) 都可見到</i>。
                 </div>
             </div>
 
@@ -106,7 +96,7 @@
                     外觀描述
                 </div>
                 <div class="info-box-text" lang="en-US">
-                    <i><span lang="en-US">T</span>緬甸蟒名列世界上大體型的蛇類之一。最長可以達到8公尺(通常7公尺較普遍)，體重可達到190磅(86公斤左右)。整體顏色是奶黃色，在頭頸部分有一個茅型的標誌，另外身上帶有棕色細長有黑色邊框的斑塊。具有可感熱的夾窩，使牠可以感應到藏匿的溫血動物</i>. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.honoluluzoo.org/burmese_python.htm" lang="en-US">Source</a>)
+                    <i><span lang="en-US">T</span>緬甸蟒名列世界上大體型的蛇類之一。最長可以達到8公尺(通常7公尺較普遍)，體重可達到190磅(86公斤左右)。整體顏色是奶黃色，在頭頸部分有一個茅型的標誌，另外身上帶有棕色細長有黑色邊框的斑塊。具有可感熱的夾窩，使牠可以感應到藏匿的溫血動物</i>.
                 </div>
             </div>
 
@@ -121,7 +111,7 @@
                     <div class="info-box-paragraph">
                         緬甸蟒靠著腹部的鱗片與地面接觸的摩擦力來動作，並且使用腹部肌肉來控制前進與後退。牠們很會攀爬，可以靠尾部停留在樹幹上。另外牠們也是水中健將，良好的水性使牠們可再水中逗留長達一個半小時。在偏北的地區冬季時牠們會進入冬眠好幾個月，通常會躲再樹洞或是石頭底下。
                     </div>
-                    卵生蛇類，母蛇於早春產下 12-36 枚的卵，有著護卵的行為。孵化約需要兩個月以上的時間，達到性成熟則要 2-3 年。成長的速率則要視外在環境而定，目前活最久的紀錄是25年。</i> (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.honoluluzoo.org/burmese_python.htm" lang="en-US">Source</a>)
+                    卵生蛇類，母蛇於早春產下 12-36 枚的卵，有著護卵的行為。孵化約需要兩個月以上的時間，達到性成熟則要 2-3 年。成長的速率則要視外在環境而定，目前活最久的紀錄是25年。</i>
                 </div>
             </div>
 
@@ -141,15 +131,6 @@
                         <span lang="en-US"><i>bivittatus</i></span>: 來自拉丁文 <span lang="en-US">prefix <i>bi</i></span> = 兩個、雙數，和 <span lang="en-US"><i>vitta</i></span> = 帶、條。
                     </div>
                     緬甸蟒、黑尾蟒、金花蟒、琴蛇。
-                </div>
-            </div>
-
-            <div class="species-info-box">
-                <div class="info-box-header">          
-                    附註
-                </div>
-                <div class="info-box-text">
-                    <span lang="en-US"><i>P. molurus</i></span> 在2009年重新被定為 <span lang="en-US"><i>P. bivittatus bivittatus</i></span>.更多請看 <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.captivebredreptileforums.co.uk/boas-pythons/30542-new-burmese-classifications.html">這邊</a>。                
                 </div>
             </div>
 

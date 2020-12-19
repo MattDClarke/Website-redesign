@@ -2,10 +2,10 @@
 {% set species = hebiusSpRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -47,7 +47,7 @@
                         第一本介紹這個物種給予大眾最新資訊的的書籍:
                     </div>  
                     <div class="info-box-paragraph">
-                        <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010455301">台灣兩棲爬行類圖鑑, 2009, <span lang="en-US">by</span> 向高世, 李鵬翔 <span lang="en-US">&</span> 楊懿如</a>
+                        <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.kingstone.com.tw/basic/2013880034421/">台灣兩棲爬行類圖鑑, 2009, <span lang="en-US">by</span> 向高世, 李鵬翔 <span lang="en-US">&</span> 楊懿如</a>
                     </div>  
                     以下所有資訊皆來自這本好書。 
                 </div>
@@ -124,7 +124,7 @@
                     生態描述
                 </div>
                 <div class="info-box-text"> 	
-                    就像大部分<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.tiscali.co.uk/reference/dictionaries/difficultwords/data/d0008748.html">水游蛇亞科</a> 的成員，排灣腹鏈蛇(日夜間皆可能出沒)可以在接近溪流、池塘或是溼地等地區找到其蹤影，這些地方有較多的青蛙與蜥蜴可以供給牠的生存。當走進牠的警戒範圍時會有激烈的防衛反應。母蛇體型明顯大於公蛇。目前觀察幼蛇約會在5 - 6 月間出沒，進而推測交配季節可能是在春天。 
+                    就像大部分 水游蛇亞科 的成員，排灣腹鏈蛇(日夜間皆可能出沒)可以在接近溪流、池塘或是溼地等地區找到其蹤影，這些地方有較多的青蛙與蜥蜴可以供給牠的生存。當走進牠的警戒範圍時會有激烈的防衛反應。母蛇體型明顯大於公蛇。目前觀察幼蛇約會在5 - 6 月間出沒，進而推測交配季節可能是在春天。 
                 </div>
             </div>
 

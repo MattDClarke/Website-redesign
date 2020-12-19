@@ -1,10 +1,10 @@
 {% set species = laticaudaColubrinaRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -44,8 +44,6 @@
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=UPtnIn7GEdA"><i>L. colubrina</i> off Orchid Island</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.istockphoto.com/file_closeup/animals/reptiles/6878713-banded-sea-snake-laticauda-colubrina.php?id=6878713"><i>L. colubrina</i> foraging on reef</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.metacafe.com/watch/bg-3020124/sea_snake_on_the_hunt/"><i>L. colubrina</i> hunting off Palau</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=mWapKeWjJ4M"><i>L. colubrina</i> on land</a></li>
                     </ul>
                 </div>
@@ -60,7 +58,7 @@
                     Family
                 </div>
                 <div class="info-box-text">
-                    Elapidae, subfamily <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/res.pl?keyword=Hydrophiidae&offset=0">Hydrophiidae</a>
+                    Elapidae, subfamily Hydrophiidae
                 </div>
             </div>
 
@@ -114,7 +112,7 @@
                     </div>
 
                     <div class="info-box-paragraph">
-                        The reproductive biology of L. colubrina and other species of the family Laticaudinae are different from all other sea snakes. They are oviparous and need to come ashore on small isolated islands to lay their eggs. Large aggregations form at these breeding and resting sites. L. colubrina undertake long distance migrations for breeding. Males reach sexual maturity at about 18 months whereas females can take up to 24 months before they are ready to breed. Clutch sizes tend to be large but may vary geographically, with smaller clutch sizes in some areas and larger in others. A female can lay 4-20 eggs at any time of the year. The populations of L. colubrina have smaller numbers of juveniles than adults, which is most likely a result of low fecundity and high juvenile mortality.</i>" (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.jcu.edu.au/school/tbiol/zoology/herp/Laticaudacolubrina.PDF">Source</a>)
+                        The reproductive biology of L. colubrina and other species of the family Laticaudinae are different from all other sea snakes. They are oviparous and need to come ashore on small isolated islands to lay their eggs. Large aggregations form at these breeding and resting sites. L. colubrina undertake long distance migrations for breeding. Males reach sexual maturity at about 18 months whereas females can take up to 24 months before they are ready to breed. Clutch sizes tend to be large but may vary geographically, with smaller clutch sizes in some areas and larger in others. A female can lay 4-20 eggs at any time of the year. The populations of L. colubrina have smaller numbers of juveniles than adults, which is most likely a result of low fecundity and high juvenile mortality.</i>" (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.researchgate.net/profile/Richard_Shine/publication/250068412_The_mating_system_of_yellow-lipped_sea_kraits_Laticauda_colubrina_Laticaudidae/links/02e7e520446cc95f35000000/The-mating-system-of-yellow-lipped-sea-kraits-Laticauda-colubrina-Laticaudidae.pdf">Source</a>)
                     </div>
 
                     <div class="info-box-paragraph">

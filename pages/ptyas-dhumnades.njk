@@ -2,10 +2,10 @@
 {% set species = ptyasDhumnadesRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -89,7 +89,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                    Throughout Taiwan, but more widespread in the North; up to 1800m. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0054">Distribution map</a>)
+                    Throughout Taiwan, but more widespread in the North; up to 1800m. 
                 </div>
             </div>
 
@@ -136,7 +136,7 @@
                     </div>
                     <div class="info-box-paragraph">
                         <i>dhumnades</i>: "<i>STEJNEGER (1907) speculates that CANTOR might have meant to indicate a snake that 
-                        is like his Coluber dhumna (= Coluber mucosus), the name of which in Hindu is said to be 'dhamin' </i>". (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.jcvi.org/reptiles/species.php?genus=Ptyas&species=dhumnades">Source</a>)
+                        is like his Coluber dhumna (= Coluber mucosus), the name of which in Hindu is said to be 'dhamin' </i>".
                     </div>
                     The Chinese name <span lang="zh-TW">過山刀</span> (guo4shan1dao1) literally means "the knife that crosses the mountain"; the knife most probably referring to the triangular cross-section of the snake's body, and the mountain-crossing to its agility and speed.
                 </div>

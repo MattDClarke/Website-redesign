@@ -1,10 +1,10 @@
 {% set body_class = "home" %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="home.html" />
-     <link rel="alternate" hreflang="en" href="home.html" />
-     <link rel="alternate" hreflang="zh-TW" href="home_zh.html" />
-     <link rel="alternate" hreflang="zh" href="home_zh.html" />
+    <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/home.html" />
+    <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/home.html" />
+    <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/home_zh.html" />
+    <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/home_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     "Image gallery showing all of the snakes of Taiwan with links to species descriptions and additional photos."
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/home.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
 {% endblock %}
 {% block title %}
     Home

@@ -2,10 +2,10 @@
 {% set species = euprepiophisMandarinaRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -45,16 +45,6 @@
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=kcVgO7FVgiQ">人工飼養的高砂蛇</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="species-info-box">
-                <div class="info-box-header">          
-                    更多美圖
-                </div>
-                <div class="info-box-text">
-                    <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.ellison.idv.tw/ellisonblog/article.asp?id=376">七彩魔幻高砂蛇 - 轉自 小勛<span lang="en-US">'s BLOG</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +78,7 @@
                     台灣棲地分布
                 </div>
                 <div class="info-box-text">
-                    濱危蛇類。出沒在台灣北、中、東海拔 1000 - 2500 公尺的高海拔山區。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0076">線上分布圖</a>)
+                    濱危蛇類。出沒在台灣北、中、東海拔 1000 - 2500 公尺的高海拔山區。
                 </div>
             </div>
 
@@ -154,7 +144,7 @@
                     <div class="info-box-paragraph">
                         <span lang="en-US">- Elaphe Auct., and related genera (Reptilia, Squamata, Colubridae)." Russ. J. Herpetol. 9 (2): 105-124).</span>
                     </div>
-                    (<span lang="en-US"><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.mophidia.com/euprepiophis.html">Source</a></span>)             
+                    (<span lang="en-US"><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://d1wqtxts1xzle7.cloudfront.net/36683016/Utiger_et_al_2002.pdf?1424277156=&response-content-disposition=inline%3B+filename%3DMOLECULAR_SYSTEMATICS_AND_PHYLOGENY_OF_O.pdf&Expires=1608362193&Signature=VpHTb3ROfDBU9GURNAW~~jkc1mB10vR8fvVr8RJA1rG84lT6woQEbHoolYr-jRKWSKh8SrBpkCwQKB1IFhT869gfyis4zwN~qe1D1~IuFO30BBZhfcMDXxtDgXrbTEEeerCZlOaeQ0vrLcDVriKnskjhCcmiEfsstq7I2Ykp2n5ZcS1jAXJmTA-piotYRLtazUatj1oKDhKFX7yNrKpJZQjwM6qaSm-aru~QdSafyp0sakNa7gD3IGGdZq3tedc6JimbpQpieH2agWwJQfAt2IWYobnyugN~S1qwRaCUk4ZulX4omRJ1-6eRVcgpN-SHUa8LwwOKt8Ha04o22XYJRw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA">Source</a></span>)             
                 </div>
             </div>
 

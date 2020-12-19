@@ -25,7 +25,6 @@ body {
     letter-spacing: 0.02rem;
     background-color: color(dark-grey);
     scrollbar-width: auto;
-    overflow-y: scroll;
     scrollbar-color: color(maroon) color(black);
 }
 
@@ -54,7 +53,6 @@ body::-webkit-scrollbar-thumb {
 body.remove-scroll {
     overflow-y: hidden;
     position: fixed;
-    padding-right: $scroll-width;
 }
 
 .wrapper {
@@ -546,8 +544,6 @@ footer {
     color: color(white);
     box-shadow: 0 0 1px  rgba(255,255,255,0.1);
     margin-top: 60px;
-    // some x-scroll occured on mobile due to footer img animation
-    overflow-x: hidden;
     background-color: #070707;
     // from https://www.heropatterns.com/
     background-image: url(../images/footer/wiggle.svg);
@@ -558,7 +554,6 @@ footer {
     padding-bottom: 40px;
     clip-path: polygon(0px 100px, 100% 0px, 100% 100%, 0% 100%);
 
-
     @include tablet {
         font-size: 10px;
     }
@@ -567,31 +562,32 @@ footer {
     fill: blue;
 }​
 
-.footer-img-container {
-    padding-bottom: 20px;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(3%);
-        opacity: 0.15;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.footer-img-container a video {
+    padding-bottom: 20px; 
 }
 
 footer video {
     width: 100px;
     height: 100%;
     border-radius: 5px;
-    -moz-border-radius: 5px;
 
     @include tablet {
         width: 75px;
     }
 }
+
+@keyframes slideIn {
+    from {
+        transform: translateX(30%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+
+
 
 .developer-link {
     text-decoration: none;

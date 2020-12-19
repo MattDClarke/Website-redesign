@@ -1,10 +1,10 @@
 {% set species = emydocephalusIjimaeRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -45,8 +45,6 @@
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=XHzoIF02l74"><i>E. ijimae</i> on the move</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.youtube.com/watch?v=X70hRsSMuEk"><i>E. ijimae</i> foraging on reef</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.naturefootage.com/video_clips/NZ36_047"><i>E. ijimae</i> winding through corals</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.naturefootage.com/video_clips/NZ36_046"><i>E. ijimae</i> twisting through coral branches (close-ups)</a></li>
                     </ul>
                 </div>
             </div>
@@ -118,7 +116,7 @@
                     <div class="info-box-paragraph">
                         This diurnal snake inhabits coral reefs and rocky ocean floors. Females give birth to about 2 young in a litter.
                     </div>
-                    It feeds exclusively on fish eggs: "<i>With their reduced compliment of stiffened labial scales, they scrape the eggs off rocks, and also use the spike on the snout tip to dig eggs out of the substrate. Their jaw musculature is unique (probably because they employ suction to get the eggs into the mouth), and they have a strongly reduced dentition.</i>" (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://scienceblogs.com/tetrapodzoology/2007/06/tet_zoo_picture_of_the_day_15.php">Source</a>) 
+                    It feeds exclusively on fish eggs: "<i>With their reduced compliment of stiffened labial scales, they scrape the eggs off rocks, and also use the spike on the snout tip to dig eggs out of the substrate. Their jaw musculature is unique (probably because they employ suction to get the eggs into the mouth), and they have a strongly reduced dentition.</i>" (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.researchgate.net/publication/229786303_A_Novel_Foraging_Mode_in_Snakes_Browsing_by_the_Sea_Snake_Emydocephalus_annulatus_Serpentes_Hydrophiidae">Source</a>) 
                 </div>
             </div>
 

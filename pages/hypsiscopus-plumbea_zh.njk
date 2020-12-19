@@ -2,10 +2,10 @@
 {% set species = hypsiscopusPlumbeaRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -54,10 +54,8 @@
                 </div>
                 <div class="info-box-text">
                     <ul class="my-list2 info-box-text my-list-1--species">
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.ellison.idv.tw/ellisonblog/article.asp?id=460">桃園731號埤塘 鉛色水蛇 - 轉自小勛's blog</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://blog.sina.com.tw/d100vs/article.php?pbgid=30839&entryid=576491">抓泥鰍的鉛色水蛇 - 轉自 自然生活記趣</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://blog.xuite.net/snakejoan/snake/9486773">像朝天眼金魚的鉛色水蛇 - 轉自 小青蛇的小秘密</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.ellison.idv.tw/ellisonblog/article.asp?id=317">鉛色水蛇 - 轉自小勛's blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -139,6 +137,10 @@
                     學名與俗名
                 </div>
                 <div class="info-box-text">
+                    <div class="info-box-paragraph">
+                        <span lang="en-US"><i>Hypsiscopus</i></span>: 來自希臘 <span lang="en-US"><i>Hypsi</i></span> (高或高) 
+                        和 <span lang="en-US"><i>scopus</i></span> (視圖) 關於那些蛇在頭頂眼睛的位置.
+                    </div>
                     <span lang="en-US"><i>plumbea</i></span> 是指"鉛色"在此形容牠的顏色。
                     鉛色水蛇、水蛇、水泡蛇。
                 </div>

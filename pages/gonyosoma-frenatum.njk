@@ -2,10 +2,10 @@
 {% set species = gonyosomaFrenatumRespImgs %}
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     "Family: Colubridae, subfamily Colubrinae. Max. length: 150 cm. Occurrence in Taiwan: This species was first discovered in 
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].commonName }}
@@ -64,7 +64,6 @@
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://blog.xuite.net/snakejoan/snake/12616391">Wild specimen</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.schlangengrube.de/modules/forum/viewtopic.php?t=36768">Captive specimens</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.schlangenland.de/frenatum.htm">Juvenile captives</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.ratsnakefoundation.org/modules/smartsection/item.php?itemid=126"></a>Caresheet on <i>Ratsnake Foundation</i></li>
                     </ul>
                 </div>
@@ -149,6 +148,9 @@
                 </div>
                 <div class="info-box-text">
                     <div class="info-box-paragraph">
+                        <i>Gonyosoma</i> comes from Wagler, who, like Stejneger, were rare 19th century authors who provided greek etymologies. In the present case - <i>gony</i> (angle), <i>soma</i> (body), probably in reference to the sharply angled ventrolateral junction that is characteristic of so many "rat" snakes.
+                    </div>
+                    <div class="info-box-paragraph">
                         <i>frenatum</i> is Latin for "bridled".
                     </div>
                     The Chinese name <span lang="zh-TW">灰腹綠錦蛇</span> (hui1fu2lü4jin3she2) means "Grey-bellied Green Ratsnake", (<span lang="zh-TW">灰腹</span> = grey bellly, <span lang="zh-TW">綠</span> = green, <span lang="zh-TW">錦蛇</span> = ratsnake/racer)
@@ -159,7 +161,7 @@
                     Further Info
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species">
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.nmns.edu.tw/php/Library/research/200312-1.pdf">Mao, J. J., Chu, H. P., Chen, U. C., and Yeh, K. C. 2003. The First Description of Elaphe frenata Gray, 1853 (Colubridae; Squamata) from Taiwan. Coll. and Res. 16: 1-6</a> (PDF file)</li>
+                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.airitilibrary.com/Publication/alDetailedMesh?docid=P20170120001-200312-201702030023-201702030023-1-6">Mao, J. J., Chu, H. P., Chen, U. C., and Yeh, K. C. 2003. The First Description of Elaphe frenata Gray, 1853 (Colubridae; Squamata) from Taiwan. Coll. and Res. 16: 1-6</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://reptile-database.reptarium.cz/species?genus=gonyosoma&species=frenatum">Reptile Database</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://species.wikimedia.org/wiki/Rhadinophis_frenatum">Wikispecies</a></li>
                 </ul>

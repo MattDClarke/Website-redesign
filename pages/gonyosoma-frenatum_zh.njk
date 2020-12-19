@@ -2,10 +2,10 @@
 {% set species = gonyosomaFrenatumRespImgs %}
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
-     <link rel="alternate" hreflang="en-US" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="en" href="{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
     ""
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://unpkg.com/swiper/swiper-bundle.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://unpkg.com/swiper/swiper-bundle.min.css; font-src 'self' data: application/font-woff">
 {% endblock %}
 {% block title %}
     {{ species[0].name }} - {{ species[0].chineseName }}
@@ -56,7 +56,6 @@
                     <ul class="my-list2 info-box-text my-list-1--species">
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://blog.xuite.net/snakejoan/snake/12616391">台灣最屌的灰腹綠錦蛇 - 轉自小安Blog</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.schlangengrube.de/modules/forum/viewtopic.php?t=36768">人工飼養的灰腹綠錦蛇</a></li>
-                        <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.schlangenland.de/frenatum.htm">灰腹綠錦蛇相關圖文集</a></li>
                         <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.ratsnakefoundation.org/modules/smartsection/item.php?itemid=126">灰腹綠錦蛇飼養介紹</a></li>
                     </ul>
                 </div>
@@ -143,6 +142,9 @@
                 </div>
                 <div class="info-box-text">
                     <div class="info-box-paragraph">
+                        <span lang="en-US"><i>Gonyosoma</i></span> 來自 <span lang="en-US">Wagler</span> 誰喜歡 <span lang="en-US">Stejneger</span>, 是提供希臘詞源的19世紀罕見的作者。在目前的情況下- <span lang="en-US"><i>gony</i></span> (角度), <span lang="en-US"><i>soma</i></span> (身體), 可能是許多“老鼠”蛇所特有的尖角腹側交界處。
+                    </div>
+                    <div class="info-box-paragraph">
                         "<span lang="en-US"><i>frenatum</i></span>" 則是來自拉丁文形容牠的黒眉。
                     </div>
                     灰腹綠錦蛇、灰腹綠樹錦蛇、灰腹綠瘦錦蛇。 
@@ -154,7 +156,7 @@
                     相關連結
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species" lang="en-US">
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.nmns.edu.tw/php/Library/research/200312-1.pdf">Mao, J. J., Chu, H. P., Chen, U. C., and Yeh, K. C. 2003. The First Description of <i>Elaphe frenata</i> Gray, 1853 (Colubridae; Squamata) from Taiwan. Coll. and Res. 16: 1-6</a> - 一<span lang="zh-TW">篇首次發表描述灰腹綠錦蛇的文章</span>(PDF file)</li>
+                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://www.airitilibrary.com/Publication/alDetailedMesh?docid=P20170120001-200312-201702030023-201702030023-1-6">Mao, J. J., Chu, H. P., Chen, U. C., and Yeh, K. C. 2003. The First Description of <i>Elaphe frenata</i> Gray, 1853 (Colubridae; Squamata) from Taiwan. Coll. and Res. 16: 1-6</a> - 一<span lang="zh-TW">篇首次發表描述灰腹綠錦蛇的文章</span></li>
                     <li lang="en-US"><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://reptile-database.reptarium.cz/species?genus=gonyosoma&species=frenatum">Reptile Database</a></li>
                     <li lang="en-US"><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://species.wikimedia.org/wiki/Rhadinophis_frenatum">Wikispecies</a></li>
                 </ul>

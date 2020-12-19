@@ -23,7 +23,6 @@ body {
   letter-spacing: 0.02rem;
   background-color: #0e0e0e;
   scrollbar-width: auto;
-  overflow-y: scroll;
   scrollbar-color: #800000 black;
 }
 
@@ -50,7 +49,6 @@ body::-webkit-scrollbar-thumb {
 body.remove-scroll {
   overflow-y: hidden;
   position: fixed;
-  padding-right: calc(100vw - 100%);
 }
 
 .wrapper {
@@ -651,7 +649,6 @@ footer {
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
   margin-top: 60px;
-  overflow-x: hidden;
   background-color: #070707;
   background-image: url(../images/footer/wiggle.svg);
   background-attachment: fixed;
@@ -672,46 +669,41 @@ footer {
 }
 
 ​
-.footer-img-container {
+.footer-img-container a video {
   padding-bottom: 20px;
-}
-
-@-webkit-keyframes slideIn {
-  from {
-    -webkit-transform: translateX(3%);
-            transform: translateX(3%);
-    opacity: 0.15;
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    -webkit-transform: translateX(3%);
-            transform: translateX(3%);
-    opacity: 0.15;
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 footer video {
   width: 100px;
   height: 100%;
   border-radius: 5px;
-  -moz-border-radius: 5px;
 }
 
 @media all and (max-width: 812px) {
   footer video {
     width: 75px;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
