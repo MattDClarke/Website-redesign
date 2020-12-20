@@ -9,10 +9,23 @@ contactForm.addEventListener('submit', e => {
 });
 
 function checkInputs() {
-  // get values
-  const nameValue = name.value.trim();
-  const emailValue = email.value.trim();
-  const userMessageValue = userMessage.value.trim();
+  // sanitize input values
+  const nameRaw = DOMPurify.sanitize(name.value, {
+    FORBID_ATTR: ['width', 'height', 'style'],
+    FORBID_TAGS: ['style'],
+  });
+  const emailRaw = DOMPurify.sanitize(email.value, {
+    FORBID_ATTR: ['width', 'height', 'style'],
+    FORBID_TAGS: ['style'],
+  });
+  const userMessageRaw = DOMPurify.sanitize(userMessage.value, {
+    FORBID_ATTR: ['width', 'height', 'style'],
+    FORBID_TAGS: ['style'],
+  });
+
+  const nameValue = nameRaw.trim();
+  const emailValue = emailRaw.trim();
+  const userMessageValue = userMessageRaw.trim();
 
   if (nameValue === '') {
     // show error

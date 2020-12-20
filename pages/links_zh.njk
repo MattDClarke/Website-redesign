@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/infoPages.min.css">
 {% endblock %}
 {% block csp %}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' https://www.google-analytics.com https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js; media-src 'self'; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self'">
 {% endblock %}
 {% block title %}
     在學校開創關於蛇的課程
