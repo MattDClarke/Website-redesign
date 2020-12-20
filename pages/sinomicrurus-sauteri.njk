@@ -1,4 +1,6 @@
 {% set species = sinomicrurusSauteriRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated %}
+
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -171,7 +173,7 @@
                 <ul class="my-list2 info-box-text my-list-1--species">
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Sinomicrurus&species=sauteri">Reptile Database</a></li>
                     <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.newworldencyclopedia.org/entry/Coral_snake">Coral Snakes</a></li>
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://academic.oup.com/zoolinnean/article/151/4/809/2607404">Higher-level phylogeny of Asian and American coralsnakes, their placement within the Elapidae (Squamata), and the systematic affinities of the enigmatic Asian coralsnake Hemibungarus calligaster (Wiegmann, 1834)</a>
+                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.castoelaboratory.org/wp-content/uploads/2019/08/2007_Castoe_ZJLS_Coralsnakes.pdf">Higher-level phylogeny of Asian and American coralsnakes, their placement within the Elapidae (Squamata), and the systematic affinities of the enigmatic Asian coralsnake Hemibungarus calligaster (Wiegmann, 1834)</a>
                     <br class="info-box-paragraph">
                     <div class="info-box-paragraph">
                         <i>In The phylogenetic relationships of Asian coral snakes (Elapidae: Calliophis and Maticora) based on morphological 

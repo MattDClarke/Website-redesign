@@ -1,4 +1,6 @@
 {% set species = lycodonRufozonatusRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -71,7 +73,7 @@
                     Family
                 </div>
                 <div class="info-box-text">
-                    Colubridae, subfamily <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/B_LYCODONTINAE.HTM">Lycodontinae</a>
+                    Colubridae, subfamily Lycodontinae
                 </div>
             </div>
 

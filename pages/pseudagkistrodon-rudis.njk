@@ -1,4 +1,6 @@
 {% set species = pseudagkistrodonRudisRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated %}
+
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -179,7 +181,7 @@
                     Further Info
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species">
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.phpgenus=Macropisthodon&species=rudis">Reptile Database</a></li>
+                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="https://reptile-database.reptarium.cz/species?genus=Pseudagkistrodon&species=rudis">Reptile Database</a></li>
                 </ul>
             </div>
         </div>

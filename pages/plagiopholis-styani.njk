@@ -1,9 +1,10 @@
-
 {% set species = plagiopholisStyaniRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
-         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+    <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+    <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
      <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
@@ -125,7 +126,7 @@
                         <i>Plagiopholis</i>: from Greek <i>plagios</i> = slanted, and <i>pholis</i> = scale, referring to the position of the scales.
                     </div>
                     <div class="info-box-paragraph">
-                        <i>styani</i>: named after Frederick William Styan (1858-1934), a Shanghai-based English tea merchant and ornithologist. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.styan.net/pdfs/YeStyanChronicles7.pdf">more here, p.2</a>)
+                        <i>styani</i>: named after Frederick William Styan (1858-1934), a Shanghai-based English tea merchant and ornithologist.
                     </div>
                     The Chinese name <span lang="zh-TW">福建頸斑蛇</span> (fu2jian4jing3ban1she2) literally means "Fujian (<span lang="zh-TW">福建</span>) Neck-Blotched (<span lang="zh-TW">頸斑</span>) Snake (<span lang="zh-TW">蛇</span>)".
                 </div>

@@ -1,5 +1,6 @@
-
 {% set species = hebiusSauteriRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -104,7 +105,7 @@
                         <span lang="en-US"><i>Hebius</i></span>: 源自日語單詞 “<span lang="en-US">Hebi</span>”，意為“蛇”。
                     </div>
                     <div class="info-box-paragraph">
-                        sauteri : 德國人 <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://taiwanheute.nat.gov.tw/ct.asp?xItem=41966&CtNode=1580" lang="en-US">Hans Sauter(漢斯‧梭德氏)</a> 是一位在台的昆蟲學家。梭德氏游蛇的模式標本就是由他採集，為了紀念而命名之。
+                        sauteri: 德國人 <span lang="en-US">Hans Sauter(漢斯‧梭德氏)</span> 是一位在台的昆蟲學家。梭德氏游蛇的模式標本就是由他採集，為了紀念而命名之。
                     </div>
                     梭德氏游蛇、棕黑游蛇、棕黑腹鏈蛇、梭德氏腹鏈蛇。
                 </div>

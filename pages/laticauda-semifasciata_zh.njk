@@ -1,5 +1,6 @@
-
 {% set species = laticaudaSemifasciataRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -60,9 +61,9 @@
                     家族
                 </div>
                 <div class="info-box-text">
-                    蝙蝠蛇科，<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/res.pl?keyword=Hydrophiidae&offset=0">闊尾海蛇亞科</a>
+                    蝙蝠蛇科，闊尾海蛇亞科
                     <br>
-                    <span lang="en-US">Elapidae, subfamily <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/res.pl?keyword=Hydrophiidae&offset=0">Hydrophiidae</a></span>
+                    <span lang="en-US">Elapidae, subfamily Hydrophiidae</span>
                 </div>
             </div>
 

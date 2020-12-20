@@ -1,4 +1,6 @@
 {% set species = najaAtraRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -93,7 +95,7 @@
                     Occurrence in Taiwan
                 </div>
                 <div class="info-box-text">
-                    Throughout Taiwan and Matsu, up to 1000 m altitude. Less common in Northern Taiwan. (<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0060">Distribution map</a>) 
+                    Throughout Taiwan and Matsu, up to 1000 m altitude. Less common in Northern Taiwan.
                 </div>
             </div>
 

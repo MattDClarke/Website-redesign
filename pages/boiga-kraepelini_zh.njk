@@ -1,5 +1,6 @@
-
 {% set species = boigaKraepeliniRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -58,9 +59,9 @@
                     家族
                 </div>
                 <div class="info-box-text">
-                    黃頜蛇科，<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/xphrase.pl?keyword=boiginae">林蛇亞科</a>
+                    黃頜蛇科，林蛇亞科
                     <br>
-                    <span lang="en-US">Colubridae, subfamily <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/xphrase.pl?keyword=boiginae">Boiginae</a></span>  
+                    <span lang="en-US">Colubridae, subfamily Boiginae</span>  
                 </div>
             </div>
 

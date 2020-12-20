@@ -1,5 +1,6 @@
 {% set species = schoolTalksRespImgs %}
-{% set body_class = "school-talks" %}
+{% set body_class, translation_link = "school-talks" %}
+
 {% extends "_layout_zh.njk" %}
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />

@@ -1,5 +1,6 @@
-
 {% set species = hebiusSauteriRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -111,7 +112,7 @@
                         <i>Hebius</i>: Derived from the Japanese word "Hebi", which means "snake".
                     </div>
                     <div class="info-box-paragraph">
-                        <i>sauteri</i>: in honor of <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://taiwanheute.nat.gov.tw/ct.asp?xItem=41966&CtNode=1580">Hans Sauter</a>, a Taiwan-based German entomologist who collected the 
+                        <i>sauteri</i>: in honor of Hans Sauter, a Taiwan-based German entomologist who collected the 
                         type specimen for <i>A. sauteri</i>.
                     </div>
                     The Chinese name <span lang="zh-TW">梭德氏游蛇</span> (suo1de2shi4you2she2) means "Sauter's (<span lang="zh-TW">梭德氏</span>, suo1de2shi4) 

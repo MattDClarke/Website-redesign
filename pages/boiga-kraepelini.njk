@@ -1,4 +1,6 @@
 {% set species = boigaKraepeliniRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -57,7 +59,7 @@
                     Family
                 </div>
                 <div class="info-box-text">
-                    Colubridae, subfamily <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/xphrase.pl?keyword=boiginae">Boiginae</a>
+                    Colubridae, subfamily Boiginae
                 </div>
             </div>
 

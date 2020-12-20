@@ -1,5 +1,7 @@
 
 {% set species = achalinusFormosanusFormosanusRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -59,9 +61,9 @@
                     家族
                 </div>
                 <div class="info-box-text">
-                    黃頷蛇科，<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/res.pl?keyword=Xenoderminae&offset=0" lang="en-US">Xenoderminae</a> 亞種
+                    黃頷蛇科，<span lang="en-US">Xenoderminae</span> 亞種
                     <br>
-                    <span lang="en-US">Colubridae, subfamily <a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://www.probertencyclopaedia.com/cgi-bin/res.pl?keyword=Xenoderminae&offset=0">Xenoderminae</a> </span>
+                    <span lang="en-US">Colubridae, subfamily Xenoderminae</span>
                 </div>
             </div>
 

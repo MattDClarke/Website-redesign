@@ -1,5 +1,6 @@
-
 {% set species = najaAtraRespImgs %}
+{% set translation_link = species[0].nameLowerCaseHyphenated  %}
+
 {% extends "_layout_zh.njk" %} 
 {% block hrefLanguage %}
          <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
@@ -76,7 +77,7 @@
                     家族
                 </div>
                 <div class="info-box-text">
-                    蝙蝠蛇科，亞種。 Elapidae, subfamily Elapinae  
+                    蝙蝠蛇科，亞種。 <span lang="en-US">Elapidae, subfamily Elapinae</span> 
                 </div>
             </div>
 
@@ -94,7 +95,7 @@
                     台灣棲地分布
                 </div>
                 <div class="info-box-text">
-                    全台本島與馬祖海拔1000公尺以下皆可見，但北部較少。(<a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://archive.zo.ntu.edu.tw/rept_map.asp?rept_id=R0060">分布地圖</a>)
+                    全台本島與馬祖海拔1000公尺以下皆可見，但北部較少。
                 </div>
             </div>
 
@@ -155,7 +156,7 @@
                 </div>
                 <ul class="my-list2 info-box-text my-list-1--species">
                     <li lang="en-US"><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://reptile-database.reptarium.cz/species.php?genus=Naja&species=atra">Reptile Database</a></li>
-                    <li><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Naja_atra">Wikipedia</a></li>
+                    <li lang="en-US"><a target="_blank" rel="noopener" rel="noreferrer" class="site-link" href="http://en.wikipedia.org/wiki/Naja_atra">Wikipedia</a></li>
                 </ul>
             </div>
             
