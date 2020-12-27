@@ -9,7 +9,7 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    ""
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 140 cm, northern, central and eastern Taiwan, at altitudes of 1000-2500 m. Endangered. This diurnal or crepuscular snake inhabits mountain forest floors, or environments with scattered rocks and bushes. It preys on shrews and other small mammals, occasionally on lizards and lizard eggs."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

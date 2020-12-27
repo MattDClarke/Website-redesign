@@ -9,7 +9,8 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    ""
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 90 cm, very common throughout Taiwan and Orchid Island, mainly up to 1500 m. 
+    This nocturnal and arboreal pitviper is often found resting or foraging near mountain streams or roadside ditches. Frogs are its primary prey, but small mammals, lizards, and birds are also taken."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

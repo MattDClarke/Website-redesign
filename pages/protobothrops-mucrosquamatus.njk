@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html"/>
 {% endblock %}
 {% block metaDescription %}
-    ""
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 150 cm, very common throughout Taiwan, up to 1000 meters altitude. This nocturnal pitviper lives on mountainsides and farmland, often in abandoned houses. It preys on frogs, lizards, birds, mice or bats."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

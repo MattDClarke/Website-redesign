@@ -9,7 +9,7 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    ""
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 110 cm, throughout Taiwan, up to 1000 m altitude. Quite common. This nocturnal, oviparous snake leads a terrestrial as well as arboreal lifestyle in mountainous areas and plantations. It preys on lizards and insects."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

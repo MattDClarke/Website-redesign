@@ -9,13 +9,7 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    "Colubridae, subfamily Colubrinae. Max. length: 200 cm. Occurrence in Taiwan: 
-    Throughout Taiwan, up to 1000 m altitude. Less common in the North. Rare. Global Distribution: 
-    India (Assam, Arunachal Pradesh), Bangladesh, Indonesia (Sumatra, Borneo, Java, Bali), Laos, Thailand, 
-    Vietnam, West Malaysia, Singapore Island, Myanmar, Cambodia, South China (Zhejiang, Jiangxi, Fujian, 
-    Guangdong, Guangxi, Hainan, Hunan, Yunnan, Guizhou, Anhui), Taiwan. Description: Large snake; total 
-    length up to 200 cm. There are 11-17 rows of scales, which are smooth or feebly keeled posteriorly. 
-    Head is narrow, oval to slightly triangular; body is slender and tail is long. Eye is large;"
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 200 cm, throughout Taiwan, up to 1000 m altitude. Less common in the North. Rare. This semiarboreal, cathemeral (diurnal or nocturnal) snake inhabits the ground or trees in forests and farmland, and may appear near human residences. It preys on frogs, lizards, snakes, birds, eggs, and small mammals."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

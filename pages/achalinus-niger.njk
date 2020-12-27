@@ -3,19 +3,13 @@
 
 {% extends "_layout.njk" %} 
 {% block hrefLanguage %}
-         <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
-         <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
-     <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
-     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+    <link rel="alternate" hreflang="en-US" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+    <link rel="alternate" hreflang="en" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}.html" />
+    <link rel="alternate" hreflang="zh-TW" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
+    <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    "Family: Colubridae, subfamily Xenoderminae. Max. length: 80 cm. Occurrence in Taiwan: 
-    Throughout Taiwan, above 1000-2000 m altitude. (Distribution map) Global Distribution: 	
-    Endemic to Taiwan. Small snake; total length up to 80 cm. Whole body is iridescent under light. 
-    There are 21-25 (mostly 25 at mid-body) rows of scales, which are smooth in anterior part of body 
-    and keeled in posterior one. The scales of an outermost row in upper face of postcloacal region are 
-    distinctly enlarged when compared with adjacent scales. Head is small, oval and not distinct from neck; 
-    body is slender; tail is moderately short. Eye is small,"
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 80 cm, found throughout Taiwan, above 1000-2000 m altitude. This nocturnal and terrestrial snake inhabits humid environments, such as montane forest floors, stone cracks or decayed plants. Earthworms, slugs, or frogs may be its staple food. Females produce about 7 long eggs of approximately 2x1 cm per clutch in spring. It is not aggressive."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

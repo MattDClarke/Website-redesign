@@ -9,7 +9,7 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    ""
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 70 cm, throughout Taiwan, mainly up to 2000 m altitude. This nocturnal, semiarboreal snake inhabits humid mountain regions where it feeds mainly on slugs and snails which it hunts during or after rainfalls. This snake is quite cold-tolerant and can be found on the prowl even on cool winter nights if there has been sufficient precipitation."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

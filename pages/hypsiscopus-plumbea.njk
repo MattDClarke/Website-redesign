@@ -9,7 +9,7 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    ""
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 72 cm, throughout Taiwan, up to 500 m altitude. Endangered. Hypsiscopus plumbea is a crepuscular or nocturnal species found in fresh water, such as ponds, rice paddies, and ditches. Fish and frogs are its staple foods."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

@@ -9,11 +9,8 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    "Colubridae, subfamily Natricinae. Max. length: 	70 cm. Occurrence in Taiwan: 
-    Throughout Taiwan, at altitudes of 500-1000 m. Not common. (Distribution map) 
-    Global Distribution: Endemic to Taiwan. Description: Small snake; total length up to 70 cm. 
-    There are 15-17 rows of scales, which are all keeled. Head is oval; body is moderately stout; 
-    tail is moderately long. Eye is medium to large;"
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 70 cm, throughout Taiwan, at altitudes of 500-1000 m. Not common. Endemic. This docile, diurnal snake inhabits the floors of forests, bushlands, and other humid environments. It preys mainly on frogs and when threatened, it may expand its throat and neck transversely, but hardly ever bites.
+"
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html"/>
 {% endblock %}
 {% block metaDescription %}
-    ""
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 100 cm, throughout Taiwan, at altitudes above 1500 m. Rare. This diurnal rear-fanged snake inhabits humid environments, including mountain rivers, creeks, and forest floors. It preys on frogs and toads, and occasionally on fish or snakes."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

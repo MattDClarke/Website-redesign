@@ -9,13 +9,7 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    "Colubridae, subfamily Lycodontinae. Max. length: 40 cm. Occurrence in Taiwan: 
-    The only records In Taiwan are from Yangmingshan National Park near Taipei and 
-    around the Northern Cross-Island Highway. Very rare. Global Distribution: 
-    South China (Fujian, Guangdong, Guangxi, Jiangxi, Zhejiang, Anhui, Sichuan, SE Gansu), Taiwan. 
-    Description: Small snake; total length up to 40 cm. There are 15 rows of scales, all are smooth and glossy. 
-    Head is oval, with short snout and slightly large rostral (with a blackish spot), and not distinct 
-    from neck; body is stout and cylindrical; tail is short. Eye is medium-sized;"
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 40 cm, the only records In Taiwan are from Yangmingshan National Park near Taipei and around the Northern Cross-Island Highway. Very rare. This nocturnal snake inhabits mountainous forest floors between 500 and 1100 meters altidude. Its diet consists mainly of earthworms or arthropods."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

@@ -9,12 +9,7 @@
      <link rel="alternate" hreflang="zh" href="https://snakes-of-taiwan-test.netlify.app/{{- species[0].nameLowerCaseHyphenated -}}_zh.html" />
 {% endblock %}
 {% block metaDescription %}
-    "Family: Colubridae, subfamily Lycodontinae. Max. length: 95 cm. Occurrence in Taiwan: 	
-    Throughout Taiwan and Orchid Island, up to 1000 m altitude. (Distribution map)
-     at altitudes of 500-1500 m. Very rare. Global Distribution: South China (Fujian, Guangdong, Guangxi, Jiangxi, 
-     Jiangsu, Guizhou, Hainan, Zhejiang), Taiwan, Vietnam. Description: Small snake; total length up to 95 cm. 
-     There are 15-19 (19 at mid-body) rows of scales, which are smooth. It has a short, indistinct head bearing a 
-     large rostral shield; body is moderately stout and tail is medium stout. Eye is medium-sized;"
+    "{{ species[0].chineseName }} {{ species[0].chineseNameRomanized }}. {{ species[0].danger }}, max length: 95 cm, throughout Taiwan and Orchid Island, up to 1000 m altitude. This nocturnal rear-fanged (= opistoglyphous, see footnote (1)) snake inhabits mountainous regions and lowland plantations. It preys almost exclusively on reptile eggs, occasionally including its own. The large, laterally flattened posterior teeth in the upper jaw as well as the large rostral shield are adapted to cut open and thrust into the eggs."
 {% endblock %}
 {% block headLinks %}
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
