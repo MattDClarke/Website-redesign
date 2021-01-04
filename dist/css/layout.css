@@ -585,7 +585,7 @@ body.links .nav-links-page a {
 
 @-webkit-keyframes fadeInAnimation {
   0% {
-    opacity: 0;
+    opacity: 0.9;
   }
   100% {
     opacity: 1;
@@ -594,7 +594,7 @@ body.links .nav-links-page a {
 
 @keyframes fadeInAnimation {
   0% {
-    opacity: 0;
+    opacity: 0.9;
   }
   100% {
     opacity: 1;
