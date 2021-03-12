@@ -4,7 +4,7 @@ function gtag() {
 }
 gtag('js', new Date());
 
-gtag('config', 'UA-169851286-1', {
-  cookie_domain: 'snakes-of-taiwan-test.netlify.app',
+gtag('config', 'G-CYV9Y238H0', {
+  cookie_domain: 'snakesoftaiwan.com',
   cookie_flags: 'SameSite=None;Secure',
 });
